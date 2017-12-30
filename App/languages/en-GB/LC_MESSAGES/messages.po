@@ -1,0 +1,2125 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mvc elmtwer.com\n"
+"POT-Creation-Date: 2017-04-02 16:51+0200\n"
+"PO-Revision-Date: 2017-04-02 16:52+0200\n"
+"Last-Translator: saad hamed <s@elmtwer.com>\n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.12\n"
+"X-Poedit-Basepath: ../../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _t;gettext;T_;__;_\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: .\n"
+
+#: App/controllers/ajaxController.php:39 App/controllers/ajaxController.php:72
+msgid "لا يوجد"
+msgstr "none"
+
+#: App/controllers/ajaxController.php:50 App/controllers/ajaxController.php:56
+msgid "موديل رئيسى"
+msgstr "Model heads"
+
+#: App/core/controller.php:82
+#, php-format
+msgid "Error Model Not Exists The File %s "
+msgstr ""
+
+#: App/lip/class.switchlang.php:7 App/modules/admin/views/users/edit.php:55
+#: App/modules/users/views/login/login.php:22
+#: App/modules/users/views/register/register.php:69
+#: App/template/admin/login.php:66 App/template/hragkom/sider.php:35
+#: App/template/hragkom/users/login/login.php:17
+#: App/template/hragkom/users/login/login.php:19
+#: App/template/hragkom/users/register/register.php:65
+#: App/template/style1/users/login/login.php:22
+#: App/template/style1/users/register/register.php:69
+msgid "اسم المستخدم"
+msgstr "username"
+
+#: App/lip/class.switchlang.php:8 App/modules/admin/views/users/edit.php:72
+#: App/modules/users/views/login/login.php:33
+#: App/modules/users/views/register/register.php:91
+#: App/template/admin/login.php:68 App/template/hragkom/sider.php:41
+#: App/template/hragkom/users/login/login.php:25
+#: App/template/hragkom/users/login/login.php:27
+#: App/template/hragkom/users/register/register.php:86
+#: App/template/style1/users/login/login.php:33
+#: App/template/style1/users/register/register.php:91
+msgid "كلمة المرور"
+msgstr "passwords"
+
+#: App/lip/class.switchlang.php:9 App/modules/users/views/index/password.php:43
+#: App/modules/users/views/register/register.php:102
+#: App/template/hragkom/users/index/password.php:27
+#: App/template/hragkom/users/register/register.php:96
+#: App/template/style1/users/index/password.php:43
+#: App/template/style1/users/register/register.php:102
+msgid "اعادة كلمة المرور"
+msgstr "re password"
+
+#: App/lip/class.switchlang.php:10 App/modules/admin/views/city/add.php:29
+#: App/modules/admin/views/city/edit.php:29
+#: App/modules/admin/views/option/adsimg.php:23
+#: App/modules/admin/views/shows/add.php:17
+#: App/modules/admin/views/shows/edit.php:17
+#: App/modules/admin/views/typecar/add.php:42
+#: App/modules/admin/views/typecar/edit.php:40
+#: App/modules/cars/views/index/sendmsg.php:8
+#: App/template/hragkom/cars/index/carid.php:308
+#: App/template/hragkom/cars/index/sendmsg.php:8
+#: App/template/style1/cars/index/sendmsg.php:8
+msgid "الاسم"
+msgstr "name"
+
+#: App/lip/class.switchlang.php:11 App/modules/admin/views/users/edit.php:36
+#: App/modules/cars/views/index/rentid.php:150
+#: App/modules/users/views/index/profile.php:45
+#: App/modules/users/views/register/register.php:45
+#: App/template/hragkom/cars/index/rentid.php:150
+#: App/template/hragkom/users/index/profile.php:25
+#: App/template/hragkom/users/register/register.php:36
+#: App/template/style1/cars/index/rentid.php:150
+#: App/template/style1/users/index/profile.php:45
+#: App/template/style1/users/register/register.php:45
+msgid "العمر"
+msgstr "age"
+
+#: App/lip/class.switchlang.php:12 App/modules/access/views/cp/add.php:21
+#: App/modules/access/views/cp/edit.php:22
+#: App/modules/admin/views/users/edit.php:45
+#: App/modules/cars/views/index/rentid.php:177
+#: App/modules/messages/views/cp/send.php:28
+#: App/modules/pages/views/index/a3len.php:70
+#: App/modules/pages/views/index/contact.php:35
+#: App/modules/users/views/index/profile.php:56
+#: App/modules/users/views/register/register.php:56
+#: App/template/hragkom/cars/index/rentid.php:177
+#: App/template/hragkom/pages/index/a3len.php:56
+#: App/template/hragkom/pages/index/contact.php:34
+#: App/template/hragkom/users/index/profile.php:32
+#: App/template/hragkom/users/register/register.php:46
+#: App/template/style1/cars/index/rentid.php:177
+#: App/template/style1/pages/index/a3len.php:70
+#: App/template/style1/pages/index/contact.php:35
+#: App/template/style1/users/index/profile.php:56
+#: App/template/style1/users/register/register.php:56
+msgid "الجوال"
+msgstr "mobile"
+
+#: App/lip/class.switchlang.php:13
+msgid "الهاتف"
+msgstr "Phone"
+
+#: App/lip/class.switchlang.php:14 App/modules/access/views/cp/add.php:28
+#: App/modules/access/views/cp/edit.php:31
+#: App/modules/admin/views/users/edit.php:64
+#: App/modules/cars/views/index/rentid.php:159
+#: App/modules/cars/views/index/sendmsg.php:15
+#: App/modules/messages/views/cp/send.php:35
+#: App/modules/pages/views/index/a3len.php:61
+#: App/modules/pages/views/index/contact.php:26
+#: App/modules/users/views/index/profile.php:68
+#: App/modules/users/views/login/lostpassword.php:14
+#: App/template/hragkom/cars/index/carid.php:315
+#: App/template/hragkom/cars/index/rentid.php:159
+#: App/template/hragkom/cars/index/sendmsg.php:15
+#: App/template/hragkom/pages/index/a3len.php:49
+#: App/template/hragkom/pages/index/contact.php:25
+#: App/template/hragkom/users/index/profile.php:40
+#: App/template/hragkom/users/login/lostpassword.php:11
+#: App/template/style1/cars/index/rentid.php:159
+#: App/template/style1/cars/index/sendmsg.php:15
+#: App/template/style1/pages/index/a3len.php:61
+#: App/template/style1/pages/index/contact.php:26
+#: App/template/style1/users/index/profile.php:68
+#: App/template/style1/users/login/lostpassword.php:14
+msgid "البريد الالكترونى"
+msgstr "email"
+
+#: App/lip/class.switchlang.php:15 App/modules/admin/views/users/edit.php:18
+#: App/modules/messages/views/cp/send.php:14
+#: App/modules/users/views/index/profile.php:21
+#: App/modules/users/views/register/register.php:21
+#: App/template/hragkom/users/index/profile.php:11
+#: App/template/hragkom/users/register/register.php:16
+#: App/template/style1/users/index/profile.php:21
+#: App/template/style1/users/register/register.php:21
+msgid "الاسم الاول"
+msgstr "First name"
+
+#: App/lip/class.switchlang.php:16 App/modules/admin/views/users/edit.php:27
+#: App/modules/cars/views/index/rentid.php:141
+#: App/modules/messages/views/cp/send.php:21
+#: App/modules/users/views/index/profile.php:34
+#: App/modules/users/views/register/register.php:34
+#: App/template/hragkom/cars/index/rentid.php:141
+#: App/template/hragkom/users/index/profile.php:18
+#: App/template/hragkom/users/register/register.php:26
+#: App/template/style1/cars/index/rentid.php:141
+#: App/template/style1/users/index/profile.php:34
+#: App/template/style1/users/register/register.php:34
+msgid "الاسم الاخير"
+msgstr "Last Name"
+
+#: App/lip/class.switchlang.php:17
+msgid "اتفاقية الاستخدام"
+msgstr "Terms of Use"
+
+#: App/lip/class.switchlang.php:26
+msgid "معطل"
+msgstr "Broken"
+
+#: App/lip/class.switchlang.php:27
+msgid "موافق عليه"
+msgstr "Approved"
+
+#: App/lip/class.switchlang.php:28
+msgid "بانتظار التفعيل"
+msgstr "Validating"
+
+#: App/lip/class.switchlang.php:37 App/lip/class.switchlang.php:38
+msgid "قيد المزايدة"
+msgstr "Under bid"
+
+#: App/lip/class.switchlang.php:39
+#: App/template/hragkom/cars/index/carid.php:194
+msgid "تم البيع"
+msgstr "Buy"
+
+#: App/lip/class.switchlang.php:40
+msgid " انتهاء الاعلان "
+msgstr "Expiration"
+
+#: App/lip/class.validate.php:25
+msgid "حقل مطلوب"
+msgstr "Required field"
+
+#: App/lip/class.validate.php:28
+#, php-format
+msgid "عدد الاحرف اقل من الحد المطلوب %d حرف"
+msgstr ""
+"The number of characters is less than the threshold required  %d symbols"
+
+#: App/lip/class.validate.php:30
+#, php-format
+msgid "عدد الاحرف تجاوزت الحد المطلوب %d حرف"
+msgstr "The number of characters exceeded the threshold required %d symbols"
+
+#: App/lip/class.validate.php:32
+msgid "الرقم السرى غير مطابق"
+msgstr "PIN does not match"
+
+#: App/lip/class.validate.php:34
+msgid "البريد الالكترونى غير مطابق"
+msgstr "Email does not match"
+
+#: App/lip/class.validate.php:36
+msgid "هذا البريد غير صحيح"
+msgstr "This e-mail is incorrect"
+
+#: App/lip/class.validate.php:38 App/lip/class.validate.php:40
+msgid "هذا الرقم غير صحيح"
+msgstr "This figure is incorrect"
+
+#: App/lip/class.validate.php:49
+msgid "موجود بالفعل"
+msgstr "Already exists"
+
+#: App/lip/class.validate.php:60
+msgid "هذا الموضوع غير متوفر"
+msgstr "!Not Found"
+
+#: App/lip/class.validate.php:84
+msgid "هذا العضو غير موجود"
+msgstr "This user does not exist"
+
+#: App/modules/access/controllers/cpController.php:86
+#: App/modules/access/controllers/cpController.php:156
+#: App/modules/admin/controllers/accessController.php:98
+#: App/modules/admin/controllers/cityController.php:99
+#: App/modules/admin/controllers/showsController.php:56
+#: App/modules/admin/controllers/showsController.php:110
+#: App/modules/admin/controllers/typecarController.php:98
+#: App/modules/users/controllers/indexController.php:75
+#: App/modules/users/controllers/indexController.php:125
+#: App/modules/users/controllers/loginController.php:186
+#: App/modules/users/controllers/registerController.php:153
+#: App/modules/users/controllers/registerController.php:160
+#: App/modules/users/controllers/registerController.php:183
+#, php-format
+msgid "Error Database  %s "
+msgstr ""
+
+#: App/modules/access/controllers/indexController.php:39
+msgid "زينة و اكسسورات"
+msgstr "Accessories and Accessories"
+
+#: App/modules/access/controllers/indexController.php:128
+#: App/modules/cars/controllers/indexController.php:359
+#: App/modules/cars/controllers/indexController.php:431
+#: App/modules/messages/controllers/cpController.php:120
+#: App/modules/pages/controllers/indexController.php:105
+#: App/modules/pages/controllers/indexController.php:189
+#: App/modules/users/controllers/loginController.php:130
+msgid "تم الارسال بنجاح"
+msgstr "Sent successfully"
+
+#: App/modules/access/controllers/indexController.php:130
+#: App/modules/cars/controllers/indexController.php:361
+#: App/modules/cars/controllers/indexController.php:433
+#: App/modules/messages/controllers/cpController.php:122
+#: App/modules/pages/controllers/indexController.php:107
+#: App/modules/pages/controllers/indexController.php:191
+#: App/modules/users/controllers/loginController.php:133
+msgid "حاول مره اخرى"
+msgstr "Try again"
+
+#: App/modules/access/views/cp/add.php:8 App/modules/access/views/cp/edit.php:8
+msgid "اضافة منتج جديدة"
+msgstr "Add a new product"
+
+#: App/modules/access/views/cp/add.php:14
+#: App/modules/access/views/cp/edit.php:14
+msgid "اسم المنتج"
+msgstr "Product Name"
+
+#: App/modules/access/views/cp/add.php:35
+#: App/modules/access/views/cp/edit.php:38
+#: App/template/hragkom/cars/mycars/index.php:18
+msgid "القسم"
+msgstr "Section"
+
+#: App/modules/access/views/cp/add.php:37
+#: App/modules/access/views/cp/add.php:38
+#: App/modules/access/views/cp/edit.php:40
+#: App/modules/access/views/cp/edit.php:41
+#: App/template/hragkom/cars/mycars/add.php:14
+msgid "اختر القسم"
+msgstr "Select a section"
+
+#: App/modules/access/views/cp/add.php:48
+#: App/modules/access/views/cp/add.php:50
+#: App/modules/access/views/cp/edit.php:51
+#: App/modules/access/views/cp/edit.php:53
+msgid "ماركة المنتج"
+msgstr "Product brand"
+
+#: App/modules/access/views/cp/add.php:51
+#: App/modules/access/views/cp/edit.php:54
+msgid "اختر الماركة"
+msgstr "Select Brand"
+
+#: App/modules/access/views/cp/add.php:61
+#: App/modules/access/views/cp/edit.php:64
+#: App/modules/cars/views/mycars/add.php:46
+#: App/modules/cars/views/mycars/edit.php:50
+#: App/template/style1/cars/mycars/add.php:46
+#: App/template/style1/cars/mycars/edit.php:50
+msgid "اللون"
+msgstr "Color"
+
+#: App/modules/access/views/cp/add.php:63
+#: App/modules/access/views/cp/add.php:64
+#: App/modules/access/views/cp/edit.php:66
+#: App/modules/access/views/cp/edit.php:67
+#: App/modules/cars/views/mycars/add.php:48
+#: App/modules/cars/views/mycars/add.php:49
+#: App/modules/cars/views/mycars/edit.php:52
+#: App/modules/cars/views/mycars/edit.php:53
+#: App/template/style1/cars/mycars/add.php:48
+#: App/template/style1/cars/mycars/add.php:49
+#: App/template/style1/cars/mycars/edit.php:52
+#: App/template/style1/cars/mycars/edit.php:53
+msgid "اختر اللون"
+msgstr "Choose the color"
+
+#: App/modules/access/views/cp/add.php:75
+#: App/modules/access/views/cp/edit.php:78
+#: App/modules/cars/views/mycars/add.php:117
+#: App/modules/cars/views/mycars/edit.php:121
+#: App/template/hragkom/cars/index/carid.php:219
+#: App/template/hragkom/cars/index/showsid.php:274
+#: App/template/hragkom/cars/mycars/index.php:22
+#: App/template/style1/cars/mycars/add.php:117
+#: App/template/style1/cars/mycars/edit.php:121 App/views/hragkom/index.php:62
+#: App/views/hragkom/index.php:111 App/views/hragkom/index.php:158
+msgid "السعر"
+msgstr "Price"
+
+#: App/modules/access/views/cp/add.php:85
+#: App/modules/access/views/cp/edit.php:88
+#: App/modules/admin/views/cars/add.php:69
+#: App/modules/admin/views/cars/edit.php:65
+#: App/modules/cars/views/mycars/add.php:126
+#: App/modules/cars/views/mycars/edit.php:130
+#: App/template/hragkom/cars/index/carid.php:77
+#: App/template/hragkom/cars/mycars/add.php:95
+#: App/template/hragkom/cars/mycars/edit.php:75
+#: App/template/style1/cars/mycars/add.php:126
+#: App/template/style1/cars/mycars/edit.php:130
+msgid "البلد"
+msgstr "Country"
+
+#: App/modules/access/views/cp/add.php:87
+#: App/modules/access/views/cp/add.php:88
+#: App/modules/access/views/cp/add.php:102
+#: App/modules/access/views/cp/add.php:103
+#: App/modules/access/views/cp/edit.php:90
+#: App/modules/access/views/cp/edit.php:91
+#: App/modules/access/views/cp/edit.php:105
+#: App/modules/access/views/cp/edit.php:106
+#: App/modules/admin/views/cars/add.php:23
+#: App/modules/admin/views/cars/add.php:42
+#: App/modules/admin/views/cars/add.php:71
+#: App/modules/admin/views/cars/add.php:72
+#: App/modules/admin/views/cars/add.php:86
+#: App/modules/admin/views/cars/add.php:87
+#: App/modules/admin/views/cars/add.php:120
+#: App/modules/admin/views/cars/add.php:121
+#: App/modules/admin/views/cars/edit.php:26
+#: App/modules/admin/views/cars/edit.php:67
+#: App/modules/admin/views/cars/edit.php:68
+#: App/modules/admin/views/cars/edit.php:81
+#: App/modules/admin/views/cars/edit.php:82
+#: App/modules/admin/views/cars/edit.php:130
+#: App/modules/admin/views/cars/edit.php:131
+#: App/modules/cars/views/mycars/add.php:37
+#: App/modules/cars/views/mycars/add.php:68
+#: App/modules/cars/views/mycars/add.php:69
+#: App/modules/cars/views/mycars/add.php:80
+#: App/modules/cars/views/mycars/add.php:81
+#: App/modules/cars/views/mycars/add.php:93
+#: App/modules/cars/views/mycars/add.php:94
+#: App/modules/cars/views/mycars/add.php:106
+#: App/modules/cars/views/mycars/add.php:107
+#: App/modules/cars/views/mycars/add.php:128
+#: App/modules/cars/views/mycars/add.php:129
+#: App/modules/cars/views/mycars/add.php:140
+#: App/modules/cars/views/mycars/add.php:141
+#: App/modules/cars/views/mycars/edit.php:40
+#: App/modules/cars/views/mycars/edit.php:72
+#: App/modules/cars/views/mycars/edit.php:73
+#: App/modules/cars/views/mycars/edit.php:84
+#: App/modules/cars/views/mycars/edit.php:85
+#: App/modules/cars/views/mycars/edit.php:97
+#: App/modules/cars/views/mycars/edit.php:98
+#: App/modules/cars/views/mycars/edit.php:110
+#: App/modules/cars/views/mycars/edit.php:111
+#: App/modules/cars/views/mycars/edit.php:132
+#: App/modules/cars/views/mycars/edit.php:133
+#: App/modules/cars/views/mycars/edit.php:144
+#: App/modules/cars/views/mycars/edit.php:145
+#: App/modules/cars/views/mycars/edit.php:159
+#: App/modules/cars/views/mycars/edit.php:160
+#: App/template/hragkom/cars/mycars/add.php:49
+#: App/template/hragkom/cars/mycars/add.php:68
+#: App/template/hragkom/cars/mycars/add.php:97
+#: App/template/hragkom/cars/mycars/add.php:98
+#: App/template/hragkom/cars/mycars/add.php:112
+#: App/template/hragkom/cars/mycars/add.php:113
+#: App/template/hragkom/cars/mycars/add.php:146
+#: App/template/hragkom/cars/mycars/add.php:147
+#: App/template/hragkom/cars/mycars/edit.php:33
+#: App/template/hragkom/cars/mycars/edit.php:77
+#: App/template/hragkom/cars/mycars/edit.php:78
+#: App/template/hragkom/cars/mycars/edit.php:92
+#: App/template/hragkom/cars/mycars/edit.php:93
+#: App/template/hragkom/cars/mycars/edit.php:142
+#: App/template/hragkom/cars/mycars/edit.php:143
+#: App/template/style1/cars/mycars/add.php:37
+#: App/template/style1/cars/mycars/add.php:68
+#: App/template/style1/cars/mycars/add.php:69
+#: App/template/style1/cars/mycars/add.php:80
+#: App/template/style1/cars/mycars/add.php:81
+#: App/template/style1/cars/mycars/add.php:93
+#: App/template/style1/cars/mycars/add.php:94
+#: App/template/style1/cars/mycars/add.php:106
+#: App/template/style1/cars/mycars/add.php:107
+#: App/template/style1/cars/mycars/add.php:128
+#: App/template/style1/cars/mycars/add.php:129
+#: App/template/style1/cars/mycars/add.php:140
+#: App/template/style1/cars/mycars/add.php:141
+#: App/template/style1/cars/mycars/edit.php:40
+#: App/template/style1/cars/mycars/edit.php:72
+#: App/template/style1/cars/mycars/edit.php:73
+#: App/template/style1/cars/mycars/edit.php:84
+#: App/template/style1/cars/mycars/edit.php:85
+#: App/template/style1/cars/mycars/edit.php:97
+#: App/template/style1/cars/mycars/edit.php:98
+#: App/template/style1/cars/mycars/edit.php:110
+#: App/template/style1/cars/mycars/edit.php:111
+#: App/template/style1/cars/mycars/edit.php:132
+#: App/template/style1/cars/mycars/edit.php:133
+#: App/template/style1/cars/mycars/edit.php:144
+#: App/template/style1/cars/mycars/edit.php:145
+#: App/template/style1/cars/mycars/edit.php:159
+#: App/template/style1/cars/mycars/edit.php:160
+msgid "اختر"
+msgstr "Choose"
+
+#: App/modules/access/views/cp/add.php:100
+#: App/modules/access/views/cp/edit.php:103
+#: App/modules/admin/views/cars/add.php:84
+#: App/modules/admin/views/cars/edit.php:79
+#: App/modules/cars/views/mycars/add.php:138
+#: App/modules/cars/views/mycars/edit.php:142
+#: App/template/hragkom/cars/index/carid.php:82
+#: App/template/hragkom/cars/index/showsid.php:172
+#: App/template/hragkom/cars/mycars/add.php:110
+#: App/template/hragkom/cars/mycars/edit.php:90
+#: App/template/hragkom/cars/search/form.php:69
+#: App/template/hragkom/cars/search/search.php:43
+#: App/template/hragkom/cars/search/search.php:172
+#: App/template/hragkom/index/index.php:173
+#: App/template/style1/cars/mycars/add.php:138
+#: App/template/style1/cars/mycars/edit.php:142
+msgid "المدينة"
+msgstr "city"
+
+#: App/modules/access/views/cp/add.php:144
+#: App/modules/access/views/cp/edit.php:149
+#: App/modules/admin/views/shows/add.php:24
+#: App/modules/admin/views/shows/edit.php:24
+#: App/modules/admin/views/typecar/add.php:56
+#: App/modules/admin/views/typecar/edit.php:50
+msgid "رفع صورة"
+msgstr "Upload"
+
+#: App/modules/access/views/cp/add.php:164
+#: App/modules/admin/views/cars/add.php:202
+#: App/modules/admin/views/city/add.php:54
+#: App/modules/admin/views/option/add_category.php:39
+#: App/modules/admin/views/option/addoption.php:113
+#: App/modules/admin/views/option/get.php:37
+#: App/modules/admin/views/pages/add.php:55
+#: App/modules/admin/views/shows/add.php:73
+#: App/modules/admin/views/typecar/add.php:70
+#: App/modules/cars/views/admin/add_category.php:39
+#: App/modules/cars/views/mycars/add.php:185
+#: App/template/hragkom/cars/index/carid.php:348
+#: App/template/hragkom/cars/mycars/add.php:226
+#: App/template/style1/cars/mycars/add.php:185
+msgid "اضافة"
+msgstr "Add"
+
+#: App/modules/access/views/cp/edit.php:183
+#: App/modules/admin/views/cars/edit.php:195
+#: App/modules/admin/views/cars/index.php:46
+#: App/modules/admin/views/city/edit.php:52
+#: App/modules/admin/views/option/adsimg.php:56
+#: App/modules/admin/views/option/edit.php:65
+#: App/modules/admin/views/option/offers.php:68
+#: App/modules/admin/views/option/sliderserch.php:57
+#: App/modules/admin/views/option/vedioindex.php:36
+#: App/modules/admin/views/pages/edit.php:56
+#: App/modules/admin/views/settings/index.php:252
+#: App/modules/admin/views/shows/edit.php:74
+#: App/modules/admin/views/typecar/edit.php:70
+#: App/modules/admin/views/users/add_group.php:41
+#: App/modules/admin/views/users/add_permis.php:36
+#: App/modules/admin/views/users/edit.php:123
+#: App/modules/admin/views/users/group_edit.php:30
+#: App/modules/admin/views/users/permis.php:36
+#: App/modules/cars/views/mycars/edit.php:207
+#: App/modules/messages/views/cp/index.php:53
+#: App/modules/users/views/index/password.php:58
+#: App/modules/users/views/index/profile.php:93
+#: App/modules/users/views/login/newpass.php:43
+#: App/template/hragkom/cars/mycars/edit.php:202
+#: App/template/hragkom/users/index/password.php:37
+#: App/template/hragkom/users/index/profile.php:55
+#: App/template/hragkom/users/login/newpass.php:29
+#: App/template/style1/cars/mycars/edit.php:207
+#: App/template/style1/users/index/password.php:58
+#: App/template/style1/users/index/profile.php:93
+#: App/template/style1/users/login/newpass.php:43
+msgid "تعديل"
+msgstr "edit"
+
+#: App/modules/admin/controllers/optionController.php:110
+#: App/modules/admin/controllers/optionController.php:355
+msgid "قيمة افتراضية"
+msgstr "A default value"
+
+#: App/modules/admin/views/cars/add.php:8
+#: App/modules/admin/views/option/add_category.php:8
+#: App/modules/cars/views/admin/add_category.php:8
+msgid "اضافة سيارة جديدة"
+msgstr "Add a new car"
+
+#: App/modules/admin/views/cars/add.php:22
+#: App/modules/admin/views/cars/add.php:41
+#: App/modules/admin/views/cars/add.php:55
+#: App/modules/admin/views/cars/add.php:56
+#: App/modules/admin/views/cars/edit.php:25
+#: App/modules/admin/views/cars/edit.php:41
+#: App/modules/admin/views/cars/edit.php:42
+#: App/modules/admin/views/cars/edit.php:54
+#: App/modules/admin/views/cars/edit.php:55
+#: App/modules/admin/views/cars/index.php:39
+#: App/modules/admin/views/cars/index.php:40
+#: App/modules/cars/views/mycars/add.php:14
+#: App/modules/cars/views/mycars/add.php:15
+#: App/modules/cars/views/mycars/add.php:27
+#: App/modules/cars/views/mycars/add.php:28
+#: App/modules/cars/views/mycars/edit.php:14
+#: App/modules/cars/views/mycars/edit.php:15
+#: App/modules/cars/views/mycars/edit.php:27
+#: App/modules/cars/views/mycars/edit.php:28
+#: App/modules/messages/views/cp/index.php:44
+#: App/modules/messages/views/cp/index.php:45
+#: App/template/hragkom/cars/mycars/add.php:48
+#: App/template/hragkom/cars/mycars/add.php:67
+#: App/template/hragkom/cars/mycars/add.php:81
+#: App/template/hragkom/cars/mycars/add.php:82
+#: App/template/hragkom/cars/mycars/edit.php:32
+#: App/template/hragkom/cars/mycars/edit.php:49
+#: App/template/hragkom/cars/mycars/edit.php:50
+#: App/template/hragkom/cars/mycars/edit.php:63
+#: App/template/hragkom/cars/mycars/edit.php:64
+#: App/template/style1/cars/mycars/add.php:14
+#: App/template/style1/cars/mycars/add.php:15
+#: App/template/style1/cars/mycars/add.php:27
+#: App/template/style1/cars/mycars/add.php:28
+#: App/template/style1/cars/mycars/edit.php:14
+#: App/template/style1/cars/mycars/edit.php:15
+#: App/template/style1/cars/mycars/edit.php:27
+#: App/template/style1/cars/mycars/edit.php:28
+msgid "اختر "
+msgstr "Choose"
+
+#: App/modules/admin/views/cars/add.php:53
+#: App/modules/admin/views/cars/edit.php:52
+#: App/template/hragkom/cars/index/carid.php:69
+#: App/template/hragkom/cars/mycars/index.php:20
+#: App/template/hragkom/cars/search/form.php:12
+#: App/template/hragkom/cars/search/search.php:22
+#: App/views/hragkom/index.php:104 App/views/hragkom/index.php:151
+msgid "الموديل"
+msgstr "model"
+
+#: App/modules/admin/views/cars/add.php:184
+#: App/modules/admin/views/cars/edit.php:170
+#: App/template/hragkom/cars/mycars/add.php:210
+#: App/template/hragkom/cars/mycars/edit.php:182
+msgid "نعم"
+msgstr "Yes"
+
+#: App/modules/admin/views/cars/add.php:185
+#: App/template/hragkom/cars/mycars/add.php:211
+msgid "لا"
+msgstr "No"
+
+#: App/modules/admin/views/cars/edit.php:8
+msgid "تعديل  سيارة "
+msgstr "Car modification"
+
+#: App/modules/admin/views/cars/index.php:41
+msgid "تفعيل "
+msgstr "Activation"
+
+#: App/modules/admin/views/city/add.php:8
+#: App/modules/admin/views/city/edit.php:8
+msgid "اضافة مدينة او دولة"
+msgstr "Add your city or state"
+
+#: App/modules/admin/views/city/add.php:14
+#: App/modules/admin/views/city/edit.php:14
+msgid "اختر الدولة الرئيسية"
+msgstr "Select Country Home"
+
+#: App/modules/admin/views/city/add.php:16
+#: App/modules/admin/views/city/edit.php:16
+#: App/modules/admin/views/shows/add.php:46
+#: App/modules/admin/views/shows/edit.php:41
+msgid "الدولة "
+msgstr "State"
+
+#: App/modules/admin/views/city/add.php:17
+#: App/modules/admin/views/city/edit.php:17
+msgid "دولة رئيسية "
+msgstr "Key state"
+
+#: App/modules/admin/views/city/add.php:42
+#: App/modules/admin/views/city/edit.php:40
+msgid "كود الدولة"
+msgstr "Country Code"
+
+#: App/modules/admin/views/option/add_category.php:13
+#: App/modules/cars/views/admin/add_category.php:13
+msgid "اسم التصنيف"
+msgstr "Category Name"
+
+#: App/modules/admin/views/option/add_category.php:29
+#: App/modules/cars/views/admin/add_category.php:29
+msgid "اختر الموديل الفرعى "
+msgstr "Select Model Sub"
+
+#: App/modules/admin/views/option/addoption.php:8
+msgid "اضافة موديل جديد"
+msgstr "Add new model"
+
+#: App/modules/admin/views/option/addoption.php:15
+#: App/modules/admin/views/option/edit.php:15
+msgid "اسم الموديل"
+msgstr "Model Name"
+
+#: App/modules/admin/views/option/addoption.php:26
+msgid "كود الموديل"
+msgstr "Model Code"
+
+#: App/modules/admin/views/option/addoption.php:32
+#: App/modules/admin/views/option/addoption.php:34
+msgid "نوع الحقل"
+msgstr "Field Type"
+
+#: App/modules/admin/views/option/addoption.php:35
+msgid "اختر النوع"
+msgstr "Select Type"
+
+#: App/modules/admin/views/option/addoption.php:36
+msgid "نص"
+msgstr "text"
+
+#: App/modules/admin/views/option/addoption.php:37
+msgid "حقل كبير"
+msgstr "texterea"
+
+#: App/modules/admin/views/option/addoption.php:38
+msgid "اختيارى"
+msgstr "select"
+
+#: App/modules/admin/views/option/addoption.php:39
+msgid "اختيار متعدد"
+msgstr "checkbox"
+
+#: App/modules/admin/views/option/addoption.php:40
+msgid "رفع صورة متعدد"
+msgstr "Upload images"
+
+#: App/modules/admin/views/option/addoption.php:41
+msgid "اختيارى (نعم/لا)"
+msgstr "select yes or no"
+
+#: App/modules/admin/views/option/addoption.php:47
+msgid "add-on Star"
+msgstr ""
+
+#: App/modules/admin/views/option/addoption.php:53
+msgid "add-on End"
+msgstr ""
+
+#: App/modules/admin/views/option/addoption.php:59
+msgid "حقل اجبارى"
+msgstr "Mandatory field"
+
+#: App/modules/admin/views/option/addoption.php:65
+msgid "حقل مبرمج مسبقا"
+msgstr "Preprogrammed field"
+
+#: App/modules/admin/views/option/addoption.php:71
+msgid "حقل اساسي"
+msgstr "Basic field"
+
+#: App/modules/admin/views/option/addoption.php:77
+msgid "الادارة فقط"
+msgstr "admin"
+
+#: App/modules/admin/views/option/addoption.php:89
+#: App/modules/admin/views/option/edit.php:37
+msgid "اضف حقل"
+msgstr "Add Field"
+
+#: App/modules/admin/views/option/adsimg.php:27
+msgid "الرابط"
+msgstr "url"
+
+#: App/modules/admin/views/option/adsimg.php:31
+msgid "مسار الصورة"
+msgstr "Image Path"
+
+#: App/modules/admin/views/option/adsimg.php:35
+msgid "المكان"
+msgstr "Location"
+
+#: App/modules/admin/views/option/adsimg.php:36
+msgid "المكان "
+msgstr "Location"
+
+#: App/modules/admin/views/option/edit.php:8
+msgid "تعديل الموديل"
+msgstr "Amendment Model"
+
+#: App/modules/admin/views/option/get.php:29
+#: App/modules/admin/views/option/offers.php:60
+#: App/modules/admin/views/option/sliderserch.php:49
+msgid "اضف جديد"
+msgstr "Add new"
+
+#: App/modules/admin/views/option/offers.php:8
+#: App/modules/admin/views/option/sliderserch.php:8
+msgid "ادارة العروض"
+msgstr "Administration offers"
+
+#: App/modules/admin/views/option/opt_cat.php:8
+msgid "دمج الحقول "
+msgstr "Merge fields"
+
+#: App/modules/admin/views/option/opt_cat.php:13
+#: App/modules/admin/views/typecar/add.php:14
+#: App/modules/admin/views/typecar/edit.php:12
+msgid "التصنيف"
+msgstr "Category"
+
+#: App/modules/admin/views/option/opt_cat.php:15
+#: App/modules/admin/views/typecar/add.php:16
+#: App/modules/admin/views/typecar/edit.php:14
+msgid "التصنيف "
+msgstr "Category"
+
+#: App/modules/admin/views/option/opt_cat.php:16
+#: App/modules/admin/views/typecar/add.php:17
+#: App/modules/admin/views/typecar/edit.php:15
+msgid "اختر التصنيف"
+msgstr "Category"
+
+#: App/modules/admin/views/option/opt_cat.php:31
+#: App/modules/admin/views/pages/add.php:33
+#: App/modules/admin/views/pages/edit.php:33
+msgid "الترتيب"
+msgstr "Ranking"
+
+#: App/modules/admin/views/pages/add.php:10
+msgid "اضافة صفحه جديده"
+msgstr "Add a new page"
+
+#: App/modules/admin/views/pages/add.php:16
+#: App/modules/admin/views/pages/edit.php:16
+msgid "اسم الصفحه"
+msgstr "Name Page"
+
+#: App/modules/admin/views/pages/add.php:40
+#: App/modules/admin/views/pages/edit.php:40
+#: App/modules/cars/views/index/friend.php:42
+#: App/modules/cars/views/index/sendmsg.php:29
+#: App/modules/messages/views/cp/send.php:63
+#: App/template/hragkom/cars/index/carid.php:330
+#: App/template/hragkom/cars/index/friend.php:42
+#: App/template/hragkom/cars/index/sendmsg.php:29
+#: App/template/style1/cars/index/friend.php:42
+#: App/template/style1/cars/index/sendmsg.php:29
+msgid "المحتوى"
+msgstr "Content"
+
+#: App/modules/admin/views/pages/edit.php:10
+msgid "تعديل صفحه "
+msgstr "Edit Page"
+
+#: App/modules/admin/views/settings/index.php:8
+msgid "ادارة الموقع"
+msgstr "Site management"
+
+#: App/modules/admin/views/settings/index.php:24
+msgid "اسم الموقع"
+msgstr "Site Name"
+
+#: App/modules/admin/views/settings/index.php:31
+msgid "رابط الموقع"
+msgstr "URL"
+
+#: App/modules/admin/views/settings/index.php:38
+msgid "البريد الرسمى"
+msgstr "E-official"
+
+#: App/modules/admin/views/settings/index.php:45
+msgid "الكلمات الدليلية"
+msgstr "Tagged"
+
+#: App/modules/admin/views/settings/index.php:52
+msgid "تفعيل التعليقات"
+msgstr "Activate Comments"
+
+#: App/modules/admin/views/settings/index.php:66
+msgid "حاله مراجعه التعليقات"
+msgstr "If you review the comments"
+
+#: App/modules/admin/views/settings/index.php:78
+msgid "وصف الموقعى"
+msgstr "Description OSI"
+
+#: App/modules/admin/views/settings/index.php:85
+msgid "حالة الموقع"
+msgstr "Status"
+
+#: App/modules/admin/views/settings/index.php:96
+msgid "رسالة اغلاق الموقع"
+msgstr "Message shut Site"
+
+#: App/modules/admin/views/settings/index.php:107
+msgid "الموقع"
+msgstr "Location"
+
+#: App/modules/admin/views/settings/index.php:115
+#: App/template/hragkom/style.php:114
+msgid "اتصل بنا"
+msgstr "contact"
+
+#: App/modules/admin/views/settings/index.php:123
+msgid "البريد"
+msgstr "email"
+
+#: App/modules/admin/views/settings/index.php:131
+msgid "الفيس بوك"
+msgstr ""
+
+#: App/modules/admin/views/settings/index.php:138
+msgid "google+"
+msgstr ""
+
+#: App/modules/admin/views/settings/index.php:146
+msgid "تويتر"
+msgstr ""
+
+#: App/modules/admin/views/settings/index.php:153
+msgid "يوتيوب"
+msgstr ""
+
+#: App/modules/admin/views/settings/index.php:163
+#: App/modules/admin/views/settings/index.php:171
+msgid "اسم الجلسة"
+msgstr "Session Name"
+
+#: App/modules/admin/views/settings/index.php:179
+msgid "token"
+msgstr ""
+
+#: App/modules/admin/views/settings/index.php:193
+msgid "اللغه الافتراضية"
+msgstr "The default language"
+
+#: App/modules/admin/views/settings/index.php:205
+msgid "العملة الافتراضية"
+msgstr "Virtual Currency"
+
+#: App/modules/admin/views/settings/index.php:223
+msgid "التصميم الافتراضى"
+msgstr "Default Design"
+
+#: App/modules/admin/views/settings/index.php:233
+msgid "الصفحه الرئيسية"
+msgstr "Home page"
+
+#: App/modules/admin/views/shows/add.php:8
+msgid "اضافة معرض جديد"
+msgstr "Add new exhibition"
+
+#: App/modules/admin/views/shows/add.php:35
+#: App/modules/admin/views/shows/edit.php:50
+msgid "الاعلان"
+msgstr "Announcement"
+
+#: App/modules/admin/views/shows/add.php:44
+#: App/modules/admin/views/shows/edit.php:39
+msgid "نوع المعرض"
+msgstr "Type exhibition"
+
+#: App/modules/admin/views/shows/add.php:47
+#: App/modules/admin/views/shows/edit.php:42
+msgid "حدد نوع المعرض"
+msgstr "Select the type of exhibition"
+
+#: App/modules/admin/views/shows/add.php:48
+#: App/modules/admin/views/shows/edit.php:43
+msgid "بيع وشراء"
+msgstr "Buy and sell"
+
+#: App/modules/admin/views/shows/add.php:49
+#: App/modules/admin/views/shows/edit.php:44
+msgid "تاجير"
+msgstr "Rental"
+
+#: App/modules/admin/views/shows/edit.php:8
+msgid "تعديل المعارض"
+msgstr "Amendment exhibitions"
+
+#: App/modules/admin/views/typecar/add.php:8
+#: App/modules/admin/views/typecar/edit.php:8
+msgid "اضافة موديل سيارة"
+msgstr "Add your model of car"
+
+#: App/modules/admin/views/typecar/add.php:27
+#: App/modules/admin/views/typecar/edit.php:25
+msgid "اختر الموديل الرئيسى"
+msgstr "Select Model main"
+
+#: App/modules/admin/views/typecar/add.php:29
+#: App/modules/admin/views/typecar/edit.php:27
+msgid "الموديل "
+msgstr "Model"
+
+#: App/modules/admin/views/typecar/add.php:30
+msgid "حدد  قسم اولا"
+msgstr "Select First Division"
+
+#: App/modules/admin/views/typecar/edit.php:28
+msgid "الموديل رئيسى"
+msgstr "Model key"
+
+#: App/modules/admin/views/users/add_group.php:8
+#: App/modules/admin/views/users/group_edit.php:8
+msgid "أدارة الصلاحيات"
+msgstr "Management powers"
+
+#: App/modules/admin/views/users/add_group.php:16
+#: App/modules/admin/views/users/group_edit.php:16
+msgid "اسم المجموعه"
+msgstr "Group Name"
+
+#: App/modules/admin/views/users/add_group.php:23
+msgid "الصلاحيات"
+msgstr "Powers"
+
+#: App/modules/admin/views/users/add_permis.php:8
+#: App/modules/admin/views/users/permis.php:8
+msgid "اضافة صلاحية جديد"
+msgstr "Add the validity of a new"
+
+#: App/modules/admin/views/users/add_permis.php:16
+#: App/modules/admin/views/users/permis.php:16
+#: App/modules/pages/views/index/contact.php:15
+#: App/template/hragkom/pages/index/contact.php:17
+#: App/template/style1/pages/index/contact.php:15
+msgid "الاسم "
+msgstr "name"
+
+#: App/modules/admin/views/users/add_permis.php:23
+#: App/modules/admin/views/users/permis.php:23
+msgid "الكود "
+msgstr "code"
+
+#: App/modules/admin/views/users/edit.php:8
+msgid "تعديل العضوية"
+msgstr "Organic amendment"
+
+#: App/modules/admin/views/users/edit.php:93
+msgid "حالة العضو"
+msgstr "User Status"
+
+#: App/modules/admin/views/users/edit.php:111
+#: App/modules/users/views/index/profile.php:85
+#: App/modules/users/views/register/register.php:132
+#: App/template/hragkom/users/index/profile.php:50
+#: App/template/hragkom/users/register/register.php:126
+#: App/template/style1/users/index/profile.php:85
+#: App/template/style1/users/register/register.php:132
+msgid "التسجيل للحصول على اخر الاخبار"
+msgstr "Register for Latest News"
+
+#: App/modules/cars/controllers/indexController.php:390
+#: App/modules/cars/controllers/indexController.php:531
+msgid "انت غير مسجل دخول"
+msgstr "You are not logged in"
+
+#: App/modules/cars/controllers/searchController.php:46
+msgid "السيارة غير متوفرة بالموقع"
+msgstr "The car is available Active"
+
+#: App/modules/cars/views/index/friend.php:2
+#: App/template/hragkom/cars/index/carid.php:158
+#: App/template/hragkom/cars/index/friend.php:2
+#: App/template/style1/cars/index/friend.php:2
+msgid "ارسال الى صديق"
+msgstr "Send to Friend"
+
+#: App/modules/cars/views/index/friend.php:7
+#: App/template/hragkom/cars/index/friend.php:7
+#: App/template/style1/cars/index/friend.php:7
+msgid "اسم صديقك"
+msgstr "Your friend's name"
+
+#: App/modules/cars/views/index/friend.php:14
+#: App/template/hragkom/cars/index/friend.php:14
+#: App/template/style1/cars/index/friend.php:14
+msgid "بريد صديقك"
+msgstr "E-mail"
+
+#: App/modules/cars/views/index/friend.php:21
+#: App/template/hragkom/cars/index/friend.php:21
+#: App/template/style1/cars/index/friend.php:21
+msgid "اسمك"
+msgstr "name"
+
+#: App/modules/cars/views/index/friend.php:28
+#: App/template/hragkom/cars/index/friend.php:28
+#: App/template/style1/cars/index/friend.php:28
+msgid "بريدك الالكترونى"
+msgstr "email"
+
+#: App/modules/cars/views/index/friend.php:35
+#: App/modules/cars/views/index/sendmsg.php:22
+#: App/template/hragkom/cars/index/carid.php:323
+#: App/template/hragkom/cars/index/friend.php:35
+#: App/template/hragkom/cars/index/sendmsg.php:22
+#: App/template/hragkom/cars/mycars/index.php:17
+#: App/template/style1/cars/index/friend.php:35
+#: App/template/style1/cars/index/sendmsg.php:22
+msgid "العنوان"
+msgstr "address"
+
+#: App/modules/cars/views/index/friend.php:49
+#: App/modules/cars/views/index/rentid.php:226
+#: App/modules/pages/views/index/a3len.php:88
+#: App/modules/pages/views/index/contact.php:63
+#: App/modules/users/views/login/lostpassword.php:24
+#: App/template/hragkom/cars/index/friend.php:49
+#: App/template/hragkom/cars/index/rentid.php:226
+#: App/template/hragkom/pages/index/a3len.php:69
+#: App/template/hragkom/pages/index/contact.php:58
+#: App/template/hragkom/users/login/lostpassword.php:19
+#: App/template/style1/cars/index/friend.php:49
+#: App/template/style1/cars/index/rentid.php:226
+#: App/template/style1/pages/index/a3len.php:88
+#: App/template/style1/pages/index/contact.php:63
+#: App/template/style1/users/login/lostpassword.php:24
+msgid "التحقق البشرى"
+msgstr "Verification human"
+
+#: App/modules/cars/views/index/friend.php:62
+#: App/modules/cars/views/index/sendmsg.php:40
+#: App/modules/messages/views/cp/send.php:81
+#: App/modules/pages/views/index/a3len.php:97
+#: App/modules/pages/views/index/contact.php:72
+#: App/modules/users/views/login/lostpassword.php:33
+#: App/template/admin/login.php:94
+#: App/template/hragkom/cars/index/friend.php:64
+#: App/template/hragkom/cars/index/sendmsg.php:40
+#: App/template/hragkom/pages/index/a3len.php:79
+#: App/template/hragkom/pages/index/contact.php:68
+#: App/template/hragkom/users/login/lostpassword.php:32
+#: App/template/style1/cars/index/friend.php:62
+#: App/template/style1/cars/index/sendmsg.php:40
+#: App/template/style1/pages/index/a3len.php:97
+#: App/template/style1/pages/index/contact.php:72
+#: App/template/style1/users/login/lostpassword.php:33
+msgid "ارسال"
+msgstr "send"
+
+#: App/modules/cars/views/index/rentid.php:132
+#: App/template/hragkom/cars/index/rentid.php:132
+#: App/template/style1/cars/index/rentid.php:132
+msgid "الاسم الاول "
+msgstr "Forename"
+
+#: App/modules/cars/views/index/rentid.php:168
+#: App/template/hragkom/cars/index/rentid.php:168
+#: App/template/style1/cars/index/rentid.php:168
+msgid "تاكيد البريد الالكترونى"
+msgstr "E-mail confirmation"
+
+#: App/modules/cars/views/index/rentid.php:186
+#: App/modules/messages/views/cp/send.php:41
+#: App/template/hragkom/cars/index/rentid.php:186
+#: App/template/style1/cars/index/rentid.php:186
+msgid "مكان الاستلام"
+msgstr "Place of receipt"
+
+#: App/modules/cars/views/index/rentid.php:195
+#: App/template/hragkom/cars/index/rentid.php:195
+#: App/template/style1/cars/index/rentid.php:195
+msgid "تاريخ  الاستلام"
+msgstr "تاريخ  الاستلام"
+
+#: App/modules/cars/views/index/rentid.php:206
+#: App/modules/messages/views/cp/send.php:56
+#: App/template/hragkom/cars/index/rentid.php:206
+#: App/template/style1/cars/index/rentid.php:206
+msgid "تاريخ التسليم"
+msgstr "Delivery Date"
+
+#: App/modules/cars/views/index/rentid.php:231
+#: App/template/hragkom/cars/index/rentid.php:231
+#: App/template/style1/cars/index/rentid.php:231
+msgid "احجز"
+msgstr "Book"
+
+#: App/modules/cars/views/index/sendmsg.php:2
+#: App/template/hragkom/cars/index/sendmsg.php:2
+#: App/template/style1/cars/index/sendmsg.php:2
+msgid "ارسل رسالة"
+msgstr "Send a message"
+
+#: App/modules/cars/views/mycars/add.php:5
+#: App/modules/cars/views/mycars/edit.php:5
+#: App/template/hragkom/cars/index/carid.php:6
+#: App/template/style1/cars/mycars/add.php:5
+#: App/template/style1/cars/mycars/edit.php:5
+msgid "اضافة سيارة "
+msgstr "add cars"
+
+#: App/modules/cars/views/mycars/add.php:12
+#: App/modules/cars/views/mycars/edit.php:12
+#: App/template/hragkom/cars/search/form.php:5
+#: App/template/hragkom/cars/search/search.php:11
+#: App/template/style1/cars/mycars/add.php:12
+#: App/template/style1/cars/mycars/edit.php:12
+msgid "نوع السيارة"
+msgstr "model"
+
+#: App/modules/cars/views/mycars/add.php:25
+#: App/modules/cars/views/mycars/edit.php:25
+#: App/template/style1/cars/mycars/add.php:25
+#: App/template/style1/cars/mycars/edit.php:25
+msgid "موديل السيارة"
+msgstr "Model"
+
+#: App/modules/cars/views/mycars/add.php:34
+#: App/modules/cars/views/mycars/edit.php:37
+#: App/template/hragkom/cars/index/carid.php:73
+#: App/template/hragkom/cars/mycars/index.php:21
+#: App/template/hragkom/cars/search/form.php:24
+#: App/template/hragkom/cars/search/search.php:31
+#: App/template/style1/cars/mycars/add.php:34
+#: App/template/style1/cars/mycars/edit.php:37
+msgid "سنة الصنع"
+msgstr "Year"
+
+#: App/modules/cars/views/mycars/add.php:36
+#: App/modules/cars/views/mycars/edit.php:39
+#: App/template/style1/cars/mycars/add.php:36
+#: App/template/style1/cars/mycars/edit.php:39
+msgid "اختر سنة الصنع"
+msgstr "Select Year"
+
+#: App/modules/cars/views/mycars/add.php:59
+#: App/modules/cars/views/mycars/edit.php:63
+#: App/template/style1/cars/mycars/add.php:59
+#: App/template/style1/cars/mycars/edit.php:63
+msgid "المسافة المقطوعه"
+msgstr "Odometer"
+
+#: App/modules/cars/views/mycars/add.php:61
+#: App/modules/cars/views/mycars/edit.php:65
+#: App/template/style1/cars/mycars/add.php:61
+#: App/template/style1/cars/mycars/edit.php:65
+msgid "كم"
+msgstr "km"
+
+#: App/modules/cars/views/mycars/add.php:66
+#: App/modules/cars/views/mycars/edit.php:70
+#: App/template/style1/cars/mycars/add.php:66
+#: App/template/style1/cars/mycars/edit.php:70
+msgid "ناقل الحركة"
+msgstr "Transmission"
+
+#: App/modules/cars/views/mycars/add.php:78
+#: App/modules/cars/views/mycars/edit.php:82
+#: App/template/style1/cars/mycars/add.php:78
+#: App/template/style1/cars/mycars/edit.php:82
+msgid "حالة السيارة"
+msgstr "Car Condition"
+
+#: App/modules/cars/views/mycars/add.php:91
+#: App/modules/cars/views/mycars/edit.php:95
+#: App/template/style1/cars/mycars/add.php:91
+#: App/template/style1/cars/mycars/edit.php:95
+msgid "الجسم الخارجى"
+msgstr "The external body"
+
+#: App/modules/cars/views/mycars/add.php:104
+#: App/modules/cars/views/mycars/edit.php:108
+#: App/template/style1/cars/mycars/add.php:104
+#: App/template/style1/cars/mycars/edit.php:108
+msgid "الاستمارة"
+msgstr "Form"
+
+#: App/modules/cars/views/mycars/add.php:153
+#: App/modules/cars/views/mycars/edit.php:169
+#: App/template/style1/cars/mycars/add.php:153
+#: App/template/style1/cars/mycars/edit.php:169
+msgid "مميزات السيارة"
+msgstr "Vehicle Features"
+
+#: App/modules/cars/views/mycars/add.php:168
+#: App/modules/cars/views/mycars/edit.php:166
+#: App/template/style1/cars/mycars/add.php:168
+#: App/template/style1/cars/mycars/edit.php:166
+msgid "المواصفات الاضافية"
+msgstr "Extra Specifications"
+
+#: App/modules/cars/views/mycars/add.php:174
+#: App/modules/cars/views/mycars/edit.php:186
+#: App/template/style1/cars/mycars/add.php:174
+#: App/template/style1/cars/mycars/edit.php:186
+msgid "اضافة صورة"
+msgstr "add images"
+
+#: App/modules/cars/views/mycars/edit.php:158
+#: App/template/style1/cars/mycars/edit.php:158
+msgid "نوع الاعلان"
+msgstr "Type announcement"
+
+#: App/modules/cars/views/mycars/index.php:2
+#: App/template/style1/cars/mycars/index.php:2
+msgid "ادارة  سياراتى"
+msgstr "Management of my cars"
+
+#: App/modules/cars/views/mycars/index.php:26 App/views/hragkom/index.php:63
+msgid "درهم"
+msgstr "Dir"
+
+#: App/modules/cars/views/mycars/index.php:29
+#: App/template/hragkom/cars/mycars/index.php:41
+msgid "مشاهده الاعلان"
+msgstr "View Announcement"
+
+#: App/modules/cars/views/mycars/index.php:30
+#: App/template/hragkom/cars/mycars/index.php:42
+msgid "تعديل الاعلان"
+msgstr "Edit this ad"
+
+#: App/modules/cars/views/mycars/index.php:31
+#: App/template/hragkom/cars/mycars/index.php:43
+msgid "حذف الاعلان"
+msgstr "Delete announcement"
+
+#: App/modules/cars/views/mycars/index.php:33
+msgid " موافق عليه "
+msgstr "Approved"
+
+#: App/modules/cars/views/mycars/index.php:33
+msgid " فى انتظار المراجعه "
+msgstr "Waiting for audit"
+
+#: App/modules/cars/views/mycars/index.php:48
+msgid "الاولى"
+msgstr "First"
+
+#: App/modules/cars/views/mycars/index.php:55
+msgid "الاخيرة"
+msgstr "The latest"
+
+#: App/modules/messages/views/cp/index.php:46
+msgid "تاكيد الحجز"
+msgstr "Confirm Booking"
+
+#: App/modules/messages/views/cp/index.php:47
+msgid "رفض الحجز"
+msgstr "Booking rejected"
+
+#: App/modules/messages/views/cp/send.php:8
+msgid "ارسالة رسالة للعميل"
+msgstr "Send a message to the client"
+
+#: App/modules/messages/views/cp/send.php:49
+msgid "تاريخ الاستلام"
+msgstr "Date Received"
+
+#: App/modules/pages/views/index/a3len.php:24
+#: App/template/hragkom/pages/index/a3len.php:17
+#: App/template/style1/pages/index/a3len.php:24
+msgid "الاسم الثلاثى"
+msgstr "Name trio"
+
+#: App/modules/pages/views/index/a3len.php:34
+#: App/template/hragkom/pages/index/a3len.php:25
+#: App/template/style1/pages/index/a3len.php:34
+msgid "الصفة الوظيفية"
+msgstr "Functional capacity"
+
+#: App/modules/pages/views/index/a3len.php:43
+#: App/template/hragkom/pages/index/a3len.php:33
+#: App/template/style1/pages/index/a3len.php:43
+msgid "اسم الشركة"
+msgstr "Company Name"
+
+#: App/modules/pages/views/index/a3len.php:52
+#: App/template/hragkom/pages/index/a3len.php:41
+#: App/template/style1/pages/index/a3len.php:52
+msgid "نشاط الشركة"
+msgstr "Business Activity"
+
+#: App/modules/pages/views/index/a3len.php:79
+#: App/template/hragkom/pages/index/a3len.php:63
+#: App/template/style1/pages/index/a3len.php:79
+msgid "الموقع الالكترونى"
+msgstr "url site"
+
+#: App/modules/pages/views/index/contact.php:44
+#: App/template/hragkom/pages/index/contact.php:42
+#: App/template/style1/pages/index/contact.php:44
+msgid "الموضوع"
+msgstr "subject"
+
+#: App/modules/pages/views/index/contact.php:54
+#: App/template/hragkom/cars/index/showsid.php:275
+#: App/template/hragkom/pages/index/contact.php:50
+#: App/template/style1/pages/index/contact.php:54
+#: App/views/hragkom/index.php:116 App/views/hragkom/index.php:163
+msgid "التفاصيل"
+msgstr "Details"
+
+#: App/modules/users/controllers/loginController.php:56
+msgid "الباسورد خطا"
+msgstr "error password"
+
+#: App/modules/users/controllers/loginController.php:106
+msgid "طريقة استرجاع الباسورد"
+msgstr "Password retrieval method"
+
+#: App/modules/users/controllers/registerController.php:125
+msgid "تفعيل حسابك  "
+msgstr "active acount"
+
+#: App/modules/users/controllers/registerController.php:150
+msgid ""
+"تم ارسال رسالة تفعيل الى بريدك الالكتروني قم بالضغط على الرابط الموضح فيه "
+"ليتم تفعيل الحساب "
+msgstr ""
+"Activation message has been sent to your email address by clicking on the "
+"link shown it to be activated Accoun"
+
+#: App/modules/users/views/index/password.php:21
+#: App/template/hragkom/users/index/password.php:11
+#: App/template/style1/users/index/password.php:21
+msgid "كلمة المرور الحالية"
+msgstr "Current Password"
+
+#: App/modules/users/views/index/password.php:32
+#: App/template/hragkom/users/index/password.php:19
+#: App/template/style1/users/index/password.php:32
+msgid "كلمة المرور الجديده"
+msgstr "The new password"
+
+#: App/modules/users/views/login/login.php:45
+#: App/template/style1/users/login/login.php:45
+msgid "تذكرني"
+msgstr "Remember me"
+
+#: App/modules/users/views/login/login.php:49
+#: App/template/style1/users/login/login.php:49
+msgid "تسجيل الدخول"
+msgstr "Login"
+
+#: App/modules/users/views/login/newpass.php:22
+#: App/template/hragkom/users/login/newpass.php:11
+#: App/template/style1/users/login/newpass.php:22
+msgid "كلمة المرور الجديد"
+msgstr "The new password"
+
+#: App/modules/users/views/login/newpass.php:33
+#: App/template/hragkom/users/login/newpass.php:19
+#: App/template/style1/users/login/newpass.php:33
+msgid "اعادة كلمة المرور "
+msgstr "Re password"
+
+#: App/modules/users/views/register/register.php:80
+#: App/template/hragkom/users/register/register.php:76
+#: App/template/style1/users/register/register.php:80
+msgid "البريد الالكتروني"
+msgstr "Email"
+
+#: App/modules/users/views/register/register.php:113
+#: App/template/hragkom/cars/index/carid.php:338
+#: App/template/hragkom/cars/index/spam.php:32
+#: App/template/hragkom/users/register/register.php:106
+#: App/template/style1/users/register/register.php:113
+msgid "التحقق البشري"
+msgstr "Human verification"
+
+#: App/modules/users/views/register/register.php:127
+#: App/template/hragkom/users/register/register.php:121
+#: App/template/style1/users/register/register.php:127
+msgid "اوفق على اتفاقية استخدام الموقع"
+msgstr "More satisfactory agreement on use of the site"
+
+#: App/modules/users/views/register/register.php:127
+#: App/template/hragkom/users/register/register.php:121
+#: App/template/style1/users/register/register.php:127
+msgid "مشاهده اتفاقية الاستخدام"
+msgstr "See Terms of Use"
+
+#: App/modules/users/views/register/register.php:140
+#: App/template/hragkom/users/register/register.php:133
+#: App/template/style1/users/register/register.php:140
+msgid "تسجيل"
+msgstr "register"
+
+#: App/template/admin/login.php:54
+msgid "تم تسجيل الدخول بنجاح"
+msgstr "You are logged in successfully"
+
+#: App/template/admin/login.php:65
+msgid "من فضلك قم بتسجيل الدخول"
+msgstr "Please log in"
+
+#: App/template/admin/login.php:72 App/template/hragkom/sider.php:50
+#: App/template/hragkom/style.php:62
+#: App/template/hragkom/users/login/login.php:36
+msgid "تسجيل دخول"
+msgstr "Login"
+
+#: App/template/admin/login.php:75 App/template/admin/login.php:84
+#: App/template/hragkom/users/login/lostpassword.php:7
+msgid "استرجاع كلمة المرور"
+msgstr "Password Recovery"
+
+#: App/template/admin/login.php:75
+msgid "اضغط هنا"
+msgstr "Click here"
+
+#: App/template/admin/login.php:85
+msgid "الرجاء ادخال كلمة المرور لارسال كلمة السر الجديده على البريد"
+msgstr "Please enter your password to send a new password to the e"
+
+#: App/template/admin/login.php:93
+msgid "رجوع"
+msgstr "Back"
+
+#: App/template/admin/style.php:9
+msgid "لوحة تحكم الادارة"
+msgstr "Admin Control Panel"
+
+#: App/template/admin/style.php:79
+msgid "اهلا بك يا ادمن"
+msgstr "Welcome O Op"
+
+#: App/template/admin/style.php:120
+msgid "اضافة "
+msgstr "add"
+
+#: App/template/admin/style.php:121
+msgid "ادارة"
+msgstr "admin"
+
+#: App/template/admin/style.php:136
+msgid "ادارة الموديلات"
+msgstr "Module Manager"
+
+#: App/template/admin/style.php:140
+msgid "اضافة نوع"
+msgstr "add model"
+
+#: App/template/admin/style.php:143
+msgid "ادارة موديلات "
+msgstr "Models Management"
+
+#: App/template/hragkom/cars/index/accept.php:7
+msgid "تفاصيل الاعلان"
+msgstr "details"
+
+#: App/template/hragkom/cars/index/accept.php:9
+#: App/template/hragkom/cars/index/accept.php:30
+msgid "رقم الاعلان"
+msgstr "# ID"
+
+#: App/template/hragkom/cars/index/accept.php:10
+#: App/template/hragkom/cars/index/accept.php:31
+msgid "اسم الاعلان"
+msgstr "Title"
+
+#: App/template/hragkom/cars/index/accept.php:11
+#: App/template/hragkom/cars/index/accept.php:32
+msgid "السعر المتفق عليه"
+msgstr "Price"
+
+#: App/template/hragkom/cars/index/accept.php:12
+#: App/template/hragkom/cars/index/accept.php:33
+#: App/template/hragkom/cars/index/carid.php:21
+msgid "العضو "
+msgstr "Member"
+
+#: App/template/hragkom/cars/index/accept.php:18
+msgid "هل توافق علي المزايدة"
+msgstr "Do you agree with the bid"
+
+#: App/template/hragkom/cars/index/accept.php:20
+msgid " نعم موافق "
+msgstr "yes"
+
+#: App/template/hragkom/cars/index/accept.php:22
+msgid "غير موافق"
+msgstr "Not"
+
+#: App/template/hragkom/cars/index/accept.php:27
+msgid "رسالة للعضو"
+msgstr "Message of User"
+
+#: App/template/hragkom/cars/index/carid.php:17
+msgid "العنوان "
+msgstr "Title"
+
+#: App/template/hragkom/cars/index/carid.php:27
+msgid "رقم الاعلان "
+msgstr "Listing ID"
+
+#: App/template/hragkom/cars/index/carid.php:31
+#: App/template/hragkom/cars/mycars/index.php:23
+msgid "تاريخ النشر "
+msgstr "Date of publication"
+
+#: App/template/hragkom/cars/index/carid.php:35
+msgid "الحد الادني "
+msgstr "minimum"
+
+#: App/template/hragkom/cars/index/carid.php:39
+#: App/template/hragkom/cars/index/showsid.php:161
+#: App/template/hragkom/cars/search/search.php:161
+#: App/template/hragkom/index/index.php:162
+msgid "عدد المزايدات"
+msgstr "bidding"
+
+#: App/template/hragkom/cars/index/carid.php:44
+msgid "تاريخ الانتهاء"
+msgstr "End"
+
+#: App/template/hragkom/cars/index/carid.php:48
+#: App/template/hragkom/cars/index/showsid.php:141
+#: App/template/hragkom/cars/search/search.php:141
+#: App/template/hragkom/index/index.php:142
+msgid "السعر الحالي"
+msgstr "Price Now"
+
+#: App/template/hragkom/cars/index/carid.php:61
+msgid "معلومات الاعلان"
+msgstr "Information"
+
+#: App/template/hragkom/cars/index/carid.php:65
+msgid "النوع "
+msgstr "type"
+
+#: App/template/hragkom/cars/index/carid.php:90
+msgid "التفاصيل "
+msgstr "The details"
+
+#: App/template/hragkom/cars/index/carid.php:123
+msgid "الوصف "
+msgstr "Description"
+
+#: App/template/hragkom/cars/index/carid.php:150
+msgid "طريقة التواصل"
+msgstr "The way you communicate"
+
+#: App/template/hragkom/cars/index/carid.php:158
+#: App/template/hragkom/cars/index/carid.php:225
+#: App/template/hragkom/cars/index/spam.php:42
+msgid "تبليغ"
+msgstr "Report"
+
+#: App/template/hragkom/cars/index/carid.php:164
+msgid "المزايدات"
+msgstr "Bids"
+
+#: App/template/hragkom/cars/index/carid.php:166
+msgid "انتظر من فضلك"
+msgstr "Please Wait"
+
+#: App/template/hragkom/cars/index/carid.php:175
+msgid "اضف قيمة"
+msgstr "Add amount"
+
+#: App/template/hragkom/cars/index/carid.php:183
+msgid "زد للاعلان"
+msgstr "Announcement"
+
+#: App/template/hragkom/cars/index/carid.php:198
+msgid "انتهت فترة هذا الاعلان"
+msgstr "This declaration has expired"
+
+#: App/template/hragkom/cars/index/carid.php:211
+msgid "اسم العضو"
+msgstr "Name"
+
+#: App/template/hragkom/cars/index/carid.php:212
+msgid "تاريخ الاضافة"
+msgstr "Date Add"
+
+#: App/template/hragkom/cars/index/carid.php:227
+msgid "قبول السعر"
+msgstr "Accept"
+
+#: App/template/hragkom/cars/index/carid.php:230
+msgid "تم اخيار هذا السعر"
+msgstr "This price has been selected"
+
+#: App/template/hragkom/cars/index/carid.php:253
+msgid "قبول المزايدة"
+msgstr "Bid Acceptance"
+
+#: App/template/hragkom/cars/index/carid.php:302
+msgid "اضف تعليق"
+msgstr "Add comment"
+
+#: App/template/hragkom/cars/index/carid.php:359
+msgid "يجب تسجيل الدخول لاضافة تعليق"
+msgstr "You must login to post a comment."
+
+#: App/template/hragkom/cars/index/friend.php:37
+msgid "رسالة من صديق :اسمك:"
+msgstr "usernameA message from a friend: Your name:"
+
+#: App/template/hragkom/cars/index/friend.php:44
+msgid ""
+"اهلا بك يا [اسم صديقك] <br /> لقد ارسل لك [اسمك]<br> رابط اعلان من موقع "
+msgstr ""
+"Welcome to my [ friend's name ] <br /> I've sent you [ name ] <br> link "
+"announcement of the site"
+
+#: App/template/hragkom/cars/index/friend.php:44
+msgid "الرابط التالى"
+msgstr "Next link"
+
+#: App/template/hragkom/cars/index/ok.php:3
+msgid "سوف تصلك رسالة تأكيد حجزك على بريدك الالكترونى عند استكمال البيانات"
+msgstr ""
+"You will receive a confirmation message on the reservation e-mail upon "
+"completion of data"
+
+#: App/template/hragkom/cars/index/showsid.php:16
+#: App/template/hragkom/index/index.php:16
+msgid "اختيار السلع"
+msgstr "Section"
+
+#: App/template/hragkom/cars/index/showsid.php:35
+#: App/template/hragkom/index/index.php:35
+msgid "مزاد مدينتي"
+msgstr "City"
+
+#: App/template/hragkom/cars/index/showsid.php:72
+#: App/template/hragkom/index/index.php:72
+msgid "ابحث برقم الاعلان"
+msgstr "Search by listing ID"
+
+#: App/template/hragkom/cars/index/showsid.php:76
+#: App/template/hragkom/cars/search/search.php:75
+#: App/template/hragkom/index/index.php:76 App/template/hragkom/style.php:134
+msgid "بحث"
+msgstr "search"
+
+#: App/template/hragkom/cars/index/showsid.php:151
+#: App/template/hragkom/cars/search/search.php:151
+#: App/template/hragkom/index/index.php:152
+msgid "الحد الادني للمزايدة"
+msgstr "The minimum for bidding"
+
+#: App/template/hragkom/cars/index/showsid.php:183
+#: App/template/hragkom/cars/search/search.php:183
+#: App/template/hragkom/index/index.php:184
+msgid "انتهاء فترة الاعلان"
+msgstr "Expiration "
+
+#: App/template/hragkom/cars/index/showsid.php:183
+#: App/template/hragkom/cars/search/search.php:183
+#: App/template/hragkom/index/index.php:184
+msgid "وقت انتهاء المزايدة"
+msgstr "Bid ends soon"
+
+#: App/template/hragkom/cars/index/showsid.php:217
+#: App/template/hragkom/cars/search/search.php:217
+#: App/template/hragkom/index/index.php:218
+msgid "اريد ان ازايد"
+msgstr "I want that"
+
+#: App/template/hragkom/cars/index/showsid.php:253
+msgid "التالي"
+msgstr "Next"
+
+#: App/template/hragkom/cars/index/showsid.php:273
+#: App/template/hragkom/cars/mycars/add.php:65
+#: App/template/hragkom/cars/mycars/edit.php:47
+#: App/template/hragkom/cars/mycars/index.php:19 App/views/hragkom/index.php:61
+msgid "النوع"
+msgstr "type"
+
+#: App/template/hragkom/cars/index/spam.php:2
+msgid "استمارة تبليغ عن مخالفة"
+msgstr "Infraction Form"
+
+#: App/template/hragkom/cars/index/spam.php:10
+msgid "نوع التبليغ"
+msgstr "Report Type"
+
+#: App/template/hragkom/cars/index/spam.php:12
+msgid "مخالف"
+msgstr "Contrary to"
+
+#: App/template/hragkom/cars/index/spam.php:14
+msgid "محتال"
+msgstr "Con man"
+
+#: App/template/hragkom/cars/index/spam.php:16
+msgid "غير لائق"
+msgstr "Unbecoming"
+
+#: App/template/hragkom/cars/index/spam.php:18
+msgid "اخرى"
+msgstr "other"
+
+#: App/template/hragkom/cars/index/spam.php:24
+msgid "سبب التبليغ"
+msgstr "Reporting Reason"
+
+#: App/template/hragkom/cars/mycars/edit.php:3
+msgid "تعديل المحتوى "
+msgstr "Edit"
+
+#: App/template/hragkom/cars/mycars/index.php:7
+msgid "ادارة  الاعلانات"
+msgstr "Edit "
+
+#: App/template/hragkom/cars/mycars/index.php:24
+msgid "اعدادات"
+msgstr "Settings"
+
+#: App/template/hragkom/cars/mycars/index.php:25
+msgid "حالة الاعلان"
+msgstr "The case"
+
+#: App/template/hragkom/cars/search/form.php:31
+msgid "الحد الادنى للسعر"
+msgstr "Minimum price"
+
+#: App/template/hragkom/cars/search/form.php:51
+msgid "الحد الاعلى للسعر"
+msgstr "The upper limit of the price"
+
+#: App/template/hragkom/cars/search/form.php:76
+msgid "التالى"
+msgstr "next"
+
+#: App/template/hragkom/cars/search/search.php:6
+msgid "ابحث عن سياراتك"
+msgstr "cars"
+
+#: App/template/hragkom/cars/search/search.php:65
+msgid "السعر بين"
+msgstr "Price between"
+
+#: App/template/hragkom/index/index.php:57
+msgid "تسجيل مزاد جديد"
+msgstr "Register New Mazad"
+
+#: App/template/hragkom/pages/index/a3len.php:11
+msgid "يرجى ملئ الاستمارة التالية ليتسني لنا خدمتكم فى اسرع وقت ممكن"
+msgstr ""
+"Please fill out the following form so that we can serve you as soon as "
+"possible"
+
+#: App/template/hragkom/pages/index/contact.php:11
+msgid "إملأء الاستمارة التالية ليتم التواصل معكم  بأقرب وقت ممكن"
+msgstr ""
+"Fill in the form below to be communicating with you as soon as possible"
+
+#: App/template/hragkom/sider.php:10
+msgid "اضف اعلان للمزاد"
+msgstr "Add New Ads"
+
+#: App/template/hragkom/sider.php:24
+#: App/template/hragkom/users/login/login.php:8
+msgid "منطقة العميل"
+msgstr "Client Area"
+
+#: App/template/hragkom/sider.php:47
+#: App/template/hragkom/users/login/login.php:33
+msgid "تذكرنى"
+msgstr "Remember me"
+
+#: App/template/hragkom/sider.php:59
+msgid "اهلا بك يا"
+msgstr "Wellcome"
+
+#: App/template/hragkom/sider.php:65 App/template/hragkom/style.php:65
+msgid "ادارة اعلاناتى  "
+msgstr "My Cars"
+
+#: App/template/hragkom/sider.php:67
+msgid "الرسائل"
+msgstr "Messages"
+
+#: App/template/hragkom/sider.php:72 App/template/hragkom/style.php:66
+msgid " اضف اعلان "
+msgstr "Add New"
+
+#: App/template/hragkom/sider.php:73 App/template/hragkom/style.php:67
+msgid " بياناتك الشخصية"
+msgstr "Your personal data"
+
+#: App/template/hragkom/sider.php:74 App/template/hragkom/style.php:68
+msgid " تسجيل الخروج"
+msgstr "Logout"
+
+#: App/template/hragkom/sider.php:88
+msgid "انواع السيارات"
+msgstr "cars"
+
+#: App/template/hragkom/sider.php:113
+msgid "حساب العمولة"
+msgstr "Commission expense"
+
+#: App/template/hragkom/sider.php:125
+msgid "ادخل القيمة الاجمالية للمزاد"
+msgstr "Enter the total value of the auction"
+
+#: App/template/hragkom/sider.php:132
+msgid "قيمة العمولة"
+msgstr "The commission"
+
+#: App/template/hragkom/style.php:63
+msgid "مستخدم جديد"
+msgstr "register"
+
+#: App/template/hragkom/style.php:71
+msgid "البحث"
+msgstr "search"
+
+#: App/template/hragkom/style.php:113
+msgid "الرئيسية"
+msgstr "index"
+
+#: App/template/hragkom/style.php:115
+msgid "السيارات"
+msgstr "cars"
+
+#: App/template/hragkom/style.php:116
+msgid "لوحات معدنية"
+msgstr "Car plate"
+
+#: App/template/hragkom/style.php:117
+msgid "عن الموقع"
+msgstr "About Us"
+
+#: App/template/hragkom/style.php:118
+msgid "طرق الدفع"
+msgstr "Payment Methods"
+
+#: App/template/hragkom/style.php:132
+msgid " بحث في الموقع"
+msgstr "Search In Site"
+
+#: App/template/hragkom/style.php:231
+msgid "جميع الحقوق محفوظة لموقع مزاد"
+msgstr ""
+
+#: App/template/hragkom/users/index/index.php:4
+msgid "يمكنك ادارة سياراتك المضافة  ومعلوماتك الشخصية من هنا"
+msgstr "You can manage your cars and your personal information is added here"
+
+#: App/template/hragkom/users/index/index.php:8
+msgid "تعديل بياناتك الشخصية"
+msgstr "Edit Profile"
+
+#: App/template/hragkom/users/index/index.php:9
+msgid "تغير الباسورد"
+msgstr "Change Password"
+
+#: App/template/hragkom/users/index/index.php:10
+msgid "مشاهده السيارات المضافة"
+msgstr "Show My Ads"
+
+#: App/template/hragkom/users/index/index.php:11
+msgid "اضافة سيارة جديده"
+msgstr "Add New Ads"
+
+#: App/template/hragkom/users/index/password.php:7
+#: App/template/hragkom/users/index/profile.php:7
+msgid "تعديل البيانات الشخصية"
+msgstr "Modification of personal data"
+
+#: App/template/hragkom/users/login/login.php:44
+msgid "نسيت كلمة السر"
+msgstr "Forgot Password"
+
+#: App/template/hragkom/users/login/newpass.php:7
+msgid "تعين كلمة مرور جديده"
+msgstr "Appoint a new password"
+
+#: App/template/hragkom/users/register/active.php:2
+msgid ""
+"تم تفعيل حسابك  <br>\n"
+"يمكنك  تسجيل دخول الان"
+msgstr ""
+"Was activated your account <br>\n"
+" You can login now"
+
+#: App/template/hragkom/users/register/active.php:4
+msgid "من هنا"
+msgstr "From here"
+
+#: App/template/hragkom/users/register/register.php:8
+#: App/template/style1/users/register/register.php:5
+msgid "انشاء حساب جديد"
+msgstr "Create new account"
+
+#: App/template/style1/users/register/register.php:146
+msgid "او يمكنك تسجيل الدخول عبر حسابك على الفيس بوك"
+msgstr "Or you can log in via your Facebook account"
+
+#: App/views/hragkom/index.php:8
+msgid "اضف اعلان  مميز"
+msgstr "add ads special"
+
+#: App/views/hragkom/index.php:11
+msgid "اضف اعلان ذهبى"
+msgstr "add ads new"
+
+#: App/views/hragkom/index.php:24
+msgid "ابدا بالبيع مجانا"
+msgstr "add ads free"
+
+#: App/views/hragkom/index.php:28
+msgid "قائمة البيع"
+msgstr "List sale"
+
+#: App/views/hragkom/index.php:51
+msgid "اعلانات مميزة"
+msgstr "Be Featured"
+
+#: App/views/hragkom/index.php:89
+msgid "اعلانات العادية"
+msgstr "Advertising normal"
+
+#: App/views/hragkom/index.php:103 App/views/hragkom/index.php:150
+msgid "رقم الهاتف"
+msgstr "name"
+
+#: App/views/hragkom/index.php:105 App/views/hragkom/index.php:152
+msgid "تاريخ النشر"
+msgstr "username"
+
+#: App/views/hragkom/index.php:128
+msgid "المزيد"
+msgstr "more"
+
+#: App/views/hragkom/index.php:139
+msgid "اعلانات الذهبية"
+msgstr "Advertising gold"
+
+#: App/views/hragkom/index.php:175
+msgid "المزيد من الاعلانات الذهبية"
+msgstr "More announcements gold"
+
+#~ msgid "تفاصيل السيارة"
+#~ msgstr "Details"
+
+#~ msgid "اضافة محتوى جديد "
+#~ msgstr "Add new content"
+
+#~ msgid "اضف اعلانك"
+#~ msgstr "add ads"
+
+#~ msgid "مهما كان نوع سيارتك"
+#~ msgstr "Whatever type of car"
+
+#~ msgid "اكثر من 100 زائر"
+#~ msgstr "More than 100 visitors"
+
+#~ msgid " اضف سيارتك "
+#~ msgstr "Add your car"
+
+#~ msgid "اعلن معنا"
+#~ msgstr "Advertise with us"
+
+#~ msgid "خدماتنا"
+#~ msgstr "Services"
+
+#~ msgid "الموتورز"
+#~ msgstr "Motors"
+
+#~ msgid "التسجيل"
+#~ msgstr "register"
+
+#~ msgid "الحوالات"
+#~ msgstr "Remittances"
+
+#~ msgid " الامارات المنطقة الغربية"
+#~ msgstr "Emirates Western Region"
+
+#~ msgid "للاتصال بنا"
+#~ msgstr "contact"
+
+#~ msgid "تابعنا على "
+#~ msgstr "Follow us on"
+
+#~ msgid "جميع الحقوق محفوظة لموقع حراجكو"
+#~ msgstr "All rights reserved. Hrajko"
+
+#~ msgid "ادخل اسم المستخدم وكلمة السر "
+#~ msgstr "Enter your username and password"
+
+#~ msgid "الموديل الفرعى"
+#~ msgstr "Sub-Model"
+
+#~ msgid "اختر الموديل الفرعى  "
+#~ msgstr "Select Model Sub"
+
+#~ msgid "جسم المركبة"
+#~ msgstr "Body Type"
+
+#~ msgid "المعرض"
+#~ msgstr "Exhibition"
+
+#~ msgid "ادارة السيارات"
+#~ msgstr "Management of car"
+
+#~ msgid "اضافة سيارة"
+#~ msgstr "Add your car"
+
+#~ msgid "أنواع السيارات"
+#~ msgstr "Types of cars"
+
+#~ msgid "ادارة موديلات السيارات"
+#~ msgstr "Management of car models"
+
+#~ msgid "القوارب"
+#~ msgstr "Boat"
+
+#~ msgid "الدراجات"
+#~ msgstr "Cycling"
+
+#~ msgid "المسافة"
+#~ msgstr "The distance"
+
+#~ msgid "الحالة"
+#~ msgstr "Status"
+
+#~ msgid ""
+#~ "اهلا بك يا [اسم صديقك] <br /> لقد ارسل لك [اسمك]<br> رابط اعلان من موقع "
+#~ "مبايعه على الرابط التالى"
+#~ msgstr ""
+#~ "Welcome, my [friend's name] <br /> I've sent you [name] <br> link to "
+#~ "swear allegiance to an announcement from the site on the following link"
+
+#~ msgid "جميع الحقوق محفوظة "
+#~ msgstr "All Rights Reserved"
+
+#~ msgid "ريال"
+#~ msgstr "RS"
+
+#~ msgid "نجاح"
+#~ msgstr "sucssed"
+
+#~ msgid "تحريف"
+#~ msgstr "tahref"
+
+#~ msgid "تمام يا حج"
+#~ msgstr "fineaaaaaaaaaaaaaaa"
+
+#~ msgid "يا مسهل"
+#~ msgstr "ttttttttttt"
+
+#~ msgid "fine"
+#~ msgstr "yyyyyyyyyyy"
+
+#~ msgid "الله اكبر"
+#~ msgstr "aaaaaaaaaaa"
+
+#~ msgid "saad hamed"
+#~ msgstr "سعد حامد"
+
+#~ msgid "ahmed ebrahe,"
+#~ msgstr "احمد ابراهيم"

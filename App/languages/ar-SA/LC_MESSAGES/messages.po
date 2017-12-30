@@ -1,0 +1,50 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mvc Elmtwer.com\n"
+"POT-Creation-Date: 2014-06-25 18:56+0300\n"
+"PO-Revision-Date: 2014-06-25 18:57+0300\n"
+"Last-Translator: saad hamed <s@elmtwer.com>\n"
+"Language-Team:  <s@elmtwer.com>\n"
+"Language: ar_SA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: C:\\xampp\\htdocs\\mvcNew\n"
+
+#: C:\xampp\htdocs\mvcNew/App/controllers/indexController.php:75
+msgid "تمام يا حج"
+msgstr "ya hag"
+
+#: C:\xampp\htdocs\mvcNew/App/controllers/indexController.php:76
+msgid "الحمد لله رب العالمين"
+msgstr "el hamd llah"
+
+#: C:\xampp\htdocs\mvcNew/App/controllers/indexController.php:77
+msgid "يا مسهل"
+msgstr "ya mosahel"
+
+#: C:\xampp\htdocs\mvcNew/App/controllers/indexController.php:78
+msgid "fine"
+msgstr ""
+
+#: C:\xampp\htdocs\mvcNew/App/controllers/indexController.php:80
+msgid "الله اكبر"
+msgstr "allah akber"
+
+#~ msgid "ok"
+#~ msgstr "اهلا"
+
+#~ msgid "saad hamed"
+#~ msgstr "سعد حامد"
+
+#~ msgid "ahmed ebrahe"
+#~ msgstr "احمد ابراهيم"
+
+#, fuzzy
+#~ msgid "saad "
+#~ msgstr "سعد حامد"

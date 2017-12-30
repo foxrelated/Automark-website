@@ -1,0 +1,12 @@
+@media (max-width: 767px)
+{
+	.adv2 .no-padding-left
+	{
+		margin-top: 10px;
+		padding-left: 25px;
+	}
+	#right-section .my-li ul li
+	{
+		margin-right: 100px;
+	}
+}

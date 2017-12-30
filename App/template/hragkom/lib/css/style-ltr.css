@@ -1,0 +1,45 @@
+nav .search-top-menu .po {
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+	left:auto;
+    background: #777777;
+    border-radius: 0;
+    border: 0;
+    color: #fff;
+    font-family: 'Droid Arabic Kufi', Stag Sans Light;
+    border-radius: 10px;
+    height: 30px;
+    line-height: 11px;
+}
+
+.paddingdivcol_right{
+    padding-left:1px; 
+    padding-right:15px; 
+}
+.paddingdivcol_left{
+    padding-right:1px; 
+    padding-left:15px; 
+}
+.title-gold-car {
+    padding: 10px;
+    border-right: 0px solid #e5c530;
+    border-left: 12px solid #e5c530;
+    color: #0087c0;
+    text-shadow: 1px 1px 0 #fff;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Droid Arabic Kufi', Stag Sans Light;
+}
+.title-blue-car {
+    padding: 10px;
+    margin: 2px 0;
+    font-family: 'Droid Arabic Kufi', Stag Sans Light;
+    border-right: 0px solid #0087c0;
+    border-left: 12px solid #0087c0;
+    color: #0087c0;
+    background: #fff;
+    text-shadow: 1px 1px 0 #fff;
+    font-weight: bold;
+    font-size: 14px;
+}

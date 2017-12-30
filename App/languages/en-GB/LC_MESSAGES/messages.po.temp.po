@@ -1,0 +1,1728 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mvc elmtwer.com\n"
+"POT-Creation-Date: 2014-07-27 21:46+0300\n"
+"PO-Revision-Date: 2014-07-27 23:57+0300\n"
+"Last-Translator: saad hamed <s@elmtwer.com>\n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _t;gettext\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: C:\\xampp\\htdocs\\mvcNew\n"
+
+#: C:\xampp\htdocs\mvcNew/App/controllers/ajaxController.php:39
+#: C:\xampp\htdocs\mvcNew/App/controllers/ajaxController.php:55
+msgid "لا يوجد"
+msgstr "none"
+
+#: C:\xampp\htdocs\mvcNew/App/core/controller.php:53
+#, php-format
+msgid "Error Model Not Exists The File %s "
+msgstr ""
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.switchlang.php:7
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/edit.php:55
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/login/login.php:22
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/register/register.php:69
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/login/login.php:12
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/login/login.php:14
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/register/register.php:56
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/login/login.php:22
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/register/register.php:69
+msgid "اسم المستخدم"
+msgstr "username"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.switchlang.php:8
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/edit.php:72
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/login/login.php:33
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/register/register.php:91
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/login/login.php:19
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/login/login.php:21
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/register/register.php:77
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/login/login.php:33
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/register/register.php:91
+msgid "كلمة المرور"
+msgstr "passwords"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.switchlang.php:9
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/index/password.php:43
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/register/register.php:102
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/index/password.php:27
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/register/register.php:87
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/index/password.php:43
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/register/register.php:102
+msgid "اعادة كلمة المرور"
+msgstr "re password"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.switchlang.php:10
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/city/add.php:29
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/city/edit.php:29
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/adsimg.php:23
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/add.php:17
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/edit.php:17
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/typecar/add.php:29
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/typecar/edit.php:29
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/sendmsg.php:8
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/sendmsg.php:8
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/sendmsg.php:8
+msgid "الاسم"
+msgstr "name"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.switchlang.php:11
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/edit.php:36
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/rentid.php:150
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/index/profile.php:45
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/register/register.php:45
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/rentid.php:150
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/index/profile.php:25
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/register/register.php:36
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/rentid.php:150
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/index/profile.php:45
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/register/register.php:45
+msgid "العمر"
+msgstr "age"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.switchlang.php:12
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:21
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:22
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/edit.php:45
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/rentid.php:177
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/views/cp/send.php:28
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/views/index/a3len.php:70
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/views/index/contact.php:35
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/index/profile.php:56
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/register/register.php:56
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/rentid.php:177
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/a3len.php:56
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/contact.php:34
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/index/profile.php:32
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/register/register.php:46
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/rentid.php:177
+#: C:\xampp\htdocs\mvcNew/App/template/style1/pages/index/a3len.php:70
+#: C:\xampp\htdocs\mvcNew/App/template/style1/pages/index/contact.php:35
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/index/profile.php:56
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/register/register.php:56
+msgid "الجوال"
+msgstr "mobile"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.switchlang.php:13
+msgid "الهاتف"
+msgstr "Phone"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.switchlang.php:14
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:28
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:31
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/edit.php:64
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/rentid.php:159
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/sendmsg.php:15
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/views/cp/send.php:35
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/views/index/a3len.php:61
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/views/index/contact.php:26
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/index/profile.php:68
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/login/lostpassword.php:14
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/rentid.php:159
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/sendmsg.php:15
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/a3len.php:49
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/contact.php:25
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/index/profile.php:40
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/login/lostpassword.php:11
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/rentid.php:159
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/sendmsg.php:15
+#: C:\xampp\htdocs\mvcNew/App/template/style1/pages/index/a3len.php:61
+#: C:\xampp\htdocs\mvcNew/App/template/style1/pages/index/contact.php:26
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/index/profile.php:68
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/login/lostpassword.php:14
+msgid "البريد الالكترونى"
+msgstr "email"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.switchlang.php:15
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/edit.php:18
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/views/cp/send.php:14
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/index/profile.php:21
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/register/register.php:21
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/index/profile.php:11
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/register/register.php:16
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/index/profile.php:21
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/register/register.php:21
+msgid "الاسم الاول"
+msgstr "First name"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.switchlang.php:16
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/edit.php:27
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/rentid.php:141
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/views/cp/send.php:21
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/index/profile.php:34
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/register/register.php:34
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/rentid.php:141
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/index/profile.php:18
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/register/register.php:26
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/rentid.php:141
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/index/profile.php:34
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/register/register.php:34
+msgid "الاسم الاخير"
+msgstr "Last Name"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.switchlang.php:17
+msgid "اتفاقية الاستخدام"
+msgstr "Terms of Use"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.switchlang.php:26
+msgid "معطل"
+msgstr "Broken"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.switchlang.php:27
+msgid "موافق عليه"
+msgstr "Approved"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.switchlang.php:28
+msgid "بانتظار التفعيل"
+msgstr "Validating"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.validate.php:22
+msgid "حقل مطلوب"
+msgstr "Required field"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.validate.php:24
+#, php-format
+msgid "عدد الاحرف اقل من الحد المطلوب %d حرف"
+msgstr "The number of characters is less than the threshold required  %d symbols"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.validate.php:26
+#, php-format
+msgid "عدد الاحرف تجاوزت الحد المطلوب %d حرف"
+msgstr "The number of characters exceeded the threshold required %d symbols"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.validate.php:28
+msgid "الرقم السرى غير مطابق"
+msgstr "PIN does not match"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.validate.php:30
+msgid "البريد الالكترونى غير مطابق"
+msgstr "Email does not match"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.validate.php:32
+msgid "هذا البريد غير صحيح"
+msgstr "This e-mail is incorrect"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.validate.php:34
+#: C:\xampp\htdocs\mvcNew/App/lip/class.validate.php:36
+msgid "هذا الرقم غير صحيح"
+msgstr "This figure is incorrect"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.validate.php:40
+msgid "موجود بالفعل"
+msgstr "Already exists"
+
+#: C:\xampp\htdocs\mvcNew/App/lip/class.validate.php:46
+msgid "هذا العضو غير موجود"
+msgstr "This user does not exist"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/controllers/cpController.php:86
+#: C:\xampp\htdocs\mvcNew/App/modules/access/controllers/cpController.php:156
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/controllers/accessController.php:98
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/controllers/cityController.php:98
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/controllers/showsController.php:56
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/controllers/showsController.php:110
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/controllers/typecarController.php:92
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/controllers/indexController.php:150
+#: C:\xampp\htdocs\mvcNew/App/modules/users/controllers/indexController.php:75
+#: C:\xampp\htdocs\mvcNew/App/modules/users/controllers/indexController.php:125
+#: C:\xampp\htdocs\mvcNew/App/modules/users/controllers/loginController.php:184
+#: C:\xampp\htdocs\mvcNew/App/modules/users/controllers/registerController.php:146
+#: C:\xampp\htdocs\mvcNew/App/modules/users/controllers/registerController.php:153
+#: C:\xampp\htdocs\mvcNew/App/modules/users/controllers/registerController.php:174
+#, php-format
+msgid "Error Database  %s "
+msgstr ""
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/controllers/indexController.php:39
+msgid "زينة و اكسسورات"
+msgstr "Accessories and Accessories"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/controllers/indexController.php:128
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/controllers/indexController.php:360
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/controllers/cpController.php:120
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/controllers/indexController.php:105
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/controllers/indexController.php:189
+#: C:\xampp\htdocs\mvcNew/App/modules/users/controllers/loginController.php:128
+msgid "تم الارسال بنجاح"
+msgstr "Sent successfully"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/controllers/indexController.php:130
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/controllers/indexController.php:147
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/controllers/indexController.php:362
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/controllers/cpController.php:122
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/controllers/indexController.php:107
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/controllers/indexController.php:191
+#: C:\xampp\htdocs\mvcNew/App/modules/users/controllers/loginController.php:131
+msgid "حاول مره اخرى"
+msgstr "Try again"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:8
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:8
+msgid "اضافة منتج جديدة"
+msgstr "Add a new product"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:14
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:14
+msgid "اسم المنتج"
+msgstr "Product Name"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:35
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:38
+msgid "القسم"
+msgstr "Section"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:37
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:38
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:40
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:41
+msgid "اختر القسم"
+msgstr "Select a section"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:48
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:50
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:51
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:53
+msgid "ماركة المنتج"
+msgstr "Product brand"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:51
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:54
+msgid "اختر الماركة"
+msgstr "Select Brand"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:61
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:64
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:71
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:74
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:46
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:50
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:72
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:89
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:50
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:46
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:50
+msgid "اللون"
+msgstr "Color"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:63
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:64
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:66
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:67
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:73
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:74
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:76
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:77
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:48
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:49
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:52
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:53
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:91
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:92
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:52
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:53
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:48
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:49
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:52
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:53
+msgid "اختر اللون"
+msgstr "Choose the color"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:75
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:78
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:158
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:161
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:117
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:121
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:90
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/showsid.php:53
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:169
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:121
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/search.php:90
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:61
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:109
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:156
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:117
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:121
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:61
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:109
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:156
+msgid "السعر"
+msgstr "Price"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:85
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:88
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:168
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:171
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:126
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:130
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:93
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:179
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:130
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:126
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:130
+msgid "البلد"
+msgstr "Country"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:87
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:88
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:102
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:103
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:90
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:91
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:105
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:106
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:59
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:98
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:99
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:114
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:115
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:130
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:131
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:146
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:147
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:170
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:171
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:185
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:186
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:261
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:262
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:276
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:277
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:61
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:101
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:102
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:117
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:118
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:133
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:134
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:149
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:150
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:173
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:174
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:188
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:189
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:272
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:273
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:287
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:288
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:37
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:68
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:69
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:80
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:81
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:93
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:94
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:106
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:107
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:128
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:129
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:140
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:141
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:40
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:72
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:73
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:84
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:85
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:97
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:98
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:110
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:111
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:132
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:133
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:144
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:145
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:159
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:160
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:79
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:116
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:117
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:129
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:130
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:143
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:144
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:157
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:158
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:181
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:182
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:194
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:195
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:40
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:72
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:73
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:84
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:85
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:97
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:98
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:110
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:111
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:132
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:133
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:144
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:145
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:159
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:160
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:37
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:68
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:69
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:80
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:81
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:93
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:94
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:106
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:107
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:128
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:129
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:140
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:141
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:40
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:72
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:73
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:84
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:85
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:97
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:98
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:110
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:111
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:132
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:133
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:144
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:145
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:159
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:160
+msgid "اختر"
+msgstr "Choose"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:100
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:103
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:183
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:186
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:138
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:142
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:96
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:192
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:142
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/form.php:69
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/search.php:43
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:138
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:142
+msgid "المدينة"
+msgstr "city"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:144
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:149
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:233
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:232
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/add.php:24
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/edit.php:24
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/typecar/add.php:36
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/typecar/edit.php:36
+msgid "رفع صورة"
+msgstr "Upload"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/add.php:164
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:301
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/city/add.php:48
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/addoption.php:49
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/get.php:37
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/pages/add.php:47
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/add.php:73
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/typecar/add.php:50
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:185
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:228
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:185
+msgid "اضافة"
+msgstr "Add"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/access/views/cp/edit.php:183
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:326
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/index.php:46
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/city/edit.php:48
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/adsimg.php:56
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/offers.php:68
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/sliderserch.php:57
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/vedioindex.php:36
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/pages/edit.php:47
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/settings/index.php:70
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/edit.php:74
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/typecar/edit.php:56
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/add_group.php:41
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/add_permis.php:36
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/edit.php:123
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/group_edit.php:30
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/permis.php:36
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:207
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/views/cp/index.php:53
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/index/password.php:58
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/index/profile.php:93
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/login/newpass.php:43
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:207
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/index/password.php:37
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/index/profile.php:55
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/login/newpass.php:29
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:207
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/index/password.php:58
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/index/profile.php:93
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/login/newpass.php:43
+msgid "تعديل"
+msgstr "edit"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:8
+msgid "اضافة سيارة جديدة"
+msgstr "Add a new car"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:15
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:15
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:12
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:12
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:53
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:12
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/form.php:5
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/search.php:11
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:12
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:12
+msgid "نوع السيارة"
+msgstr "model"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:17
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:18
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:33
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:34
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:17
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:18
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:33
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:34
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/index.php:39
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/index.php:40
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:14
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:15
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:27
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:28
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:14
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:15
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:27
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:28
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/views/cp/index.php:44
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/views/cp/index.php:45
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:55
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:56
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:68
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:69
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:14
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:15
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:27
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:28
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:14
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:15
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:27
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:28
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:14
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:15
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:27
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:28
+msgid "اختر "
+msgstr "Choose"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:31
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:31
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:66
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/form.php:12
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/search.php:22
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:102
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:149
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:102
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:149
+msgid "الموديل"
+msgstr "model"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:43
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:45
+msgid "الموديل الفرعى"
+msgstr "Sub-Model"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:45
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:47
+msgid "اختر الموديل الفرعى "
+msgstr "Select Model Sub"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:46
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:48
+msgid "اختر الموديل الفرعى  "
+msgstr "Select Model Sub"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:56
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:58
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:34
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:37
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:69
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:76
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:37
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/form.php:24
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/search.php:31
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:34
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:37
+msgid "سنة الصنع"
+msgstr "Year"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:58
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:60
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:36
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:39
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:78
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:39
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:36
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:39
+msgid "اختر سنة الصنع"
+msgstr "Select Year"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:85
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:88
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:59
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:63
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:103
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:63
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:59
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:63
+msgid "المسافة المقطوعه"
+msgstr "Odometer"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:87
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:90
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:61
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:65
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:106
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:65
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:61
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:65
+msgid "كم"
+msgstr "km"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:96
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:99
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:66
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:70
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:78
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:114
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:70
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:66
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:70
+msgid "ناقل الحركة"
+msgstr "Transmission"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:112
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:115
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:78
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:82
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:127
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:82
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:78
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:82
+msgid "حالة السيارة"
+msgstr "Car Condition"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:128
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:131
+msgid "جسم المركبة"
+msgstr "Body Type"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:144
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:147
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:104
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:108
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:87
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:155
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:108
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:104
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:108
+msgid "الاستمارة"
+msgstr "Form"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:225
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:300
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:168
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:166
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:217
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:166
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:168
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:166
+msgid "المواصفات الاضافية"
+msgstr "Extra Specifications"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:259
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:270
+msgid "المعرض"
+msgstr "Exhibition"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/add.php:274
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:285
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:158
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:158
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:158
+msgid "نوع الاعلان"
+msgstr "Type announcement"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/edit.php:8
+msgid "تعديل  سيارة "
+msgstr "Car modification"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/cars/index.php:41
+msgid "تفعيل "
+msgstr "Activation"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/city/add.php:8
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/city/edit.php:8
+msgid "اضافة مدينة او دولة"
+msgstr "Add your city or state"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/city/add.php:14
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/city/edit.php:14
+msgid "اختر الدولة الرئيسية"
+msgstr "Select Country Home"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/city/add.php:16
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/city/edit.php:16
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/add.php:46
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/edit.php:41
+msgid "الدولة "
+msgstr "State"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/city/add.php:17
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/city/edit.php:17
+msgid "دولة رئيسية "
+msgstr "Key state"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/city/add.php:36
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/city/edit.php:36
+msgid "كود الدولة"
+msgstr "Country Code"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/addoption.php:8
+msgid "اضافة موديل جديد"
+msgstr "Add new model"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/addoption.php:13
+msgid "اسم الموديل"
+msgstr "Model Name"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/addoption.php:19
+msgid "كود الموديل"
+msgstr "Model Code"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/addoption.php:32
+msgid "اضف حقل"
+msgstr "Add Field"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/adsimg.php:27
+msgid "الرابط"
+msgstr "url"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/adsimg.php:31
+msgid "مسار الصورة"
+msgstr "Image Path"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/adsimg.php:35
+msgid "المكان"
+msgstr "Location"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/adsimg.php:36
+msgid "المكان "
+msgstr "Location"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/get.php:29
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/offers.php:60
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/sliderserch.php:49
+msgid "اضف جديد"
+msgstr "Add new"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/offers.php:8
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/option/sliderserch.php:8
+msgid "ادارة العروض"
+msgstr "Administration offers"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/pages/add.php:10
+msgid "اضافة صفحه جديده"
+msgstr "Add a new page"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/pages/add.php:16
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/pages/edit.php:16
+msgid "اسم الصفحه"
+msgstr "Name Page"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/pages/add.php:27
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/pages/edit.php:27
+msgid "الترتيب"
+msgstr "Ranking"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/pages/add.php:34
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/pages/edit.php:34
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/friend.php:42
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/sendmsg.php:29
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/views/cp/send.php:63
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/friend.php:42
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/sendmsg.php:29
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/friend.php:42
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/sendmsg.php:29
+msgid "المحتوى"
+msgstr "Content"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/pages/edit.php:10
+msgid "تعديل صفحه "
+msgstr "Edit Page"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/settings/index.php:8
+msgid "ادارة الموقع"
+msgstr "Site management"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/settings/index.php:17
+msgid "اسم الموقع"
+msgstr "Site Name"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/settings/index.php:24
+msgid "رابط الموقع"
+msgstr "URL"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/settings/index.php:31
+msgid "البريد الرسمى"
+msgstr "E-official"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/settings/index.php:38
+msgid "الكلمات الدليلية"
+msgstr "Tagged"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/settings/index.php:46
+msgid "وصف الموقعى"
+msgstr "Description OSI"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/settings/index.php:54
+msgid "حالة الموقع"
+msgstr "Status"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/add.php:8
+msgid "اضافة معرض جديد"
+msgstr "Add new exhibition"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/add.php:35
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/edit.php:50
+msgid "الاعلان"
+msgstr "Announcement"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/add.php:44
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/edit.php:39
+msgid "نوع المعرض"
+msgstr "Type exhibition"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/add.php:47
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/edit.php:42
+msgid "حدد نوع المعرض"
+msgstr "Select the type of exhibition"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/add.php:48
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/edit.php:43
+msgid "بيع وشراء"
+msgstr "Buy and sell"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/add.php:49
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/edit.php:44
+msgid "تاجير"
+msgstr "Rental"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/shows/edit.php:8
+msgid "تعديل المعارض"
+msgstr "Amendment exhibitions"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/typecar/add.php:8
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/typecar/edit.php:8
+msgid "اضافة موديل سيارة"
+msgstr "Add your model of car"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/typecar/add.php:14
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/typecar/edit.php:14
+msgid "اختر الموديل الرئيسى"
+msgstr "Select Model main"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/typecar/add.php:16
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/typecar/edit.php:16
+msgid "الموديل "
+msgstr "Model"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/typecar/add.php:17
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/typecar/edit.php:17
+msgid "الموديل رئيسى"
+msgstr "Model key"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/add_group.php:8
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/group_edit.php:8
+msgid "أدارة الصلاحيات"
+msgstr "Management powers"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/add_group.php:16
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/group_edit.php:16
+msgid "اسم المجموعه"
+msgstr "Group Name"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/add_group.php:23
+msgid "الصلاحيات"
+msgstr "Powers"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/add_permis.php:8
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/permis.php:8
+msgid "اضافة صلاحية جديد"
+msgstr "Add the validity of a new"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/add_permis.php:16
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/permis.php:16
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/views/index/contact.php:15
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/contact.php:17
+#: C:\xampp\htdocs\mvcNew/App/template/style1/pages/index/contact.php:15
+msgid "الاسم "
+msgstr "name"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/add_permis.php:23
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/permis.php:23
+msgid "الكود "
+msgstr "code"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/edit.php:8
+msgid "تعديل العضوية"
+msgstr "Organic amendment"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/edit.php:93
+msgid "حالة العضو"
+msgstr "User Status"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/admin/views/users/edit.php:111
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/index/profile.php:85
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/register/register.php:132
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/index/profile.php:50
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/register/register.php:117
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/index/profile.php:85
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/register/register.php:132
+msgid "التسجيل للحصول على اخر الاخبار"
+msgstr "Register for Latest News"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/controllers/searchController.php:45
+msgid "السيارة غير متوفرة بالموقع"
+msgstr "The car is available Active"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/friend.php:2
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/friend.php:2
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/friend.php:2
+msgid "ارسال الى صديق"
+msgstr "Send to Friend"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/friend.php:7
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/friend.php:7
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/friend.php:7
+msgid "اسم صديقك"
+msgstr "Your friend's name"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/friend.php:14
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/friend.php:14
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/friend.php:14
+msgid "بريد صديقك"
+msgstr "E-mail"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/friend.php:21
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/friend.php:21
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/friend.php:21
+msgid "اسمك"
+msgstr "name"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/friend.php:28
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/friend.php:28
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/friend.php:28
+msgid "بريدك الالكترونى"
+msgstr "email"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/friend.php:35
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/sendmsg.php:22
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/friend.php:35
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/sendmsg.php:22
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/friend.php:35
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/sendmsg.php:22
+msgid "العنوان"
+msgstr "address"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/friend.php:49
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/rentid.php:226
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/views/index/a3len.php:88
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/views/index/contact.php:63
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/login/lostpassword.php:24
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/friend.php:49
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/rentid.php:226
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/a3len.php:69
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/contact.php:58
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/login/lostpassword.php:19
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/friend.php:49
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/rentid.php:226
+#: C:\xampp\htdocs\mvcNew/App/template/style1/pages/index/a3len.php:88
+#: C:\xampp\htdocs\mvcNew/App/template/style1/pages/index/contact.php:63
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/login/lostpassword.php:24
+msgid "التحقق البشرى"
+msgstr "Verification human"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/friend.php:62
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/sendmsg.php:40
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/views/cp/send.php:81
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/views/index/a3len.php:97
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/views/index/contact.php:72
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/login/lostpassword.php:33
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/friend.php:62
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/sendmsg.php:40
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/a3len.php:79
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/contact.php:68
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/login/lostpassword.php:32
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/friend.php:62
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/sendmsg.php:40
+#: C:\xampp\htdocs\mvcNew/App/template/style1/pages/index/a3len.php:97
+#: C:\xampp\htdocs\mvcNew/App/template/style1/pages/index/contact.php:72
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/login/lostpassword.php:33
+msgid "ارسال"
+msgstr "send"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/rentid.php:132
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/rentid.php:132
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/rentid.php:132
+msgid "الاسم الاول "
+msgstr "Forename"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/rentid.php:168
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/rentid.php:168
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/rentid.php:168
+msgid "تاكيد البريد الالكترونى"
+msgstr "E-mail confirmation"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/rentid.php:186
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/views/cp/send.php:41
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/rentid.php:186
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/rentid.php:186
+msgid "مكان الاستلام"
+msgstr "Place of receipt"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/rentid.php:195
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/rentid.php:195
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/rentid.php:195
+msgid "تاريخ  الاستلام"
+msgstr "تاريخ  الاستلام"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/rentid.php:206
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/views/cp/send.php:56
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/rentid.php:206
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/rentid.php:206
+msgid "تاريخ التسليم"
+msgstr "Delivery Date"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/rentid.php:231
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/rentid.php:231
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/rentid.php:231
+msgid "احجز"
+msgstr "Book"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/index/sendmsg.php:2
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/sendmsg.php:2
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/index/sendmsg.php:2
+msgid "ارسل رسالة"
+msgstr "Send a message"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:5
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:5
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:46
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:46
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:5
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:5
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:5
+msgid "اضافة سيارة "
+msgstr "add cars"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:25
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:25
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:66
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:25
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:25
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:25
+msgid "موديل السيارة"
+msgstr "Model"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:91
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:95
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:84
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:141
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:95
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:91
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:95
+msgid "الجسم الخارجى"
+msgstr "The external body"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:153
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:169
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:205
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:169
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:153
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:169
+msgid "مميزات السيارة"
+msgstr "Vehicle Features"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/add.php:174
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/edit.php:186
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/edit.php:186
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/add.php:174
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/edit.php:186
+msgid "اضافة صورة"
+msgstr "add images"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/cars/views/mycars/index.php:2
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/index.php:22
+#: C:\xampp\htdocs\mvcNew/App/template/style1/cars/mycars/index.php:2
+msgid "ادارة  سياراتى"
+msgstr "Management of my cars"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/views/cp/index.php:46
+msgid "تاكيد الحجز"
+msgstr "Confirm Booking"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/views/cp/index.php:47
+msgid "رفض الحجز"
+msgstr "Booking rejected"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/views/cp/send.php:8
+msgid "ارسالة رسالة للعميل"
+msgstr "Send a message to the client"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/messages/views/cp/send.php:49
+msgid "تاريخ الاستلام"
+msgstr "Date Received"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/views/index/a3len.php:24
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/a3len.php:17
+#: C:\xampp\htdocs\mvcNew/App/template/style1/pages/index/a3len.php:24
+msgid "الاسم الثلاثى"
+msgstr "Name trio"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/views/index/a3len.php:34
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/a3len.php:25
+#: C:\xampp\htdocs\mvcNew/App/template/style1/pages/index/a3len.php:34
+msgid "الصفة الوظيفية"
+msgstr "Functional capacity"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/views/index/a3len.php:43
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/a3len.php:33
+#: C:\xampp\htdocs\mvcNew/App/template/style1/pages/index/a3len.php:43
+msgid "اسم الشركة"
+msgstr "Company Name"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/views/index/a3len.php:52
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/a3len.php:41
+#: C:\xampp\htdocs\mvcNew/App/template/style1/pages/index/a3len.php:52
+msgid "نشاط الشركة"
+msgstr "Business Activity"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/views/index/a3len.php:79
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/a3len.php:63
+#: C:\xampp\htdocs\mvcNew/App/template/style1/pages/index/a3len.php:79
+msgid "الموقع الالكترونى"
+msgstr "url site"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/views/index/contact.php:44
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/contact.php:42
+#: C:\xampp\htdocs\mvcNew/App/template/style1/pages/index/contact.php:44
+msgid "الموضوع"
+msgstr "subject"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/pages/views/index/contact.php:54
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/showsid.php:54
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/search.php:91
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:114
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:161
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/contact.php:50
+#: C:\xampp\htdocs\mvcNew/App/template/style1/pages/index/contact.php:54
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:114
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:161
+msgid "التفاصيل"
+msgstr "Details"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/users/controllers/loginController.php:57
+msgid "الباسورد خطا"
+msgstr "error password"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/users/controllers/loginController.php:104
+msgid "طريقة استرجاع الباسورد"
+msgstr "Password retrieval method"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/users/controllers/registerController.php:118
+msgid "تفعيل حسابك  "
+msgstr "active acount"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/users/controllers/registerController.php:143
+msgid "تم ارسال رسالة تفعيل الى بريدك الالكتروني قم بالضغط على الرابط الموضح فيه ليتم تفعيل الحساب "
+msgstr "Activation message has been sent to your email address by clicking on the link shown it to be activated Accoun"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/index/password.php:21
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/index/password.php:11
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/index/password.php:21
+msgid "كلمة المرور الحالية"
+msgstr "Current Password"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/index/password.php:32
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/index/password.php:19
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/index/password.php:32
+msgid "كلمة المرور الجديده"
+msgstr "The new password"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/login/login.php:45
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/login/login.php:45
+msgid "تذكرني"
+msgstr "Remember me"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/login/login.php:49
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/login/login.php:49
+msgid "تسجيل الدخول"
+msgstr "Login"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/login/newpass.php:22
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/login/newpass.php:11
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/login/newpass.php:22
+msgid "كلمة المرور الجديد"
+msgstr "The new password"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/login/newpass.php:33
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/login/newpass.php:19
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/login/newpass.php:33
+msgid "اعادة كلمة المرور "
+msgstr "Re password"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/register/register.php:80
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/register/register.php:67
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/register/register.php:80
+msgid "البريد الالكتروني"
+msgstr "Email"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/register/register.php:113
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/register/register.php:97
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/register/register.php:113
+msgid "التحقق البشري"
+msgstr "Human verification"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/register/register.php:127
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/register/register.php:112
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/register/register.php:127
+msgid "اوفق على اتفاقية استخدام الموقع"
+msgstr "More satisfactory agreement on use of the site"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/register/register.php:127
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/register/register.php:112
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/register/register.php:127
+msgid "مشاهده اتفاقية الاستخدام"
+msgstr "See Terms of Use"
+
+#: C:\xampp\htdocs\mvcNew/App/modules/users/views/register/register.php:140
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/register/register.php:124
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/register/register.php:140
+msgid "تسجيل"
+msgstr "register"
+
+#: C:\xampp\htdocs\mvcNew/App/template/admin/style.php:9
+msgid "لوحة تحكم الادارة"
+msgstr "Admin Control Panel"
+
+#: C:\xampp\htdocs\mvcNew/App/template/admin/style.php:79
+msgid "اهلا بك يا ادمن"
+msgstr "Welcome O Op"
+
+#: C:\xampp\htdocs\mvcNew/App/template/admin/style.php:112
+#: C:\xampp\htdocs\mvcNew/App/template/admin/style.php:119
+msgid "ادارة السيارات"
+msgstr "Management of car"
+
+#: C:\xampp\htdocs\mvcNew/App/template/admin/style.php:118
+msgid "اضافة سيارة"
+msgstr "Add your car"
+
+#: C:\xampp\htdocs\mvcNew/App/template/admin/style.php:129
+msgid "أنواع السيارات"
+msgstr "Types of cars"
+
+#: C:\xampp\htdocs\mvcNew/App/template/admin/style.php:135
+msgid "اضافة نوع"
+msgstr "add model"
+
+#: C:\xampp\htdocs\mvcNew/App/template/admin/style.php:136
+msgid "ادارة موديلات السيارات"
+msgstr "Management of car models"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:7
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/showsid.php:9
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:7
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/index.php:8
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:8
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:8
+msgid "اضف اعلان  مميز"
+msgstr "add ads special"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:10
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/showsid.php:12
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:10
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/index.php:11
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:11
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:11
+msgid "اضف اعلان ذهبى"
+msgstr "add ads new"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:23
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/showsid.php:25
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:23
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:24
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:24
+msgid "ابدا بالبيع مجانا"
+msgstr "add ads free"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:27
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/showsid.php:29
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:27
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:28
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:28
+msgid "قائمة البيع"
+msgstr "List sale"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:30
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/showsid.php:32
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:30
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:31
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:31
+msgid "السيارات"
+msgstr "cars"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:31
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/showsid.php:33
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:31
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:32
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:32
+msgid "القوارب"
+msgstr "Boat"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:32
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/showsid.php:34
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/mycars/add.php:32
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:33
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:33
+msgid "الدراجات"
+msgstr "Cycling"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:55
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:104
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:130
+msgid "تفاصيل السيارة"
+msgstr "Details"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:57
+msgid "رقم الاعلان "
+msgstr "Listing ID"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:60
+msgid "تاريخ النشر "
+msgstr "Date of publication"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:63
+msgid "النوع "
+msgstr "type"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:75
+msgid "المسافة"
+msgstr "The distance"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:81
+msgid "الحالة"
+msgstr "Status"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/carid.php:139
+msgid "طريقة التواصل"
+msgstr "The way you communicate"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/friend.php:37
+msgid "رسالة من صديق :اسمك:"
+msgstr "usernameA message from a friend: Your name:"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/friend.php:44
+msgid "اهلا بك يا [اسم صديقك] <br /> لقد ارسل لك [اسمك]<br> رابط اعلان من موقع مبايعه على الرابط التالى"
+msgstr "Welcome, my [friend's name] <br /> I've sent you [name] <br> link to swear allegiance to an announcement from the site on the following link"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/friend.php:44
+msgid "الرابط التالى"
+msgstr "Next link"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/ok.php:3
+msgid "سوف تصلك رسالة تأكيد حجزك على بريدك الالكترونى عند استكمال البيانات"
+msgstr "You will receive a confirmation message on the reservation e-mail upon completion of data"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/index/showsid.php:52
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/search.php:89
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:60
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:60
+msgid "النوع"
+msgstr "type"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/form.php:31
+msgid "الحد الادنى للسعر"
+msgstr "Minimum price"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/form.php:51
+msgid "الحد الاعلى للسعر"
+msgstr "The upper limit of the price"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/form.php:76
+msgid "التالى"
+msgstr "next"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/search.php:6
+msgid "ابحث عن سياراتك"
+msgstr "cars"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/search.php:65
+msgid "السعر بين"
+msgstr "Price between"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/cars/search/search.php:74
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:87
+msgid "بحث"
+msgstr "search"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:50
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:50
+msgid "اعلانات مميزة"
+msgstr "Be Featured"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:87
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:87
+msgid "اعلانات العادية"
+msgstr "Advertising normal"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:101
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:148
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:101
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:148
+msgid "رقم الهاتف"
+msgstr "name"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:103
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:150
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:103
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:150
+msgid "تاريخ النشر"
+msgstr "username"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:126
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:126
+msgid "المزيد"
+msgstr "more"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:137
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:137
+msgid "اعلانات الذهبية"
+msgstr "Advertising gold"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/index/index.php:173
+#: C:\xampp\htdocs\mvcNew/App/views/hragkom/index.php:173
+msgid "المزيد من الاعلانات الذهبية"
+msgstr "More announcements gold"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/a3len.php:11
+msgid "يرجى ملئ الاستمارة التالية ليتسني لنا خدمتكم فى اسرع وقت ممكن"
+msgstr "Please fill out the following form so that we can serve you as soon as possible"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/pages/index/contact.php:11
+msgid "إملأء الاستمارة التالية ليتم التواصل معكم  بأقرب وقت ممكن"
+msgstr "Fill in the form below to be communicating with you as soon as possible"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/sider.php:7
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/sider.php:46
+msgid "اضف اعلانك"
+msgstr "add ads"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/sider.php:9
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/sider.php:48
+msgid "مهما كان نوع سيارتك"
+msgstr "Whatever type of car"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/sider.php:11
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/sider.php:50
+msgid "اكثر من 100 زائر"
+msgstr "More than 100 visitors"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/sider.php:22
+msgid "انواع السيارات"
+msgstr "cars"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:30
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/login/login.php:30
+msgid "تسجيل دخول"
+msgstr "Login"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:31
+msgid "مستخدم جديد"
+msgstr "register"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:33
+msgid "ادارة اعلاناتى  "
+msgstr "My Cars"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:34
+msgid " اضف سيارتك "
+msgstr "Add your car"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:35
+msgid " بياناتك الشخصية"
+msgstr "Your personal data"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:36
+msgid " تسجيل الخروج"
+msgstr "Logout"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:39
+msgid "البحث"
+msgstr "search"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:40
+msgid "اعلن معنا"
+msgstr "Advertise with us"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:73
+msgid "الرئيسية"
+msgstr "index"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:74
+msgid "اتصل بنا"
+msgstr "contact"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:75
+msgid "خدماتنا"
+msgstr "Services"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:76
+msgid "الموتورز"
+msgstr "Motors"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:77
+msgid "عن الموقع"
+msgstr "About Us"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:78
+msgid "طرق الدفع"
+msgstr "Payment Methods"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:79
+msgid "التسجيل"
+msgstr "register"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:86
+msgid "ابحث برقم الاعلان"
+msgstr "Search by listing ID"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:135
+msgid "الحوالات"
+msgstr "Remittances"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:136
+msgid " الامارات المنطقة الغربية"
+msgstr "Emirates Western Region"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:140
+msgid "للاتصال بنا"
+msgstr "contact"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:147
+msgid "البريد"
+msgstr "email"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:160
+msgid "تابعنا على "
+msgstr "Follow us on"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:185
+msgid "جميع الحقوق محفوظة "
+msgstr "All Rights Reserved"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:266
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:271
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/style.php:272
+msgid "ريال"
+msgstr "RS"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/index/index.php:4
+msgid "يمكنك ادارة سياراتك المضافة  ومعلوماتك الشخصية من هنا"
+msgstr "You can manage your cars and your personal information is added here"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/index/password.php:7
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/index/profile.php:7
+msgid "تعديل البيانات الشخصية"
+msgstr "Modification of personal data"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/login/login.php:5
+msgid "ادخل اسم المستخدم وكلمة السر "
+msgstr "Enter your username and password"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/login/login.php:27
+msgid "تذكرنى"
+msgstr "Remember me"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/login/login.php:38
+msgid "نسيت كلمة السر"
+msgstr "Forgot Password"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/login/lostpassword.php:7
+msgid "استرجاع كلمة المرور"
+msgstr "Password Recovery"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/login/newpass.php:7
+msgid "تعين كلمة مرور جديده"
+msgstr "Appoint a new password"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/register/active.php:2
+msgid ""
+"تم تفعيل حسابك  <br>\n"
+"يمكنك  تسجيل دخول الان"
+msgstr ""
+"Was activated your account <br>\n"
+" You can login now"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/register/active.php:4
+msgid "من هنا"
+msgstr "From here"
+
+#: C:\xampp\htdocs\mvcNew/App/template/hragkom/users/register/register.php:8
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/register/register.php:5
+msgid "انشاء حساب جديد"
+msgstr "Create new account"
+
+#: C:\xampp\htdocs\mvcNew/App/template/style1/users/register/register.php:146
+msgid "او يمكنك تسجيل الدخول عبر حسابك على الفيس بوك"
+msgstr "Or you can log in via your Facebook account"
+
+#~ msgid "نجاح"
+#~ msgstr "sucssed"
+
+#~ msgid "تحريف"
+#~ msgstr "tahref"
+
+#~ msgid "تمام يا حج"
+#~ msgstr "fineaaaaaaaaaaaaaaa"
+
+#~ msgid "يا مسهل"
+#~ msgstr "ttttttttttt"
+
+#~ msgid "fine"
+#~ msgstr "yyyyyyyyyyy"
+
+#~ msgid "الله اكبر"
+#~ msgstr "aaaaaaaaaaa"
+
+#~ msgid "saad hamed"
+#~ msgstr "سعد حامد"
+
+#~ msgid "ahmed ebrahe,"
+#~ msgstr "احمد ابراهيم"
