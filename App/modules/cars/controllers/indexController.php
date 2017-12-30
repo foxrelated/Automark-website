@@ -177,8 +177,9 @@ $validate['email']=array(
            $this->_view->assign('_showsimages',$_shows['images_s']);
            $this->_view->assign('_showsemail',$_shows['email_s']);
            $this->_view->assign('_phone_num1',$_shows['phone_num1']);
-           $this->_view->assign('_phone_num2',$_shows['phone_num2']);
-           $this->_view->assign('_city_c',$_shows['city_c']);
+           $this->_view->assign('_phone_num2',$_shows['phone_num2']);           
+           $this->_view->assign('_city_s',$_shows['city_s']);
+           $this->_view->assign('_region_s',$_shows['region_s']);
            $this->_view->assign('_showsemail',$_shows['email_s']);
            $this->_view->assign('_carsId',$datacars);
 
@@ -230,7 +231,8 @@ $validate['email']=array(
            $this->_view->assign('_showsemail',$_shows['email_s']);
            $this->_view->assign('_phone_num1',$_shows['phone_num1']);
            $this->_view->assign('_phone_num2',$_shows['phone_num2']);
-           $this->_view->assign('_city_c',$_shows['city_c']);
+           $this->_view->assign('_city_s',$_shows['city_s']);
+           $this->_view->assign('_region_s',$_shows['region_s']);
            $this->_view->assign('_showsemail',$_shows['email_s']);
            $this->_view->assign('_carsId',$datacars);
            $this->_view->assign('_carsIdyear',$this->_cars->getlimit('shows',$limit,'desc',$id,'on'));

@@ -15,6 +15,8 @@
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/style-auto.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/media.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/share-button.min.css">
+    <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/share-button.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
   </head>
 
@@ -53,9 +55,11 @@
               </div>
             </div>
             <ul class="list-unstyled col-lg-12" id="right-section">
-              <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href="">القوز الصناعية - <?php   if(isset($_city_c) and $_city_c!=''){ ?> <?php echo  language::getLang($_city->getNameId($_city_c));?> <?php } ?></a></li>
-              <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href=""><?php echo isset($_phone_num1)?$_phone_num1:''; ?></a></li>
-              <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href=""><?php echo isset($_phone_num2)?$_phone_num2:''; ?></a></li>
+              <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href="<?php echo $path['urlsite'] ?>cars/index/showsid/<?php echo $_ids;?>"><?php echo isset($_region_s)?$_region_s:''; ?> - 
+
+              	<?php   if(isset($_city_s) and $_city_s!=''){ ?> <?php echo  language::getLang($_city->getNameId($_city_s));?> <?php } ?></a></li>
+              <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href="<?php echo $path['urlsite'] ?>cars/index/showsid/<?php echo $_ids;?>"><?php echo isset($_phone_num1)?$_phone_num1:''; ?></a></li>
+              <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href="<?php echo $path['urlsite'] ?>cars/index/showsid/<?php echo $_ids;?>"><?php echo isset($_phone_num2)?$_phone_num2:''; ?></a></li>
               <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href="mailto:<?php echo $_showsemail ?>"><?=$_showsemail?></a></li>
               <li class="my-li hidden-md hidden-xs col-sm-12">
                 <ul class="list-unstyled text-center">
@@ -63,7 +67,21 @@
                     <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
                   </li>
                   <li>
-                    <i class="fa fa-share-alt fa-2x" aria-hidden="true"></i>
+                  	
+                  	<!-- AddToAny BEGIN -->
+					<a class="a2a_dd" href="https://www.addtoany.com/share"><i class="fa fa-share-alt fa-2x" aria-hidden="true"></i></a>
+					<script>
+						var a2a_config = a2a_config || {};
+						a2a_config.onclick = 1;
+						a2a_config.num_services = 3;
+						a2a_config.color_main = "D7E5ED";
+						a2a_config.color_border = "AECADB";
+						a2a_config.color_link_text = "333333";
+						a2a_config.color_link_text_hover = "333333";
+					</script>
+					<script async src="https://static.addtoany.com/menu/page.js"></script>
+					<!-- AddToAny END -->
+                    
                   </li>
                 </ul>
               </li>
@@ -195,6 +213,7 @@
 
 
     <!-- Scripts -->
+
     <script>
       var elements = document.getElementsByClassName("column");
       var i;
@@ -208,6 +227,12 @@
           elements[i].style.width = "30%";
         }
       }
+
+	var share = new ShareButton();
+	share.toggle(); // toggles the share button popup
+share.open();   // open the share button popup
+share.close();  // closes the share button popup
+share.config;
     </script>
   </body>
   </html>
