@@ -1,5 +1,8 @@
 
-
+<?php
+$_SESSION['username'] = $_user; // Must be already set
+$_SESSION['fromuser'] = $_fromuser;
+?>
 	<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +19,12 @@
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/media.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/share-button.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/chat.css"> 
+    <!--<link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/screen.css">-->      
+    <!--<link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/screen_ie.css">--> 
     <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/share-button.js"></script>
+
+    <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/chat.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
   </head>
 
@@ -64,7 +72,8 @@
               <li class="my-li hidden-md hidden-xs col-sm-12">
                 <ul class="list-unstyled text-center">
                   <li>
-                    <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+                  	<a href="javascript:void(0)" onclick="javascript:chatWith('<?=$_SESSION['username']?>')"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
+                    
                   </li>
                   <li>
                   	

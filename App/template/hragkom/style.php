@@ -4,6 +4,7 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title><?php echo $path['namesite']?></title>
      <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/jquery.js"></script>
      <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/jquery-3.1.1.min.js"></script>
      
      <link href="<?php echo $path['template'];?>lib/css/font-awesome.css" rel="stylesheet">
@@ -22,7 +23,7 @@
 	 <link id="cssLink" href="<?php echo $path['template'];?>lib/css/style-ltr.css" rel="stylesheet" media="screen" />
 	 <link id="cssLink" href="<?php echo $path['template'];?>lib/ltr/css/bootstrap.min.css" rel="stylesheet" media="screen" />
 	 <?php } ?>
-	
+	 
      <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/jquery.ad-gallery.css">
      <link rel="stylesheet" href="<?php echo $path['urlsite']; ?>Public/css/colorbox.css" />
     <link rel="shortcut icon" href="<?php echo $path['template'];?>img/icone.png" />

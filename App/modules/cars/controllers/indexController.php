@@ -168,7 +168,11 @@ $validate['email']=array(
 
             $datacars =  $this->_cars->getlimit('shows',$limit,'desc',$id,'on');
             
-             
+            $userid = $_shows['user_id'];
+          $user = $this->_users->findName($userid,"username");
+          $this->_view->assign('_user',$user);
+          $_fromuser = $this->_users->findName($this->user_id,"username");
+          $this->_view->assign('_fromuser',$_fromuser);
             //var_dump($limit);
            $this->_view->assign('_name_ar',$_shows['name_ar_s']);
            $this->_view->assign('_name_en',$_shows['name_en_s']);
@@ -182,7 +186,7 @@ $validate['email']=array(
            $this->_view->assign('_region_s',$_shows['region_s']);
            $this->_view->assign('_showsemail',$_shows['email_s']);
            $this->_view->assign('_carsId',$datacars);
-
+           $this->_view->assign('_carsIdyear',$this->_cars->getlimit('shows',$limit,'desc',$id,'on'));
           $this->_view->sider('sider');
           $this->_view->tmpDir('showsid');
     }
@@ -221,7 +225,9 @@ $validate['email']=array(
                 );
               $datacars =  $this->_cars->showssearch($arraySearch,'shows',$limit,'desc',$id,'on');
             }
-             
+             $userid = $_shows['user_id'];
+          $user = $this->_users->findName($userid,"username");
+          $this->_view->assign('_user',$user);
             //var_dump($limit);
            $this->_view->assign('_name_ar',$_shows['name_ar_s']);
            $this->_view->assign('_name_en',$_shows['name_en_s']);

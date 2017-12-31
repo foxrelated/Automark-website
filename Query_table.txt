@@ -9,3 +9,9 @@ ALTER TABLE `shows` ADD `phone_num1` VARCHAR(50) CHARACTER SET latin1 COLLATE la
 ALTER TABLE `shows` ADD `phone_num2` VARCHAR(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL AFTER `phone_num1`;
 
 ALTER TABLE `shows` ADD `region_s` VARCHAR(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL AFTER `city_s`;
+
+RENAME TABLE `automark`.`oldchat` TO `automark`.`old_chat`;
+
+CREATE TABLE `chat` ( `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT, `from` VARCHAR(255) NOT NULL DEFAULT '', `to` VARCHAR(255) NOT NULL DEFAULT '', `message` TEXT NOT NULL, `sent` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, `recd` INTEGER UNSIGNED NOT NULL DEFAULT 0, PRIMARY KEY (`id`) )
+
+ALTER TABLE `shows` ADD `user_id` INT(11) NOT NULL AFTER `id_s`;
