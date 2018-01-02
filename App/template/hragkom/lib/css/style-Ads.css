@@ -1,0 +1,1199 @@
+* {
+  font-family: 'DroidKufi';
+}
+
+body {
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+}
+
+/* my frameork */
+
+.inline {
+  display: inline;
+}
+
+.main-color {
+  color: #db2d2e
+}
+
+.pointer {
+  cursor: pointer;
+}
+/*@media ( min-width: 900px ){
+.container {
+  width: 823px
+}
+}*/
+
+.num-bd {
+  font-weight: bold;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: DroidKufi;
+    src: url("../fonts/DroidKufi-Regular.ttf") format("opentype");
+}
+@font-face {
+    font-family: DroidKufiBold;
+    src: url("../fonts/DroidKufi-Bold.ttf") format("opentype");
+}
+@font-face {
+    font-family: AdobeArabic;
+    src: url("../fonts/AdobeArabicRegular.otf") format("opentype");
+}
+@font-face {
+    font-family: MyriadProBlack;
+    src: url("../fonts/MyriadPro-Black.otf") format("opentype");
+}
+@font-face {
+    font-family: MyriadPro;
+    src: url("../fonts/MyriadPro-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: FontAwesome;
+    src: url("../fonts/FontAwesome.otf") format("opentype");
+}
+
+/* Add New Ads */
+
+.add-ad {
+  text-align: center;
+}
+
+.add-ad .bar {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.add-ad h2 {
+  font-size: 25px;
+  font-family: 'DroidKufiBold';
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 0
+}
+
+.add-ad .btn-secondary {
+  font-size: 1.1em;
+  background-color: #707070;
+  border-radius: 0;
+  border: none;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding: 9px 0;
+  width: 16%;
+}
+
+.add-ad .btn-secondary:last-of-type {
+  margin-left: 0
+}
+
+@media (min-width: 1200px) {
+  .add-ad .btn-secondary {
+    float: right
+  }
+  .add-ad .container .bar {
+    /*padding-right: 50px*/
+  }
+}
+
+.add-ad .btn-secondary:hover {
+  background-color: #db2d2e;
+  transition: all .3s ease-in-out
+}
+
+.add-ad .btn-secondary.active {
+  background-color: #db2d2e
+}
+
+.add-ad button,
+.add-ad .btn,
+.add-ad .btn-secondary,
+.add-ad a {
+  margin-left: 8px
+}
+
+.add-ad form input {
+  font-size: 17px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  margin: 10px 0;
+  color: #999;
+  border: 1px solid #ccc
+}
+
+.add-ad .form-group {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.add-ad .form-group:nth-of-type(2) input,
+.add-ad .form-group:nth-of-type(3) input {
+  width:49%
+}
+
+.add-ad .form-group:nth-of-type(2) input:last-child,
+.add-ad .form-group:nth-of-type(3) input:last-child {
+  float: right
+}
+
+.add-ad .form-group:nth-of-type(2) input:first-child,
+.add-ad .form-group:nth-of-type(3) input:first-child {
+  float: left
+}
+
+@media (max-width: 1200px) {
+  .add-ad .btn-secondary {
+    font-size: 1.1em;
+    margin-left: 5px;
+    width: 14.5%
+  }
+}
+@media (max-width: 900px) {
+  .add-ad .btn-secondary {
+    width: 14.2%
+  }
+  .add-ad button,
+  .add-ad .btn,
+  .add-ad .btn-secondary,
+  .add-ad a {
+    margin-left: 7px
+  }
+}
+@media (max-width: 700px) {
+  .add-ad .btn-secondary {
+    width: 14%
+  }
+  .add-ad button,
+  .add-ad .btn,
+  .add-ad .btn-secondary,
+  .add-ad a {
+    margin-left: 6px
+  }
+}
+@media (max-width: 615px) {
+  .add-ad .btn-secondary {
+    width: 13.5%
+  }
+  .add-ad button,
+  .add-ad .btn,
+  .add-ad .btn-secondary,
+  .add-ad a {
+    margin-left: 1px
+  }
+}
+@media (max-width: 550px) {
+  .add-ad h2 {
+    margin-bottom: 0px;
+  }
+
+  .add-ad .btn-secondary {
+    font-size: 1em;
+    margin-left: 3px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 14%
+  }
+  .add-ad form input {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  .add-ad button,
+  .add-ad .btn,
+  .add-ad .btn-secondary,
+  .add-ad a {
+    margin-left: 1px
+  }
+}
+
+@media ( max-width: 450px ) {
+  .add-ad h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .add-ad .btn-secondary {
+    font-size: .7em;
+    margin-left: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 14%
+  }
+  .add-ad form input {
+    font-size: 13px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 3px 0;
+  }
+}
+@media ( max-width: 350px ) {
+  .add-ad h2 {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .add-ad .btn-secondary {
+    font-size: .5em;
+    margin-left: 2px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 14%
+  }
+  .add-ad form input {
+    font-size: 9px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin: 2px 0;
+  }
+}
+
+/* Car Details */
+
+/**/
+.lSSlideWrapper {
+    overflow: visible;
+}
+.lSNext {
+  right: -170px !important;
+  bottom: 40px !important;
+  z-index: 99999
+}
+.lSPrev {
+  right: -175px !important;
+}
+.lSSlideOuter.vertical {
+  padding-right: 25% !important;
+}
+.lSSlideOuter .lSPager.lSGallery img {
+
+}
+.lSSlideOuter.vertical.noPager {
+  padding-right: 25% !important
+}
+.lSSlideOuter .lSPager.lSGallery {
+  overflow-y: scroll;
+  height: 100% !important;
+  list-style: none;
+  -moz-touch-callout: none;
+}
+.lSSlideOuter .lSPager.lSGallery li {
+    height: 160px !important;
+}
+@media (max-width: 1200px) {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
+      height: 500px !important;
+      /*overflow: hidden;*/
+  }
+  .lSSlideOuter .lSPager.lSGallery img {
+      /*max-width: 70%;*/
+  }
+  .lSSlideOuter .lSPager.lSGallery li {
+      height: 120px !important;
+  }
+  .lSNext {
+    bottom: 155px !important;
+    right: -145px !important;
+  }
+  .lSPrev {
+    right: -145px !important;
+  }
+}
+@media (max-width: 1000px) {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
+      height: 500px !important;
+      /*overflow: hidden;*/
+  }
+  .lSSlideOuter .lSPager.lSGallery img {
+      /*max-width: 55%;*/
+  }
+  .lSSlideOuter .lSPager.lSGallery li {
+      height: auto !important;
+  }
+  .lSNext {
+    bottom: 155px !important;
+    right: -110px !important;
+  }
+  .lSPrev {
+    right: -110px !important;
+  }
+}
+@media (max-width: 975px) {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
+      height: 400px !important
+  }
+  .lSSlideOuter .lSPager.lSGallery {
+    width: 30% !important
+  }
+  .lSSlideOuter .lSPager.lSGallery img {
+      /*max-width: 100%;*/
+  }
+  .lSSlideOuter .lSPager.lSGallery li {
+      /*height: 14% !important;*/
+
+  }
+  .lSNext {
+    bottom: 280px !important
+  }
+}
+@media (max-width: 700px) {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
+      height: 350px !important
+  }
+  .lSSlideOuter .lSPager.lSGallery img {
+      /*max-width: 45%;*/
+  }
+  .lSSlideOuter .lSPager.lSGallery li {
+      /*height: 8% !important;*/
+  }
+  .lSNext {
+    bottom: 320px !important;
+    right: -80px !important;
+  }
+  .lSPrev {
+    right: -80px !important;
+  }
+}
+@media (max-width: 600px) {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
+      height: 300px !important;
+  }
+  .lSSlideOuter .lSPager.lSGallery img {
+      /*max-width: 30%;*/
+  }
+  .lSSlideOuter .lSPager.lSGallery li {
+      height: auto !important;
+  }
+  .lSNext {
+    bottom: 375px !important
+  }
+  /*.lSSlideOuter.vertical {
+    padding-right: 30% !important
+  }*/
+}
+@media (max-width: 550px) {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
+      height: 260px !important
+  }
+  .lSSlideOuter .lSPager.lSGallery img {
+      /*max-width: 30%;*/
+  }
+  .lSSlideOuter .lSPager.lSGallery li {
+      /*height: 10% !important;*/
+  }
+  .lSNext {
+    bottom: 405px !important
+  }
+  /*.lSPrev {
+    right: 50% !important
+  }*/
+}
+@media (max-width: 500px) {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
+      height: 220px !important
+  }
+  .lSSlideOuter .lSPager.lSGallery img {
+      /*max-width: 35%;*/
+  }
+  .lSSlideOuter .lSPager.lSGallery li {
+      /*height: 4.9% !important;*/
+  }
+  .lSNext {
+    bottom: 435px !important;
+    right: -55px !important;
+  }
+  .lSPrev {
+    right: -55px !important;
+  }
+}
+@media (max-width: 410px) {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
+      height: 175px !important
+  }
+  .lSSlideOuter .lSPager.lSGallery img {
+      /*max-width: 25%;*/
+  }
+  .lSSlideOuter .lSPager.lSGallery li {
+      /*height: 3.5% !important;*/
+  }
+  .lSNext {
+    bottom: 480px !important;
+    right: -43px !important;
+  }
+  .lSPrev {
+    right: -43px !important;
+  }
+}
+@media (max-width: 350px) {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
+      height: 140px !important
+  }
+  .lSSlideOuter .lSPager.lSGallery {
+    width: 40% !important
+  }
+  .lSSlideOuter .lSPager.lSGallery img {
+      /*max-width: 22%;*/
+  }
+  .lSSlideOuter .lSPager.lSGallery li {
+      /*height: 3% !important;*/
+  }
+  .lSNext {
+    bottom: 510px !important;
+    right: -30px !important;
+  }
+  .lSPrev {
+    top: 1px !important;
+    right: -30px !important;
+  }
+}
+@media (max-width: 310px) {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
+      height: 120px !important
+  }
+  .lSSlideOuter .lSPager.lSGallery img {
+      /*max-width: 18%;*/
+  }
+  .lSSlideOuter .lSPager.lSGallery li {
+      /*height: 2.5% !important;*/
+  }
+  .lSNext {
+    bottom: 535px !important;
+    right: -25px !important;
+  }
+  .lSPrev {
+    right: -25px !important;
+  }
+}
+/**/
+.car-detail .container .car-image-head {
+  background-color: #fff;
+  padding: 30px 25px;
+  border: 1px solid #999;
+  margin: 15px auto;
+  overflow: hidden;
+}
+
+.text-muted {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1.1
+}
+
+.car-type {
+  font-size: 25px;
+  font-family: 'DroidKufiBold'
+}
+
+.price {
+  font-size: 23px;
+  color: #db2d2e;
+  float: left;
+  font-family: 'DroidKufiBold';
+  cursor: default;
+}
+
+.price span {
+  font-weight: bold;
+}
+
+.basic-details {
+  margin-top: 10px
+}
+
+.detail {
+  font-size: 17px;
+  color: #db2d2e;
+  margin-bottom: 0;
+  float: right;
+  font-family: 'DroidKufiBold';
+}
+
+.detail i {
+  font-size: 20px;
+  color: #898989;
+  margin-left: 10px;
+}
+
+@media ( max-width: 600px ) {
+  .detail {
+    font-size: 12px;
+  }
+  .detail i {
+    font-size: 12px;
+  }
+  .car-detail .container {
+    padding: 15px 25px;
+    margin: 5px auto;
+  }
+  .text-muted {
+    font-size: 10px;
+  }
+
+  .car-type {
+    font-size: 20px;
+  }
+
+  .price {
+    font-size: 18px;
+    color: #db2d2e;
+  }
+
+  .price span {
+    font-weight: bold;
+  }
+
+  .basic-details {
+    margin-top: 5px
+  }
+}
+
+@media ( max-width: 450px ) {
+  .car-detail .container {
+    padding: 10px 15px;
+  }
+  .car-image-head {
+    padding: 0
+  }
+  .car-type {
+    font-size: 16px;
+  }
+  .price {
+    font-size: 15px;
+  }
+  .basic-details {
+    margin-top: 5px
+  }
+  .detail {
+    font-size: 9px
+  }
+  .detail i {
+    font-size: 10px;
+  }
+}
+@media ( max-width: 350px ) {
+  .car-detail .container {
+    padding: 5px 10px;
+  }
+  .text-muted {
+    font-size: 6px
+  }
+  .car-type {
+    font-size: 12px;
+  }
+  .price {
+    font-size: 11px;
+  }
+  .basic-details {
+    margin-top: 3px
+  }
+  .detail {
+    font-size: 7px
+  }
+  .detail i {
+    font-size: 8px;
+  }
+}
+@media (max-width: 310px) {
+  .car-type {
+    font-size: 10px;
+  }
+  .price {
+    font-size: 9px;
+  }
+  .basic-details {
+    margin-top: 3px
+  }
+  .detail {
+    font-size: 6px
+  }
+  .detail i {
+    font-size: 6px;
+  }
+}
+
+/* Cars Images */
+
+.car-images {
+  padding: 20px 0;
+  background-color: #fff;
+  padding: 20px 0 40px
+}
+
+.basic-image {
+  padding: 0 10px;
+}
+
+.other-image {
+  width: 19%;
+  /*height: 20%;*/
+  margin-bottom: 16px
+}
+
+.other-image:last-of-type {
+  margin-bottom: 0
+}
+
+@media (max-width: 990px) {
+  .other-image {
+    margin-bottom: 5px;
+    width: 18%;
+  }
+}
+
+@media (max-width: 600px) {
+  .other-image {
+    width: 20%;
+  }
+}
+@media (max-width: 400px) {
+  .other-image {
+    margin-bottom: 3px;
+    width: 23%;
+  }
+}
+@media (max-width: 310px) {
+  .other-image {
+    margin-bottom: 3px;
+    width: 24%;
+  }
+  .car-images {
+    padding: 20px 0;
+    background-color: #fff;
+    padding: 20px 0
+  }
+}
+/* Information */
+
+.information {
+  background-color: #363636;
+  color: #ebebeb;
+  padding: 30px 0;
+  margin: 0
+}
+
+.information h2 {
+  font-size: 25px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  margin-right: 15px;
+  font-family: 'DroidKufiBold'
+}
+
+.information .half-info {
+  padding: 0;
+}
+
+.information .half-info:first-of-type {
+  padding-right: 25px
+}
+
+.information select,
+.information textarea {
+  width: 100%;
+  background-color: #555;
+  color: #a6a5a5;
+  border: none;
+  padding: 5px 10px;
+  font-size: 18px;
+  margin: 8px 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none
+}
+
+.information .symbol-container {
+  position: relative;
+}
+
+.information i {
+  float:left;
+  position: absolute;
+  top: 22px;
+  left: 2rem;
+  font-size: 30px;
+  font-weight: bold;
+  color: #363636
+}
+
+.information textarea {
+  max-height: 100px;
+  min-height: 100px;
+  max-width: 100%;
+  min-width: 100%
+}
+
+@media ( max-width: 600px ) {
+  .information {
+    padding: 10px 0;
+  }
+  .information h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .information .half-info:first-of-type {
+    padding-right: 10px
+  }
+
+  .information select,
+  .information textarea {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  .information i {
+    top: 15px;
+    font-size: 25px;
+  }
+}
+
+@media ( max-width: 450px ) {
+  .information {
+    padding: 10px 0;
+  }
+
+  .information h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .information select,
+  .information textarea {
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+  .information i {
+    float:left;
+    position: absolute;
+    top: 14px;
+    left: 1rem;
+    font-size: 18px;
+  }
+}
+@media (max-width: 350px) {
+  .information {
+    padding: 5px 0;
+  }
+
+  .information h2 {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .information select,
+  .information textarea {
+    font-size: 8px;
+  }
+  .information i {
+    font-size: 12px;
+  }
+  .information textarea {
+    max-height: 40px;
+    min-height: 40px;
+  }
+}
+/* Publish */
+
+.publish .btn1,
+.publish .btn2 {
+  font-size: 1.2em;
+  border-radius: 0;
+  border: none;
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  padding: 9px 0;
+  width: 43%;
+  font-family: 'DroidKufiBold'
+}
+
+.publish .btn1 {
+  background-color: #db2d2e;
+  margin-left: 50px;
+  margin-right: 15px
+}
+
+.publish .btn1:hover {
+  background-color: #707070;
+  transition: all .3s ease-in-out
+}
+
+.publish .btn2 {
+  background-color: #707070;
+}
+
+.publish .btn2:hover {
+  background-color: #db2d2e;
+  transition: all .3s ease-in-out
+}
+
+@media (max-width:1200px) {
+  .publish .btn1,
+  .publish .btn2 {
+    font-size: 1em;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 550px) {
+  .publish .btn1,
+  .publish .btn2 {
+    font-size: 1em;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .publish .btn1 {
+    margin-left: 20px;
+    margin-right: 20px
+  }
+}
+@media (max-width: 370px) {
+  .publish .btn1,
+  .publish .btn2 {
+    font-size: .7em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .publish .btn1 {
+    margin-left: 10px;
+    margin-right: 10px
+  }
+}
+/* Advertis */
+
+.ads {
+  background-color: #f2f2f2;
+  padding: 30px 0
+}
+
+.ads .ads1 {
+  text-align: center;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.ads .ads1 img {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.ads .ads1 div {
+  background-color: rgba(0,0,0,0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.ads .ads1 div h4,
+.ads .ads1 div p {
+  z-index: 99;
+  position: relative;
+  top: 80px;
+}
+
+.ads .ads1 div h4 {
+  font-size: 20px
+}
+
+.ads .ads1 div p {
+  font-size: 17px
+}
+
+.ads-logo {
+  position: absolute;
+  z-index: 11;
+  width: 20%;
+  left:0;
+  top: 25px
+}
+
+.ads .ads1 h5 {
+  position: absolute;
+  top:20px;
+  right: 20px;
+  font-size: 15px;
+
+}
+
+.ads .ads1 h5 i {
+  margin-left: 5px;
+  color: #ffd200
+}
+
+.ads .ads2 {
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.ads .ads2 h4 {
+  z-index: 999;
+  position: absolute;
+  top: 54px;
+  right: 30%;
+  font-size: 15px;
+  color: #fff;
+  font-family: 'DroidKufiBold';
+}
+
+.ads .ads3 {
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.ads .ads3 h4 {
+  position: absolute;
+  top: 44px;
+  left: 2%;
+  font-size: 15px;
+  color: #000;
+  font-family: 'DroidKufiBold';
+}
+
+.ads2 img {
+  padding-left: 5px
+}
+
+.ads3 img {
+  padding-right: 5px
+}
+
+@media (max-width: 1200px) {
+  .ads .ads1 {
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .ads .ads1 div h4,
+  .ads .ads1 div p {
+    top: 35%;
+  }
+  .ads .ads1 div h4 {
+    font-size: 20px
+  }
+  .ads .ads1 div p {
+    font-size: 17px
+  }
+  .ads .ads2 h4 {
+    top: 70px;
+    right: 30%;
+    font-size: 15px;
+  }
+  .ads .ads3 h4 {
+    top: 50px;
+    left: 3%;
+    font-size: 15px;
+  }
+  .ads .ads1 h5 {
+    top:20px;
+    right: 15px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 990px) {
+  .ads .ads1 {
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .ads .ads1 img {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .ads .ads1 div h4,
+  .ads .ads1 div p {
+    top: 35%;
+  }
+  .ads .ads1 div h4 {
+    font-size: 12px
+  }
+  .ads .ads1 div p {
+    font-size: 10px
+  }
+  .ads-logo {
+    width: 20%;
+    top: 15px
+  }
+  .ads .ads1 h5 {
+    top:10px;
+    right: 20px;
+    font-size: 10px;
+  }
+  .ads .ads2 h4 {
+    top: 50px;
+    right: 30%;
+    font-size: 11px;
+  }
+  .ads .ads3 h4 {
+    top: 30px;
+    left: 3%;
+    font-size: 11px;
+  }
+  .ads2 img {
+    padding-left: 2px
+  }
+  .ads3 img {
+    padding-right: 2px
+  }
+}
+
+@media (max-width: 768px) {
+
+  .ads {
+    padding: 5px 0
+  }
+  .ads .ads1 {
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .ads .ads1 img {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .ads .ads1 div h4,
+  .ads .ads1 div p {
+    top: 35%;
+  }
+  .ads .ads1 div h4 {
+    font-size: 12px
+  }
+  .ads .ads1 div p {
+    font-size: 10px
+  }
+  .ads-logo {
+    width: 20%;
+    top: 15px
+  }
+  .ads .ads1 h5 {
+    top:10px;
+    right: 20px;
+    font-size: 10px;
+  }
+  .ads .ads2 h4 {
+    top: 50px;
+    right: 30%;
+    font-size: 11px;
+  }
+  .ads .ads3 h4 {
+    top: 30px;
+    left: 3%;
+    font-size: 11px;
+  }
+  .ads2 img {
+    padding-left: 2px
+  }
+  .ads3 img {
+    padding-right: 2px
+  }
+}
+
+@media (max-width: 543px) {
+  .ads .ads3 h4 {
+    top: 20px;
+    left: 3%;
+    font-size: 9px;
+  }
+  .ads .ads2 h4 {
+    top: 30px;
+    right: 30%;
+    font-size: 9px;
+  }
+  .ads .ads1 h5 {
+    top:8px;
+    right: 10px;
+    font-size: 9px;
+  }
+  .ads .ads1 div h4,
+  .ads .ads1 div p {
+    top: 30%;
+  }
+}
+
+@media (max-width: 415px) {
+  .ads .ads1 div h4 {
+    font-size: 10px
+  }
+  .ads .ads1 div p {
+    font-size: 8px
+  }
+  .ads .ads3 h4 {
+    top: 20px;
+    left: 3%;
+    font-size: 6px;
+  }
+  .ads .ads2 h4 {
+    top: 30px;
+    right: 30%;
+    font-size: 6px;
+  }
+  .ads .ads1 h5 {
+    top:6px;
+    right: 10px;
+    font-size: 9px;
+  }
+  .ads .ads1 div h4,
+  .ads .ads1 div p {
+    top: 30%;
+  }
+}
+
+@media (max-width: 350px) {
+  .ads .ads1 div h4 {
+    font-size: 7px;
+    padding: 0;
+    margin: 0
+  }
+  .ads .ads1 div p {
+    font-size: 5px
+  }
+  .ads .ads3 h4 {
+    top: 5px;
+    left: 3%;
+    font-size: 4px;
+  }
+  .ads .ads2 h4 {
+    top: 5px;
+    right: 30%;
+    font-size: 4px;
+  }
+  .ads .ads1 h5 {
+    top:3px;
+    right: 6px;
+    font-size: 5px;
+  }
+  .ads .ads1 div h4,
+  .ads .ads1 div p {
+    top: 40%;
+  }
+  .ads-logo {
+    width: 20%;
+    top: 9px
+  }
+}

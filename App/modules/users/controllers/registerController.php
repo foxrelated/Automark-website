@@ -9,6 +9,9 @@
        parent::__construct();
         $this->_model=  $this->loadModel('users');
         $this->_global=  $this->loadModel('global','default');
+        $this->_shows=$this->loadModel("shows",'admin');
+        $this->_shows = $this->_shows->getAll();
+        $this->_view->assign('_shows',$this->_shows);
     }
     function index(){
 

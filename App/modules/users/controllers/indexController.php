@@ -9,6 +9,9 @@
         $this->_res=  $this->_user->resulte();
         $this->idUser=  session::get(system::get("session/session_name"));
         $this->_view->assign("_user",$this->_res);
+        $this->_shows=$this->loadModel("shows",'admin');
+        $this->_shows = $this->_shows->getAll();
+        $this->_view->assign('_shows',$this->_shows);
     }
     public function index(){
             $this->_view->tmpDir("index",'',array('tmp'=>true));

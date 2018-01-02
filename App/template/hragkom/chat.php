@@ -214,7 +214,7 @@ function sendChat() {
 	    printf("Connect failed: %s\n", mysqli_connect_error());
 	    exit();
 	}
-	$from = $_SESSION['fromuser'];
+	$from = $_SESSION['username'];
 	$to = $_POST['to'];
 	$message = $_POST['message'];
 	

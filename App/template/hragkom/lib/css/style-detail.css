@@ -55,7 +55,6 @@ body {
     src: url("../fonts/MyriadPro-Regular.otf") format("opentype");
 }
 
-
 /* Head Bar */
 
 .head-bar {
@@ -338,12 +337,16 @@ body {
 
 /* Images Cars */
 
+.lSSlideWrapper {
+    overflow: visible;
+}
 .lSNext {
-  right: 50% !important;
-  bottom: 40px !important
+  right: -170px !important;
+  bottom: 40px !important;
+  z-index: 99999
 }
 .lSPrev {
-
+  right: -175px !important;
 }
 
 .car-image {
@@ -355,144 +358,208 @@ body {
 .lSSlideOuter.vertical {
   padding-right: 25% !important
 }
+.lSSlideOuter .lSPager.lSGallery img {
+    /*max-width: 90%;*/
+}
+.lSSlideOuter .lSPager.lSGallery {
+  overflow-y: scroll;
+  height: 100% !important
+}
+.lSSlideOuter .lSPager.lSGallery li {
+    height: 160px !important;
+}
 @media (max-width: 1200px) {
-  .car-images .container {
-      height: 500px !important
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
+      height: 500px !important;
+      /*overflow: hidden;*/
   }
   .lSSlideOuter .lSPager.lSGallery img {
-      max-width: 70%;
+      /*max-width: 70%;*/
   }
   .lSSlideOuter .lSPager.lSGallery li {
-      height: 12% !important;
+      height: 120px !important;
   }
   .lSNext {
-    bottom: 155px !important
+    bottom: 155px !important;
+    right: -145px !important;
+  }
+  .lSPrev {
+    right: -145px !important;
   }
 }
 @media (max-width: 1000px) {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
+      height: 500px !important;
+      /*overflow: hidden;*/
+  }
   .lSSlideOuter .lSPager.lSGallery img {
-      max-width: 50%;
+      /*max-width: 55%;*/
   }
   .lSSlideOuter .lSPager.lSGallery li {
-      height: 8% !important;
+      height: auto !important;
+  }
+  .lSNext {
+    bottom: 155px !important;
+    right: -110px !important;
+  }
+  .lSPrev {
+    right: -110px !important;
   }
 }
 @media (max-width: 975px) {
-  .car-images .container {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
       height: 400px !important
   }
+  .lSSlideOuter .lSPager.lSGallery {
+    width: 30% !important
+  }
   .lSSlideOuter .lSPager.lSGallery img {
-      max-width: 50%;
+      /*max-width: 100%;*/
   }
   .lSSlideOuter .lSPager.lSGallery li {
-      height: 8% !important;
+      /*height: 14% !important;*/
+
   }
   .lSNext {
     bottom: 280px !important
   }
 }
 @media (max-width: 700px) {
-  .car-images .container {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
       height: 350px !important
   }
   .lSSlideOuter .lSPager.lSGallery img {
-      max-width: 45%;
+      /*max-width: 45%;*/
   }
   .lSSlideOuter .lSPager.lSGallery li {
-      height: 8% !important;
+      /*height: 8% !important;*/
   }
   .lSNext {
-    bottom: 320px !important
+    bottom: 320px !important;
+    right: -80px !important;
+  }
+  .lSPrev {
+    right: -80px !important;
   }
 }
 @media (max-width: 600px) {
-  .car-images .container {
-      height: 290px !important
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
+      height: 300px !important;
   }
   .lSSlideOuter .lSPager.lSGallery img {
-      max-width: 30%;
+      /*max-width: 30%;*/
   }
   .lSSlideOuter .lSPager.lSGallery li {
-      height: 6% !important;
+      height: auto !important;
   }
   .lSNext {
     bottom: 375px !important
   }
+  /*.lSSlideOuter.vertical {
+    padding-right: 30% !important
+  }*/
 }
 @media (max-width: 550px) {
-  .car-images .container {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
       height: 260px !important
   }
   .lSSlideOuter .lSPager.lSGallery img {
-      max-width: 30%;
+      /*max-width: 30%;*/
   }
   .lSSlideOuter .lSPager.lSGallery li {
-      height: 6% !important;
+      /*height: 10% !important;*/
   }
   .lSNext {
     bottom: 405px !important
   }
-  .lSPrev {
+  /*.lSPrev {
     right: 50% !important
-  }
+  }*/
 }
 @media (max-width: 500px) {
-  .car-images .container {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
       height: 220px !important
   }
   .lSSlideOuter .lSPager.lSGallery img {
-      max-width: 30%;
+      /*max-width: 35%;*/
   }
   .lSSlideOuter .lSPager.lSGallery li {
-      height: 4% !important;
+      /*height: 4.9% !important;*/
   }
   .lSNext {
-    bottom: 435px !important
+    bottom: 435px !important;
+    right: -55px !important;
+  }
+  .lSPrev {
+    right: -55px !important;
   }
 }
 @media (max-width: 410px) {
-  .car-images .container {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
       height: 175px !important
   }
   .lSSlideOuter .lSPager.lSGallery img {
-      max-width: 25%;
+      /*max-width: 25%;*/
   }
   .lSSlideOuter .lSPager.lSGallery li {
-      height: 3.5% !important;
+      /*height: 3.5% !important;*/
   }
   .lSNext {
-    bottom: 480px !important
+    bottom: 480px !important;
+    right: -43px !important;
+  }
+  .lSPrev {
+    right: -43px !important;
   }
 }
 @media (max-width: 350px) {
-  .car-images .container {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
       height: 140px !important
   }
+  .lSSlideOuter .lSPager.lSGallery {
+    width: 40% !important
+  }
   .lSSlideOuter .lSPager.lSGallery img {
-      max-width: 22%;
+      /*max-width: 22%;*/
   }
   .lSSlideOuter .lSPager.lSGallery li {
-      height: 3% !important;
+      /*height: 3% !important;*/
   }
   .lSNext {
-    bottom: 510px !important
+    bottom: 510px !important;
+    right: -30px !important;
   }
   .lSPrev {
-    top: 1px !important
+    top: 1px !important;
+    right: -30px !important;
   }
 }
 @media (max-width: 310px) {
-  .car-images .container {
+  .car-images .container,
+  .lSSlideOuter .lSPager.lSGallery {
       height: 120px !important
   }
   .lSSlideOuter .lSPager.lSGallery img {
-      max-width: 18%;
+      /*max-width: 18%;*/
   }
   .lSSlideOuter .lSPager.lSGallery li {
-      height: 2.5% !important;
+      /*height: 2.5% !important;*/
   }
   .lSNext {
-    bottom: 535px !important
+    bottom: 535px !important;
+    right: -25px !important;
+  }
+  .lSPrev {
+    right: -25px !important;
   }
 }
 .searchicon {
@@ -520,31 +587,6 @@ body {
   width: 200px;
   height: 141px;
   margin-bottom: 20px
-}
-
-/* Zoom Image */
-
-.mfp-with-zoom .mfp-container,
-.mfp-with-zoom.mfp-bg {
-  opacity: 0;
-  -webkit-backface-visibility: hidden;
-  /* ideally, transition speed should match zoom duration */
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.mfp-with-zoom.mfp-ready .mfp-container {
-    opacity: 1;
-}
-.mfp-with-zoom.mfp-ready.mfp-bg {
-    opacity: 0.8;
-}
-
-.mfp-with-zoom.mfp-removing .mfp-container,
-.mfp-with-zoom.mfp-removing.mfp-bg {
-  opacity: 0;
 }
 
 @media (max-width: 1200px) {

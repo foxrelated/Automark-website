@@ -171,6 +171,7 @@ $validate['email']=array(
             $userid = $_shows['user_id'];
           $user = $this->_users->findName($userid,"username");
           $this->_view->assign('_user',$user);
+          
           $_fromuser = $this->_users->findName($this->user_id,"username");
           $this->_view->assign('_fromuser',$_fromuser);
             //var_dump($limit);
