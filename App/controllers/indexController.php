@@ -48,6 +48,7 @@
             	 }
             $limit=array('limit_start'=>$limitNext,'limit_end'=>$countPag);
             $listPage=array('list'=>$num,'count'=>$countNumPage);
+            
           $this->_view->assign('numPage', $listPage);
           $this->_view->assign('_carsId', $this->_cars->getlimit('last',$limit,'desc','','on'));
           $this->_view->assign('_cardSort','adv');

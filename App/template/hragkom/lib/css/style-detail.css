@@ -567,10 +567,10 @@ body {
 }
 
 .fa-search {
-  position: absolute;
+  /*position: absolute;*/
   left: 70px;
   top: 530px;
-  font-size: 50px;
+  /*font-size: 50px;*/
   color: #ddd;
 }
 

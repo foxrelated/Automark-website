@@ -15,3 +15,149 @@ RENAME TABLE `automark`.`oldchat` TO `automark`.`old_chat`;
 CREATE TABLE `chat` ( `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT, `from` VARCHAR(255) NOT NULL DEFAULT '', `to` VARCHAR(255) NOT NULL DEFAULT '', `message` TEXT NOT NULL, `sent` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, `recd` INTEGER UNSIGNED NOT NULL DEFAULT 0, PRIMARY KEY (`id`) )
 
 ALTER TABLE `shows` ADD `user_id` INT(11) NOT NULL AFTER `id_s`;
+
+ALTER TABLE `value_option` CHANGE `value_v` `value_v` LONGTEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL;
+
+INSERT INTO `option_car` (`id_o`, `name_o`, `code_o`, `option_o`, `type_o`, `order_o`) VALUES (NULL, '<!--:ar-->عدد الكيلومترات المستهلكة<!--:--><!--:en-->Kilometers consumed<!--:-->', 'kilometersconsumed', '{"type":"select"}', 'form', '0');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '50', '<!--:ar--><!--:1-->10<!--:--><!--:en--><!--:1-->10<!--:-->', '');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '1', '50', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '2', '50', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '3', '50', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '4', '50', '4');
+
+UPDATE `option_car` SET `name_o` = '<!--:ar-->الكيلومترات المستهلكة<!--:--><!--:en-->Kilometers consumed<!--:-->' WHERE `option_car`.`id_o` = 50;
+
+ALTER TABLE `option_car` CHANGE `name_o` `name_o` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL;
+
+INSERT INTO `option_car` (`id_o`, `name_o`, `code_o`, `option_o`, `type_o`, `order_o`) VALUES (NULL, '<!--:ar-->كم الحمولة<!--:--><!--:en-->How much load<!--:-->', 'howmuchload', '{"type":"select"}', 'form', '0');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '51', '<!--:ar--><!--:1-->10<!--:--><!--:en--><!--:1-->10<!--:-->', '');
+
+ALTER TABLE `category` CHANGE `code_ss` `code_ss` VARCHAR(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL;
+
+INSERT INTO `category` (`id_ss`, `code_ss`, `value_ss`, `type_ss`) VALUES (NULL, '<!--:ar-->قارب<!--:--><!--:en-->Boat<!--:-->', '', '');
+
+INSERT INTO `category` (`id_ss`, `code_ss`, `value_ss`, `type_ss`) VALUES (NULL, '<!--:ar-->شاحنة<!--:--><!--:en-->Truck<!--:-->', '', '');
+
+ALTER TABLE `category` CHANGE `code_ss` `code_ss` VARCHAR(150) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL;
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '1', '51', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '5', '51', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '51', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '5', '16', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '5', '15', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '5', '20', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '5', '36', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '5', '50', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '5', '22', '4');
+
+INSERT INTO `option_car` (`id_o`, `name_o`, `code_o`, `option_o`, `type_o`, `order_o`) VALUES (NULL, '<!--:ar-->قوة المحرك<!--:--><!--:en-->Engine power<!--:-->', 'enginepower', '{"type":"text","addon_end":"Horse.Power","force":"1","basic":"1"}', 'form', '0');
+
+UPDATE `option_car` SET `option_o` = '{"type":"select"}' WHERE `option_car`.`id_o` = 52;
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '1', '52', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '5', '52', '4');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '52', '<!--:ar--><!--:1-->1<!--:--><!--:en--><!--:1-->1<!--:-->', '');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '52', '<!--:ar--><!--:1-->2<!--:--><!--:en--><!--:1-->2<!--:-->', '');
+
+INSERT INTO `option_car` (`id_o`, `name_o`, `code_o`, `option_o`, `type_o`, `order_o`) VALUES (NULL, '<!--:ar-->سرعة المحرك<!--:--><!--:en-->Engine speed<!--:-->', 'enginespeed', '{"type":"select"}', 'form', '0');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '53', '<!--:ar--><!--:1-->20<!--:--><!--:en--><!--:1-->20<!--:-->', '');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '1', '53', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '5', '53', '4');
+
+INSERT INTO `option_car` (`id_o`, `name_o`, `code_o`, `option_o`, `type_o`, `order_o`) VALUES (NULL, '<!--:ar-->طول القارب<!--:--><!--:en-->Length of the boat<!--:-->', 'lengthoftheboat', '{"type":"select"}', 'form', '0');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '54', '<!--:ar--><!--:1-->1<!--:--><!--:en--><!--:1-->1<!--:-->', '');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '5', '54', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '1', '54', '4');
+
+INSERT INTO `option_car` (`id_o`, `name_o`, `code_o`, `option_o`, `type_o`, `order_o`) VALUES (NULL, '<!--:ar-->حالة القارب<!--:--><!--:en-->The case of the boat<!--:-->', 'thecaseoftheboat', '{"type":"select"}', 'form', '0');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '55', '<!--:ar-->Ø¨Ø­Ø§Ø¬Ø© Ø§Ù„Ù‰ ØµÙŠØ§Ù†Ø©<!--:--><!--:en-->need maintenance<!--:-->', '');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '55', '<!--:ar-->Ù…Ù…ØªØ§Ø²Ø©<!--:--><!--:en-->Excellent<!--:-->', '');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '55', '<!--:ar-->Ù…ØªÙˆØ³Ø·Ø©<!--:--><!--:en-->center<!--:-->', '');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '55', '<!--:ar-->Ø¬ÙŠØ¯Ù‡<!--:--><!--:en-->Good<!--:-->', '');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '5', '55', '4');
+
+ALTER TABLE `option_car` CHANGE `name_o` `name_o` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL;
+
+INSERT INTO `cars_type` (`id_t`, `name_t`, `sub_t`, `images_t`, `category_t`) VALUES (NULL, '<!--:ar-->Ø¯Ø§ÙŠÙˆ<!--:--><!--:en-->DAEWOO<!--:-->', '0', 'upl_53b69ecb3d778.jpg', '5');
+
+INSERT INTO `option_car` (`id_o`, `name_o`, `code_o`, `option_o`, `type_o`, `order_o`) VALUES (NULL, '<!--:ar-->حالة الشاحنة<!--:--><!--:en-->The case of the truck<!--:-->', 'thecaseofthetruck', '{"type":"select"}', 'form', '0');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '56', '<!--:ar-->Ù…Ù…ØªØ§Ø²Ø©<!--:--><!--:en-->Excellent<!--:-->', '');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '56', '<!--:ar-->Ø¬ÙŠØ¯Ù‡<!--:--><!--:en-->Good<!--:-->', '');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '56', '<!--:ar-->Ù…ØªÙˆØ³Ø·Ø©<!--:--><!--:en-->center<!--:-->', '');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '56', '<!--:ar-->Ø¨Ø­Ø§Ø¬Ø© Ø§Ù„Ù‰ ØµÙŠØ§Ù†Ø©<!--:--><!--:en-->need maintenance<!--:-->', '');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '56', '4');
+
+INSERT INTO `option_car` (`id_o`, `name_o`, `code_o`, `option_o`, `type_o`, `order_o`) VALUES (NULL, '<!--:ar-->حالة الدراجة<!--:--><!--:en-->Bike case<!--:-->', 'bikecase', '{"type":"select"}', 'form', '0');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '57', '<!--:ar-->Ù…Ù…ØªØ§Ø²Ø©<!--:--><!--:en-->Excellent<!--:-->', '');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '57', '<!--:ar-->Ø¬ÙŠØ¯Ù‡<!--:--><!--:en-->Good<!--:-->', '');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '57', '<!--:ar-->Ù…ØªÙˆØ³Ø·Ø©<!--:--><!--:en-->center<!--:-->', '');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '57', '<!--:ar-->Ø¨Ø­Ø§Ø¬Ø© Ø§Ù„Ù‰ ØµÙŠØ§Ù†Ø©<!--:--><!--:en-->need maintenance<!--:-->', '');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '4', '57', '4');
+
+ALTER TABLE `option_car` CHANGE `name_o` `name_o` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL;
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '4', '16', '7');
+
+INSERT INTO `cars_type` (`id_t`, `name_t`, `sub_t`, `images_t`, `category_t`) VALUES (NULL, '<!--:ar-->Ø¯Ø§ÙŠÙˆ<!--:--><!--:en-->DAEWOO<!--:-->', '0', 'upl_53b69ecb3d778.jpg', '4');
+
+INSERT INTO `cars_type` (`id_t`, `name_t`, `sub_t`, `images_t`, `category_t`) VALUES (NULL, '<!--:ar-->Ø¯Ø§ÙŠÙˆ<!--:--><!--:en-->DAEWOO<!--:-->', '0', 'upl_53b69ecb3d778.jpg', '6');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '4', '36', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '4', '52', '7');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '15', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '16', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '20', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '21', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '22', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '50', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '36', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '52', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '45', '4');

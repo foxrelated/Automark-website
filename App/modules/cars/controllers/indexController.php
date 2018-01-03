@@ -37,6 +37,7 @@
 
   }
     public function index(){
+      
       $this->_view->tmpDir('index','index',array('tmp'=>true));
     }
     public function id($id){
@@ -56,11 +57,13 @@
         }else{
             $data_mazat=array('cars_id'=>$id,'user_id'=>$this->user_id); 
         }
-        
+      $iscarfavorite = $this->_cars->getcarfavorite($this->user_id,$data_id['id_c']);
 	    $this->_view->assign("_maxPrice",$this->_cars->getMaxmazad(array('cars_id'=>$id)));
 	    $this->_view->assign("_carsId",$data_id);
+      $this->_view->assign("_iscarfavorite",$iscarfavorite);
 	    $this->_view->assign("_mazad",$this->_cars->selectMazadCars($data_mazat));
 			$this->_view->assign('data_category',$date_category);
+      $this->_view->assign('_lastcarsId', $this->_cars->getlimit('last',4,'desc','','on'));
 			$this->_view->assign('show_meta_cars',$this->_cars->get_cars_meta($data_id['id_c']));
 			$this->_view->assign('data_category_value',$this->_func->jsonArray($date_category['value_ss']));
 			$this->_view->assign('data_comment',$this->_cars->getComment(array('car'=>$id,'order'=>'time_com','act'=>1)));

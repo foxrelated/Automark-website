@@ -89,12 +89,20 @@
       <div class="basic-information">
         <div class="container">
         <h3><?=_Maininformation?> </h3>
+        <?php if(!$_iscarfavorite){ 
+            
+          ?>
         <span class="add-to-favorit pointer" dir="<?php echo $_dir; ?>">
           <a href="<?php echo $path['urlsite'] ;?>cars/index/addtofavorites/<?php echo $_carsId['id_c'];?>">
           <i class="fa fa-lg3 fa-heart-o"></i>
           <?=_Addtofavoriteslist?></a> 
         </span>
-
+        <?php }else{ ?>
+        <span class="add-to-favorit pointer" dir="<?php echo $_dir; ?>">
+          <i class="fa fa-lg3 fa-heart" style=""></i>
+          <?=_AddedtoFavorites?>
+        </span>
+        <?php }?>
         <div class="all-details col-md-6 col-sm-6 col-xs-12">
           <table class="table table-sm table-dark">
             <tbody>
@@ -211,10 +219,24 @@
           <td><?php echo _t(_Share);?></td>
           <td>
             <ul dir="ltr" class="list-unstyled list-inline social">
-              <li><i class="hvr-grow pointer fa fa-lg fa-facebook-official"></i></li>
-              <li><i class="hvr-grow pointer fa fa-lg fa-twitter-square"></i></li>
-              <li><i class="hvr-grow pointer fa fa-lg fa-linkedin-square"></i></li>
-              <li><i class="hvr-grow pointer fa fa-lg fa-google-plus-square"></i></li>
+              <li><a href="http://www.facebook.com/sharer.php?u=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>" target="_blank">
+                 <i class="hvr-grow pointer fa fa-lg fa-facebook-official"></i>
+              </a></li>
+              <li> <a href="https://twitter.com/share?url=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+                <i class="hvr-grow pointer fa fa-lg fa-twitter-square"></i>
+                </a></li>
+              <li>
+                
+                  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>" target="_blank">
+                    <i class="hvr-grow pointer fa fa-lg fa-linkedin-square">
+                    </i>
+                  </a>
+                </li>
+              <li>
+                <a href="https://plus.google.com/share?url=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>" target="_blank">
+                    <i class="hvr-grow pointer fa fa-lg fa-google-plus-square"></i>
+                </a>
+              </li>
             </ul>
           </td>
         </tr>
@@ -254,22 +276,14 @@
       <section class="relative">
         <div class="container">
           <h2><?=_RelatedAds?></h2>
+          <?php foreach($_lastcarsId as $rowscars){  ?>
           <div class="rel col-md-3 col-xs-3 hvr-float-shadow">
-            <img src="<?php echo $path['template'];?>img/Layer40.png" class="img-thumbnail"/>
-            <div class="rel-title nums-font">أودي 2011 Q5</div>
+            <a style="display:block;height:100%" href="<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $rowscars['id_c'];?>">
+            <img src="<?php echo $path['upload'].$lib_func->jsonId($rowscars['images_c'],0); ?>" class="img-thumbnail"/>
+            <div class="rel-title nums-font"><?php echo $rowscars['title_c'];?></div>
+          </a>
           </div>
-          <div class="rel col-md-3  col-xs-3 hvr-float-shadow">
-            <img src="<?php echo $path['template'];?>img/Layer39.png" class="img-thumbnail"/>
-            <span class="rel-title nums-font">أودي 2011 Q5</span>
-          </div>
-          <div class="rel col-md-3  col-xs-3 hvr-float-shadow">
-            <img src="<?php echo $path['template'];?>img/Layer38.png" class="img-thumbnail"/>
-            <span class="rel-title nums-font">أودي 2011 Q5</span>
-          </div>
-          <div class="rel col-md-3  col-xs-3 hvr-float-shadow">
-            <img src="<?php echo $path['template'];?>img/bego_1.png" class="img-thumbnail"/>
-            <span class="rel-title nums-font">أودي 2011 Q5</span>
-          </div>
+          <?php } ?>
         </div>
       </section>
 

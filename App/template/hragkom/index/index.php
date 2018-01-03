@@ -28,7 +28,7 @@
 </div>
         <!-- change the "cat-1", "cat-2", "cat-3" with your "Categories ID" -->
 		<div class="showCarTypeJ">
-		 <?php foreach($_carsId as $rowscars){ ?>
+		 <?php foreach($_carsId as $rowscars){  ?>
         <div class="prod-cnt prod-box shadow cat-<?php echo $rowscars['category_c'];?>" >
 			
 				<img width="190"  src="<?php echo $path['upload'].$lib_func->jsonId($rowscars['images_c'],0); ?>">

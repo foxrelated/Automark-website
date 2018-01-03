@@ -232,7 +232,7 @@
 							<li><a href="<?php echo $path['urlsite'] ?>cars/index/show/ca/2"><?php echo _t(_Carnumbers);?></a></li>
 							<li><a href="<?php echo $path['urlsite'] ?>cars/index/show/ca/5"><?php echo _t(_Boats);?></a></li>
 							<li style="margin-top: -15px;">
-							<a  class="text-center" href="<?php echo $path['urlsite'] ?>" 
+							<a  class="text-center" href="<?php echo $path['urlsite'] ?>cars/mycars/addfreeads"
 							style="color: white; background-color: #db2d2e;">
 					
 							<i class="fa fa-plus-square-o fa-3x"></i>

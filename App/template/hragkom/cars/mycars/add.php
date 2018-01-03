@@ -124,7 +124,7 @@ if($rows_option['code_o']=='years'){?>
 
 
 
-               }else{ ?>
+               } else{ ?>
                        
 
           <?php if($lib_func->jsonId($rows_option['option_o'],'type')=='text'){ ?>

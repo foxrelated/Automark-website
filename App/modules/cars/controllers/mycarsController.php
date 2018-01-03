@@ -29,8 +29,6 @@ class mycarsController extends controller{
     }
     function index($num=''){
 
-
-
         $countPag=20;
              $count=count($this->_cars->getlimit('users','','desc',session::get(system::get("session/session_name")),''));
              $num=(isset($num) and $num!='' and  is_numeric($num))?(int)$num:1;
@@ -135,6 +133,96 @@ class mycarsController extends controller{
 			  	$this->_view->assign('data_category',$date_category);
                 $this->_view->sider('sider');  
                 $this->_view->tmpDir('add','',array('tmp'=>true));
+       } else{
+           $this->_view->tmpDir('nonuser','',array('tmp'=>true));
+       }
+    }
+
+     public function addfreeads($id= ''){
+
+      $id=(isset($id) and $id!='')?(int)$id:5;
+      $date_category=$this->_option->list_category(array('category'=>((int)$id)));
+
+       if($this->_input->get('add')==1){
+        var_dump($id);die;
+      if($this->_token->check($this->_input->get('token'))){
+
+
+      $sqlArrayq=array();
+      $validate=array();
+                            
+  $sql_def=array('imagemsh','model','modelcar','country','city','type','des','price');
+  foreach($date_category as $rows_values){
+    foreach ($this->_option->getOption(array('id'=>$rows_values['option_id'])) AS $rows_option_validate){
+      if($this->_func->jsonId($rows_option_validate['option_o'],'admin')==1){continue;}
+    $force=($this->_func->jsonId($rows_option_validate['option_o'],'force')==1)?true:false;
+      $validate[$rows_option_validate['code_o']]=array(
+        'required'=>$force
+      );
+      }
+      
+     if($this->_func->jsonId($rows_option_validate['option_o'],'basic')!=1){
+      foreach ($this->_option->getOption(array('id'=>$rows_values['option_id'])) AS $rows_option){
+        if ($this->_func->jsonId($rows_option_validate['option_o'],'multiText')==1){
+          
+           $sqlArrayq[$rows_option['code_o']]=implode(' ',$this->_input->get($rows_option['code_o']));
+           continue;          
+        }
+      if(is_array($this->_input->get($rows_option['code_o'])) and count($this->_input->get($rows_option['code_o']))){
+        $sqlArrayq[$rows_option['code_o']]=$this->_func->enJsonArray($this->_input->get($rows_option['code_o']));
+      }else{
+         $sqlArrayq[$rows_option['code_o']]=$this->_input->get($rows_option['code_o']);
+      }
+      }
+    }
+                                 }
+  $this->_validate->check($_POST,$validate);
+                
+                if($this->_validate->passed()){
+                          $sqlArray=array(
+                            'title_c'=>$this->_input->get('title_ad'),
+
+                            'modelcar'=>$this->_input->get('type_c'),
+                            'model'=>$this->_input->get('model'),
+                            'catagory'=>$id,
+                            'years'=>$this->_input->get('years'),
+                            'price_c'=>$this->_input->get('price_ad'),
+                            'country'=>$this->_input->get('sellerplace_ad'),
+                            'city'=>$this->_input->get('sellerplace_ad'),
+                            'features'=>1,
+                            'shows'=>$this->_input->get('shows'),
+                            'images_c'=>$this->_func->enJsonArray($this->_input->get('images_c')),
+                            'type'=>$this->_input->get('type'),
+                            'description_c'=>$this->_input->get('description_c'),
+                            'dateadd'=>date("Y-m-d"),
+                            'iduser'=>session::get(system::get("session/session_name")),
+                            'end'=>time()+(60*60*24*30),
+                            'act'=>1 
+                        );
+            
+                    
+          
+           if($id_last_cars=$this->_cars->insert($sqlArray)){
+          
+           foreach($sqlArrayq AS $k_sqlArrayq=>$v_sqlArrayq){
+              $array_meta_cars=array("id"=>$id_last_cars,"code"=>$k_sqlArrayq,"value"=>$v_sqlArrayq);
+                  $this->_cars->add_meta_cars($array_meta_cars);
+                         }
+
+                        session::redir("cars/mycars/ok");
+                     }
+
+                    }else{
+                      $this->_view->assign('get',array_filter($_POST));
+                      $this->_view->assign('error',$this->_validate->errors());
+                }
+            }
+           }
+        if(session::get(system::get("session/session_name"))){
+        $this->_view->assign('_id',(int)$id);
+          $this->_view->assign('data_category',$date_category);
+          $this->_view->sider('sider');  
+          $this->_view->tmpDir('addfreeads','',array('tmp'=>true));
        } else{
            $this->_view->tmpDir('nonuser','',array('tmp'=>true));
        }
