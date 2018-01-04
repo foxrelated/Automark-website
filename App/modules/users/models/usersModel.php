@@ -227,8 +227,11 @@
   }
 
     public function insert_active($value){
-    $sql=$this->_db->prepare("insert into code_active values ('',?,?,?,?)");
+      
+    $sql=$this->_db->prepare("insert into code_active values (0,?,?,?,?)");
+    
     $sql->bind_param("sssi",$value['user'],$value['code'],$value['type'],$value['timeend']);
+    
     if($sql->execute()){
       return true;
     }

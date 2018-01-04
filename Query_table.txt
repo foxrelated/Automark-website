@@ -161,3 +161,9 @@ INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VA
 INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '52', '4');
 
 INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '45', '4');
+
+ALTER TABLE `users_cars_favorite` ENGINE = INNODB DEFAULT CHARSET=latin1 COLLATE latin1_swedish_ci;
+
+ALTER TABLE `code_active` CHANGE `user_a` `user_a` VARCHAR(256) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL;
+
+ALTER TABLE `code_active` CHANGE `code_a` `code_a` VARCHAR(256) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL;

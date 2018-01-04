@@ -147,6 +147,7 @@
                         'type'=>'activeuser',
                         'timeend'=>time(),
                       );
+                        
 
                          if($this->_model->insert_active($value_active)){
                          if($this->_func->sendMail($valueemail)){
