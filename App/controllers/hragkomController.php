@@ -25,7 +25,7 @@ $this->_chat=$this->loadModel('newchat','chat');
 $this->_user1=$this->loadModel('users','users');
    $id_user=session::get(system::get("session/session_name"));
    $user = $this->_user1->findName($id_user,"username");
-   
+   $this->_view->assign('_fromuser',$user);
    $this->_view->assign('_chat', $this->_chat->getAll(array('from'=>$user,'listGroup'=>1)));
    $this->_view->assign('_access',$this->_access);
    $this->_view->assign('_shows',$this->_shows);

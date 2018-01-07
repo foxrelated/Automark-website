@@ -127,6 +127,10 @@
 }
 </style>
 </head>
+<?php
+$_SESSION['username'] = $_fromuser; // Must be already set
+$_SESSION['fromuser'] = $_fromuser;
+?>
 <body dir="<?php echo $_dir; ?>" style="overflow-x: hidden;" >
 
 <header>
@@ -175,7 +179,15 @@
                                <li><a href="<?php echo $path['urlsite'] ?>cars/mycars/add"><?php echo _t(_Addannouncement);?></a> </li>
                                <li><a href="<?php echo $path['urlsite'] ?>users/"><?php echo _t(_Yourpersonaldata);?></a> </li>
                   			   <li><a href="<?php echo $path['urlsite'] ?>users/login/logout/"><?php echo _t(_Signout);?></a> </li>
-
+                  			   <select id="english" style="width: 100px"><?php
+                  			   foreach ($_chat AS $onechat){
+                  			   ?>
+                  			   	<option><a href="javascript:void(0)" onclick="javascript:chatWith('<?=$onechat["to"]?>')"><?=$onechat["to"]?></a></option>
+								   <?php
+                  			   }
+                  			   ?>
+								   
+							  </select>
                       <?php } ?>
                        <li></li>
                     </ul>
