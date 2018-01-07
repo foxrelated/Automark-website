@@ -20,7 +20,12 @@
 		   $this->_cars=$this->loadModel('cars','admin');
            $this->_users=$this->loadModel("users",'users');
            $this->_chat=$this->loadModel('chat');
-           
+           $this->_chat=$this->loadModel('newchat','chat');
+$this->_user1=$this->loadModel('users','users');
+   $id_user=session::get(system::get("session/session_name"));
+   $user = $this->_user1->findName($id_user,"username");
+   
+   $this->_view->assign('_chat', $this->_chat->getAll(array('from'=>$user,'listGroup'=>1)));
            $this->_idUser=$this->_users->resulte();
 
            

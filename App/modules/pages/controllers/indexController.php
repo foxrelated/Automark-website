@@ -8,10 +8,15 @@
          $this->_pages=$this->loadModel("pages",'admin');
          $this->_option=$this->loadModel("option",'admin');
          $this->_mail=new phpmail;
+         $this->_chat=$this->loadModel('newchat','chat');
+$this->_user1=$this->loadModel('users','users');
+   $id_user=session::get(system::get("session/session_name"));
+   $user = $this->_user1->findName($id_user,"username");
+   
+   $this->_view->assign('_chat', $this->_chat->getAll(array('from'=>$user,'listGroup'=>1)));
     }
 
     public function index(){
-      var_dump("expression");die;
       $this->_view->tmpDir('index','',array('tmp'=>true));
     }
     public function id($id){

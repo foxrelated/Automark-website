@@ -1,5 +1,5 @@
 <?php
-  class chatModel extends models{
+  class newchatModel extends models{
     private $_query,
             $_resulte,
             $_count;
@@ -29,17 +29,14 @@
       }
       public function addChatDb($val){
           
-           $this->_query=$this->_db->prepare("insert into old_chat (user_id,sender_id,send_id,message_chat,type_chat,status_chat,sub_id,mazad_id) values (?,?,?,?,?,?,?,?)");
-               $this->_query->bind_param("iiissiii",
-                            $val['user'],
-                            $val['sender'],
-                            $val['send'],
+           $this->_query=$this->_db->prepare("insert into chat (from,to,message,sent,recd) values (?,?,?,?,?)");
+               $this->_query->bind_param("ssssi",
+                            $val['from'],
+                            $val['to'],
                             $val['message'],
+                            $val['sent'],
                             
-                            $val['type'],
-                            $val['status'],
-                            $val['sub'],
-                            $val['mazad_id']
+                            $val['recd']
                );
             if($this->_query->execute()){
                   return  $this->_db->insert_id;
@@ -153,19 +150,18 @@
             return false;
        }
     public function getAll($array=''){
+      
        $add='';
-       $add.=(isset($array['sender']))?" and sender_id = ".$array['sender']:'';
-       $add.=(isset($array['user']))?" and user_id = ".$array['user']:'';
-       $add.=(isset($array['userOrsender']))?" and (user_id = ".$array['userOrsender']." or sender_id=".$array['userOrsender'].") ":'';
-       $add.=(isset($array['type']))?" and type_chat = ".$array['type']:'';
-       $add.=(isset($array['status']))?" and status_chat = ".$array['status']:'';
-       $add.=(isset($array['sub']))?" and sub_id = ".$array['sub']:'';
-       $add.=(isset($array['listGroup']) and $array['listGroup']==1)?' group by sub_id  ':'';
-       $add.=' order by id_chat desc ';
+       $add.=(isset($array['from']))?" and chat.from = "."'".$array['from']."'":'';
+       $add.=(isset($array['to']))?" and to = ".$array['to']:'';
+       
+       $add.=(isset($array['message']))?" and message = ".$array['message']:'';
+       //$add.=(isset($array['listGroup']) and $array['listGroup']==1)?' group by id ':'';
+       $add.=' order by id desc ';
 
-        $add.=(isset($array['limitend']))?" limit ".$array['limitend']:'';
-        
-      $sql=$this->_db->query("select * from old_chat inner join users on (chat.sender_id=users.id_u) where  id_chat!='' $add ");
+        $add.=(isset($array['limitend']))?" limit ".$array['limitend']:'';      
+      $sql=$this->_db->query("select * from chat inner join users on (chat.from=users.username) where  id!='' $add ");
+      //var_dump($sql);die;
         if($sql){
             $rows=array();
 

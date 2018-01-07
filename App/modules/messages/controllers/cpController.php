@@ -14,7 +14,12 @@
             $this->_cp=$this->loadModel("cp");
             $this->_option=$this->loadModel("option",'admin');
             $this->_city=$this->loadModel("city","admin");
-
+            $this->_chat=$this->loadModel('newchat','chat');
+            $this->_user1=$this->loadModel('users','users');
+               $id_user=session::get(system::get("session/session_name"));
+               $user = $this->_user1->findName($id_user,"username");
+   
+   $this->_view->assign('_chat', $this->_chat->getAll(array('from'=>$user,'listGroup'=>1)));
             $this->_view->assign('_city',$this->_city);
 		    $this->_view->assign('_cp',$this->_cp);
             $this->_view->assign('_option',$this->_option);

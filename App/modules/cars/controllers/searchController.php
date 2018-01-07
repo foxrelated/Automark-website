@@ -18,6 +18,12 @@
         $this->_option=$this->loadModel("option",'admin');
         $this->_iduser= session::get(system::get("session/session_name"));
 $this->_shows = $this->_shows->getAll();
+$this->_chat=$this->loadModel('newchat','chat');
+$this->_user1=$this->loadModel('users','users');
+   $id_user=session::get(system::get("session/session_name"));
+   $user = $this->_user1->findName($id_user,"username");
+   
+   $this->_view->assign('_chat', $this->_chat->getAll(array('from'=>$user,'listGroup'=>1)));
         $this->_view->assign('_cars',$this->_cars);
         $this->_view->assign('_typecar',$this->_typecar);
         $this->_view->assign('_city',$this->_city);

@@ -44,7 +44,7 @@ define("_Howtopay", "كيفية الدفع");
 define("_Textlink", "رابط نصي");
 define("_DesignoftheAlMarqaz", "تصميم المركاز ");
 define("_Allrightsreservedautomark", "جميع الحقوق محفوظة لموقع اوتو مارك");
-define("_English", "إنكليزي");
+define("_English", "English");
 define("_Arabic", "عربي");
 define("_Addagoldad", "اضف اعلان ذهبى");
 define("_AddFeaturedAd", "اضف اعلان  مميز");

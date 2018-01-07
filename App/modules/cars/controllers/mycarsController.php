@@ -20,6 +20,12 @@ class mycarsController extends controller{
         $this->_users=$this->loadModel("users",'users');
         $this->_iduser= session::get(system::get("session/session_name"));
         $this->_shows = $this->_shows->getAll();
+        $this->_chat=$this->loadModel('newchat','chat');
+$this->_user1=$this->loadModel('users','users');
+   $id_user=session::get(system::get("session/session_name"));
+   $user = $this->_user1->findName($id_user,"username");
+   
+   $this->_view->assign('_chat', $this->_chat->getAll(array('from'=>$user,'listGroup'=>1)));
         $this->_view->assign('_cars',$this->_cars);
         $this->_view->assign('_typecar',$this->_typecar);
         $this->_view->assign('_city',$this->_city);
@@ -144,8 +150,8 @@ class mycarsController extends controller{
       $date_category=$this->_option->list_category(array('category'=>((int)$id)));
 
        if($this->_input->get('add')==1){
-        var_dump($id);die;
-      if($this->_token->check($this->_input->get('token'))){
+        //var_dump($id);die;
+      if($this->_token->check($_POST['token'])){
 
 
       $sqlArrayq=array();
@@ -175,40 +181,41 @@ class mycarsController extends controller{
       }
       }
     }
-                                 }
+   }
   $this->_validate->check($_POST,$validate);
-                
+
+           
                 if($this->_validate->passed()){
                           $sqlArray=array(
-                            'title_c'=>$this->_input->get('title_ad'),
-
-                            'modelcar'=>$this->_input->get('type_c'),
-                            'model'=>$this->_input->get('model'),
+                            'title_c'=>$_POST['title_ad'],
+                            'modelcar'=>$_POST['type_c'],
+                            'model'=>$_POST['model'],
                             'catagory'=>$id,
-                            'years'=>$this->_input->get('years'),
-                            'price_c'=>$this->_input->get('price_ad'),
-                            'country'=>$this->_input->get('sellerplace_ad'),
-                            'city'=>$this->_input->get('sellerplace_ad'),
+                            'years'=>$_POST['years'],
+                            'price_c'=>$_POST['price_ad'],
+                            'country'=>$_POST['Country_c'],
+                            'city'=>$_POST['city'],
                             'features'=>1,
-                            'shows'=>$this->_input->get('shows'),
-                            'images_c'=>$this->_func->enJsonArray($this->_input->get('images_c')),
-                            'type'=>$this->_input->get('type'),
-                            'description_c'=>$this->_input->get('description_c'),
+                            
+                            'images_c'=>"h",//$this->_func->enJsonArray($this->_input->get('images_c')),
+                            'type'=>"h",//$this->_input->get('type'),
+                            'description_c'=>$_POST['additionalinformation'],
                             'dateadd'=>date("Y-m-d"),
                             'iduser'=>session::get(system::get("session/session_name")),
                             'end'=>time()+(60*60*24*30),
-                            'act'=>1 
+                            'act'=>1,
+                            'vzt_c' => 1
                         );
             
                     
           
            if($id_last_cars=$this->_cars->insert($sqlArray)){
-          
+          //var_dump($id_last_cars);die;
            foreach($sqlArrayq AS $k_sqlArrayq=>$v_sqlArrayq){
               $array_meta_cars=array("id"=>$id_last_cars,"code"=>$k_sqlArrayq,"value"=>$v_sqlArrayq);
                   $this->_cars->add_meta_cars($array_meta_cars);
                          }
-
+                        
                         session::redir("cars/mycars/ok");
                      }
 

@@ -12,6 +12,12 @@
         $this->_shows=$this->loadModel("shows",'admin');
         $this->_shows = $this->_shows->getAll();
         $this->_view->assign('_shows',$this->_shows);
+        $this->_chat=$this->loadModel('newchat','chat');
+$this->_user1=$this->loadModel('users','users');
+   $id_user=session::get(system::get("session/session_name"));
+   $user = $this->_user1->findName($id_user,"username");
+   
+   $this->_view->assign('_chat', $this->_chat->getAll(array('from'=>$user,'listGroup'=>1)));
     }
     public function index(){
             $this->_view->tmpDir("index",'',array('tmp'=>true));

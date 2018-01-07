@@ -46,7 +46,7 @@ define("_Textlink", "Text link");
 define("_DesignoftheAlMarqaz", "Design of the Al-Marqaz");
 define("_Allrightsreservedautomark", "All rights reserved automark");
 define("_English", "English");
-define("_Arabic", "Arabic");
+define("_Arabic", "عربي");
 define("_Addagoldad", "Add a gold ad");
 define("_AddFeaturedAd", "Add Featured Ad");
 define("_Startsellingforfree", "Start selling for free");

@@ -42,14 +42,6 @@
       <input class="car-type-input col-lg-12 col-md-12 col-sm-12 col-xs-12" name ="title_ad" type="text" placeholder="<?=_AddAdTitle40characters?>" maxlength="40" />
       <input class="price-input col-lg-12 col-md-12 col-sm-12 col-xs-12" type="text" name="price_ad" placeholder="<?=_AskingPriceAED?>" />
     </div>
-    <div class="form-group form-row">
-      <input class="detail-make-input col-lg-6" type="text" name="year_ad" placeholder="<?=_Yearofmanufacture?>" />
-      <input class="detail-km-input col-lg-6" type="text" name="km_ad" placeholder="<?=_Thecurrentkilometer?>"   />
-    </div>
-    <div class="form-group form-row">
-      <input class="detail-phone-input col-lg-6" type="text" name="sellermobilenumber_ad" placeholder="<?=_MobileNumberSeller?>" />
-      <input class="detail-place-input col-lg-6" type="text" name="sellerplace_ad" placeholder="<?=_Sellersplace?>" />
-    </div>
     
   </div>
 </section>
@@ -141,27 +133,33 @@
         <?php echo isset($error['model'])?$error['model']:''; ?>
         <i class="fa fa-angle-down fa-lg"></i>
         </div>
-        <?php }} 
-        else{
-            if($lib_func->jsonId($rows_option['option_o'],'type')=='select'){
-              if($rows_option['code_o']=='case'){
-          ?>
-        
-        <div class="symbol-container">
-        <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
-          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
-                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
-         
-          ?>
-                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
-                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
-               <?php endforeach; ?>
-        </select>
-        
-        
+        <?php }?> 
+        <?php if($rows_option['code_o']=='Country_c'){
+
+          ?> 
+          <div class="symbol-container">
+        <select class="custom-select d-block my-3" name="Country_c" onchange="return changeselect(this,'city','#subcity') "  data-placeholder="<?php echo _t(_Country) ?>" tabindex="1">
+                <option value=""><?php echo _t(_Country) ?></option>
+             <?php foreach($_city->getCountryAll() as $rowscity ): ?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$rowscity['id_c']):'';?> value="<?php echo $rowscity['id_c']; ?>"><?php echo language::getLang($rowscity['name_c']); ?></option>
+             <?php endforeach; ?>
+             </select>
+        <span class="help-inline"><?php echo isset($error['Country_c'])?$error['Country_c']:''; ?> </span>
         <i class="fa fa-angle-down fa-lg"></i>
         </div>
-        <?php } ?>
+        <div class="symbol-container">
+        <select class="custom-select d-block my-3" name="city" id="subcity" data-placeholder="<?php echo _t(_City) ?>" tabindex="1">
+                <option value=""><?php echo _t(_City) ?></option>
+            <?php if(isset($get['city'])){ foreach($_city->getCityId($get['Country_c']) as $rowsc ): ?>
+                <option <?php echo ($lib_func->selected($get['city'],$rowsc['id_c']));?> value="<?php echo $rowsc['id_c']; ?>"><?php echo  language::getLang($rowsc['name_c']); ?></option>
+             <?php endforeach;} ?>
+             </select>
+        <span class="help-inline"><?php echo isset($error['city'])?$error['city']:''; ?> </span>
+        <i class="fa fa-angle-down fa-lg"></i>
+        </div>
+        <?php }}else{
+            if($lib_func->jsonId($rows_option['option_o'],'type')=='select'){            
+          ?>
         <?php if ($rows_option['code_o']=='color') {
           
         ?>
@@ -225,7 +223,24 @@
         <i class="fa fa-angle-down fa-lg"></i>
         </div>
         <?php } ?>
+        <?php if($rows_option['code_o']=='case'){
+          ?>
         
+        <div class="symbol-container">
+        <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
+          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
+                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+         
+          ?>
+                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+               <?php endforeach; ?>
+        </select>
+        
+        
+        <i class="fa fa-angle-down fa-lg"></i>
+        </div>
+        <?php } ?>
         <?php if ($rows_option['code_o']=='howmuchload') { ?>
         <div class="symbol-container">
         <select class="custom-select d-block my-3"  name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
@@ -354,9 +369,24 @@
         <i class="fa fa-angle-down fa-lg"></i>
         </div>
         <?php } ?>
-        <?php }}} ?>
+        <?php }}}  ?>
+
       </div>
-      <textarea class="col-lg-12" name="additionalinformation" maxlength="150"><?=_AdditionalInformation150characters?></textarea>
+      <?php 
+      foreach($data_category as $rows_values){
+    
+       foreach ($_option->getOption(array('id'=>$rows_values['option_id'])) AS $rows_option){
+             if($lib_func->jsonId($rows_option['option_o'],'admin')==1){continue;}
+                $litForce=($lib_func->jsonId($rows_option['option_o'],'force')==1)?'<span style="color:red">*</span>':'';
+            
+          
+        ?>
+      <?php if($lib_func->jsonId($rows_option['option_o'],'type')=='textarea') { 
+          if ($rows_option['code_o']=='specifications'){
+        ?>
+      <textarea class="col-lg-12" name="<?php echo $rows_option['code_o']; ?>" maxlength="150"><?=_AdditionalInformation150characters?></textarea>
+      <?php }} ?>
+      <?php }} ?>
     </div>
   </section>
 

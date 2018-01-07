@@ -46,7 +46,8 @@
             $secondhalf = array_slice($show_meta_cars, $len / 2);
             //var_dump($secondhalf);die;
           foreach($secondhalf as $rows_meta_cars){
-            if($rows_meta_cars['name_o'] == "<!--:ar-->المسافة المقطوعة<!--:--><!--:en-->the traveled distance<!--:-->"){
+            
+            if(($rows_meta_cars['name_o'] == "<!--:ar-->المسافة المقطوعة<!--:--><!--:en-->the traveled distance<!--:-->") || ($rows_meta_cars['name_o'] == "<!--:ar-->الكيلومترات المستهلكة<!--:--><!--:en-->Kilometers consumed<!--:-->")){
               
               
                   echo $rows_meta_cars['value_m'];
@@ -55,7 +56,20 @@
                 
         
             }
-          }}?>
+          }
+          foreach($firsthalf as $rows_meta_cars){
+            
+            if(($rows_meta_cars['name_o'] == "<!--:ar-->المسافة المقطوعة<!--:--><!--:en-->the traveled distance<!--:-->") || ($rows_meta_cars['name_o'] == "<!--:ar-->الكيلومترات المستهلكة<!--:--><!--:en-->Kilometers consumed<!--:-->")){
+              
+              
+                  echo $rows_meta_cars['value_m'];
+                  echo ('&nbsp;');
+                  echo _kilometer;
+                
+        
+            }
+          }
+        }?>
             </li>
             <li class="detail col-md-3 hvr-bob nums-font"><i class="fa fa-calendar fa-1"></i><?php echo  $_carsId['year_c']; ?></li>
             <li class="detail col-md-3 hvr-bob"><i class="fa fa-map-marker"></i><?php   if(isset($_carsId['Country_c']) and $_carsId['Country_c']!=''){ ?> <?php echo language::getLang($_city->getNameId($_carsId['Country_c']));?> <?php } ?> | <?php   if(isset($_carsId['city_c']) and $_carsId['city_c']!=''){ ?> <?php echo  language::getLang($_city->getNameId($_carsId['city_c']));?> <?php } ?></li>
@@ -184,8 +198,21 @@
       <div class="container">
         <?php 
           if(count($show_meta_cars)>0 && isset($show_meta_cars)){?>
-        <h3><?php echo language::getLang(($show_meta_cars[count($show_meta_cars)-1]['name_o']));?></h3>
-        <p><?php echo language::getLang(($show_meta_cars[count($show_meta_cars)-1]['value_m']));?></p>
+          <?php
+            foreach($show_meta_cars as $rows_meta_cars){
+            
+            if(($rows_meta_cars['name_o'] == "<!--:ar-->المواصفات الاضافية<!--:--><!--:en-->Additional Specifications<!--:-->") ){
+              
+              
+                  echo $rows_meta_cars['value_m'];
+                  echo ('&nbsp;');
+                  echo _kilometer;
+                      
+          ?>
+          <h3><?php echo language::getLang(($rows_meta_cars['name_o']));?></h3>
+        <p><?php echo language::getLang(($rows_meta_cars['value_m']));?></p>
+          <?php }}?>
+        
         <?php  
         } ?>
     </div>

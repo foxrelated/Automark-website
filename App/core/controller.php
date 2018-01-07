@@ -68,7 +68,7 @@ abstract class controller{
   if(isset($modules) and $modules!='default'){
         $dirModel=APP_PATH.'modules'.DS.$modules.DS.'models'.DS.$model.'.php';
   }
-
+  
   if(is_readable($dirModel)){
     require_once($dirModel);
     if(isset($data)){

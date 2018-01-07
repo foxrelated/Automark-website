@@ -19,8 +19,14 @@
    $this->_option=$this->loadModel('option','admin');
    $this->_user=$this->loadModel('users','users');
    $this->_access=$this->loadModel('access','access');
+   $this->_chat=$this->loadModel('newchat','chat');
    $this->_user=$this->_user->resulte();
    $this->_shows = $this->_shows->getAll();
+   $this->_user1=$this->loadModel('users','users');
+   $id_user=session::get(system::get("session/session_name"));
+   $user = $this->_user1->findName($id_user,"username");
+   
+   $this->_view->assign('_chat', $this->_chat->getAll(array('from'=>$user,'listGroup'=>1)));
    $this->_view->assign('_access',$this->_access);
    $this->_view->assign('_shows',$this->_shows);
    $this->_view->assign('_option',$this->_option);

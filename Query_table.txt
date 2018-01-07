@@ -12,7 +12,7 @@ ALTER TABLE `shows` ADD `region_s` VARCHAR(50) CHARACTER SET latin1 COLLATE lati
 
 RENAME TABLE `automark`.`oldchat` TO `automark`.`old_chat`;
 
-CREATE TABLE `chat` ( `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT, `from` VARCHAR(255) NOT NULL DEFAULT '', `to` VARCHAR(255) NOT NULL DEFAULT '', `message` TEXT NOT NULL, `sent` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, `recd` INTEGER UNSIGNED NOT NULL DEFAULT 0, PRIMARY KEY (`id`) )
+CREATE TABLE `chat` ( `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT, `from` VARCHAR(255) NOT NULL DEFAULT '', `to` VARCHAR(255) NOT NULL DEFAULT '', `message` TEXT NOT NULL, `sent` DATE NOT NULL , `recd` INTEGER UNSIGNED NOT NULL DEFAULT 0, PRIMARY KEY (`id`) )
 
 ALTER TABLE `shows` ADD `user_id` INT(11) NOT NULL AFTER `id_s`;
 
@@ -167,3 +167,31 @@ ALTER TABLE `users_cars_favorite` ENGINE = INNODB DEFAULT CHARSET=latin1 COLLATE
 ALTER TABLE `code_active` CHANGE `user_a` `user_a` VARCHAR(256) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL;
 
 ALTER TABLE `code_active` CHANGE `code_a` `code_a` VARCHAR(256) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL;
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '17', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '5', '17', '4');
+
+ALTER TABLE `cars` CHANGE `color_c` `color_c` VARCHAR(30) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;
+
+ALTER TABLE `cars` CHANGE `odometer_c` `odometer_c` VARCHAR(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;
+
+ALTER TABLE `cars` CHANGE `special_c` `special_c` LONGTEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;
+
+ALTER TABLE `cars` CHANGE `transmission_c` `transmission_c` VARCHAR(30) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;
+
+ALTER TABLE `cars` CHANGE `status_c` `status_c` VARCHAR(30) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;
+
+ALTER TABLE `cars` CHANGE `type_ads_c` `type_ads_c` VARCHAR(30) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;
+
+ALTER TABLE `cars` CHANGE `shows_c` `shows_c` INT(11) NOT NULL DEFAULT '0';
+
+ALTER TABLE `cars` CHANGE `body_c` `body_c` VARCHAR(30) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;
+
+ALTER TABLE `cars` CHANGE `form_c` `form_c` VARCHAR(30) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '5', '26', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '26', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '4', '26', '10');
