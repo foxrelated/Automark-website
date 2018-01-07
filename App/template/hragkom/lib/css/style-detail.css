@@ -59,7 +59,6 @@ body {
 
 .head-bar {
   height: 60px;
-  background-color: #db2d2e;
   color: #fff;
   width: 100%;
   font-size: 17px;
@@ -747,7 +746,8 @@ body {
   position: relative;
   padding: 0 70px;
   height: 100%;
-  z-index: 2
+  z-index: 2;
+  width: 100%
 }
 
 .basic-information h3 {
@@ -1826,4 +1826,9 @@ body {
     width: 20%;
     top: 9px
   }
+}
+
+.img-responsive {
+	width: 100%;
+    object-fit: cover;
 }

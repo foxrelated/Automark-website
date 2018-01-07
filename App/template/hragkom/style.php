@@ -494,9 +494,9 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
 </div>
 	<div class="containe rounded-0" style="border-radius:50px;"> 
 			<br><br>
-	<h2 class="text-center" style="background-color: #db2d2e; border-radius:50px;"><?=_Shows?></h2>
+	<h2 class="text-center" style="background-color: #db2d2e;border-radius: 50px;width: 150px;padding: 10px;color: white;margin: 0 auto;"><?=_Shows?></h2>
 <br>
-<div class="paddingTop">
+<div class="paddingTop container">
 		<div class="row">
 			<?php foreach ($_shows as $show) {?>
 			<div class="col-sm-2">

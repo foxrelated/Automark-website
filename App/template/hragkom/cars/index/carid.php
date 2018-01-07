@@ -13,8 +13,8 @@
   </head>
   <body>
     <!-- Head Bar -->
-    <div class="head-bar text-right" style="margin-top: 175px; " >
-      <div class="container">
+    <div class="container head-bar text-right" style="margin-top: 175px; " >
+      <div class="" style="background-color:#db2d2e; padding-top: 10px;">
         <table class="table table-sm table-dark">
         <tbody>
           <tr>
@@ -35,7 +35,7 @@
       <div class="car-image-head">
         <p class="car-type inline"><?php echo  $_carsId['title_c']; ?> | <?=_GCCSpecifications?></p>
         <p class="price inline hvr-bob"><span class="nums-font"><?php echo  $_carsId['price_c']; ?></span> <?php echo _t(_AED);?></p>
-        <small class="text-muted nums-font"><?php echo $_carsId['dateadd_c'];?></small>
+        <small class="text-muted nums-font" style="margin-top: 10px;"><?php echo $_carsId['dateadd_c'];?></small>
         <div class="basic-details">
           <ul class="list-inline">
             <li class="detail col-md-3 hvr-bob nums-font"><i class="fa fa-dashboard"></i>
@@ -72,8 +72,7 @@
         }?>
             </li>
             <li class="detail col-md-3 hvr-bob nums-font"><i class="fa fa-calendar fa-1"></i><?php echo  $_carsId['year_c']; ?></li>
-            <li class="detail col-md-3 hvr-bob"><i class="fa fa-map-marker"></i><?php   if(isset($_carsId['Country_c']) and $_carsId['Country_c']!=''){ ?> <?php echo language::getLang($_city->getNameId($_carsId['Country_c']));?> <?php } ?> | <?php   if(isset($_carsId['city_c']) and $_carsId['city_c']!=''){ ?> <?php echo  language::getLang($_city->getNameId($_carsId['city_c']));?> <?php } ?></li>
-            <li dir="ltr" class="detail col-md-3 hvr-bob nums-font"><?php echo  $_carsId['mobile_u'];?><i class="fa fa-mobile"></i></li>
+            <li class="detail col-md-6 hvr-bob"><i class="fa fa-map-marker"></i><?php   if(isset($_carsId['Country_c']) and $_carsId['Country_c']!=''){ ?> <?php echo language::getLang($_city->getNameId($_carsId['Country_c']));?> <?php } ?> | <?php   if(isset($_carsId['city_c']) and $_carsId['city_c']!=''){ ?> <?php echo  language::getLang($_city->getNameId($_carsId['city_c']));?> <?php } ?></li>
           </ul>
         </div>
       </div>
@@ -100,7 +99,7 @@
           
         </div>
       </div>
-      <div class="basic-information">
+      <div class="basic-information container">
         <div class="container">
         <h3><?=_Maininformation?> </h3>
         <?php if(!$_iscarfavorite){ 
