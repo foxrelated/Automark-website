@@ -3,6 +3,7 @@
    private $idUser;
    private $_user;
    private $_res;
+   private $_chat1;
     function __construct(){
        parent::__construct();
         $this->_user=  $this->loadModel('users');
@@ -12,12 +13,12 @@
         $this->_shows=$this->loadModel("shows",'admin');
         $this->_shows = $this->_shows->getAll();
         $this->_view->assign('_shows',$this->_shows);
-        $this->_chat=$this->loadModel('newchat','chat');
+        $this->_chat1=$this->loadModel('newchat','chat');
 $this->_user1=$this->loadModel('users','users');
    $id_user=session::get(system::get("session/session_name"));
    $user = $this->_user1->findName($id_user,"username");
    $this->_view->assign('_fromuser',$user);
-   $this->_view->assign('_chat', $this->_chat->getAll(array('from'=>$user,'listGroup'=>1)));
+   $this->_view->assign('_chat', $this->_chat1->getAll(array('from'=>$user,'listGroup'=>1)));
     }
     public function index(){
             $this->_view->tmpDir("index",'',array('tmp'=>true));

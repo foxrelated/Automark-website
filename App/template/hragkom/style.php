@@ -23,12 +23,13 @@
 	 <link id="cssLink" href="<?php echo $path['template'];?>lib/css/style-ltr.css" rel="stylesheet" media="screen" />
 	 <link id="cssLink" href="<?php echo $path['template'];?>lib/ltr/css/bootstrap.min.css" rel="stylesheet" media="screen" />
 	 <?php } ?>
-	 
+
      <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/jquery.ad-gallery.css">
      <link rel="stylesheet" href="<?php echo $path['urlsite']; ?>Public/css/colorbox.css" />
     <link rel="shortcut icon" href="<?php echo $path['template'];?>img/icone.png" />
     <link rel="icon" type="image/gif" href="<?php echo $path['template'];?>img/icone.png">
-	
+	<link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/chat.css"> 
+	 <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/chat.js"></script>
 <style>
 	#search{
     background: url(<?php echo $path['urlsite']; ?>Public/img/search-white.png) no-repeat 10px 12px #ec3e3d;
@@ -127,6 +128,7 @@
 }
 </style>
 </head>
+
 <?php
 $_SESSION['username'] = $_fromuser; // Must be already set
 $_SESSION['fromuser'] = $_fromuser;
@@ -179,17 +181,30 @@ $_SESSION['fromuser'] = $_fromuser;
                                <li><a href="<?php echo $path['urlsite'] ?>cars/mycars/add"><?php echo _t(_Addannouncement);?></a> </li>
                                <li><a href="<?php echo $path['urlsite'] ?>users/"><?php echo _t(_Yourpersonaldata);?></a> </li>
                   			   <li><a href="<?php echo $path['urlsite'] ?>users/login/logout/"><?php echo _t(_Signout);?></a> </li>
-                  			   <select id="english" style="width: 100px"><?php
+                  			   <!--<li >
+                  			   	<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="background-color: #db2d2e;">
+                                <i class="fa fa-envelope"></i>
+                                <b class="caret"></b>
+
+                                
+                         		</a>
+                  			   	<ul class="dropdown-menu">
+                  			   		<?php
+                  			   		
                   			   foreach ($_chat AS $onechat){
+                  			   	$to = $onechat['to'];
                   			   ?>
-                  			   	<option><a href="javascript:void(0)" onclick="javascript:chatWith('<?=$onechat["to"]?>')"><?=$onechat["to"]?></a></option>
-								   <?php
+                  			  <li> <a  href="javascript:void(0)" onclick="javascript:chatWith('<?=$to?>')" style="background-color: #db2d2e;"><<?=$onechat["to"]?></a></li>
+                  			   	
+							<?php
                   			   }
                   			   ?>
-								   
-							  </select>
+                            
+                        		</ul>
+							 </li> -->  
+							  
                       <?php } ?>
-                       <li></li>
+                       
                     </ul>
 
 			</div>
@@ -327,8 +342,11 @@ $_SESSION['fromuser'] = $_fromuser;
 						 <div class="form-group">
 		                        <select class="form-control selectpicker" name="category" title=<?= _Lookfor?> data-live-search="true" data-style="input_search_style">
 		                        <option value="" selected=""><?= _Lookfor?></option>
-									<?php foreach($db_category->getAll() as $rowsCategory){?>
+									<?php foreach($db_category->getAll() as $rowsCategory){
+										?>
+									<?php if(($rowsCategory['code_ss'] != "<!--:ar-->لوحات السيارات<!--:--><!--:en-->Car plate<!--:-->") && ($rowsCategory['code_ss'] != "<!--:ar-->ارقام الجوالات<!--:--><!--:en-->Mobile number<!--:-->")){ ?>
 											<option value="<?php echo $rowsCategory['id_ss'];?>"><?php echo language::getLang($rowsCategory['code_ss']);?></option>							
+									<?php } ?>
 									<?php } ?>
 									 <option><?= _Other?></option>
 								</select>

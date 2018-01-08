@@ -11,6 +11,7 @@
     private $_order;
     private $user_id;
     private $_chat;
+    private $_chat1;
 
   public function __construct(){
     parent::__construct();
@@ -25,12 +26,12 @@
        $this->_category=$this->loadModel("category",'cars');
        $this->_chat=$this->loadModel("chat",'chat');
        $this->_allshows = $this->_shows->getAll();
-       $this->_chat=$this->loadModel('newchat','chat');
-$this->_user1=$this->loadModel('users','users');
+       $this->_chat1=$this->loadModel('newchat','chat');
+       $this->_user1=$this->loadModel('users','users');
    $id_user=session::get(system::get("session/session_name"));
    $user = $this->_user1->findName($id_user,"username");
    $this->_view->assign('_fromuser',$user);
-   $this->_view->assign('_chat', $this->_chat->getAll(array('from'=>$user,'listGroup'=>1)));
+   $this->_view->assign('_chat', $this->_chat1->getAll(array('from'=>$user,'listGroup'=>1)));
    $this->_view->assign('_adscars', $this->_func->jsonFeild($this->_option->getCode('adsimg','option_o'),'dir','cars'));
     $this->_view->assign('_adsvedio', $this->_func->jsonFeild($this->_option->getCode('adsimg','option_o'),'dir','vedio'));
 

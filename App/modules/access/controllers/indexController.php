@@ -9,7 +9,7 @@
     private $_access;
     private $_cars;
     private $_typecar;
-
+    private $_chat1;
   public function __construct(){
     parent::__construct();
 
@@ -20,12 +20,12 @@
    $this->_city=$this->loadModel('city','admin');
    $this->_option=$this->loadModel('option','admin');
    $this->_cars=$this->loadModel('cars','admin');
-$this->_chat=$this->loadModel('newchat','chat');
+$this->_chat1=$this->loadModel('newchat','chat');
 $this->_user1=$this->loadModel('users','users');
    $id_user=session::get(system::get("session/session_name"));
    $user = $this->_user1->findName($id_user,"username");
    $this->_view->assign('_fromuser',$user);
-   $this->_view->assign('_chat', $this->_chat->getAll(array('from'=>$user,'listGroup'=>1)));
+   $this->_view->assign('_chat', $this->_chat1->getAll(array('from'=>$user,'listGroup'=>1)));
 
    $this->_view->assign('_adscars', $this->_func->jsonFeild($this->_option->getCode('adsimg','option_o'),'dir','cars'));
 

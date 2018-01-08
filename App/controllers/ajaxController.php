@@ -6,7 +6,7 @@
     private $_city;
     private $_option;
     private $_shows;
-
+    private $_chat1;
 
     public function __construct(){
         parent::__construct();
@@ -16,12 +16,12 @@
         $this->_shows=$this->loadModel("shows",'admin');
         $this->_option=$this->loadModel("option",'admin');
 $this->_shows = $this->_shows->getAll();
-$this->_chat=$this->loadModel('newchat','chat');
+$this->_chat1=$this->loadModel('newchat','chat');
 $this->_user1=$this->loadModel('users','users');
    $id_user=session::get(system::get("session/session_name"));
    $user = $this->_user1->findName($id_user,"username");
    $this->_view->assign('_fromuser',$user);
-   $this->_view->assign('_chat', $this->_chat->getAll(array('from'=>$user,'listGroup'=>1)));
+   $this->_view->assign('_chat', $this->_chat1->getAll(array('from'=>$user,'listGroup'=>1)));
         $sqlspecial=$this->_option->getCode('special','option_o');
         $jsonspecial=json_decode($sqlspecial);
 
