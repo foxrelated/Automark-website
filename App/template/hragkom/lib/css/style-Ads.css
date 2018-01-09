@@ -700,7 +700,7 @@ body {
 }
 
 .information .half-info:first-of-type {
-  padding-right: 25px
+  padding-left: 25px
 }
 
 .information select,
@@ -819,14 +819,11 @@ body {
   margin-top: 30px;
   margin-bottom: 5px;
   padding: 9px 0;
-  width: 43%;
   font-family: 'DroidKufiBold'
 }
 
 .publish .btn1 {
   background-color: #db2d2e;
-  margin-left: 50px;
-  margin-right: 15px
 }
 
 .publish .btn1:hover {
