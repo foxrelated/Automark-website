@@ -7,6 +7,7 @@ body {
   box-sizing: border-box;
 }
 
+
 /* my frameork */
 
 .inline {
@@ -696,11 +697,11 @@ body {
 }
 
 .information .half-info {
-  padding: 0;
+  padding-left: 0;
 }
 
 .information .half-info:first-of-type {
-  padding-left: 25px;
+  padding-left: 40px;
   float:left
 }
 
@@ -710,7 +711,7 @@ body {
   background-color: #555;
   color: #a6a5a5;
   border: none;
-  padding: 5px 10px;
+  padding: 10px 10px;
   font-size: 18px;
   margin: 8px 0;
   -moz-appearance: none;
@@ -820,7 +821,8 @@ body {
   margin-top: 30px;
   margin-bottom: 5px;
   padding: 9px 0;
-  font-family: 'DroidKufiBold'
+  font-family: 'DroidKufiBold';
+  width:100%
 }
 
 .publish .btn1 {
