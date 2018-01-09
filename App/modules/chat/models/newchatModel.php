@@ -150,7 +150,7 @@
             return false;
        }
     public function getAll($array=''){
-      
+      //var_dump($array);die;
        $add='';
        $add.=(isset($array['from']))?" and chat.from = "."'".$array['from']."'":'';
        $add.=(isset($array['to']))?" and to = ".$array['to']:'';
