@@ -181,7 +181,7 @@ $_SESSION['fromuser'] = $_fromuser;
                                <li><a href="<?php echo $path['urlsite'] ?>cars/mycars/add"><?php echo _t(_Addannouncement);?></a> </li>
                                <li><a href="<?php echo $path['urlsite'] ?>users/"><?php echo _t(_Yourpersonaldata);?></a> </li>
                   			   <li><a href="<?php echo $path['urlsite'] ?>users/login/logout/"><?php echo _t(_Signout);?></a> </li>
-                  			   <!--<li >
+                  			   <li >
                   			   	<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="background-color: #db2d2e;">
                                 <i class="fa fa-envelope"></i>
                                 <b class="caret"></b>
@@ -194,14 +194,16 @@ $_SESSION['fromuser'] = $_fromuser;
                   			   foreach ($_chat AS $onechat){
                   			   	$to = $onechat['to'];
                   			   ?>
-                  			  <li> <a  href="javascript:void(0)" onclick="javascript:chatWith('<?=$to?>')" style="background-color: #db2d2e;"><<?=$onechat["to"]?></a></li>
+                  			  <li> <a  href="javascript:void(0)" onclick="javascript:chatWith('<?=$to?>')" style="background-color: #673a3a;"><?=$onechat["to"]?></a>
+                  			  	<hr>
+                  			  </li>
                   			   	
 							<?php
                   			   }
                   			   ?>
                             
                         		</ul>
-							 </li> -->  
+							 </li> 
 							  
                       <?php } ?>
                        
