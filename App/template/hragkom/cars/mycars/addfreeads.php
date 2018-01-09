@@ -551,7 +551,7 @@
   <section class="publish" dir="<?php echo $_dir; ?>">
     <div class="container">
       <div>
-      <button type="submit" class="btn btn1 col-lg-6">أنشر الاعلان</button>
+      <button type="submit" class="btn btn1 col-lg-12">أنشر الاعلان</button>
       <!--<button class="btn btn2 col-lg-6">عرض الإعلان</button>-->
       <input type="hidden" name="token" value="<?php echo  $lib_token->generate(); ?>" />
          <input type="hidden" name="add" value='1' />

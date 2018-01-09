@@ -700,7 +700,8 @@ body {
 }
 
 .information .half-info:first-of-type {
-  padding-left: 25px
+  padding-left: 25px;
+  float:left
 }
 
 .information select,
