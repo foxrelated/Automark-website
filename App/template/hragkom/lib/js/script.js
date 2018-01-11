@@ -17,8 +17,9 @@ $(document).ready(function() {
   /*$('#vertical').lightSlider({
     gallery:true,
     item:1,
+    autoWidth: true,
     vertical:true,
-    verticalHeight:650,
+    verticalHeight:618,
     vThumbWidth:225,
     thumbItem:4,
     thumbMargin:4,
@@ -48,11 +49,14 @@ $(document).ready(function() {
   $('.detail-phone-input').on('keyup',function(){
     $('.detail-phone').text($(this).val());
   });
+  $('.detail-plate-input').on('keyup',function(){
+    $('.detail-plate').text($(this).val());
+  });
   $('.detail-place-input').on('keyup',function(){
     $('.detail-place').text($(this).val());
   });
-   $('.clicko').on('click',function(){
-     $("<li data-thumb=<?php echo $path['template'];?>img/???.png><img class=img-responsive src=<?php echo $path['template'];?>img/???.png></li>").appendTo('#vertical');
-   });
 
+  //  $('.clicko').on('click',function(){
+  //    $("<li data-thumb=img/???.png><img class=img-responsive src=img/???.png></li>").appendTo('#vertical');
+  //  });
 });

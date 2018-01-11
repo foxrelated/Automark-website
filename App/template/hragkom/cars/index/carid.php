@@ -1,5 +1,8 @@
 
-
+<?php
+$_SESSION['username'] = $_fromuser; // Must be already set
+$_SESSION['fromuser'] = $_fromuser;
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -84,9 +87,9 @@
           <?php $xx=0; foreach($lib_func->jsonArray($_carsId['images_c']) as $rowsimg){
               
             ?>
-            <li data-thumb="<?php echo $path['upload'].$rowsimg; ?>">
+            <li data-thumb="<?php echo $path['thumb'].'thumb_'.$rowsimg; ?>">
               
-                <img class="img-responsive" src="<?php echo $path['thumb'].'thumb_'.$rowsimg; ?>" title="" alt="">
+                <img class="img-responsive" src="<?php echo $path['upload'].$rowsimg; ?>" title="" alt="">
               
             </li>
            <?php $xx++; } ?>

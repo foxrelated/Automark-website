@@ -34,7 +34,7 @@
 				success: function (res) {
 				$(load).html('');
 					if(res.error==1){
-						$(imgEnd).append("<a onclick='return imagesdlet(this);' class='' href='#'><img  width='150' height='100' align='right' src='"+_root_+"Public/uploads/thumb/thumb_"+res.name+"' /><input type='hidden' name='"+inputnew+"' value='"+res.name+"' /></a>");
+						$(imgEnd).append("<a onclick='return imagesdlet(this);' class='' href='#'><img  width='300' height='300' align='center' src='"+_root_+"Public/uploads/"+res.name+"' /><input type='hidden' name='"+inputnew+"' value='"+res.name+"' /></a>");
 				
 					}else{
 						$(load).html("<ul>"+res.error+"</ul>");

@@ -89,7 +89,7 @@ $this->_user1=$this->loadModel('users','users');
 			}
 		  }
 		}
-                                 }
+                     var_dump($_POST);die;            }
   $this->_validate->check($_POST,$validate);
 								
                 if($this->_validate->passed()){
@@ -145,14 +145,13 @@ $this->_user1=$this->loadModel('users','users');
     }
 
      public function addfreeads($id= ''){
-
+      
       $id=(isset($id) and $id!='')?(int)$id:5;
       $date_category=$this->_option->list_category(array('category'=>((int)$id)));
 
        if($this->_input->get('add')==1){
-        //var_dump($id);die;
-      if($this->_token->check($_POST['token'])){
-
+        //var_dump($this->_token->check($_POST['token']));
+      //if($this->_token->check($_POST['token'])){
 
       $sqlArrayq=array();
       $validate=array();
@@ -182,8 +181,11 @@ $this->_user1=$this->loadModel('users','users');
       }
     }
    }
-  $this->_validate->check($_POST,$validate);
-
+  $this->_validate->check($_POST,$validate);  
+  var_dump($_POST);
+  var_dump($this->_input->get("images_c"));
+  var_dump($_FILES);
+  die();
            
                 if($this->_validate->passed()){
                           $sqlArray=array(
@@ -197,9 +199,9 @@ $this->_user1=$this->loadModel('users','users');
                             'city'=>$_POST['city'],
                             'features'=>1,
                             
-                            'images_c'=>"h",//$this->_func->enJsonArray($this->_input->get('images_c')),
+                            'images_c'=>$this->_func->enJsonArray($this->_input->get('images_c')),
                             'type'=>"h",//$this->_input->get('type'),
-                            'description_c'=>$_POST['additionalinformation'],
+                            //'description_c'=>$_POST['additionalinformation'],
                             'dateadd'=>date("Y-m-d"),
                             'iduser'=>session::get(system::get("session/session_name")),
                             'end'=>time()+(60*60*24*30),
@@ -208,7 +210,7 @@ $this->_user1=$this->loadModel('users','users');
                         );
             
                     
-          
+          var_dump($sqlArray);die;
            if($id_last_cars=$this->_cars->insert($sqlArray)){
           //var_dump($id_last_cars);die;
            foreach($sqlArrayq AS $k_sqlArrayq=>$v_sqlArrayq){
@@ -223,8 +225,9 @@ $this->_user1=$this->loadModel('users','users');
                       $this->_view->assign('get',array_filter($_POST));
                       $this->_view->assign('error',$this->_validate->errors());
                 }
-            }
+            //}
            }
+           
         if(session::get(system::get("session/session_name"))){
         $this->_view->assign('_id',(int)$id);
           $this->_view->assign('data_category',$date_category);

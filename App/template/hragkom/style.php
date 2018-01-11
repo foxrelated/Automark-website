@@ -29,7 +29,7 @@
     <link rel="shortcut icon" href="<?php echo $path['template'];?>img/icone.png" />
     <link rel="icon" type="image/gif" href="<?php echo $path['template'];?>img/icone.png">
 	<link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/chat.css"> 
-	 <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/chat.js"></script>
+	 <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/chat1.js"></script>
 <style>
 	#search{
     background: url(<?php echo $path['urlsite']; ?>Public/img/search-white.png) no-repeat 10px 12px #ec3e3d;

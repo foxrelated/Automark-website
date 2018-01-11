@@ -200,11 +200,12 @@ if($rows_option['code_o']=='years'){?>
           <label for="input3" class="col-sm-3 control-label title"><?=_Basicimage?><?php echo $litForce; ?> </label>
            <div class="col-sm-7">
                         <input type="file" onchange="return UploatImages('imagesu<?php echo $rows_option['id_o']; ?>','.loadUploadu<?php echo $rows_option['id_o']; ?>','.loadUploadu<?php echo $rows_option['id_o']; ?>','<?php echo $rows_option['code_o']; ?>[]');" name="imagesu<?php echo $rows_option['id_o']; ?>" id="imagesu<?php echo $rows_option['id_o']; ?>" />
-						<button style="display:none;" type="submit" id="btn">رفع صورة</button>
+						<button style="display:none;" type="submit" id="btn"><?=_Uploadaphoto?></button>
                           <span class="help-inline"><?php echo isset($error[$rows_option['code_o']])?$error[$rows_option['code_o']]:''; ?> </span>
 						<div class="imgUploadu<?php echo $rows_option['id_o']; ?>"><span class="loadUploadu<?php echo $rows_option['id_o']; ?>"></span>
                         
-                        <?php  if(isset($get[$rows_option['code_o']]) and count($get[$rows_option['code_o']])){ foreach( $get[$rows_option['code_o']] as $rowsImages){?>
+                        <?php 
+                          if(isset($get[$rows_option['code_o']]) and count($get[$rows_option['code_o']])){ foreach( $get[$rows_option['code_o']] as $rowsImages){?>
 										<a onclick='return imagesdlet(this);' href='#'>
 										<img width="150" height="100"  align='right' src='<?php echo $path['upload']; ?>thumb/thumb_<?php echo $rowsImages; ?>' />
 										<input type='hidden' name='<?php echo $rows_option['code_o']; ?>[]' value='<?php echo $rowsImages; ?>' /></a>

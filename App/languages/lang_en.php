@@ -296,3 +296,8 @@ define('_kmperho', 'KM/Hour');
 define("_Meter", "Meter");
 define("_AddedtoFavorites", "Added to Favorites");
 define("_AdditionalInformation150characters", "Additional Information (150 characters)");
+define('_PutAd', 'Put Ad');
+define('_Category', 'Category');
+define("_Carplate", "Car Plate");
+define('_Symbol', 'Symbol');
+define("_Thecompanyprovidedtheservice", "The company provided the service");

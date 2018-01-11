@@ -295,3 +295,8 @@ define('_kmperho', 'كم/سا');
 define("_Meter", "متر");
 define("_AddedtoFavorites", "أضيفت للمفضلة");
 define("_AdditionalInformation150characters", "معلومات إضافية(150 حرف)");
+define('_PutAd', 'أنشر الاعلان');
+define("_Category", 'التصنيف');
+define("_Symbol", 'الرمز');
+define("_Carplate", "رقم اللوحه");
+define("_Thecompanyprovidedtheservice", "الشركة المقدمة للخدمة");

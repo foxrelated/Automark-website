@@ -1,4 +1,8 @@
 <?php
+$_SESSION['username'] = $_fromuser; // Must be already set
+$_SESSION['fromuser'] = $_fromuser;
+?>
+<?php
                 if($_dir=="ltr")
                   $dir = "rtl";
                 else
@@ -28,21 +32,76 @@
 
       <?php foreach($db_category->getAll() as $rowsCategory){
           
-          if(($rowsCategory['code_ss'] == "<!--:ar-->دراجات نارية<!--:--><!--:en-->Motorcycles<!--:-->" )|| ($rowsCategory['code_ss'] == "<!--:ar-->قارب<!--:--><!--:en-->Boat<!--:-->") || ($rowsCategory['code_ss'] == "<!--:ar-->شاحنة<!--:--><!--:en-->Truck<!--:-->")){
+          if(($rowsCategory['code_ss'] == "<!--:ar-->دراجات نارية<!--:--><!--:en-->Motorcycles<!--:-->" )|| ($rowsCategory['code_ss'] == "<!--:ar-->قارب<!--:--><!--:en-->Boat<!--:-->") || ($rowsCategory['code_ss'] == "<!--:ar-->شاحنة<!--:--><!--:en-->Truck<!--:-->")||($rowsCategory['code_ss'] == "<!--:ar-->لوحات السيارات<!--:--><!--:en-->Car plate<!--:-->") || ($rowsCategory['code_ss'] == "<!--:ar-->ارقام الجوالات<!--:--><!--:en-->Mobile number<!--:-->")){
             
         ?>
         <a class="btn btn-secondary col-lg-2" style="margin-left: 1px;"  href="<?php echo $path['urlsite'] ?>/cars/mycars/addfreeads/<?php echo $rowsCategory['id_ss'];?>"><?php echo language::getLang($rowsCategory['code_ss']);?></a>
         
         <?php }} echo ("&nbsp;"); echo ("&nbsp;"); echo ("&nbsp;"); ?>
-      <button class="btn btn-secondary col-lg-2"><?=_Phonenumber?></button>
-      <button class="btn btn-secondary col-lg-2"><?=_Acarnumber?></button>
+      
+      
     </div>
-    <form action="" method="post" class="form">
+    <form action="" method="post">
     <div class="form-group">
       <input class="car-type-input col-lg-12 col-md-12 col-sm-12 col-xs-12" name ="title_ad" type="text" placeholder="<?=_AddAdTitle40characters?>" maxlength="40" />
       <input class="price-input col-lg-12 col-md-12 col-sm-12 col-xs-12" type="text" name="price_ad" placeholder="<?=_AskingPriceAED?>" />
     </div>
+    <div style="width:80%;margin:0 auto" class="form-row">
+      <?php 
+    foreach($data_category as $rows_values){
+  
+                 foreach ($_option->getOption(array('id'=>$rows_values['option_id'])) AS $rows_option){
+           if($lib_func->jsonId($rows_option['option_o'],'admin')==1){continue;}
+          //d $litForce=($lib_func->jsonId($rows_option['option_o'],'force')==1)?'<span style="color:red">*</span>':'';
+             ?>
+             <?php  if($lib_func->jsonId($rows_option['option_o'],'type')=='text'){ ?>
+             <?php if ($rows_option['code_o']=='plate_number') { ?>
+             <input style="width:45%" class="detail-plate-input col-lg-6" type="text" placeholder="<?=_Carplate?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
+             <?php } ?>
+             <?php } ?>
+             <?php  if($lib_func->jsonId($rows_option['option_o'],'type')=='select'){ ?>
+             <?php if ($rows_option['code_o']=='category') { ?>
+             <select style="width:30%;margin-left:1%;margin-right:1%" class="custom-select d-block col-lg-4" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Category) ?>" tabindex="1">
+                <option value=""><?php echo _t(_Category) ?></option>
+                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+         
+          ?>
+                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+               <?php endforeach; ?>
+             </select>
+    <?php } ?>
+    <?php if ($rows_option['code_o']=='symbol') { ?>
+    <select style="width:23%" class="custom-select d-block col-lg-4" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Symbol) ?>" tabindex="1">
+                <option value=""><?php echo _t(_Symbol) ?></option>
+                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+         
+          ?>
+                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+               <?php endforeach; ?>
+             </select>
+     <?php } ?>
+     <?php if ($rows_option['code_o']=='the_company_provided_the_service') { ?>
+    <select style="width:49%" class="custom-select d-block col-lg-4" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Thecompanyprovidedtheservice) ?>" tabindex="1">
+                <option value=""><?php echo _t(_Thecompanyprovidedtheservice) ?></option>
+                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+         
+          ?>
+                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+               <?php endforeach; ?>
+             </select>
+
+     <?php } ?>
+          <?php } ?>
+     <?php }} ?>
+      
     
+    
+    
+    
+    </div>
   </div>
 </section>
 
@@ -65,15 +124,66 @@
         </div>
       </div>
     </section>
+    
     <div class="car-images">
       <div class="container">
+        
         <ul id="vertical" class="list-unstyled">
-          <li data-thumb="<?php echo $path['template'];?>img/Rectangle47.png">
-            <img class="clicko img-responsive" src="<?php echo $path['template'];?>img/PrimaryPhoto.png" />
-          </li>
-          <li data-thumb="<?php echo $path['template'];?>img/Rectangle47.png">
-            <img class="clicko img-responsive" src="<?php echo $path['template'];?>img/PrimaryPhoto.png" />
-          </li>
+
+          <?php 
+    foreach($data_category as $rows_values){
+  
+                 foreach ($_option->getOption(array('id'=>$rows_values['option_id'])) AS $rows_option){
+           if($lib_func->jsonId($rows_option['option_o'],'admin')==1){continue;}
+          //d $litForce=($lib_func->jsonId($rows_option['option_o'],'force')==1)?'<span style="color:red">*</span>':'';
+             ?>
+                
+               <?php  if($lib_func->jsonId($rows_option['option_o'],'type')=='images'){ ?>
+                  
+                     <input type="file" onchange="return UploatImages('imagesu<?php echo $rows_option['id_o']; ?>','.loadUploadu<?php echo $rows_option['id_o']; ?>','.loadUploadu<?php echo $rows_option['id_o']; ?>','<?php echo $rows_option['code_o']; ?>[]');" name="imagesu<?php echo $rows_option['id_o']; ?>" id="imagesu<?php echo $rows_option['id_o']; ?>" />
+                     <button style="display:none;" type="submit" id="btn"><?=_Uploadaphoto?></button>
+                      <div class="imgUploadu<?php echo $rows_option['id_o']; ?>"><span class="loadUploadu<?php echo $rows_option['id_o']; ?>"></span>
+                     <?php  
+                     if(isset($get[$rows_option['code_o']]) and count($get[$rows_option['code_o']])){ foreach( $get[$rows_option['code_o']] as $rowsImages){?>
+                        <a onclick='return imagesdlet(this);' href='#'>
+                    <img width="150" height="100"  align='right' src='<?php echo $path['upload']; ?>thumb/thumb_<?php echo $rowsImages; ?>' />
+                    <input type='hidden' name='<?php echo $rows_option['code_o']; ?>[]' value='<?php echo $rowsImages; ?>' /></a>
+                    <?php  }} ?>
+                       </div>
+                       <input type="file" onchange="return UploatImages('imagesu1<?php echo $rows_option['id_o']; ?>','.loadUploadu1<?php echo $rows_option['id_o']; ?>','.loadUploadu1<?php echo $rows_option['id_o']; ?>','<?php echo $rows_option['code_o']; ?>[]');" name="imagesu1<?php echo $rows_option['id_o']; ?>" id="imagesu1<?php echo $rows_option['id_o']; ?>" />
+                     <button style="display:none;" type="submit" id="btn"><?=_Uploadaphoto?></button>
+                      <div class="imgUploadu1<?php echo $rows_option['id_o']; ?>"><span class="loadUploadu1<?php echo $rows_option['id_o']; ?>"></span>
+                     <?php  
+                     if(isset($get[$rows_option['code_o']]) and count($get[$rows_option['code_o']])){ foreach( $get[$rows_option['code_o']] as $rowsImages){?>
+                        <a onclick='return imagesdlet(this);' href='#'>
+                    <img width="150" height="100"  align='right' src='<?php echo $path['upload']; ?>thumb/thumb_<?php echo $rowsImages; ?>' />
+                    <input type='hidden' name='<?php echo $rows_option['code_o']; ?>[]' value='<?php echo $rowsImages; ?>' /></a>
+                    <?php  }} ?>
+                       </div> 
+                       <input type="file" onchange="return UploatImages('imagesu2<?php echo $rows_option['id_o']; ?>','.loadUploadu2<?php echo $rows_option['id_o']; ?>','.loadUploadu2<?php echo $rows_option['id_o']; ?>','<?php echo $rows_option['code_o']; ?>[]');" name="imagesu2<?php echo $rows_option['id_o']; ?>" id="imagesu2<?php echo $rows_option['id_o']; ?>" />
+                     <button style="display:none;" type="submit" id="btn"><?=_Uploadaphoto?></button>
+                      <div class="imgUploadu2<?php echo $rows_option['id_o']; ?>"><span class="loadUploadu2<?php echo $rows_option['id_o']; ?>"></span>
+                     <?php  
+                     if(isset($get[$rows_option['code_o']]) and count($get[$rows_option['code_o']])){ foreach( $get[$rows_option['code_o']] as $rowsImages){?>
+                        <a onclick='return imagesdlet(this);' href='#'>
+                    <img width="150" height="100"  align='right' src='<?php echo $path['upload']; ?>thumb/thumb_<?php echo $rowsImages; ?>' />
+                    <input type='hidden' name='<?php echo $rows_option['code_o']; ?>[]' value='<?php echo $rowsImages; ?>' /></a>
+                    <?php  }} ?>
+                       </div> 
+                       <input type="file" onchange="return UploatImages('imagesu3<?php echo $rows_option['id_o']; ?>','.loadUploadu3<?php echo $rows_option['id_o']; ?>','.loadUploadu3<?php echo $rows_option['id_o']; ?>','<?php echo $rows_option['code_o']; ?>[]');" name="imagesu3<?php echo $rows_option['id_o']; ?>" id="imagesu3<?php echo $rows_option['id_o']; ?>" />
+                     <button style="display:none;" type="submit" id="btn"><?=_Uploadaphoto?></button>
+                      <div class="imgUploadu3<?php echo $rows_option['id_o']; ?>"><span class="loadUploadu3<?php echo $rows_option['id_o']; ?>"></span>
+                     <?php  
+                     if(isset($get[$rows_option['code_o']]) and count($get[$rows_option['code_o']])){ foreach( $get[$rows_option['code_o']] as $rowsImages){?>
+                        <a onclick='return imagesdlet(this);' href='#'>
+                    <img width="150" height="100"  align='right' src='<?php echo $path['upload']; ?>thumb/thumb_<?php echo $rowsImages; ?>' />
+                    <input type='hidden' name='<?php echo $rows_option['code_o']; ?>[]' value='<?php echo $rowsImages; ?>' /></a>
+                    <?php  }} ?>
+                       </div>   
+                  
+                  
+                  
+          <?php }}} ?>
         </ul>
       </div>
     </div>
@@ -101,7 +211,7 @@
         <select class="custom-select d-block my-3" name="years"  data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
                 <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
                 <?php for($year=date("Y") ; $year > 1970; $year--){ ?>
-                <option <?php echo (isset($get[$rows_option['code_o']]))? $lib_func->selected($get[$rows_option['code_o']],$year):'';?> value="<?php echo $year; ?>"><?php echo  $year; ?></option>
+                <option  <?php echo (isset($get[$rows_option['code_o']]))? $lib_func->selected($get[$rows_option['code_o']],$year):'';?> value="<?php echo $year; ?>"><?php echo  $year; ?></option>
              <?php } ?>
              </select>
             <?php echo isset($error['years'])?' <span class="help-inline badge badge-error">'.$error['years'].'</span>':''; ?>
@@ -384,7 +494,7 @@
       <?php if($lib_func->jsonId($rows_option['option_o'],'type')=='textarea') { 
           if ($rows_option['code_o']=='specifications'){
         ?>
-      <textarea class="col-lg-12" name="<?php echo $rows_option['code_o']; ?>" maxlength="150"><?=_AdditionalInformation150characters?></textarea>
+      <textarea class="col-lg-12" name="<?php echo $rows_option['code_o']; ?>" maxlength="150" placeholder="<?=_AdditionalInformation150characters?>" ></textarea>
       <?php }} ?>
       <?php }} ?>
     </div>
@@ -551,7 +661,7 @@
   <section class="publish" dir="<?php echo $_dir; ?>">
     <div class="container">
       <div>
-      <button type="submit" class="btn btn1 col-lg-6">أنشر الاعلان</button>
+      <button type="submit" class="btn btn1 col-lg-6"><?=_PutAd?></button>
       <!--<button class="btn btn2 col-lg-6">عرض الإعلان</button>-->
       <input type="hidden" name="token" value="<?php echo  $lib_token->generate(); ?>" />
          <input type="hidden" name="add" value='1' />

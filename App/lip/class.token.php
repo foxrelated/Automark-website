@@ -11,6 +11,7 @@
 
     public function check($token){
         $nameToken=system::get('session/session_token');
+        
       if(session::exists($nameToken) and  session::get($nameToken)==$token){
         session::delete($nameToken);
         return true   ;
