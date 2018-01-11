@@ -272,7 +272,7 @@ $_SESSION['fromuser'] = $_fromuser;
         <tr>
           <td class="main-color"><button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal"><?php echo _t(_Callnow);?></button></td>
           <hr>
-          <td class="main-color"><?php echo ('&nbsp;');?><?php echo ('&nbsp;');?><?php echo ('&nbsp;');?><?php echo _t(_Sendamessage);?></td>
+          <td class="main-color" style="text-align: center"><button type="button" class="btn btn-warning btn-lg"><?php echo ('&nbsp;');?><?php echo ('&nbsp;');?><?php echo ('&nbsp;');?><?php echo _t(_Sendamessage);?></button></td>
         </tr>
       </tbody>
     </table>

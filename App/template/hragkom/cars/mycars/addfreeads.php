@@ -189,7 +189,7 @@ $_SESSION['fromuser'] = $_fromuser;
     </div>
 
   <!-- Information -->
-<span>
+<div class="container">
   <section class="information" id="boat" dir="<?php echo $_dir; ?>">
     <div class="container">
       <h2><?=_Maininformation?></h2>
@@ -655,7 +655,7 @@ $_SESSION['fromuser'] = $_fromuser;
       <textarea class="col-lg-12" maxlength="150">معلومات إضافية(150 حرف)</textarea>
     </div>
   </section>-->
-</span>
+</div>
   <!-- Publish -->
 
   <section class="publish" dir="<?php echo $_dir; ?>">
