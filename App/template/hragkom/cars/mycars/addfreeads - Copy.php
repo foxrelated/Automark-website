@@ -28,36 +28,23 @@ $_SESSION['fromuser'] = $_fromuser;
     <h2><?=_Addyouradforfree?></h2>
     <div dir="<?php echo $_dir; ?>" class="bar">
 
-      <!--<button class="btn btn-secondary col-lg-2"><?=_Car?>   </button>-->     
+      <button class="btn btn-secondary col-lg-2"><?=_Car?>   </button>     
 
       <?php foreach($db_category->getAll() as $rowsCategory){
           
-
-          ?>
-          
-          <?php if($rowsCategory['id_ss'] == $id){
-
-          ?>
-          <a class="btn btn-secondary active col-lg-2" style="margin-left: 1px;"  href="<?php echo $path['urlsite'] ?>/cars/mycars/addfreeads/<?php echo $rowsCategory['id_ss'];?>"><?php echo language::getLang($rowsCategory['code_ss']);?></a>
-          <?php } else { ?>
-          
+          if(($rowsCategory['code_ss'] == "<!--:ar-->دراجات نارية<!--:--><!--:en-->Motorcycles<!--:-->" )|| ($rowsCategory['code_ss'] == "<!--:ar-->قارب<!--:--><!--:en-->Boat<!--:-->") || ($rowsCategory['code_ss'] == "<!--:ar-->شاحنة<!--:--><!--:en-->Truck<!--:-->")||($rowsCategory['code_ss'] == "<!--:ar-->لوحات السيارات<!--:--><!--:en-->Car plate<!--:-->") || ($rowsCategory['code_ss'] == "<!--:ar-->ارقام الجوالات<!--:--><!--:en-->Mobile number<!--:-->")){
+            
+        ?>
         <a class="btn btn-secondary col-lg-2" style="margin-left: 1px;"  href="<?php echo $path['urlsite'] ?>/cars/mycars/addfreeads/<?php echo $rowsCategory['id_ss'];?>"><?php echo language::getLang($rowsCategory['code_ss']);?></a>
-        <?php } ?>
-         
         
-        
-        <?php } echo ("&nbsp;"); echo ("&nbsp;"); echo ("&nbsp;"); ?>
+        <?php }} echo ("&nbsp;"); echo ("&nbsp;"); echo ("&nbsp;"); ?>
       
       
     </div>
     <form action="" method="post">
     <div class="form-group">
-      <input class="car-type-input col-lg-12 col-md-12 col-sm-12 col-xs-12" name ="title_ad" type="text" placeholder="<?=_AddAdTitle40characters?>" maxlength="40" required/>
-      <input class="price-input col-lg-12 col-md-12 col-sm-12 col-xs-12" type="text" name="price_ad" placeholder="<?=_AskingPriceAED?>" required/>
-    </div>
-    <div class="form-group form-row">
-      
-      
+      <input class="car-type-input col-lg-12 col-md-12 col-sm-12 col-xs-12" name ="title_ad" type="text" placeholder="<?=_AddAdTitle40characters?>" maxlength="40" />
+      <input class="price-input col-lg-12 col-md-12 col-sm-12 col-xs-12" type="text" name="price_ad" placeholder="<?=_AskingPriceAED?>" />
     </div>
     <div style="width:80%;margin:0 auto" class="form-row">
       <?php 
@@ -65,17 +52,12 @@ $_SESSION['fromuser'] = $_fromuser;
   
                  foreach ($_option->getOption(array('id'=>$rows_values['option_id'])) AS $rows_option){
            if($lib_func->jsonId($rows_option['option_o'],'admin')==1){continue;}
-          $litForce=($lib_func->jsonId($rows_option['option_o'],'force')==1)?'<span style="color:red">*</span>':'';
+          //d $litForce=($lib_func->jsonId($rows_option['option_o'],'force')==1)?'<span style="color:red">*</span>':'';
              ?>
              <?php  if($lib_func->jsonId($rows_option['option_o'],'type')=='text'){ ?>
-             <?php if ($rows_option['code_o']=='kilometersconsumed') { ?>
-             <input class="detail-km-input col-lg-6" type="text" placeholder="<?=_kilometersconsumed?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
-             <?php } ?>
-             
              <?php if ($rows_option['code_o']=='plate_number') { ?>
              <input style="width:45%" class="detail-plate-input col-lg-6" type="text" placeholder="<?=_Carplate?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
              <?php } ?>
-
              <?php } ?>
              <?php  if($lib_func->jsonId($rows_option['option_o'],'type')=='select'){ ?>
              <?php if ($rows_option['code_o']=='category') { ?>
@@ -136,69 +118,38 @@ $_SESSION['fromuser'] = $_fromuser;
               <li class="detail col-md-3 hvr-bob"><i class="fa fa-calendar fa-1"></i><span class="detail-make num-bd">2012</span></li>
               <li class="detail detail-place col-md-3 hvr-bob"><i class="fa fa-map-marker"></i>القوز | دبي</li>
               
-              <li dir="<?php echo($dir); ?>" class="detail detail-phone num-bd col-md-3 hvr-bob"><?=$phoneuser?><i class="fa fa-mobile"></i></li>
+              <li dir="<?php echo($dir); ?>" class="detail detail-phone num-bd col-md-3 hvr-bob">050 123 1234<i class="fa fa-mobile"></i></li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-    
-    <div class="car-images">
-      <div class="container">
-        
-        <ul id="vertical" class="list-unstyled">
-
-          <?php 
+    <div>
+      <?php 
     foreach($data_category as $rows_values){
   
                  foreach ($_option->getOption(array('id'=>$rows_values['option_id'])) AS $rows_option){
            if($lib_func->jsonId($rows_option['option_o'],'admin')==1){continue;}
           //d $litForce=($lib_func->jsonId($rows_option['option_o'],'force')==1)?'<span style="color:red">*</span>':'';
              ?>
-                
+                <?php if($lib_func->jsonId($rows_option['option_o'],'default')!=1){?>
                <?php  if($lib_func->jsonId($rows_option['option_o'],'type')=='images'){ ?>
                   
                      <input type="file" onchange="return UploatImages('imagesu<?php echo $rows_option['id_o']; ?>','.loadUploadu<?php echo $rows_option['id_o']; ?>','.loadUploadu<?php echo $rows_option['id_o']; ?>','<?php echo $rows_option['code_o']; ?>[]');" name="imagesu<?php echo $rows_option['id_o']; ?>" id="imagesu<?php echo $rows_option['id_o']; ?>" />
                      <button style="display:none;" type="submit" id="btn"><?=_Uploadaphoto?></button>
-                      <div class="imgUploadu<?php echo $rows_option['id_o']; ?>"><span class="loadUploadu<?php echo $rows_option['id_o']; ?>"></span>
+                      <div class="imgUploadu<?php echo $rows_option['id_o']; ?>"><span data-thumb="img/Rectangle47.png" class="loadUploadu<?php echo $rows_option['id_o']; ?> clicko img-responsive" ></span>
                      <?php  
                      if(isset($get[$rows_option['code_o']]) and count($get[$rows_option['code_o']])){ foreach( $get[$rows_option['code_o']] as $rowsImages){?>
                         
                     <?php  }} ?>
                        </div>
-                       <input type="file" onchange="return UploatImages('imagesu1<?php echo $rows_option['id_o']; ?>','.loadUploadu1<?php echo $rows_option['id_o']; ?>','.loadUploadu1<?php echo $rows_option['id_o']; ?>','<?php echo $rows_option['code_o']; ?>[]');" name="imagesu1<?php echo $rows_option['id_o']; ?>" id="imagesu1<?php echo $rows_option['id_o']; ?>" />
-                     <button style="display:none;" type="submit" id="btn"><?=_Uploadaphoto?></button>
-                      <div class="imgUploadu1<?php echo $rows_option['id_o']; ?>"><span class="loadUploadu1<?php echo $rows_option['id_o']; ?>"></span>
-                     <?php  
-                     if(isset($get[$rows_option['code_o']]) and count($get[$rows_option['code_o']])){ foreach( $get[$rows_option['code_o']] as $rowsImages){?>
-                        
-                    <?php  }} ?>
-                       </div> 
-                       <input type="file" onchange="return UploatImages('imagesu2<?php echo $rows_option['id_o']; ?>','.loadUploadu2<?php echo $rows_option['id_o']; ?>','.loadUploadu2<?php echo $rows_option['id_o']; ?>','<?php echo $rows_option['code_o']; ?>[]');" name="imagesu2<?php echo $rows_option['id_o']; ?>" id="imagesu2<?php echo $rows_option['id_o']; ?>" />
-                     <button style="display:none;" type="submit" id="btn"><?=_Uploadaphoto?></button>
-                      <div class="imgUploadu2<?php echo $rows_option['id_o']; ?>"><span class="loadUploadu2<?php echo $rows_option['id_o']; ?>"></span>
-                     <?php  
-                     if(isset($get[$rows_option['code_o']]) and count($get[$rows_option['code_o']])){ foreach( $get[$rows_option['code_o']] as $rowsImages){?>
-                        
-                    <?php  }} ?>
-                       </div> 
-                       <input type="file" onchange="return UploatImages('imagesu3<?php echo $rows_option['id_o']; ?>','.loadUploadu3<?php echo $rows_option['id_o']; ?>','.loadUploadu3<?php echo $rows_option['id_o']; ?>','<?php echo $rows_option['code_o']; ?>[]');" name="imagesu3<?php echo $rows_option['id_o']; ?>" id="imagesu3<?php echo $rows_option['id_o']; ?>" />
-                     <button style="display:none;" type="submit" id="btn"><?=_Uploadaphoto?></button>
-                      <div class="imgUploadu3<?php echo $rows_option['id_o']; ?>"><span class="loadUploadu3<?php echo $rows_option['id_o']; ?>"></span>
-                     <?php  
-                     if(isset($get[$rows_option['code_o']]) and count($get[$rows_option['code_o']])){ foreach( $get[$rows_option['code_o']] as $rowsImages){?>
-                    
-                    <?php  }} ?>
-                       </div> 
+                       
                          
                   
                   
                   
-          <?php }}} ?>
-        </ul>
-      </div>
+          <?php }}}} ?>
     </div>
-
   <!-- Information -->
 <div class="container">
   <section class="information" id="boat" dir="<?php echo $_dir; ?>">
@@ -233,60 +184,6 @@ $_SESSION['fromuser'] = $_fromuser;
         <?php if($rows_option['code_o']=='case'){
           ?>
         
-        <div class="symbol-container">
-        <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
-          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
-                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
-         
-          ?>
-                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
-                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
-               <?php endforeach; ?>
-        </select>
-        
-        
-        <i class="fa fa-angle-down fa-lg"></i>
-        </div>
-        <?php } ?>
-        <?php if ($rows_option['code_o']=='claas_car') {
-          
-        ?>
-        <div class="symbol-container">
-        <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
-          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
-                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
-         
-          ?>
-                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
-                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
-               <?php endforeach; ?>
-        </select>
-        
-        
-        <i class="fa fa-angle-down fa-lg"></i>
-        </div>
-        <?php } ?>
-        <?php if ($rows_option['code_o']=='motive') {
-          
-        ?>
-        <div class="symbol-container">
-        <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
-          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
-                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
-         
-          ?>
-                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
-                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
-               <?php endforeach; ?>
-        </select>
-        
-        
-        <i class="fa fa-angle-down fa-lg"></i>
-        </div>
-        <?php } ?>
-        <?php if ($rows_option['code_o']=='Outside') {
-          
-        ?>
         <div class="symbol-container">
         <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
           <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
@@ -447,7 +344,7 @@ $_SESSION['fromuser'] = $_fromuser;
       if($rows_option['code_o']=='years'){
       ?>
       <div class="symbol-container">
-        <select class="custom-select d-block my-3 years-input" name="years"  data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
+        <select class="custom-select d-block my-3" name="years"  data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
                 <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
                 <?php for($year=date("Y") ; $year > 1970; $year--){ ?>
                 <option  <?php echo (isset($get[$rows_option['code_o']]))? $lib_func->selected($get[$rows_option['code_o']],$year):'';?> value="<?php echo $year; ?>"><?php echo  $year; ?></option>
@@ -487,7 +384,7 @@ $_SESSION['fromuser'] = $_fromuser;
 
           ?> 
           <div class="symbol-container">
-        <select class="custom-select d-block my-3 Country-input" name="Country_c" onchange="return changeselect(this,'city','#subcity') "  data-placeholder="<?php echo _t(_Country) ?>" tabindex="1">
+        <select class="custom-select d-block my-3" name="Country_c" onchange="return changeselect(this,'city','#subcity') "  data-placeholder="<?php echo _t(_Country) ?>" tabindex="1">
                 <option value=""><?php echo _t(_Country) ?></option>
              <?php foreach($_city->getCountryAll() as $rowscity ): ?>
                 <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$rowscity['id_c']):'';?> value="<?php echo $rowscity['id_c']; ?>"><?php echo language::getLang($rowscity['name_c']); ?></option>
@@ -527,7 +424,8 @@ $_SESSION['fromuser'] = $_fromuser;
         <i class="fa fa-angle-down fa-lg"></i>
         </div>
         <?php } ?>
-        <?php if ($rows_option['code_o']=='supplier') {
+        
+        <?php if ($rows_option['code_o']=='kilometersconsumed') {
           
         ?>
         <div class="symbol-container">
@@ -541,11 +439,9 @@ $_SESSION['fromuser'] = $_fromuser;
                <?php endforeach; ?>
         </select>
         
-        
         <i class="fa fa-angle-down fa-lg"></i>
         </div>
         <?php } ?>
-        
         <?php }}}}   ?>
         
       </div>
@@ -742,7 +638,7 @@ $_SESSION['fromuser'] = $_fromuser;
 <!-- Scripts -->
 
 <script src="<?php echo $path['template'];?>lib/js/jquery.nicescroll.min.js"></script>
-<script src="<?php echo $path['template'];?>lib/js/script1.js"></script>
+
 <script type="text/javascript">
       $(document).ready(function() {
         $('#vertical').lightSlider({

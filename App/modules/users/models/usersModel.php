@@ -92,6 +92,18 @@
     }
     return $this->_resulte[$name];
   }
+  public function findphone($id,$name){
+    $nameuser=is_numeric($id)?'id_u':'username';
+     $id= $this->_db->real_escape_string($id);
+
+    $query=$this->_db->query("select * from users where $nameuser = '$id'");
+
+    if($query){
+      $this->_resulte= $query->fetch_assoc();
+    }
+    return $this->_resulte[$name];
+  }
+  
     public function getAll(){
 	
     $query=$this->_db->query("select * from users");

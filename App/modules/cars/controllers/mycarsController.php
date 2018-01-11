@@ -89,9 +89,12 @@ $this->_user1=$this->loadModel('users','users');
 			}
 		  }
 		}
-                     var_dump($_POST);die;            }
+    }
+
   $this->_validate->check($_POST,$validate);
-								
+								var_dump($_POST);
+    var_dump($this->_validate->check($_POST,$validate));
+    die; 
                 if($this->_validate->passed()){
                           $sqlArray=array(
                             'title_c'=>$this->_input->get('title_c'),
@@ -146,9 +149,11 @@ $this->_user1=$this->loadModel('users','users');
 
      public function addfreeads($id= ''){
       
-      $id=(isset($id) and $id!='')?(int)$id:5;
+      $id=(isset($id) and $id!='')?(int)$id:1;
       $date_category=$this->_option->list_category(array('category'=>((int)$id)));
-
+      $iduser=session::get(system::get("session/session_name"));
+      $phoneuser = $this->_user1->findphone($iduser,"mobile_u");//
+      
        if($this->_input->get('add')==1){
         //var_dump($this->_token->check($_POST['token']));
       //if($this->_token->check($_POST['token'])){
@@ -183,7 +188,7 @@ $this->_user1=$this->loadModel('users','users');
    }
   $this->_validate->check($_POST,$validate);  
   var_dump($_POST);
-  var_dump($this->_input->get("images_c"));
+  var_dump($this->_validate->check($_POST,$validate));
   var_dump($_FILES);
   die();
            
@@ -231,6 +236,8 @@ $this->_user1=$this->loadModel('users','users');
         if(session::get(system::get("session/session_name"))){
         $this->_view->assign('_id',(int)$id);
           $this->_view->assign('data_category',$date_category);
+          $this->_view->assign('phoneuser',$phoneuser);
+          $this->_view->assign('id',$id);
           $this->_view->sider('sider');  
           $this->_view->tmpDir('addfreeads','',array('tmp'=>true));
        } else{

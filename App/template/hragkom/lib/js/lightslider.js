@@ -345,6 +345,7 @@
                     var $children = $slide.find('.lslide');
                     var length = $slide.find('.lslide').length;
                     var i = 0,
+                    //console.log($children);
                         pagers = '',
                         v = 0;
                     for (i = 0; i < length; i++) {
