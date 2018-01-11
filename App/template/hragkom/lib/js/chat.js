@@ -30,7 +30,7 @@ var chatboxFocus = new Array();
 var newMessages = new Array();
 var newMessagesWin = new Array();
 var chatBoxes = new Array();
-
+var APP_URL = "http://localhost/automark/";
 $(document).ready(function(){
 	originalTitle = document.title;
 	startChatSession();
@@ -182,7 +182,7 @@ function chatHeartbeat(){
 		}
 	}
 	$.ajax({
-	  url: "../../../App/template/hragkom/chat.php?action=chatheartbeat",
+	  url: APP_URL + "App/template/hragkom/chat.php?action=chatheartbeat",
 	  cache: false,
 	  dataType: "json",
 	  success: function(data) {
@@ -239,7 +239,7 @@ function closeChatBox(chatboxtitle) {
 	$('#chatbox_'+chatboxtitle).css('display','none');
 	restructureChatBoxes();
 	
-		$.post("../../../App/template/hragkom/chat.php?action=closechat", { chatbox: chatboxtitle} , function(data){	
+		$.post(APP_URL + "App/template/hragkom/chat.php?action=closechat", { chatbox: chatboxtitle} , function(data){	
 	});
 	
 
@@ -296,7 +296,7 @@ function checkChatBoxInputKey(event,chatboxtextarea,chatboxtitle) {
 		$(chatboxtextarea).css('height','44px');
 		if (message != '') {
 				
-			$.post("../../../App/template/hragkom/chat.php?action=sendchat", {to: chatboxtitle, message: message} , function(data){
+			$.post(APP_URL + "App/template/hragkom/chat.php?action=sendchat", {to: chatboxtitle, message: message} , function(data){
 				message = message.replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\"/g,"&quot;");
 				$("#chatbox_"+chatboxtitle+" .chatboxcontent").append('<div class="chatboxmessage"><span class="chatboxmessagefrom">'+username+':&nbsp;&nbsp;</span><span class="chatboxmessagecontent">'+message+'</span></div>');
 				$("#chatbox_"+chatboxtitle+" .chatboxcontent").scrollTop($("#chatbox_"+chatboxtitle+" .chatboxcontent")[0].scrollHeight);
@@ -326,7 +326,7 @@ function checkChatBoxInputKey(event,chatboxtextarea,chatboxtitle) {
 
 function startChatSession(){  
 	$.ajax({
-	  url: "../../../App/template/hragkom/chat.php?action=startchatsession",
+	  url: APP_URL + "App/template/hragkom/chat.php?action=startchatsession",
 	  cache: false,
 	  dataType: "json",
 	  success: function(data) {
