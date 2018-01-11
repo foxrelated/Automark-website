@@ -52,7 +52,7 @@ $(document).ready(function() {
     $('.detail-place').text($(this).val());
   });
    $('.clicko').on('click',function(){
-     $("<li data-thumb=<?php echo $path['template'];?>img/???.png><img class=img-responsive src=<?php echo $path['template'];?>img/???.png></li>").appendTo('#vertical');
+     $("<li data-thumb=<?php echo $path['template'];?>img/Rectangle47.png><img class=img-responsive src=<?php echo $path['template'];?>img/Rectangle47.png></li>").appendTo('#vertical');
    });
 
 });

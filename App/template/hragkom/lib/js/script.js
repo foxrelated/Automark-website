@@ -14,7 +14,7 @@ $(document).ready(function() {
     $('#heavy').fadeIn().siblings().fadeOut();
   });
 
-  /*$('#vertical').lightSlider({
+  $('#vertical').lightSlider({
     gallery:true,
     item:1,
     autoWidth: true,
@@ -24,7 +24,7 @@ $(document).ready(function() {
     thumbItem:4,
     thumbMargin:4,
     slideMargin:0
-  });*/
+  });
 
   $(".lSGallery").niceScroll({
     cursorcolor:"#db2d2e",
@@ -57,6 +57,6 @@ $(document).ready(function() {
   });
 
   //  $('.clicko').on('click',function(){
-  //    $("<li data-thumb=img/???.png><img class=img-responsive src=img/???.png></li>").appendTo('#vertical');
+  //    $("<li data-thumb=<?php echo $path['template'];?>img/Rectangle47.png><img class=img-responsive src=<?php echo $path['template'];?>img/Rectangle47.png></li>").appendTo('#vertical');
   //  });
 });

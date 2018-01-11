@@ -320,7 +320,8 @@ $_SESSION['fromuser'] = $_fromuser;
 
       
       <!-- Scripts -->
-    
+      <script src="<?php echo $path['template'];?>lib/js/jquery.nicescroll.min.js"></script>
+    <script src="<?php echo $path['template'];?>lib/js/script.js"></script>
       
       
     </body>

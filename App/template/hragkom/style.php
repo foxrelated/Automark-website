@@ -446,7 +446,7 @@ $_SESSION['fromuser'] = $_fromuser;
 					</div>
 					<div class="col-sm-3 col-xs-6">
 						 <div class="form-group">
-		                          <button   name="general" class="btn btn-default btn_input_search_style" /><i class="fa fa-search" aria-hidden="true"></i></button>
+		                          <button   name="general" class="btn btn-default btn_input_search_style" /><i class="fa fa-search" aria-hidden="true" style="position: static; height: 25px; font-size: 30px;"></i></button>
 		                          <input type="hidden" name="generalsearch" value="1" />
 		                </div>
 					</div>
@@ -781,26 +781,13 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
 <?php }   ?>
    
    <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/jquery.magnific-popup.js"></script>
-    
-   <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/lightslider.js"></script>
+    <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/lightslider.js"></script>
+   
    
  <script type="text/javascript">
             var _root_ = '<?php echo $path['urlsite'];?>';
         </script>
-        <script type="text/javascript">
-      $(document).ready(function() {
-        $('#vertical').lightSlider({
-          gallery:true,
-          item:1,
-          vertical:true,
-          verticalHeight:650,
-          vThumbWidth:225,
-          thumbItem:4,
-          thumbMargin:4,
-          slideMargin:0
-        });
-      });
-      </script>
+      
 	
 </body>
 
