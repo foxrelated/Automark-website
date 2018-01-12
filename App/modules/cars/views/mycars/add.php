@@ -1,13 +1,10 @@
 
-
-
  <form action="" method="post">
  <h3  class="title btn-primary right"><?php echo _t(_Addacar);?></h3>
 <div class="border-block inputh" >
 
  <div class="right span3">
    <table cellpadding="4" cellspacing="4" style="border-size: 0px ;font-size:15px;" class="title">
-
      <tr>
        <td style="width:110px;"><?php echo _t(_Typeofcar);?></td>
         <td>
@@ -45,8 +42,8 @@
         <tr>
        <td><?php echo _t("اللون");?></td>
        <td>
-            <select class="span12 inputsize inputcolor" name="color" data-placeholder="<?php echo _t(_Choose._Color)) ?>" tabindex="1">
-                <option value=""><?php echo _t(_Choose._Color)) ?></option>
+            <select class="span12 inputsize inputcolor" name="color" data-placeholder="<?php echo _t(_Choose._Color)); ?>" tabindex="1">
+                <option value=""><?php echo _t(_Choose._Color)); ?></option>
                  <?php foreach($lib_func->jsonArray($_option->getCode('color','option_o')) as $rowscolor): ?>
                 <option value="<?php echo $rowscolor;?>"><?php echo $rowscolor;?></option>
                <?php endforeach; ?>
@@ -197,4 +194,3 @@
 </div>
 
  </form>
-  

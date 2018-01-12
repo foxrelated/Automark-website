@@ -164,6 +164,7 @@ $this->_user1=$this->loadModel('users','users');
     echo $res;
     }
     public function upload(){
+        error_reporting(0); // to disable php warnings here
 
     $array=array('error'=>'لم تختر الملف الصحيح');
 if(isset($_FILES['images']['name'])) {

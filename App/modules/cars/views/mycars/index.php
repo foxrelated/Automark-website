@@ -43,7 +43,7 @@
 
 	<div class="clear"></div>
     <div class="list">
-    
+
 	<?php if($numPage['list']!=1){ ?>
 			<a class="star"  href="<?php echo $path['urlsite'].'/cars/mycars/'; ?>"><?php echo _t(_First); ?></a>
 			<?php } ?>
