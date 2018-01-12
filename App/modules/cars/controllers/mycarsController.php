@@ -188,9 +188,7 @@ $this->_user1=$this->loadModel('users','users');
    }
   $this->_validate->check($_POST,$validate);  
   var_dump($_POST);
-  var_dump($this->_validate->check($_POST,$validate));
-  var_dump($_FILES);
-  die();
+           die();
            
                 if($this->_validate->passed()){
                           $sqlArray=array(
