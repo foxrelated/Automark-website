@@ -234,7 +234,7 @@ $_SESSION['fromuser'] = $_fromuser;
 		  padding-top: 0px;
 		}
 	</style>
-	<div class="header_float" style="z-index: 10; border-radius: 250px;">
+	<div class="header_float" style="z-index: 1000; border-radius: 250px;">
 		<nav class="navbar navbar-default affix-top" data-spy="affix" data-offset-top="10" style="border:none;">
 			<div class="container">
 		<div class="" style="background:#fff;">
