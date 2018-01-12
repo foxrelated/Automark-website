@@ -185,7 +185,7 @@ $this->_user1=$this->loadModel('users','users');
     }
    }
   $this->_validate->check($_POST,$validate); 
-  var_dump($this->_input->get('images_c'));die;
+  
                 if($this->_validate->passed()){
   
                           $sqlArray=array(
@@ -199,7 +199,7 @@ $this->_user1=$this->loadModel('users','users');
                             'city'=>$_POST['city'],
                             'features'=>1,
                             
-                            'images_c'=>$this->_func->enJsonArray($this->_input->get('images_c')),
+                            'images_c'=>$this->_func->enJsonArray($this->_input->get('act_c')),
                             'type'=>"h",//$this->_input->get('type'),
                             //'description_c'=>$_POST['additionalinformation'],
                             'dateadd'=>date("Y-m-d"),
@@ -212,7 +212,7 @@ $this->_user1=$this->loadModel('users','users');
                     
           
            if($id_last_cars=$this->_cars->insert($sqlArray)){
-          //var_dump($id_last_cars);die;
+          
            foreach($sqlArrayq AS $k_sqlArrayq=>$v_sqlArrayq){
               $array_meta_cars=array("id"=>$id_last_cars,"code"=>$k_sqlArrayq,"value"=>$v_sqlArrayq);
                   $this->_cars->add_meta_cars($array_meta_cars);

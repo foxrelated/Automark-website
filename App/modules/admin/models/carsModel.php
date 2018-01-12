@@ -288,12 +288,14 @@
         return false;
     }
        public function add_meta_cars($values){
+        
 			      $this->_query=$this->_db->prepare("insert into cars_meta (id_cars_m,code_m,value_m) values (?,?,?)");
            $this->_query->bind_param("iss",
                         $values['id'],
                         $values['code'],
                         $values['value']
            );
+           
             if($this->_query->execute()){
                   return true;
                 }

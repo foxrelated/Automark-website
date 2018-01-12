@@ -70,7 +70,7 @@ $_SESSION['fromuser'] = $_fromuser;
              <?php } ?>
              
              <?php if ($rows_option['code_o']=='colorinter') { ?>
-             <input class="detail-km-input col-lg-6" type="text" placeholder="<?=_InteriorColor?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
+             <input class="detail-km-input1 col-lg-6" type="text" placeholder="<?=_InteriorColor?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
              <?php } ?>
              <?php if ($rows_option['code_o']=='plate_number') { ?>
              <input style="width:45%" class="detail-plate-input col-lg-6" type="text" placeholder="<?=_Carplate?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
