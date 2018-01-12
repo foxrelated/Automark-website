@@ -234,8 +234,8 @@
     }
   public function insert($values=array()){
 				
-	$this->_query=$this->_db->prepare("insert into cars (title_c,type_c,model_c,category_c,year_c,price_c,Country_c,city_c,features_c,images_c,type_ads_c,description_c,dateadd_c,id_user,end_c,act_c,vzt_c) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0)");
-           $this->_query->bind_param("siiiisiiissssiii",
+	$this->_query=$this->_db->prepare("insert into cars (title_c,type_c,model_c,category_c,year_c,price_c,Country_c,city_c,features_c,images_c,type_ads_c,description_c,dateadd_c,id_user,end_c,act_c,vzt_c) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+           $this->_query->bind_param("siiiisiiissssiiii",
                         $values['title_c'],
                         $values['modelcar'],
                         $values['model'],
@@ -251,10 +251,10 @@
                         $values['dateadd'],
                         $values['iduser'],
                         $values['end'],
-                        $values['act']
+                        $values['act'],
+                        $values['vzt_c']
            );
             if($this->_query->execute()){
-			
                   return $this->_db->insert_id;
                 }
             return false;

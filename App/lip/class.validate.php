@@ -90,7 +90,7 @@ class validate {
 
            }
         }
-
+        
 
         if(empty($this->_error)){
           $this->_passed =true;
