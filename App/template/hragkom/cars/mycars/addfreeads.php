@@ -68,6 +68,10 @@ $_SESSION['fromuser'] = $_fromuser;
              <?php if ($rows_option['code_o']=='kilometersconsumed') { ?>
              <input class="detail-km-input col-lg-6" type="text" placeholder="<?=_kilometersconsumed?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
              <?php } ?>
+             
+             <?php if ($rows_option['code_o']=='colorinter') { ?>
+             <input class="detail-km-input col-lg-6" type="text" placeholder="<?=_InteriorColor?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
+             <?php } ?>
              <?php if ($rows_option['code_o']=='plate_number') { ?>
              <input style="width:45%" class="detail-plate-input col-lg-6" type="text" placeholder="<?=_Carplate?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
              <?php } ?>
@@ -141,8 +145,11 @@ $_SESSION['fromuser'] = $_fromuser;
     <div class="car-images">
         <div class="container">
             <ul id="vertical" class="list-unstyled">
+              
+              
                 <?php
                 // just 4 pictures for the Ad
+
                 for($i=0;$i<4;$i++){?>
                     <li id="imgThumb<?=$i.$rows_option['id_o']?>"
                         data-thumb="<?=$path['template']?>img/Rectangle47.png">
@@ -163,6 +170,7 @@ $_SESSION['fromuser'] = $_fromuser;
                 <?php
                 }
                 ?>
+                
             </ul>
         </div>
     </div>

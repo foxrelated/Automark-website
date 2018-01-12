@@ -302,3 +302,4 @@ define("_Carplate", "Car Plate");
 define('_Symbol', 'Symbol');
 define("_Thecompanyprovidedtheservice", "The company provided the service");
 define('_kilometersconsumed', 'Kilometers consumed');
+define('_InteriorColor', 'Interior Color');

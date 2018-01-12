@@ -92,9 +92,7 @@ $this->_user1=$this->loadModel('users','users');
     }
 
   $this->_validate->check($_POST,$validate);
-								var_dump($_POST);
-    var_dump($this->_validate->check($_POST,$validate));
-    die; 
+								
                 if($this->_validate->passed()){
                           $sqlArray=array(
                             'title_c'=>$this->_input->get('title_c'),
@@ -187,7 +185,7 @@ $this->_user1=$this->loadModel('users','users');
     }
    }
   $this->_validate->check($_POST,$validate); 
-  
+  var_dump($this->_input->get('images_c'));die;
                 if($this->_validate->passed()){
   
                           $sqlArray=array(
@@ -201,7 +199,7 @@ $this->_user1=$this->loadModel('users','users');
                             'city'=>$_POST['city'],
                             'features'=>1,
                             
-                            'images_c'=>$this->_func->enJsonArray($this->_input->get('act_c')),
+                            'images_c'=>$this->_func->enJsonArray($this->_input->get('images_c')),
                             'type'=>"h",//$this->_input->get('type'),
                             //'description_c'=>$_POST['additionalinformation'],
                             'dateadd'=>date("Y-m-d"),
