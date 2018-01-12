@@ -118,14 +118,16 @@ body {
   margin-left: 8px
 }
 
-.add-ad form input {
+.add-ad form input, .add-ad form select {
   font-size: 17px;
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
   margin: 10px 0;
   color: #999;
-  border: 1px solid #ccc
+  border: 1px solid #ccc;
+  height:46px;
+  background: #fff;
 }
 
 .add-ad .form-group {
@@ -134,17 +136,23 @@ body {
 }
 
 .add-ad .form-group:nth-of-type(2) input,
-.add-ad .form-group:nth-of-type(3) input {
+.add-ad .form-group:nth-of-type(3) input,
+.add-ad .form-group:nth-of-type(2) select,
+.add-ad .form-group:nth-of-type(3) select {
   width:49%
 }
 
 .add-ad .form-group:nth-of-type(2) input:last-child,
-.add-ad .form-group:nth-of-type(3) input:last-child {
+.add-ad .form-group:nth-of-type(3) input:last-child,
+.add-ad .form-group:nth-of-type(2) select:last-child,
+.add-ad .form-group:nth-of-type(3) select:last-child {
   float: right
 }
 
 .add-ad .form-group:nth-of-type(2) input:first-child,
-.add-ad .form-group:nth-of-type(3) input:first-child {
+.add-ad .form-group:nth-of-type(3) input:first-child,
+.add-ad .form-group:nth-of-type(2) select:first-child,
+.add-ad .form-group:nth-of-type(3) select:first-child {
   float: left
 }
 
@@ -1196,4 +1204,21 @@ body {
     width: 20%;
     top: 9px
   }
+}
+
+.phone-number-big {
+  font-size: 16px;
+  color: #707070;
+  font-weight: 200;
+  float: left;
+  font-family: 'DroidKufiBold';
+  cursor: default;
+}
+
+.phone-number-big span {
+  font-weight: bold;
+  font-size: 26px;
+  color: #db2d2e;
+  font-family: 'DroidKufiBold';
+  cursor: default;
 }

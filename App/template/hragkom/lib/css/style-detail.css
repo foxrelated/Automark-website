@@ -59,6 +59,7 @@ body {
 
 .head-bar {
   height: 60px;
+  background-color: #db2d2e;
   color: #fff;
   width: 100%;
   font-size: 17px;
@@ -566,10 +567,10 @@ body {
 }
 
 .fa-search {
-  /*position: absolute;*/
+  position: absolute;
   left: 70px;
   top: 530px;
-  /*font-size: 50px;*/
+  font-size: 50px;
   color: #ddd;
 }
 
@@ -745,8 +746,7 @@ body {
   position: relative;
   padding: 0 70px;
   height: 100%;
-  z-index: 2;
-  width: 100%
+  z-index: 2
 }
 
 .basic-information h3 {
@@ -1825,9 +1825,4 @@ body {
     width: 20%;
     top: 9px
   }
-}
-
-.img-responsive {
-	width: 100%;
-    object-fit: cover;
 }

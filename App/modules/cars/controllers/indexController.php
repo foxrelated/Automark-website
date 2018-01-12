@@ -65,6 +65,12 @@
             $data_mazat=array('cars_id'=>$id,'user_id'=>$this->user_id); 
         }
       $iscarfavorite = $this->_cars->getcarfavorite($this->user_id,$data_id['id_c']);
+      
+      $userid = $data_id['id_user'];
+      
+      $_user = $this->_user1->findName($userid,"username");
+      
+      $this->_view->assign('_user',$_user);
 	    $this->_view->assign("_maxPrice",$this->_cars->getMaxmazad(array('cars_id'=>$id)));
 	    $this->_view->assign("_carsId",$data_id);
       $this->_view->assign("_iscarfavorite",$iscarfavorite);

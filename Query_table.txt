@@ -195,3 +195,48 @@ INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VA
 INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '26', '4');
 
 INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '4', '26', '10');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '6', '27', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '5', '27', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '4', '27', '4');
+
+UPDATE `option_car` SET `option_o` = '{"type":"images","force":"0","basic":"1"}' WHERE `option_car`.`id_o` = 27;
+
+INSERT INTO `option_car` (`id_o`, `name_o`, `code_o`, `option_o`, `type_o`, `order_o`) VALUES (NULL, '<!--:ar-->Ø±Ù‚Ù… Ø§Ù„Ù„ÙˆØ­Ø©<!--:--><!--:en-->Plate Number<!--:-->', 'plate_number', '{"type":"text"}', 'form', '0');
+
+INSERT INTO `option_car` (`id_o`, `name_o`, `code_o`, `option_o`, `type_o`, `order_o`) VALUES (NULL, '<!--:ar-->Ø§Ù„ØªØµÙ†ÙŠÙ<!--:--><!--:en-->Category<!--:-->', 'category', '{"type":"select"}', 'form', '0');
+
+INSERT INTO `option_car` (`id_o`, `name_o`, `code_o`, `option_o`, `type_o`, `order_o`) VALUES (NULL, '<!--:ar-->Ø§Ù„Ø±Ù…Ø²<!--:--><!--:en-->Symbol<!--:-->', 'symbol', '{"type":"select"}', 'form', '0');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '2', '58', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '2', '59', '4');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '2', '60', '4');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '59', '<!--:ar-->1<!--:--><!--:en-->1<!--:-->', '');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '60', '<!--:ar-->1<!--:--><!--:en-->1<!--:-->', '');
+
+INSERT INTO `option_car` (`id_o`, `name_o`, `code_o`, `option_o`, `type_o`, `order_o`) VALUES (NULL, '<!--:ar-->Ø§Ù„Ù…Ù‚Ø¯Ù…Ù‡ Ù„Ù„Ø®Ø¯Ù…Ù‡<!--:--><!--:en-->The company provided the service<!--:-->', 'the_company_provided_the_service', '{"type":"select"}', 'form', '0');
+
+INSERT INTO `value_option` (`id_v`, `option_id_v`, `value_v`, `type_v`) VALUES (NULL, '61', '<!--:ar-->1<!--:--><!--:en-->1<!--:-->', '');
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '3', '61', '4');
+
+UPDATE `option_car` SET `option_o` = '{"type":"text"}' WHERE `option_car`.`id_o` = 50;
+
+INSERT INTO `category_list` (`id_cl`, `category_id`, `option_id`, `order_cl`) VALUES (NULL, '1', '50', '4');
+
+UPDATE `option_car` SET `option_o` = '{"type":"text","force":"1"}' WHERE `option_car`.`id_o` = 58;
+
+UPDATE `option_car` SET `name_o` = '<!--:ar-->Ø§Ù„Ù…ÙˆØ±Ø¯ <!--:--><!--:en-->The supplier<!--:-->' WHERE `option_car`.`id_o` = 37;
+
+UPDATE `option_car` SET `name_o` = '<!--:ar-->Ø¹Ø¯Ø¯ Ø§Ù„Ø³Ù„Ù†Ø¯Ø±Ø§Øª<!--:--><!--:en-->Number selender<!--:-->' WHERE `option_car`.`id_o` = 45;
+
+UPDATE `option_car` SET `name_o` = '<!--:ar-->Ø­Ø§Ù„Ø© Ø§Ù„Ù…ÙƒÙŠÙ†Ø©<!--:--><!--:en-->Machine condition<!--:-->' WHERE `option_car`.`id_o` = 41;
+
+UPDATE `option_car` SET `name_o` = '<!--:ar-->Ø­Ø§Ù„Ø© Ø§Ù„Ø¨Ø¯ÙŠ<!--:--><!--:en-->Badi case<!--:-->' WHERE `option_car`.`id_o` = 40;
+//////////////////////////////////

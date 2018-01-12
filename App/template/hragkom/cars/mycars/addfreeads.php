@@ -1,4 +1,8 @@
 <?php
+$_SESSION['username'] = $_fromuser; // Must be already set
+$_SESSION['fromuser'] = $_fromuser;
+?>
+<?php
                 if($_dir=="ltr")
                   $dir = "rtl";
                 else
@@ -24,25 +28,98 @@
     <h2><?=_Addyouradforfree?></h2>
     <div dir="<?php echo $_dir; ?>" class="bar">
 
-      <button class="btn btn-secondary col-lg-2"><?=_Car?>   </button>     
+      <!--<button class="btn btn-secondary col-lg-2"><?=_Car?>   </button>-->     
 
       <?php foreach($db_category->getAll() as $rowsCategory){
           
-          if(($rowsCategory['code_ss'] == "<!--:ar-->دراجات نارية<!--:--><!--:en-->Motorcycles<!--:-->" )|| ($rowsCategory['code_ss'] == "<!--:ar-->قارب<!--:--><!--:en-->Boat<!--:-->") || ($rowsCategory['code_ss'] == "<!--:ar-->شاحنة<!--:--><!--:en-->Truck<!--:-->")){
-            
-        ?>
+
+          ?>
+          
+          <?php if($rowsCategory['id_ss'] == $id){
+
+          ?>
+          <a class="btn btn-secondary active col-lg-2" style="margin-left: 1px;"  href="<?php echo $path['urlsite'] ?>/cars/mycars/addfreeads/<?php echo $rowsCategory['id_ss'];?>"><?php echo language::getLang($rowsCategory['code_ss']);?></a>
+          <?php } else { ?>
+          
         <a class="btn btn-secondary col-lg-2" style="margin-left: 1px;"  href="<?php echo $path['urlsite'] ?>/cars/mycars/addfreeads/<?php echo $rowsCategory['id_ss'];?>"><?php echo language::getLang($rowsCategory['code_ss']);?></a>
+        <?php } ?>
+         
         
-        <?php }} echo ("&nbsp;"); echo ("&nbsp;"); echo ("&nbsp;"); ?>
-      <button class="btn btn-secondary col-lg-2"><?=_Phonenumber?></button>
-      <button class="btn btn-secondary col-lg-2"><?=_Acarnumber?></button>
+        
+        <?php } echo ("&nbsp;"); echo ("&nbsp;"); echo ("&nbsp;"); ?>
+      
+      
     </div>
-    <form action="" method="post" class="form">
+    <form action="" method="post">
     <div class="form-group">
-      <input class="car-type-input col-lg-12 col-md-12 col-sm-12 col-xs-12" name ="title_ad" type="text" placeholder="<?=_AddAdTitle40characters?>" maxlength="40" />
-      <input class="price-input col-lg-12 col-md-12 col-sm-12 col-xs-12" type="text" name="price_ad" placeholder="<?=_AskingPriceAED?>" />
+      <input class="car-type-input col-lg-12 col-md-12 col-sm-12 col-xs-12" name ="title_ad" type="text" placeholder="<?=_AddAdTitle40characters?>" maxlength="40" required/>
+      <input class="price-input col-lg-12 col-md-12 col-sm-12 col-xs-12" type="text" name="price_ad" placeholder="<?=_AskingPriceAED?>" required/>
     </div>
+    <div class="form-group form-row">
+      
+      
+    </div>
+    <div style="width:80%;margin:0 auto" class="form-row">
+      <?php 
+    foreach($data_category as $rows_values){
+  
+                 foreach ($_option->getOption(array('id'=>$rows_values['option_id'])) AS $rows_option){
+           if($lib_func->jsonId($rows_option['option_o'],'admin')==1){continue;}
+          $litForce=($lib_func->jsonId($rows_option['option_o'],'force')==1)?'<span style="color:red">*</span>':'';
+             ?>
+             <?php  if($lib_func->jsonId($rows_option['option_o'],'type')=='text'){ ?>
+             <?php if ($rows_option['code_o']=='kilometersconsumed') { ?>
+             <input class="detail-km-input col-lg-6" type="text" placeholder="<?=_kilometersconsumed?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
+             <?php } ?>
+             
+             <?php if ($rows_option['code_o']=='plate_number') { ?>
+             <input style="width:45%" class="detail-plate-input col-lg-6" type="text" placeholder="<?=_Carplate?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
+             <?php } ?>
+
+             <?php } ?>
+             <?php  if($lib_func->jsonId($rows_option['option_o'],'type')=='select'){ ?>
+             <?php if ($rows_option['code_o']=='category') { ?>
+             <select style="width:30%;margin-left:1%;margin-right:1%" class="custom-select d-block col-lg-4" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Category) ?>" tabindex="1">
+                <option value=""><?php echo _t(_Category) ?></option>
+                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+         
+          ?>
+                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+               <?php endforeach; ?>
+             </select>
+    <?php } ?>
+    <?php if ($rows_option['code_o']=='symbol') { ?>
+    <select style="width:23%" class="custom-select d-block col-lg-4" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Symbol) ?>" tabindex="1">
+                <option value=""><?php echo _t(_Symbol) ?></option>
+                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+         
+          ?>
+                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+               <?php endforeach; ?>
+             </select>
+     <?php } ?>
+     <?php if ($rows_option['code_o']=='the_company_provided_the_service') { ?>
+    <select style="width:49%" class="custom-select d-block col-lg-4" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Thecompanyprovidedtheservice) ?>" tabindex="1">
+                <option value=""><?php echo _t(_Thecompanyprovidedtheservice) ?></option>
+                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+         
+          ?>
+                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+               <?php endforeach; ?>
+             </select>
+
+     <?php } ?>
+          <?php } ?>
+     <?php }} ?>
+      
     
+    
+    
+    
+    </div>
   </div>
 </section>
 
@@ -59,21 +136,65 @@
               <li class="detail col-md-3 hvr-bob"><i class="fa fa-calendar fa-1"></i><span class="detail-make num-bd">2012</span></li>
               <li class="detail detail-place col-md-3 hvr-bob"><i class="fa fa-map-marker"></i>القوز | دبي</li>
               
-              <li dir="<?php echo($dir); ?>" class="detail detail-phone num-bd col-md-3 hvr-bob">050 123 1234<i class="fa fa-mobile"></i></li>
+              <li dir="<?php echo($dir); ?>" class="detail detail-phone num-bd col-md-3 hvr-bob"><?=$phoneuser?><i class="fa fa-mobile"></i></li>
             </ul>
           </div>
         </div>
       </div>
     </section>
+    
     <div class="car-images">
       <div class="container">
+        
         <ul id="vertical" class="list-unstyled">
-          <li data-thumb="<?php echo $path['template'];?>img/Rectangle47.png">
-            <img class="clicko img-responsive" src="<?php echo $path['template'];?>img/PrimaryPhoto.png" />
-          </li>
-          <li data-thumb="<?php echo $path['template'];?>img/Rectangle47.png">
-            <img class="clicko img-responsive" src="<?php echo $path['template'];?>img/PrimaryPhoto.png" />
-          </li>
+
+          <?php 
+    foreach($data_category as $rows_values){
+  
+                 foreach ($_option->getOption(array('id'=>$rows_values['option_id'])) AS $rows_option){
+           if($lib_func->jsonId($rows_option['option_o'],'admin')==1){continue;}
+          //d $litForce=($lib_func->jsonId($rows_option['option_o'],'force')==1)?'<span style="color:red">*</span>':'';
+             ?>
+                
+               <?php  if($lib_func->jsonId($rows_option['option_o'],'type')=='images'){ ?>
+                  
+                     <input type="file" onchange="return UploatImages('imagesu<?php echo $rows_option['id_o']; ?>','.loadUploadu<?php echo $rows_option['id_o']; ?>','.loadUploadu<?php echo $rows_option['id_o']; ?>','<?php echo $rows_option['code_o']; ?>[]');" name="imagesu<?php echo $rows_option['id_o']; ?>" id="imagesu<?php echo $rows_option['id_o']; ?>" />
+                     <button style="display:none;" type="submit" id="btn"><?=_Uploadaphoto?></button>
+                      <div class="imgUploadu<?php echo $rows_option['id_o']; ?>"><span class="loadUploadu<?php echo $rows_option['id_o']; ?>"></span>
+                     <?php  
+                     if(isset($get[$rows_option['code_o']]) and count($get[$rows_option['code_o']])){ foreach( $get[$rows_option['code_o']] as $rowsImages){?>
+                        
+                    <?php  }} ?>
+                       </div>
+                       <input type="file" onchange="return UploatImages('imagesu1<?php echo $rows_option['id_o']; ?>','.loadUploadu1<?php echo $rows_option['id_o']; ?>','.loadUploadu1<?php echo $rows_option['id_o']; ?>','<?php echo $rows_option['code_o']; ?>[]');" name="imagesu1<?php echo $rows_option['id_o']; ?>" id="imagesu1<?php echo $rows_option['id_o']; ?>" />
+                     <button style="display:none;" type="submit" id="btn"><?=_Uploadaphoto?></button>
+                      <div class="imgUploadu1<?php echo $rows_option['id_o']; ?>"><span class="loadUploadu1<?php echo $rows_option['id_o']; ?>"></span>
+                     <?php  
+                     if(isset($get[$rows_option['code_o']]) and count($get[$rows_option['code_o']])){ foreach( $get[$rows_option['code_o']] as $rowsImages){?>
+                        
+                    <?php  }} ?>
+                       </div> 
+                       <input type="file" onchange="return UploatImages('imagesu2<?php echo $rows_option['id_o']; ?>','.loadUploadu2<?php echo $rows_option['id_o']; ?>','.loadUploadu2<?php echo $rows_option['id_o']; ?>','<?php echo $rows_option['code_o']; ?>[]');" name="imagesu2<?php echo $rows_option['id_o']; ?>" id="imagesu2<?php echo $rows_option['id_o']; ?>" />
+                     <button style="display:none;" type="submit" id="btn"><?=_Uploadaphoto?></button>
+                      <div class="imgUploadu2<?php echo $rows_option['id_o']; ?>"><span class="loadUploadu2<?php echo $rows_option['id_o']; ?>"></span>
+                     <?php  
+                     if(isset($get[$rows_option['code_o']]) and count($get[$rows_option['code_o']])){ foreach( $get[$rows_option['code_o']] as $rowsImages){?>
+                        
+                    <?php  }} ?>
+                       </div> 
+                       <input type="file" onchange="return UploatImages('imagesu3<?php echo $rows_option['id_o']; ?>','.loadUploadu3<?php echo $rows_option['id_o']; ?>','.loadUploadu3<?php echo $rows_option['id_o']; ?>','<?php echo $rows_option['code_o']; ?>[]');" name="imagesu3<?php echo $rows_option['id_o']; ?>" id="imagesu3<?php echo $rows_option['id_o']; ?>" />
+                     <button style="display:none;" type="submit" id="btn"><?=_Uploadaphoto?></button>
+                      <div class="imgUploadu3<?php echo $rows_option['id_o']; ?>"><span class="loadUploadu3<?php echo $rows_option['id_o']; ?>"></span>
+                     <?php  
+                     if(isset($get[$rows_option['code_o']]) and count($get[$rows_option['code_o']])){ foreach( $get[$rows_option['code_o']] as $rowsImages){?>
+                    
+                    <?php  }} ?>
+                       </div> 
+                         
+                  
+                  
+                  
+          <?php }}} ?>
         </ul>
       </div>
     </div>
@@ -84,121 +205,7 @@
     <div class="container">
       <h2><?=_Maininformation?></h2>
       
-    <div class="half-info col-lg-6 col-md-6 col-sm-6 col-xs-6">
-    <?php 
-      foreach($data_category as $rows_values){
     
-       foreach ($_option->getOption(array('id'=>$rows_values['option_id'])) AS $rows_option){
-             if($lib_func->jsonId($rows_option['option_o'],'admin')==1){continue;}
-                $litForce=($lib_func->jsonId($rows_option['option_o'],'force')==1)?'<span style="color:red">*</span>':'';
-   ?>
-        
-                  
-     <?php if($lib_func->jsonId($rows_option['option_o'],'default')==1){
-      if($rows_option['code_o']=='years'){
-      ?>
-      <div class="symbol-container">
-        <select class="custom-select d-block my-3" name="years"  data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
-                <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
-                <?php for($year=date("Y") ; $year > 1970; $year--){ ?>
-                <option <?php echo (isset($get[$rows_option['code_o']]))? $lib_func->selected($get[$rows_option['code_o']],$year):'';?> value="<?php echo $year; ?>"><?php echo  $year; ?></option>
-             <?php } ?>
-             </select>
-            <?php echo isset($error['years'])?' <span class="help-inline badge badge-error">'.$error['years'].'</span>':''; ?>
-        <i class="fa fa-angle-down fa-lg"></i>
-        </div>
-      <?php } ?> 
-      <?php 
-      if($rows_option['code_o']=='type_c'){
-      ?>
-
-        <div class="symbol-container">
-        <select class="custom-select d-block my-3" name="type_c"  tabindex="1" onchange="return changeselect(this,'typecar','#subtype') ">
-          <option value=""><?php echo _t(_Type) ?> </option>
-                <?php foreach($_typecar->getTypeAll(array('category'=>$rows_values['category_id'])) as $rowstype ): ?>
-                <option <?php echo (isset($get[$rows_option['code_o']]))? $lib_func->selected($get[$rows_option['code_o']],$rowstype['id_t']):'';?> value="<?php echo $rowstype['id_t']; ?>"><?php echo  language::getLang($rowstype['name_t']); ?></option>
-             <?php endforeach; ?>
-        </select>
-        <?php echo isset($error['type_c'])?' <span class="help-inline badge badge-error">'.$error['type_c'].'</span>':''; ?>
-        <i class="fa fa-angle-down fa-lg"></i>
-        </div>
-        <div class="symbol-container">
-        <select class="custom-select d-block my-3" name="model" id="subtype" tabindex="1">
-          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
-
-<?php if(isset($get['model'])){ foreach($_typecar->getTypeSubId($get['type_c']) as $rowstypesub ): ?>
-                <option <?php echo ($lib_func->selected($get['model'],$rowstypesub['id_t']));?> value="<?php echo $rowstypesub['id_t']; ?>"><?php echo  language::getLang($rowstypesub['name_t']); ?></option>
-             <?php endforeach; } ?>
-        </select>
-        <?php echo isset($error['model'])?$error['model']:''; ?>
-        <i class="fa fa-angle-down fa-lg"></i>
-        </div>
-        <?php }?> 
-        <?php if($rows_option['code_o']=='Country_c'){
-
-          ?> 
-          <div class="symbol-container">
-        <select class="custom-select d-block my-3" name="Country_c" onchange="return changeselect(this,'city','#subcity') "  data-placeholder="<?php echo _t(_Country) ?>" tabindex="1">
-                <option value=""><?php echo _t(_Country) ?></option>
-             <?php foreach($_city->getCountryAll() as $rowscity ): ?>
-                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$rowscity['id_c']):'';?> value="<?php echo $rowscity['id_c']; ?>"><?php echo language::getLang($rowscity['name_c']); ?></option>
-             <?php endforeach; ?>
-             </select>
-        <span class="help-inline"><?php echo isset($error['Country_c'])?$error['Country_c']:''; ?> </span>
-        <i class="fa fa-angle-down fa-lg"></i>
-        </div>
-        <div class="symbol-container">
-        <select class="custom-select d-block my-3" name="city" id="subcity" data-placeholder="<?php echo _t(_City) ?>" tabindex="1">
-                <option value=""><?php echo _t(_City) ?></option>
-            <?php if(isset($get['city'])){ foreach($_city->getCityId($get['Country_c']) as $rowsc ): ?>
-                <option <?php echo ($lib_func->selected($get['city'],$rowsc['id_c']));?> value="<?php echo $rowsc['id_c']; ?>"><?php echo  language::getLang($rowsc['name_c']); ?></option>
-             <?php endforeach;} ?>
-             </select>
-        <span class="help-inline"><?php echo isset($error['city'])?$error['city']:''; ?> </span>
-        <i class="fa fa-angle-down fa-lg"></i>
-        </div>
-        <?php }}else{
-            if($lib_func->jsonId($rows_option['option_o'],'type')=='select'){            
-          ?>
-        <?php if ($rows_option['code_o']=='color') {
-          
-        ?>
-        <div class="symbol-container">
-        <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
-          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
-                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
-         
-          ?>
-                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
-                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
-               <?php endforeach; ?>
-        </select>
-        
-        
-        <i class="fa fa-angle-down fa-lg"></i>
-        </div>
-        <?php } ?>
-        
-        <?php if ($rows_option['code_o']=='kilometersconsumed') {
-          
-        ?>
-        <div class="symbol-container">
-        <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
-          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
-                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
-         
-          ?>
-                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
-                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
-               <?php endforeach; ?>
-        </select>
-        
-        <i class="fa fa-angle-down fa-lg"></i>
-        </div>
-        <?php } ?>
-        <?php }}}}   ?>
-        
-      </div>
       <div class="half-info col-lg-6 col-md-6 col-sm-6 col-xs-6" >
         <?php 
       foreach($data_category as $rows_values){
@@ -226,6 +233,60 @@
         <?php if($rows_option['code_o']=='case'){
           ?>
         
+        <div class="symbol-container">
+        <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
+          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
+                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+         
+          ?>
+                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+               <?php endforeach; ?>
+        </select>
+        
+        
+        <i class="fa fa-angle-down fa-lg"></i>
+        </div>
+        <?php } ?>
+        <?php if ($rows_option['code_o']=='claas_car') {
+          
+        ?>
+        <div class="symbol-container">
+        <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
+          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
+                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+         
+          ?>
+                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+               <?php endforeach; ?>
+        </select>
+        
+        
+        <i class="fa fa-angle-down fa-lg"></i>
+        </div>
+        <?php } ?>
+        <?php if ($rows_option['code_o']=='motive') {
+          
+        ?>
+        <div class="symbol-container">
+        <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
+          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
+                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+         
+          ?>
+                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+               <?php endforeach; ?>
+        </select>
+        
+        
+        <i class="fa fa-angle-down fa-lg"></i>
+        </div>
+        <?php } ?>
+        <?php if ($rows_option['code_o']=='Outside') {
+          
+        ?>
         <div class="symbol-container">
         <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
           <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
@@ -372,6 +433,122 @@
         <?php }}}  ?>
 
       </div>
+      <div class="half-info col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <?php 
+      foreach($data_category as $rows_values){
+    
+       foreach ($_option->getOption(array('id'=>$rows_values['option_id'])) AS $rows_option){
+             if($lib_func->jsonId($rows_option['option_o'],'admin')==1){continue;}
+                $litForce=($lib_func->jsonId($rows_option['option_o'],'force')==1)?'<span style="color:red">*</span>':'';
+   ?>
+        
+                  
+     <?php if($lib_func->jsonId($rows_option['option_o'],'default')==1){
+      if($rows_option['code_o']=='years'){
+      ?>
+      <div class="symbol-container">
+        <select class="custom-select d-block my-3 years-input" name="years"  data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
+                <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
+                <?php for($year=date("Y") ; $year > 1970; $year--){ ?>
+                <option  <?php echo (isset($get[$rows_option['code_o']]))? $lib_func->selected($get[$rows_option['code_o']],$year):'';?> value="<?php echo $year; ?>"><?php echo  $year; ?></option>
+             <?php } ?>
+             </select>
+            <?php echo isset($error['years'])?' <span class="help-inline badge badge-error">'.$error['years'].'</span>':''; ?>
+        <i class="fa fa-angle-down fa-lg"></i>
+        </div>
+      <?php } ?> 
+      <?php 
+      if($rows_option['code_o']=='type_c'){
+      ?>
+
+        <div class="symbol-container">
+        <select class="custom-select d-block my-3" name="type_c"  tabindex="1" onchange="return changeselect(this,'typecar','#subtype') ">
+          <option value=""><?php echo _t(_Type) ?> </option>
+                <?php foreach($_typecar->getTypeAll(array('category'=>$rows_values['category_id'])) as $rowstype ): ?>
+                <option <?php echo (isset($get[$rows_option['code_o']]))? $lib_func->selected($get[$rows_option['code_o']],$rowstype['id_t']):'';?> value="<?php echo $rowstype['id_t']; ?>"><?php echo  language::getLang($rowstype['name_t']); ?></option>
+             <?php endforeach; ?>
+        </select>
+        <?php echo isset($error['type_c'])?' <span class="help-inline badge badge-error">'.$error['type_c'].'</span>':''; ?>
+        <i class="fa fa-angle-down fa-lg"></i>
+        </div>
+        <div class="symbol-container">
+        <select class="custom-select d-block my-3" name="model" id="subtype" tabindex="1">
+          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
+
+<?php if(isset($get['model'])){ foreach($_typecar->getTypeSubId($get['type_c']) as $rowstypesub ): ?>
+                <option <?php echo ($lib_func->selected($get['model'],$rowstypesub['id_t']));?> value="<?php echo $rowstypesub['id_t']; ?>"><?php echo  language::getLang($rowstypesub['name_t']); ?></option>
+             <?php endforeach; } ?>
+        </select>
+        <?php echo isset($error['model'])?$error['model']:''; ?>
+        <i class="fa fa-angle-down fa-lg"></i>
+        </div>
+        <?php }?> 
+        <?php if($rows_option['code_o']=='Country_c'){
+
+          ?> 
+          <div class="symbol-container">
+        <select class="custom-select d-block my-3 Country-input" name="Country_c" onchange="return changeselect(this,'city','#subcity') "  data-placeholder="<?php echo _t(_Country) ?>" tabindex="1">
+                <option value=""><?php echo _t(_Country) ?></option>
+             <?php foreach($_city->getCountryAll() as $rowscity ): ?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$rowscity['id_c']):'';?> value="<?php echo $rowscity['id_c']; ?>"><?php echo language::getLang($rowscity['name_c']); ?></option>
+             <?php endforeach; ?>
+             </select>
+        <span class="help-inline"><?php echo isset($error['Country_c'])?$error['Country_c']:''; ?> </span>
+        <i class="fa fa-angle-down fa-lg"></i>
+        </div>
+        <div class="symbol-container">
+        <select class="custom-select d-block my-3" name="city" id="subcity" data-placeholder="<?php echo _t(_City) ?>" tabindex="1">
+                <option value=""><?php echo _t(_City) ?></option>
+            <?php if(isset($get['city'])){ foreach($_city->getCityId($get['Country_c']) as $rowsc ): ?>
+                <option <?php echo ($lib_func->selected($get['city'],$rowsc['id_c']));?> value="<?php echo $rowsc['id_c']; ?>"><?php echo  language::getLang($rowsc['name_c']); ?></option>
+             <?php endforeach;} ?>
+             </select>
+        <span class="help-inline"><?php echo isset($error['city'])?$error['city']:''; ?> </span>
+        <i class="fa fa-angle-down fa-lg"></i>
+        </div>
+        <?php }}else{
+            if($lib_func->jsonId($rows_option['option_o'],'type')=='select'){            
+          ?>
+        <?php if ($rows_option['code_o']=='color') {
+          
+        ?>
+        <div class="symbol-container">
+        <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
+          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
+                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+         
+          ?>
+                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+               <?php endforeach; ?>
+        </select>
+        
+        
+        <i class="fa fa-angle-down fa-lg"></i>
+        </div>
+        <?php } ?>
+        <?php if ($rows_option['code_o']=='supplier') {
+          
+        ?>
+        <div class="symbol-container">
+        <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
+          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
+                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+         
+          ?>
+                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+               <?php endforeach; ?>
+        </select>
+        
+        
+        <i class="fa fa-angle-down fa-lg"></i>
+        </div>
+        <?php } ?>
+        
+        <?php }}}}   ?>
+        
+      </div>
       <?php 
       foreach($data_category as $rows_values){
     
@@ -384,7 +561,7 @@
       <?php if($lib_func->jsonId($rows_option['option_o'],'type')=='textarea') { 
           if ($rows_option['code_o']=='specifications'){
         ?>
-      <textarea class="col-lg-12" name="<?php echo $rows_option['code_o']; ?>" maxlength="150"><?=_AdditionalInformation150characters?></textarea>
+      <textarea class="col-lg-12" name="<?php echo $rows_option['code_o']; ?>" maxlength="150" placeholder="<?=_AdditionalInformation150characters?>" ></textarea>
       <?php }} ?>
       <?php }} ?>
     </div>
@@ -551,7 +728,7 @@
   <section class="publish" dir="<?php echo $_dir; ?>">
     <div class="container">
       <div>
-      <button type="submit" class="btn btn1 col-lg-12">أنشر الاعلان</button>
+      <button type="submit" class="btn btn1 col-lg-6"><?=_PutAd?></button>
       <!--<button class="btn btn2 col-lg-6">عرض الإعلان</button>-->
       <input type="hidden" name="token" value="<?php echo  $lib_token->generate(); ?>" />
          <input type="hidden" name="add" value='1' />
@@ -565,6 +742,20 @@
 <!-- Scripts -->
 
 <script src="<?php echo $path['template'];?>lib/js/jquery.nicescroll.min.js"></script>
-<script src="<?php echo $path['template'];?>lib/js/script.js"></script>
+<script src="<?php echo $path['template'];?>lib/js/script1.js"></script>
+<script type="text/javascript">
+      $(document).ready(function() {
+        $('#vertical').lightSlider({
+          gallery:true,
+          item:1,
+          vertical:true,
+          verticalHeight:650,
+          vThumbWidth:225,
+          thumbItem:4,
+          thumbMargin:4,
+          slideMargin:0
+        });
+      });
+      </script>
 </body>
 </html>

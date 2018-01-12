@@ -214,10 +214,11 @@ function sendChat() {
 	    printf("Connect failed: %s\n", mysqli_connect_error());
 	    exit();
 	}
+
 	$from = $_SESSION['username'];
 	$to = $_POST['to'];
 	$message = $_POST['message'];
-	
+	//var_dump($sql);
 	$_SESSION['openChatBoxes'][$_POST['to']] = date('Y-m-d H:i:s', time());
 	
 	$messagesan = sanitize($message);
@@ -239,6 +240,7 @@ EOD;
 
 	$sql = "insert into chat (chat.from,chat.to,message,sent) values ('".mysqli_real_escape_string($gaSql,$from)."', '".mysqli_real_escape_string($gaSql,$to)."','".mysqli_real_escape_string($gaSql,$message)."',NOW())";
 	$query = mysqli_query($gaSql,$sql);
+	//var_dump($gaSql);
 	echo "1";
 	exit(0);
 }
