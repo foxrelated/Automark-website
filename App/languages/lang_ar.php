@@ -300,3 +300,4 @@ define("_Category", 'التصنيف');
 define("_Symbol", 'الرمز');
 define("_Carplate", "رقم اللوحه");
 define("_Thecompanyprovidedtheservice", "الشركة المقدمة للخدمة");
+define('_kilometersconsumed', 'الكليلو متر الحالي');

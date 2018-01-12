@@ -39,7 +39,7 @@ $(document).ready(function() {
   $('.price-input').on('keyup',function(){
     $('.price').text($(this).val());
   });
-  $('.detail-make-input').on('keyup',function(){
+  $('.years-input').on('keyup',function(){
     $('.detail-make').text($(this).val());
   });
   $('.detail-km-input').on('keyup',function(){
@@ -48,7 +48,7 @@ $(document).ready(function() {
   $('.detail-phone-input').on('keyup',function(){
     $('.detail-phone').text($(this).val());
   });
-  $('.detail-place-input').on('keyup',function(){
+  $('.Country-input').on('keyup',function(){
     $('.detail-place').text($(this).val());
   });
    $('.clicko').on('click',function(){

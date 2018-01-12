@@ -12,6 +12,13 @@ $_SESSION['fromuser'] = $_fromuser;
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/magnific-popup.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/lightslider.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/style-detail.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/style-auto.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/media.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/share-button.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/chat.css">
+
+    <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/chat.js"></script>
     
   </head>
   <body>
@@ -84,6 +91,7 @@ $_SESSION['fromuser'] = $_fromuser;
         <div class="container">
 
         <ul id="vertical">
+          <?php if(($lib_func->jsonArray($_carsId['images_c']) != null)) {?>
           <?php $xx=0; foreach($lib_func->jsonArray($_carsId['images_c']) as $rowsimg){
               
             ?>
@@ -93,6 +101,7 @@ $_SESSION['fromuser'] = $_fromuser;
               
             </li>
            <?php $xx++; } ?>
+           <?php } ?>
            <!--<li data-thumb="<?php echo $path['upload']."upl_58e51e8b6c940.jpg"; ?>">
               
                 <img class="img-responsive" src="<?php echo $path['thumb'].'thumb_upl_58e51e8b6c940.jpg' ?>" title="" alt="">
@@ -248,21 +257,21 @@ $_SESSION['fromuser'] = $_fromuser;
           <td><?php echo _t(_Share);?></td>
           <td>
             <ul dir="ltr" class="list-unstyled list-inline social">
-              <li><a href="http://www.facebook.com/sharer.php?u=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>" target="_blank">
+              <li><a class="details-share-icon" href="http://www.facebook.com/sharer.php?u=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>" target="_blank">
                  <i class="hvr-grow pointer fa fa-lg fa-facebook-official"></i>
               </a></li>
-              <li> <a href="https://twitter.com/share?url=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+              <li> <a class="details-share-icon" href="https://twitter.com/share?url=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
                 <i class="hvr-grow pointer fa fa-lg fa-twitter-square"></i>
                 </a></li>
               <li>
                 
-                  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>" target="_blank">
+                  <a class="details-share-icon" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>" target="_blank">
                     <i class="hvr-grow pointer fa fa-lg fa-linkedin-square">
                     </i>
                   </a>
                 </li>
               <li>
-                <a href="https://plus.google.com/share?url=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>" target="_blank">
+                <a class="details-share-icon" href="https://plus.google.com/share?url=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>" target="_blank">
                     <i class="hvr-grow pointer fa fa-lg fa-google-plus-square"></i>
                 </a>
               </li>
@@ -272,7 +281,52 @@ $_SESSION['fromuser'] = $_fromuser;
         <tr>
           <td class="main-color"><button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal"><?php echo _t(_Callnow);?></button></td>
           <hr>
-          <td class="main-color" style="text-align: center"><button type="button" class="btn btn-warning btn-lg"><?php echo ('&nbsp;');?><?php echo ('&nbsp;');?><?php echo ('&nbsp;');?><?php echo _t(_Sendamessage);?></button></td>
+          <td class="main-color" style="text-align: center">
+            <?php if(session::get(system::get("session/session_name"))){ ?>
+                    
+                    <button  class="btn btn-warning btn-lg"><?php echo ('&nbsp;');?><?php echo ('&nbsp;');?><?php echo ('&nbsp;');?>
+                      <a href="javascript:void(0)" onclick="javascript:chatWith('<?=$_user?>')"></a>
+                    </button>
+                    <?php }
+                      elseif(!session::get(system::get("session/session_name"))) {
+                      ?>
+                  
+                  <button type="button" data-toggle="modal" data-target="#myChatModal" style="border-bottom: 2px solid #ab191a;
+                    border-top: 2px solid #ec4b4c;"><i class="fa fa-envelope-o fa-2x" aria-hidden="true" ></i></button>
+                  <?php }  ?>
+                  <div id="myChatModal" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"></h4>
+                          </div>
+                          <div class="modal-body">
+                            <ul class="" style="background-color:#e83031; margin: 10px;">
+                                <li>
+                                  <a href="<?php echo $path['urlsite'] ?>users/login"><i class="fa fa-unlock-alt" aria-hidden="true"></i> <?php echo _t(_Login);?></a> 
+                                </li>
+                              
+                                
+                            </ul>
+                            <ul class="" style="background-color:#e83031; margin: 10px;">
+                              <li>
+                                  <a href="<?php echo $path['urlsite'] ?>users/register"><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo _t(_Newuser);?></a>
+                                </li>
+                            </ul>
+                        
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+            
+          </td>
         </tr>
       </tbody>
     </table>
