@@ -64,7 +64,7 @@
     #social-links{
     position: absolute;
     list-style: none;
-    margin-top: 50px;
+    margin-top: 80px;
         }
 
        #social-links li{

@@ -245,21 +245,21 @@
           <td><?php echo _t(_Share);?></td>
           <td>
             <ul dir="ltr" class="list-unstyled list-inline social">
-              <li><a href="http://www.facebook.com/sharer.php?u=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>" target="_blank">
+              <li><a class="details-share-icon" href="http://www.facebook.com/sharer.php?u=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>" target="_blank">
                  <i class="hvr-grow pointer fa fa-lg fa-facebook-official"></i>
               </a></li>
-              <li> <a href="https://twitter.com/share?url=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+              <li> <a class="details-share-icon" href="https://twitter.com/share?url=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
                 <i class="hvr-grow pointer fa fa-lg fa-twitter-square"></i>
                 </a></li>
               <li>
                 
-                  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>" target="_blank">
+                  <a class="details-share-icon" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>" target="_blank">
                     <i class="hvr-grow pointer fa fa-lg fa-linkedin-square">
                     </i>
                   </a>
                 </li>
               <li>
-                <a href="https://plus.google.com/share?url=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>" target="_blank">
+                <a class="details-share-icon" href="https://plus.google.com/share?url=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>" target="_blank">
                     <i class="hvr-grow pointer fa fa-lg fa-google-plus-square"></i>
                 </a>
               </li>
