@@ -30,24 +30,28 @@ else
 
             <div dir="<?php echo $_dir; ?>" class="bar">
 
-                <button class="btn btn-secondary col-lg-2"><?= _Car ?>   </button>
+      <!--<button class="btn btn-secondary col-lg-2"><?=_Car?>   </button>-->  
 
-                <?php foreach ($db_category->getAll() as $rowsCategory) {
+      <?php foreach($db_category->getAll() as $rowsCategory){
+          
 
-                    if (($rowsCategory['code_ss'] == "<!--:ar-->دراجات نارية<!--:--><!--:en-->Motorcycles<!--:-->") || ($rowsCategory['code_ss'] == "<!--:ar-->قارب<!--:--><!--:en-->Boat<!--:-->") || ($rowsCategory['code_ss'] == "<!--:ar-->شاحنة<!--:--><!--:en-->Truck<!--:-->") || ($rowsCategory['code_ss'] == "<!--:ar-->لوحات السيارات<!--:--><!--:en-->Car plate<!--:-->") || ($rowsCategory['code_ss'] == "<!--:ar-->ارقام الجوالات<!--:--><!--:en-->Mobile number<!--:-->")) {
+          ?>
+          
+          <?php if($rowsCategory['id_ss'] == $id){
 
-                        ?>
-                        <a class="btn btn-secondary col-lg-2" style="margin-left: 1px;"
-                           href="<?php echo $path['urlsite'] ?>/cars/mycars/addfreeads/<?php echo $rowsCategory['id_ss']; ?>"><?php echo language::getLang($rowsCategory['code_ss']); ?></a>
+          ?>
+          <a class="btn btn-secondary active col-lg-2" style="margin-left: 1px;"  href="<?php echo $path['urlsite'] ?>/cars/mycars/addfreeads/<?php echo $rowsCategory['id_ss'];?>"><?php echo language::getLang($rowsCategory['code_ss']);?></a>
+          <?php } else { ?>
+          
+        <a class="btn btn-secondary col-lg-2" style="margin-left: 1px;"  href="<?php echo $path['urlsite'] ?>/cars/mycars/addfreeads/<?php echo $rowsCategory['id_ss'];?>"><?php echo language::getLang($rowsCategory['code_ss']);?></a>
+        <?php } ?>
+         
+        
+        
+        <?php }echo ("&nbsp;"); echo ("&nbsp;"); echo ("&nbsp;"); ?>
 
-                    <?php }
-                }
-                echo("&nbsp;");
-                echo("&nbsp;");
-                echo("&nbsp;"); ?>
 
-
-            </div>
+    </div>
 
             <div class="form-group">
                 <input class="car-type-input col-lg-12 col-md-12 col-sm-12 col-xs-12" name="title_ad" type="text"
@@ -66,6 +70,9 @@ else
                         //d $litForce=($lib_func->jsonId($rows_option['option_o'],'force')==1)?'<span style="color:red">*</span>':'';
                         ?>
                         <?php if ($lib_func->jsonId($rows_option['option_o'], 'type') == 'text') { ?>
+                        <?php if ($rows_option['code_o']=='kilometersconsumed') { ?>
+             <input class="detail-km-input col-lg-6" type="text" placeholder="<?=_kilometersconsumed?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
+             <?php } ?>
                             <?php if ($rows_option['code_o'] == 'plate_number') { ?>
                                 <input style="width:45%" class="detail-plate-input col-lg-6" type="text"
                                        placeholder="<?= _Carplate ?>" name="<?php echo $rows_option['code_o']; ?>[0]"
@@ -144,8 +151,7 @@ else
                         <li class="detail detail-place col-md-3 hvr-bob"><i class="fa fa-map-marker"></i>القوز | دبي
                         </li>
 
-                        <li dir="<?php echo($dir); ?>" class="detail detail-phone num-bd col-md-3 hvr-bob">050 123
-                            1234<i
+                        <li dir="<?php echo($dir); ?>" class="detail detail-phone num-bd col-md-3 hvr-bob"><?=$phoneuser?><i
                                 class="fa fa-mobile"></i></li>
                     </ul>
                 </div>
@@ -247,6 +253,60 @@ else
                                         <i class="fa fa-angle-down fa-lg"></i>
                                     </div>
                                 <?php } ?>
+                                <?php if ($rows_option['code_o']=='claas_car') {
+          
+        ?>
+        <div class="symbol-container">
+        <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
+          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
+                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+         
+          ?>
+                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+               <?php endforeach; ?>
+        </select>
+        
+        
+        <i class="fa fa-angle-down fa-lg"></i>
+        </div>
+        <?php } ?>
+        <?php if ($rows_option['code_o']=='motive') {
+          
+        ?>
+        <div class="symbol-container">
+        <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
+          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
+                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+         
+          ?>
+                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+               <?php endforeach; ?>
+        </select>
+        
+        
+        <i class="fa fa-angle-down fa-lg"></i>
+        </div>
+        <?php } ?>
+        <?php if ($rows_option['code_o']=='Outside') {
+          
+        ?>
+        <div class="symbol-container">
+        <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
+          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
+                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+         
+          ?>
+                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+               <?php endforeach; ?>
+        </select>
+        
+        
+        <i class="fa fa-angle-down fa-lg"></i>
+        </div>
+        <?php } ?>
                                 <?php if ($rows_option['code_o'] == 'howmuchload') { ?>
                                     <div class="symbol-container">
                                         <select class="custom-select d-block my-3"
@@ -537,27 +597,24 @@ else
                                         </div>
                                     <?php } ?>
 
-                                    <?php if ($rows_option['code_o'] == 'kilometersconsumed') {
-
+                                    <?php if ($rows_option['code_o']=='supplier') {
+          
+                                      ?>
+                                      <div class="symbol-container">
+                                      <select class="custom-select d-block my-3" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
+                                        <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
+                                               <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+                                       
                                         ?>
-                                        <div class="symbol-container">
-                                            <select class="custom-select d-block my-3"
-                                                    name="<?php echo $rows_option['code_o']; ?>"
-                                                    data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
-                                                <option
-                                                    value=""><?php echo language::getLang($rows_option['name_o']); ?> </option>
-                                                <?php foreach ($_option->get_value_option(array('option_id' => $rows_option['id_o'])) as $rowsform):
-
-                                                    ?>
-                                                    <?php $valuer = ($rowsform['type_v'] != '' and $rowsform['type_v'] != 0) ? $rowsform['type_v'] : $rowsform['id_v'];?>
-                                                    <option <?php echo (isset($get[$rows_option['code_o']])) ? $lib_func->selected($get[$rows_option['code_o']], $valuer) : '';?>
-                                                        value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
-                                                <?php endforeach; ?>
-                                            </select>
-
-                                            <i class="fa fa-angle-down fa-lg"></i>
-                                        </div>
-                                    <?php } ?>
+                                                <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                                              <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+                                             <?php endforeach; ?>
+                                      </select>
+                                      
+                                      
+                                      <i class="fa fa-angle-down fa-lg"></i>
+                                      </div>
+                                      <?php } ?>
                                 <?php }
                             }
                         }
@@ -608,6 +665,7 @@ else
 <!-- Scripts -->
 
 <script src="<?php echo $path['template']; ?>lib/js/jquery.nicescroll.min.js"></script>
+<script src="<?php echo $path['template'];?>lib/js/script1.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('#vertical').lightSlider({
