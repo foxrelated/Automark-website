@@ -52,11 +52,11 @@ $_SESSION['fromuser'] = $_fromuser;
     </div>
     
     <div class="form-group">
-      <input class="car-type-input col-lg-12 col-md-12 col-sm-12 col-xs-12" name ="title_c" type="text" placeholder="<?=_AddAdTitle40characters?>" maxlength="40" />
-      <input class="price-input col-lg-12 col-md-12 col-sm-12 col-xs-12" type="text" name="price_c" placeholder="<?=_AskingPriceAED?>" />
+      <input class="car-type-input col-lg-12 col-md-12 col-sm-12 col-xs-12" name ="title_c" type="text" placeholder="<?=_AddAdTitle40characters?>" maxlength="40" style="height: 45px;"/>
+      <input class="price-input col-lg-12 col-md-12 col-sm-12 col-xs-12" type="text" name="price_c" placeholder="<?=_AskingPriceAED?>" style="height: 45px;"/>
     </div>
     <?php echo ("&nbsp;"); echo ("&nbsp;"); echo ("&nbsp;"); ?>
-    <div style="width:80%;margin:0 auto" class="form-row">
+    <div style="" class="form-row">
       <?php
     foreach($data_category as $rows_values){
 
@@ -66,12 +66,13 @@ $_SESSION['fromuser'] = $_fromuser;
              ?>
              <?php  if($lib_func->jsonId($rows_option['option_o'],'type')=='text'){ ?>
              <?php if ($rows_option['code_o']=='kilometersconsumed') { ?>
-             <input class="detail-km-input col-lg-6" type="text" placeholder="<?=_kilometersconsumed?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
+             <input class="detail-km-input col-lg-6"  style="margin-right: 300px; margin-top: 20px;" type="text" placeholder="<?=_kilometersconsumed?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
              <?php } ?>
              
              <?php if ($rows_option['code_o']=='colorinter') { ?>
-             <input class="detail-km-input1 col-lg-6" type="text" placeholder="<?=_InteriorColor?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
+             <input class="detail-km-input1 col-lg-6" style="margin-right: 300px; margin-top: 20px;" type="text" placeholder="<?=_InteriorColor?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
              <?php } ?>
+             
              <?php if ($rows_option['code_o']=='plate_number') { ?>
              <input style="width:45%" class="detail-plate-input col-lg-6" type="text" placeholder="<?=_Carplate?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
              <?php } ?>
