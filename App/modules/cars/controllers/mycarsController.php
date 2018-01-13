@@ -186,20 +186,29 @@ $this->_user1=$this->loadModel('users','users');
    }
   $this->_validate->check($_POST,$validate); 
   
+  
+  if(!empty($this->_input->get('act_c')))
+    {
+      $img = $this->_input->get('act_c');
+    }
+
+  elseif (!empty($this->_input->get('images_c'))) {
+    $img = $this->_input->get('images_c');
+  }
                 if($this->_validate->passed()){
   
                           $sqlArray=array(
                             'title_c'=>$_POST['title_c'],
-                            'modelcar'=>$_POST['type_c'],
-                            'model'=>$_POST['model'],
+                            'modelcar'=>(isset($_POST['type_c']))?$_POST['type_c']:"",
+                            'model'=>(isset($_POST['model']))?$_POST['model']:"",
                             'catagory'=>$id,
-                            'years'=>$_POST['years'],
+                            'years'=>(isset($_POST['years']))?$_POST['years']:"",
                             'price_c'=>$_POST['price_c'],
                             'country'=>$_POST['Country_c'],
                             'city'=>$_POST['city'],
                             'features'=>1,
                             
-                            'images_c'=>$this->_func->enJsonArray($this->_input->get('act_c')),
+                            'images_c'=>$this->_func->enJsonArray($img),
                             'type'=>"h",//$this->_input->get('type'),
                             //'description_c'=>$_POST['additionalinformation'],
                             'dateadd'=>date("Y-m-d"),
