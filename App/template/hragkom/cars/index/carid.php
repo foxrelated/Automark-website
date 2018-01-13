@@ -94,7 +94,7 @@ $_SESSION['fromuser'] = $_fromuser;
 
         <ul id="vertical">
           <?php if(($lib_func->jsonArray($_carsId['images_c']) != null)) {?>
-          <?php $xx=0; foreach($lib_func->jsonArray($_carsId['images_c']) as $rowsimg){
+          <?php foreach($lib_func->jsonArray($_carsId['images_c']) as $rowsimg){
               
             ?>
             <li data-thumb="<?php echo $path['thumb'].'thumb_'.$rowsimg; ?>">
@@ -102,13 +102,8 @@ $_SESSION['fromuser'] = $_fromuser;
                 <img class="img-responsive" src="<?php echo $path['upload'].$rowsimg; ?>" title="" alt="">
               
             </li>
-           <?php $xx++; } ?>
+           <?php  } ?>
            <?php } ?>
-           <!--<li data-thumb="<?php echo $path['upload']."upl_58e51e8b6c940.jpg"; ?>">
-              
-                <img class="img-responsive" src="<?php echo $path['thumb'].'thumb_upl_58e51e8b6c940.jpg' ?>" title="" alt="">
-              
-            </li>-->
         </ul>
           
         </div>

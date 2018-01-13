@@ -24,13 +24,15 @@ define ('DBUSER','automark');
 define ('DBPASS','ABnRjqARFD7NAhWV');
 define ('DBNAME','automark');
 
-//$db_host 		= "localhost";
 $db_host 		= "104.217.253.15";
-$db_port 		= "";
+
 $db_user 		= "automark";
 $db_password 	= "ABnRjqARFD7NAhWV";
+//$db_host 		= "localhost";
+//$db_user 		= "root";
+//$db_password 	= "";
 $db_name 		= "automark";
-
+$db_port 		= "";
 session_start();
 
 //global $gaSql;
@@ -59,12 +61,15 @@ if (!isset($_SESSION['openChatBoxes'])) {
 }
 
 function chatHeartbeat() {
-	//$db_host 		= "localhost";
-$db_host 		= "104.217.253.15";
-	$db_port 		= "";
-	$db_user 		= "root";
-	$db_password 	= "";
-	$db_name 		= "automark";
+	$db_host 		= "104.217.253.15";
+
+$db_user 		= "automark";
+$db_password 	= "ABnRjqARFD7NAhWV";
+//$db_host 		= "localhost";
+//$db_user 		= "root";
+//$db_password 	= "";
+$db_name 		= "automark";
+$db_port 		= "";
 	$gaSql ="";
 	$gaSql =  mysqli_connect( $db_host, $db_user, $db_password, $db_name) or
 			die( 'Could not open connection to server' );
@@ -203,12 +208,16 @@ header('Content-type: application/json');
 }
 
 function sendChat() {
-	//$db_host 		= "localhost";
+	
 $db_host 		= "104.217.253.15";
-	$db_port 		= "";
-	$db_user 		= "root";
-	$db_password 	= "";
-	$db_name 		= "automark";
+
+$db_user 		= "automark";
+$db_password 	= "ABnRjqARFD7NAhWV";
+//$db_host 		= "localhost";
+//$db_user 		= "root";
+//$db_password 	= "";
+$db_name 		= "automark";
+$db_port 		= "";
 	$gaSql ="";
 	$gaSql =  mysqli_connect( $db_host, $db_user, $db_password, $db_name) or
 			die( 'Could not open connection to server' );
