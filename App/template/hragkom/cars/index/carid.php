@@ -24,7 +24,8 @@ $_SESSION['fromuser'] = $_fromuser;
   <body>
     <!-- Head Bar -->
     <div class="container head-bar text-right" style="margin-top: 175px; " >
-      <div class="" style="background-color:#db2d2e; padding-top: 10px;height: 100%;">
+    <div style="background-color:#db2d2e;">
+      <div class="" style="padding-top: 10px;height: 100%;">
         <table class="table table-sm table-dark">
         <tbody>
           <tr>
@@ -37,6 +38,7 @@ $_SESSION['fromuser'] = $_fromuser;
           </tr>
         </tbody>
         </table>
+      </div>
       </div>
     </div>
     <!-- Content -->

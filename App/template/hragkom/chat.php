@@ -20,15 +20,15 @@ OTHER DEALINGS IN THE SOFTWARE.
 */
 
 define ('DBPATH','localhost');
-define ('DBUSER','root');
-define ('DBPASS','');
+define ('DBUSER','automark');
+define ('DBPASS','ABnRjqARFD7NAhWV');
 define ('DBNAME','automark');
 
 //$db_host 		= "localhost";
 $db_host 		= "104.217.253.15";
 $db_port 		= "";
-$db_user 		= "root";
-$db_password 	= "";
+$db_user 		= "automark";
+$db_password 	= "ABnRjqARFD7NAhWV";
 $db_name 		= "automark";
 
 session_start();
