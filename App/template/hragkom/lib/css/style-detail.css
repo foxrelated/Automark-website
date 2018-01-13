@@ -70,7 +70,8 @@ body {
 }
 
 .head-bar .table td {
-    line-height: none !important
+    line-height: none !important;
+    text-align: center
   }
 
   @media (max-width: 990px) {
