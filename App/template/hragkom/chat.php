@@ -24,7 +24,8 @@ define ('DBUSER','root');
 define ('DBPASS','');
 define ('DBNAME','automark');
 
-$db_host 		= "localhost";
+//$db_host 		= "localhost";
+$db_host 		= "104.217.253.15";
 $db_port 		= "";
 $db_user 		= "root";
 $db_password 	= "";
@@ -58,7 +59,8 @@ if (!isset($_SESSION['openChatBoxes'])) {
 }
 
 function chatHeartbeat() {
-	$db_host 		= "localhost";
+	//$db_host 		= "localhost";
+$db_host 		= "104.217.253.15";
 	$db_port 		= "";
 	$db_user 		= "root";
 	$db_password 	= "";
@@ -201,7 +203,8 @@ header('Content-type: application/json');
 }
 
 function sendChat() {
-	$db_host 		= "localhost";
+	//$db_host 		= "localhost";
+$db_host 		= "104.217.253.15";
 	$db_port 		= "";
 	$db_user 		= "root";
 	$db_password 	= "";

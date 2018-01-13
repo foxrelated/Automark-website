@@ -5,8 +5,8 @@
 				<div class="weight-cars">
                     <div class="navtitleindexsearch">
 				<div class="col-sm-4">
-                    
-				
+
+
  <ul class="add-menu-list-car">
 						<li class="dropdown " style="text-align:center">
                                                         <i class="fa fa-navicon" aria-hidden="true"></i>
@@ -14,7 +14,7 @@
                             <?php echo _t(_SelectSection);?></a>
 							<ul class="dropdown-menu dropbg">
 								<?php foreach($db_category->getAll() as $rowsCategory){?>
-		<li><a href="<?php echo $path['urlsite'] ?>/cars/mycars/add/<?php echo $rowsCategory['id_ss'];?>"><?php echo language::getLang($rowsCategory['code_ss']);?></a></li>							
+		<li><a href="<?php echo $path['urlsite'] ?>/cars/mycars/add/<?php echo $rowsCategory['id_ss'];?>"><?php echo language::getLang($rowsCategory['code_ss']);?></a></li>
 <?php } ?>
 							</ul>
 						</li>
@@ -32,14 +32,14 @@
 
 <div class="row">
  <div class=" col-sm-12">
- <?php 
+ <?php
     foreach($data_category as $rows_values){
-	
+
                  foreach ($_option->getOption(array('id'=>$rows_values['option_id'])) AS $rows_option){
 					 if($lib_func->jsonId($rows_option['option_o'],'admin')==1){continue;}
 					 $litForce=($lib_func->jsonId($rows_option['option_o'],'force')==1)?'<span style="color:red">*</span>':'';
 					   ?>
-                
+
                  <?php if($lib_func->jsonId($rows_option['option_o'],'default')==1){
 
 if($rows_option['code_o']=='years'){?>
@@ -55,7 +55,7 @@ if($rows_option['code_o']=='years'){?>
             <?php echo isset($error['years'])?' <span class="help-inline badge badge-error">'.$error['years'].'</span>':''; ?>
           </div>
        </div>
-	
+
 	<?php }
 
 
@@ -119,13 +119,13 @@ if($rows_option['code_o']=='years'){?>
               <span class="help-inline"><?php echo isset($error['city'])?$error['city']:''; ?> </span>
           </div>
        </div>
-		   
+
 		  <?php }
 
 
 
                } else{ ?>
-                       
+
 
           <?php if($lib_func->jsonId($rows_option['option_o'],'type')=='text'){ ?>
 		  <div class="form-group">
@@ -135,7 +135,7 @@ if($rows_option['code_o']=='years'){?>
                 <div class="<?php echo $type_text;?>">
                 <?php echo ($lib_func->jsonId($rows_option['option_o'],'addon_star')!='')?"<span class='input-group-addon'>".$lib_func->jsonId($rows_option['option_o'],'addon_star')."</span>":""; ?>
                    <?php if ($lib_func->jsonId($rows_option['option_o'],'multiText')==1){?>
-				  
+
 				  <div class="row">
 				  <div class="col-sm-3">
 				   <input class="form-control "   name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" type="text" />
@@ -159,7 +159,7 @@ if($rows_option['code_o']=='years'){?>
             <select  class="form-control"  name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
                 <option value=""><?php echo _t(_Choose) ?></option>
                  <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
-				 
+
 				  ?>
                   <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
                 <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
@@ -173,7 +173,7 @@ if($rows_option['code_o']=='years'){?>
           <label for="input3" class="col-sm-3 control-label title"><?php echo  language::getLang($rows_option['name_o']); ?> <?php echo $litForce; ?> </label>
           <div class="col-sm-7">
              <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
-			 
+
 			  ?>
                <?php $rowse= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
                          <div class="span2">
@@ -181,7 +181,7 @@ if($rows_option['code_o']=='years'){?>
                      <input type="checkbox" <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->checkArray($rowse,$get[$rows_option['code_o']]):'';?> name="<?php echo $rows_option['code_o']; ?>[]" value="<?php echo $rowsform['id_v'];?>"><?php echo language::getLang($rowsform['value_v']);?>
                   </label>
                   </div>
-				  
+
                   <?php endforeach; ?>
 				     <span class="help-inline"><?php echo isset($error[$rows_option['code_o']])?$error[$rows_option['code_o']]:''; ?> </span>
           </div>
@@ -199,43 +199,46 @@ if($rows_option['code_o']=='years'){?>
 	 <div class="form-group">
           <label for="input3" class="col-sm-3 control-label title"><?=_Basicimage?><?php echo $litForce; ?> </label>
            <div class="col-sm-7">
-                        <input type="file" onchange="return UploatImages('imagesu<?php echo $rows_option['id_o']; ?>','.loadUploadu<?php echo $rows_option['id_o']; ?>','.loadUploadu<?php echo $rows_option['id_o']; ?>','<?php echo $rows_option['code_o']; ?>[]');" name="imagesu<?php echo $rows_option['id_o']; ?>" id="imagesu<?php echo $rows_option['id_o']; ?>" />
+                        <input type="file" onchange="return UploatImages('imagesu<?php echo $rows_option['id_o']; ?>','.loadUploadu<?php echo $rows_option['id_o']; ?>','.loadUploadu<?php echo $rows_option['id_o']; ?>','<?php echo $rows_option['code_o']; ?>[]');"
+                               name="imagesu<?php echo $rows_option['id_o']; ?>"
+                               id="imagesu<?php echo $rows_option['id_o']; ?>" />
 						<button style="display:none;" type="submit" id="btn"><?=_Uploadaphoto?></button>
                           <span class="help-inline"><?php echo isset($error[$rows_option['code_o']])?$error[$rows_option['code_o']]:''; ?> </span>
 						<div class="imgUploadu<?php echo $rows_option['id_o']; ?>"><span class="loadUploadu<?php echo $rows_option['id_o']; ?>"></span>
-                        
-                        <?php 
+
+                        <?php
                           if(isset($get[$rows_option['code_o']]) and count($get[$rows_option['code_o']])){ foreach( $get[$rows_option['code_o']] as $rowsImages){?>
 										<a onclick='return imagesdlet(this);' href='#'>
 										<img width="150" height="100"  align='right' src='<?php echo $path['upload']; ?>thumb/thumb_<?php echo $rowsImages; ?>' />
 										<input type='hidden' name='<?php echo $rows_option['code_o']; ?>[]' value='<?php echo $rowsImages; ?>' /></a>
 
 							<?php }} ?>
-                            
+
                         </div>
-                            
-								  
+
+
           </div>
        </div>
-	   
+
   <div class="form-group">
           <label for="input3" class="col-sm-3 control-label title"><?php echo  language::getLang($rows_option['name_o']); ?></label>
            <div class="col-sm-7">
                         <input type="file" onchange="return UploatImages('images<?php echo $rows_option['id_o']; ?>','.loadUpload<?php echo $rows_option['id_o']; ?>','.imgUpload<?php echo $rows_option['id_o']; ?>','<?php echo $rows_option['code_o']; ?>[]');" name="images<?php echo $rows_option['id_o']; ?>" id="images<?php echo $rows_option['id_o']; ?>" />
 						<button style="display:none;" type="submit" id="btn"><?=_Uploadaphoto?></button>
                           <span class="help-inline"><?php echo isset($error[$rows_option['code_o']])?$error[$rows_option['code_o']]:''; ?> </span>
-						<div class="imgUpload<?php echo $rows_option['id_o']; ?>"><span class="loadUpload<?php echo $rows_option['id_o']; ?>"></span>
-                        
+						<div class="imgUpload<?php echo $rows_option['id_o']; ?>">
+                            <span class="loadUpload<?php echo $rows_option['id_o']; ?>"></span>
+
                         <?php  if(isset($get[$rows_option['code_o']]) and count($get[$rows_option['code_o']])){ foreach( $get[$rows_option['code_o']] as $rowsImages){?>
 										<a onclick='return imagesdlet(this);' href='#'>
 										<img width="150" height="100"  align='right' src='<?php echo $path['upload']; ?>thumb/thumb_<?php echo $rowsImages; ?>' />
 										<input type='hidden' name='<?php echo $rows_option['code_o']; ?>[]' value='<?php echo $rowsImages; ?>' /></a>
 
 							<?php }} ?>
-                            
+
                         </div>
-                            
-								  
+
+
           </div>
        </div>
                 <?php  }else if($lib_func->jsonId($rows_option['option_o'],'type')=='yes'){ ?>
@@ -248,14 +251,14 @@ if($rows_option['code_o']=='years'){?>
           </div>
        </div>
                    <?php } ?>
-           
+
                <?php
                }
                     }
                         } ?>
  		</div>
-  </div>   
-  
+  </div>
+
   <div class="row">
   <div class="col-sm-12">
          <input type="submit" value="<?php echo _t(_Add) ?>" class="btn btn-primary left" />

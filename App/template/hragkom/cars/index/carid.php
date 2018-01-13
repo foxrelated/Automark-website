@@ -284,9 +284,9 @@ $_SESSION['fromuser'] = $_fromuser;
           <td class="main-color" style="text-align: center">
             <?php if(session::get(system::get("session/session_name"))){ ?>
                     
-                    <button  class="btn btn-warning btn-lg"><?php echo ('&nbsp;');?><?php echo ('&nbsp;');?><?php echo ('&nbsp;');?>
-                      <a href="javascript:void(0)" onclick="javascript:chatWith('<?=$_user?>')"></a>
-                    </button>
+                    
+                      <a href="javascript:void(0)" onclick="chatWith('<?=$_user?>')"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
+                    
                     <?php }
                       elseif(!session::get(system::get("session/session_name"))) {
                       ?>

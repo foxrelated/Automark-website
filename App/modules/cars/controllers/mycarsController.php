@@ -92,9 +92,7 @@ $this->_user1=$this->loadModel('users','users');
     }
 
   $this->_validate->check($_POST,$validate);
-								var_dump($_POST);
-    var_dump($this->_validate->check($_POST,$validate));
-    die; 
+								
                 if($this->_validate->passed()){
                           $sqlArray=array(
                             'title_c'=>$this->_input->get('title_c'),
@@ -186,25 +184,22 @@ $this->_user1=$this->loadModel('users','users');
       }
     }
    }
-  $this->_validate->check($_POST,$validate);  
-  var_dump($_POST);
-  var_dump($this->_validate->check($_POST,$validate));
-  var_dump($_FILES);
-  die();
-           
+  $this->_validate->check($_POST,$validate); 
+  
                 if($this->_validate->passed()){
+  
                           $sqlArray=array(
-                            'title_c'=>$_POST['title_ad'],
+                            'title_c'=>$_POST['title_c'],
                             'modelcar'=>$_POST['type_c'],
                             'model'=>$_POST['model'],
                             'catagory'=>$id,
                             'years'=>$_POST['years'],
-                            'price_c'=>$_POST['price_ad'],
+                            'price_c'=>$_POST['price_c'],
                             'country'=>$_POST['Country_c'],
                             'city'=>$_POST['city'],
                             'features'=>1,
                             
-                            'images_c'=>$this->_func->enJsonArray($this->_input->get('images_c')),
+                            'images_c'=>$this->_func->enJsonArray($this->_input->get('act_c')),
                             'type'=>"h",//$this->_input->get('type'),
                             //'description_c'=>$_POST['additionalinformation'],
                             'dateadd'=>date("Y-m-d"),
@@ -215,9 +210,9 @@ $this->_user1=$this->loadModel('users','users');
                         );
             
                     
-          var_dump($sqlArray);die;
+          
            if($id_last_cars=$this->_cars->insert($sqlArray)){
-          //var_dump($id_last_cars);die;
+          
            foreach($sqlArrayq AS $k_sqlArrayq=>$v_sqlArrayq){
               $array_meta_cars=array("id"=>$id_last_cars,"code"=>$k_sqlArrayq,"value"=>$v_sqlArrayq);
                   $this->_cars->add_meta_cars($array_meta_cars);
