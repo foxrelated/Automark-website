@@ -19,7 +19,7 @@ $_SESSION['fromuser'] = $_fromuser;
   <link rel="stylesheet" href="<?php echo $path['template'];?>lib/css/style-Ads.css" />
 
 </head>
-<body>
+<body class="add-ad" >
 
     <!-- Add New Ads -->
 <form action="" method="post">
@@ -134,7 +134,7 @@ $_SESSION['fromuser'] = $_fromuser;
           <div class="basic-details">
             <ul class="list-inline">
               <li class="detail col-md-3 hvr-bob"><i class="fa fa-dashboard"></i><span class="detail-km num-bd">95,000</span> <?=_kilometer?></li>
-              <li class="detail col-md-3 hvr-bob"><i class="fa fa-calendar fa-1"></i><span class="detail-make num-bd">2012</span></li>
+              <li class="detail col-md-3 hvr-bob"><i class="fa fa-calendar fa-1"></i><span class="detail-make num-bd">سنه الصنع</span></li>
               <li class="detail detail-place col-md-3 hvr-bob"><i class="fa fa-map-marker"></i>العنوان</li>
 
               <li dir="<?php echo($dir); ?>" class="detail detail-phone num-bd col-md-3 hvr-bob"><?=$phoneuser?><i class="fa fa-mobile"></i></li>
@@ -180,7 +180,7 @@ $_SESSION['fromuser'] = $_fromuser;
   <!-- Information -->
 <div class="container">
   <section class="information" id="boat" dir="<?php echo $_dir; ?>">
-    <div class="container">
+    <div class="" style="padding: 0 20px;">
       <h2><?=_Maininformation?></h2>
 
 
@@ -399,7 +399,7 @@ $_SESSION['fromuser'] = $_fromuser;
         <?php }}}  ?>
 
       </div>
-      <div class="half-info col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <div class="half-info col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0 10px;">
     <?php
       foreach($data_category as $rows_values){
 

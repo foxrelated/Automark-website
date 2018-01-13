@@ -92,7 +92,7 @@ $_SESSION['fromuser'] = $_fromuser;
       <div class="car-images">
         <div class="">
 
-        <ul id="vertical">
+        <ul id="vertical" style="max-height:550px">
           <?php if(($lib_func->jsonArray($_carsId['images_c']) != null)) {?>
           <?php foreach($lib_func->jsonArray($_carsId['images_c']) as $rowsimg){
               

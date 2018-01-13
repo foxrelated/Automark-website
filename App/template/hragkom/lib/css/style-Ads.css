@@ -827,8 +827,8 @@ body {
   border: none;
   color: #fff;
   margin-top: 30px;
-  margin-bottom: 5px;
-  padding: 9px 0;
+  margin-bottom: 30px;
+  padding: 13px 0;
   font-family: 'DroidKufiBold';
   width:100%
 }
@@ -1221,4 +1221,8 @@ body {
   color: #db2d2e;
   font-family: 'DroidKufiBold';
   cursor: default;
+}
+
+.top-input-field{
+height:45px;
 }
