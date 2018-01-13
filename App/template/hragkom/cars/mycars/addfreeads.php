@@ -19,10 +19,10 @@ $_SESSION['fromuser'] = $_fromuser;
   <link rel="stylesheet" href="<?php echo $path['template'];?>lib/css/style-Ads.css" />
 
 </head>
-<body class="add-ad" >
+<body >
 
     <!-- Add New Ads -->
-<form action="" method="post">
+<form id="add-fields-form" action="" method="post">
 <section dir="<?php echo $_dir; ?>" class="add-ad">
   <div class="container">
     <h2><?=_Addyouradforfree?></h2>
@@ -545,6 +545,7 @@ $_SESSION['fromuser'] = $_fromuser;
       <textarea class="col-lg-12" name="<?php echo $rows_option['code_o']; ?>" maxlength="150" placeholder="<?=_AdditionalInformation150characters?>" ></textarea>
       <?php }} ?>
       <?php }} ?>
+      <div style="clear:both"/>
     </div>
   </section>
 

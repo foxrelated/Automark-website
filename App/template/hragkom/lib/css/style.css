@@ -1532,3 +1532,7 @@ text-shadow:-1px 1px 0 #940f0f;
 	background:#fff;
 	color:#bbb;
 }
+
+.lSSlideWrapper img {
+	width:100%;
+}

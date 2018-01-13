@@ -33,8 +33,6 @@ $_SESSION['fromuser'] = $_fromuser;
             <td class="car-section pointer"><?=_Carsforsale?></td>
             <td style="padding-top: 8px;"><i class="fa fa-angle-left"></i></td>
             <td class="type"><?php echo  $_carsId['title_c']; ?></td>
-            <td>|</td>
-            <td class="pointer"><?=_Back?></td>
           </tr>
         </tbody>
         </table>
@@ -90,16 +88,16 @@ $_SESSION['fromuser'] = $_fromuser;
       </div>
     </div>
       <div class="car-images">
-        <div class="">
+        <div style="max-height:551px">
 
-        <ul id="vertical" style="max-height:550px">
+        <ul id="vertical">
           <?php if(($lib_func->jsonArray($_carsId['images_c']) != null)) {?>
           <?php foreach($lib_func->jsonArray($_carsId['images_c']) as $rowsimg){
               
             ?>
             <li data-thumb="<?php echo $path['thumb'].'thumb_'.$rowsimg; ?>">
               
-                <img class="img-responsive" src="<?php echo $path['upload'].$rowsimg; ?>" title="" alt="">
+                <img class="img-responsive" style="width:100%" src="<?php echo $path['upload'].$rowsimg; ?>" title="" alt="">
               
             </li>
            <?php  } ?>
