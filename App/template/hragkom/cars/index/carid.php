@@ -140,7 +140,12 @@ $_SESSION['fromuser'] = $_fromuser;
           ?>
           <tr>
                 <th scope="row"></th>
-                <td><?php echo language::getLang($rows_meta_cars['name_o']); ?></td>
+                <td><?php 
+                  if(($rows_meta_cars['name_o'] !== "<!--:ar-->المواصفات الاضافية<!--:--><!--:en-->Additional Specifications<!--:-->") ){
+                echo language::getLang($rows_meta_cars['name_o']); 
+              }?>
+                  
+                </td>
                 <td><?php
         if($lib_func->jsonId($rows_meta_cars['option_o'],'type')=='select'){
         $option_id=$_option->get_value_option(array('id'=>$rows_meta_cars['value_m']));
@@ -151,9 +156,10 @@ $_SESSION['fromuser'] = $_fromuser;
         <?php endforeach; 
           }
           }else{
+            if(($rows_meta_cars['name_o'] !== "<!--:ar-->المواصفات الاضافية<!--:--><!--:en-->Additional Specifications<!--:-->") ){
             echo $rows_meta_cars['value_m'];
           }
-        
+        }
         ?></td>
               </tr>
         <?php  }
@@ -176,7 +182,10 @@ $_SESSION['fromuser'] = $_fromuser;
           ?>
               <tr>
                 <th scope="row"></th>
-                <td><?php echo language::getLang($rows_meta_cars['name_o']); ?></td>
+                <td><?php 
+                  if(($rows_meta_cars['name_o'] !== "<!--:ar-->المواصفات الاضافية<!--:--><!--:en-->Additional Specifications<!--:-->") ){
+                echo language::getLang($rows_meta_cars['name_o']); 
+              }?></td>
                 <td><?php
         if($lib_func->jsonId($rows_meta_cars['option_o'],'type')=='select'){
         $option_id=$_option->get_value_option(array('id'=>$rows_meta_cars['value_m']));
@@ -187,7 +196,9 @@ $_SESSION['fromuser'] = $_fromuser;
         <?php endforeach; 
           }
           }else{
-            echo $rows_meta_cars['value_m'];
+            if(($rows_meta_cars['name_o'] !== "<!--:ar-->المواصفات الاضافية<!--:--><!--:en-->Additional Specifications<!--:-->") ){
+              echo $rows_meta_cars['value_m'];
+            }
           }
         
         ?></td>
