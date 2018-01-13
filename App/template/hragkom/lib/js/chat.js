@@ -30,7 +30,7 @@ var chatboxFocus = new Array();
 var newMessages = new Array();
 var newMessagesWin = new Array();
 var chatBoxes = new Array();
-var APP_URL = "http://localhost/automark/";
+var APP_URL = "http://http:/104.217.253.15/automark/";
 $(document).ready(function(){
 	originalTitle = document.title;
 	startChatSession();

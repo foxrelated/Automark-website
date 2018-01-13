@@ -1204,6 +1204,13 @@ text-shadow:-1px 1px 0 #940f0f;
     width: 96.6%;
 }
 }
+
+@media(max-width: 767px){
+.menutopLogo{
+	float:none !important;
+}
+}
+
 @media(max-width: 690px){
 .menutop {
 	margin:0;
@@ -1223,9 +1230,6 @@ text-shadow:-1px 1px 0 #940f0f;
     font-weight: 100;
 	    z-index: 10;
     background: #fff;
-}
-.menutopLogo{
-	float:none !important;
 }
 .menutopContact > li > a {
     color: #fff;
@@ -1525,5 +1529,6 @@ text-shadow:-1px 1px 0 #940f0f;
 }
 
 .details-share-icon{
-	background:#bbb
+	background:#fff;
+	color:#bbb;
 }
