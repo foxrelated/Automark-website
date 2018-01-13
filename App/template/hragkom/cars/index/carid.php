@@ -94,7 +94,7 @@ $_SESSION['fromuser'] = $_fromuser;
 
         <ul id="vertical">
           <?php if(($lib_func->jsonArray($_carsId['images_c']) != null)) {?>
-          <?php $xx=0; foreach($lib_func->jsonArray($_carsId['images_c']) as $rowsimg){
+          <?php foreach($lib_func->jsonArray($_carsId['images_c']) as $rowsimg){
               
             ?>
             <li data-thumb="<?php echo $path['thumb'].'thumb_'.$rowsimg; ?>">
@@ -102,13 +102,8 @@ $_SESSION['fromuser'] = $_fromuser;
                 <img class="img-responsive" src="<?php echo $path['upload'].$rowsimg; ?>" title="" alt="">
               
             </li>
-           <?php $xx++; } ?>
+           <?php  } ?>
            <?php } ?>
-           <!--<li data-thumb="<?php echo $path['upload']."upl_58e51e8b6c940.jpg"; ?>">
-              
-                <img class="img-responsive" src="<?php echo $path['thumb'].'thumb_upl_58e51e8b6c940.jpg' ?>" title="" alt="">
-              
-            </li>-->
         </ul>
           
         </div>
@@ -142,7 +137,12 @@ $_SESSION['fromuser'] = $_fromuser;
           ?>
           <tr>
                 <th scope="row"></th>
-                <td><?php echo language::getLang($rows_meta_cars['name_o']); ?></td>
+                <td><?php 
+                  if(($rows_meta_cars['name_o'] !== "<!--:ar-->المواصفات الاضافية<!--:--><!--:en-->Additional Specifications<!--:-->") ){
+                echo language::getLang($rows_meta_cars['name_o']); 
+              }?>
+                  
+                </td>
                 <td><?php
         if($lib_func->jsonId($rows_meta_cars['option_o'],'type')=='select'){
         $option_id=$_option->get_value_option(array('id'=>$rows_meta_cars['value_m']));
@@ -153,9 +153,10 @@ $_SESSION['fromuser'] = $_fromuser;
         <?php endforeach; 
           }
           }else{
+            if(($rows_meta_cars['name_o'] !== "<!--:ar-->المواصفات الاضافية<!--:--><!--:en-->Additional Specifications<!--:-->") ){
             echo $rows_meta_cars['value_m'];
           }
-        
+        }
         ?></td>
               </tr>
         <?php  }
@@ -178,7 +179,10 @@ $_SESSION['fromuser'] = $_fromuser;
           ?>
               <tr>
                 <th scope="row"></th>
-                <td><?php echo language::getLang($rows_meta_cars['name_o']); ?></td>
+                <td><?php 
+                  if(($rows_meta_cars['name_o'] !== "<!--:ar-->المواصفات الاضافية<!--:--><!--:en-->Additional Specifications<!--:-->") ){
+                echo language::getLang($rows_meta_cars['name_o']); 
+              }?></td>
                 <td><?php
         if($lib_func->jsonId($rows_meta_cars['option_o'],'type')=='select'){
         $option_id=$_option->get_value_option(array('id'=>$rows_meta_cars['value_m']));
@@ -189,7 +193,9 @@ $_SESSION['fromuser'] = $_fromuser;
         <?php endforeach; 
           }
           }else{
-            echo $rows_meta_cars['value_m'];
+            if(($rows_meta_cars['name_o'] !== "<!--:ar-->المواصفات الاضافية<!--:--><!--:en-->Additional Specifications<!--:-->") ){
+              echo $rows_meta_cars['value_m'];
+            }
           }
         
         ?></td>

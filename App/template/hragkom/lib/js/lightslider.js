@@ -368,7 +368,7 @@
                                 i = i + 1;
                                 var minPgr = 2;
                                 if (settings.autoWidth) {
-                                    pagers += '<li><a href="#">' + (i + 1) + '</a></li>';
+                                    pagers += '<li style="width:100%;' + property + ':' + thumbWidth + 'px;' + gutter + ':' + settings.thumbMargin + 'px"><a href="#"><img src="' + thumb + '" /></a></li>';
                                     minPgr = 1;
                                 }
                                 if (i < minPgr) {

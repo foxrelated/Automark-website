@@ -188,7 +188,16 @@ $_SESSION['fromuser'] = $_fromuser;
 
                                 
                          		</a>
-                  			   	<ul class="dropdown-menu">
+                         		
+                         		
+                            
+                        		
+                  			   		
+                  			   	<ul class="dropdown-menu" style="">
+                  			   		<?php if(!empty($_chat) || isset($_chat)){?>
+                         		
+                  			   		<p style="background-color: #803131;"><?=_NoMassege?></p>
+                  			   		<?php } else {?>
                   			   		<?php
                   			   		
                   			   foreach ($_chat AS $onechat){
@@ -199,10 +208,11 @@ $_SESSION['fromuser'] = $_fromuser;
                   			  </li>
                   			   	
 							<?php
-                  			   }
+                  			   } 
                   			   ?>
                             
                         		</ul>
+                        		<?php } ?>
 							 </li> 
 							  
                       <?php } ?>

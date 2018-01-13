@@ -75,12 +75,12 @@ $_SESSION['fromuser'] = $_fromuser;
              <?php } ?>
 
              <?php if ($rows_option['code_o']=='plate_number') { ?>
-             <input style="width:45%" class="detail-plate-input col-lg-6" type="text" placeholder="<?=_Carplate?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
+             <input style="width:45%;margin-right: 300px; margin-top: 20px;" class="detail-plate-input col-lg-6"   type="text" placeholder="<?=_Carplate?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
              <?php } ?>
              <?php } ?>
              <?php  if($lib_func->jsonId($rows_option['option_o'],'type')=='select'){ ?>
              <?php if ($rows_option['code_o']=='category') { ?>
-             <select style="width:30%;margin-left:1%;margin-right:1%" class="custom-select d-block col-lg-4" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Category) ?>" tabindex="1">
+             <select style="width:30%;margin-left:1%;margin-right: 300px; margin-top: 20px;margin-right:1%"   class="custom-select d-block col-lg-4" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Category) ?>" tabindex="1">
                 <option value=""><?php echo _t(_Category) ?></option>
                  <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
 
@@ -91,7 +91,7 @@ $_SESSION['fromuser'] = $_fromuser;
              </select>
     <?php } ?>
     <?php if ($rows_option['code_o']=='symbol') { ?>
-    <select style="width:23%" class="custom-select d-block col-lg-4" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Symbol) ?>" tabindex="1">
+    <select style="width:23%; margin-right: 300px; margin-top: 20px;" class="custom-select d-block col-lg-4" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Symbol) ?>" tabindex="1">
                 <option value=""><?php echo _t(_Symbol) ?></option>
                  <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
 
@@ -281,20 +281,7 @@ $_SESSION['fromuser'] = $_fromuser;
         <i class="fa fa-angle-down fa-lg"></i>
         </div>
         <?php } ?>
-        <?php if ($rows_option['code_o']=='howmuchload') { ?>
-        <div class="symbol-container">
-        <select class="custom-select d-block my-3"  name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
-          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
-                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
-
-          ?>
-                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
-                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
-               <?php endforeach; ?>
-        </select>
-        <i class="fa fa-angle-down fa-lg"></i>
-        </div>
-        <?php } ?>
+        
 
        <?php if ($rows_option['code_o']=='enginepower') { ?>
         <div class="symbol-container">
@@ -488,6 +475,7 @@ $_SESSION['fromuser'] = $_fromuser;
         <?php }}else{
             if($lib_func->jsonId($rows_option['option_o'],'type')=='select'){
           ?>
+
         <?php if ($rows_option['code_o']=='color') {
 
         ?>
@@ -522,6 +510,20 @@ $_SESSION['fromuser'] = $_fromuser;
         </select>
         
         
+        <i class="fa fa-angle-down fa-lg"></i>
+        </div>
+        <?php } ?>
+        <?php if ($rows_option['code_o']=='howmuchload') { ?>
+        <div class="symbol-container">
+        <select class="custom-select d-block my-3"  name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Choose) ?>" tabindex="1">
+          <option value=""><?php echo  language::getLang($rows_option['name_o']); ?> </option>
+                 <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
+
+          ?>
+                  <?php $valuer= ($rowsform['type_v']!=''  and $rowsform['type_v']!=0 )?$rowsform['type_v']:$rowsform['id_v'];?>
+                <option <?php echo (isset($get[$rows_option['code_o']]) )? $lib_func->selected($get[$rows_option['code_o']],$valuer):'';?> value="<?php echo $valuer; ?>"><?php echo language::getLang($rowsform['value_v']);?></option>
+               <?php endforeach; ?>
+        </select>
         <i class="fa fa-angle-down fa-lg"></i>
         </div>
         <?php } ?>
