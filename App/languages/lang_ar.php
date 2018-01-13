@@ -302,3 +302,4 @@ define("_Carplate", "رقم اللوحه");
 define("_Thecompanyprovidedtheservice", "الشركة المقدمة للخدمة");
 define('_kilometersconsumed', 'الكليلو متر الحالي');
 define('_InteriorColor', 'اللون الداخلي');
+define('_NoMassege', 'لا يوجد رسائل');
