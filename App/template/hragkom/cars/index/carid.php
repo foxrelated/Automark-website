@@ -24,13 +24,14 @@ $_SESSION['fromuser'] = $_fromuser;
   <body>
     <!-- Head Bar -->
     <div class="container head-bar text-right" style="margin-top: 175px; " >
-      <div class="" style="background-color:#db2d2e; padding-top: 10px;">
+    <div style="background-color:#db2d2e;">
+      <div class="" style="padding-top: 10px;height: 100%;">
         <table class="table table-sm table-dark">
         <tbody>
           <tr>
             <th scope="row"></th>
             <td class="car-section pointer"><?=_Carsforsale?></td>
-            <td><i class="fa fa-angle-left"></i></td>
+            <td style="padding-top: 8px;"><i class="fa fa-angle-left"></i></td>
             <td class="type"><?php echo  $_carsId['title_c']; ?></td>
             <td>|</td>
             <td class="pointer"><?=_Back?></td>
@@ -38,10 +39,11 @@ $_SESSION['fromuser'] = $_fromuser;
         </tbody>
         </table>
       </div>
+      </div>
     </div>
     <!-- Content -->
-    <section class="car-detail">
-      <div class="container">
+    <section class="container car-detail">
+      <div style="padding: 0 30px;">
       <div class="car-image-head">
         <p class="car-type inline"><?php echo  $_carsId['title_c']; ?> | <?=_GCCSpecifications?></p>
         <p class="price inline hvr-bob"><span class="nums-font"><?php echo  $_carsId['price_c']; ?></span> <?php echo _t(_AED);?></p>
@@ -117,13 +119,13 @@ $_SESSION['fromuser'] = $_fromuser;
         <?php if(!$_iscarfavorite){ 
             
           ?>
-        <span class="add-to-favorit pointer" dir="<?php echo $_dir; ?>">
+        <span style="display:none" class="add-to-favorit pointer" dir="<?php echo $_dir; ?>">
           <a href="<?php echo $path['urlsite'] ;?>cars/index/addtofavorites/<?php echo $_carsId['id_c'];?>">
           <i class="fa fa-lg3 fa-heart-o"></i>
           <?=_Addtofavoriteslist?></a> 
         </span>
         <?php }else{ ?>
-        <span class="add-to-favorit pointer" dir="<?php echo $_dir; ?>">
+        <span style="display:none" class="add-to-favorit pointer" dir="<?php echo $_dir; ?>">
           <i class="fa fa-lg3 fa-heart" style=""></i>
           <?=_AddedtoFavorites?>
         </span>
@@ -248,12 +250,12 @@ $_SESSION['fromuser'] = $_fromuser;
       <div class="col-md-6 col-xs-12 buy-info">
       <table class="table table-sm table-dark">
       <tbody class="col-xs-12">
-        <tr>
+        <tr style="width:150px">
           <td><?php echo _t(_Theseller);?>:</td>
 
           <td><?php echo  $_carsId['name_u']; ?></td>
         </tr>
-        <tr>
+        <tr style="display:none">
           <td><?php echo _t(_Methodofcommunication);?>:<?php echo ('&nbsp;');?></td>
           
           <td dir="ltr" class="fbold nums-font"><?php echo  $_carsId['mobile_u'];?></td>
@@ -315,14 +317,14 @@ $_SESSION['fromuser'] = $_fromuser;
                             <h4 class="modal-title"></h4>
                           </div>
                           <div class="modal-body">
-                            <ul class="" style="background-color:#e83031; margin: 10px;">
+                            <ul class="" style="margin: 10px;list-style: none;">
                                 <li>
                                   <a href="<?php echo $path['urlsite'] ?>users/login"><i class="fa fa-unlock-alt" aria-hidden="true"></i> <?php echo _t(_Login);?></a> 
                                 </li>
                               
                                 
                             </ul>
-                            <ul class="" style="background-color:#e83031; margin: 10px;">
+                            <ul class="" style="margin: 30px;list-style: none;">
                               <li>
                                   <a href="<?php echo $path['urlsite'] ?>users/register"><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo _t(_Newuser);?></a>
                                 </li>
