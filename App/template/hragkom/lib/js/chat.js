@@ -31,7 +31,8 @@ var newMessages = new Array();
 var newMessagesWin = new Array();
 var chatBoxes = new Array();
 var APP_URL = "http://104.217.253.15/automark/";
-//var APP_URL = "http://localhost/automark/";
+//var APP_URL = "http://localhost/automark/site/";
+
 $(document).ready(function(){
 	originalTitle = document.title;
 	startChatSession();
@@ -296,8 +297,11 @@ function checkChatBoxInputKey(event,chatboxtextarea,chatboxtitle) {
 		$(chatboxtextarea).focus();
 		$(chatboxtextarea).css('height','44px');
 		if (message != '') {
-				
-			$.post(APP_URL + "App/template/hragkom/chat.php?action=sendchat", {to: chatboxtitle, message: message} , function(data){
+			$.post(APP_URL + "App/template/hragkom/chat.php?action=sendchat",
+                {
+                    to: chatboxtitle,
+                    message: message
+                } , function(data){
 				message = message.replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\"/g,"&quot;");
 				$("#chatbox_"+chatboxtitle+" .chatboxcontent").append('<div class="chatboxmessage"><span class="chatboxmessagefrom">'+username+':&nbsp;&nbsp;</span><span class="chatboxmessagecontent">'+message+'</span></div>');
 				$("#chatbox_"+chatboxtitle+" .chatboxcontent").scrollTop($("#chatbox_"+chatboxtitle+" .chatboxcontent")[0].scrollHeight);
