@@ -135,7 +135,7 @@ $_SESSION['fromuser'] = $_fromuser;
             <ul class="list-inline">
               <li class="detail col-md-3 hvr-bob"><i class="fa fa-dashboard"></i><span class="detail-km num-bd">95,000</span> <?=_kilometer?></li>
               <li class="detail col-md-3 hvr-bob"><i class="fa fa-calendar fa-1"></i><span class="detail-make num-bd">2012</span></li>
-              <li class="detail detail-place col-md-3 hvr-bob"><i class="fa fa-map-marker"></i>القوز | دبي</li>
+              <li class="detail detail-place col-md-3 hvr-bob"><i class="fa fa-map-marker"></i>العنوان</li>
 
               <li dir="<?php echo($dir); ?>" class="detail detail-phone num-bd col-md-3 hvr-bob"><?=$phoneuser?><i class="fa fa-mobile"></i></li>
             </ul>
