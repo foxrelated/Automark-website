@@ -107,7 +107,7 @@ $this->_user1=$this->loadModel('users','users');
                     //var_dump($data);die;
                     $this->_view->assign("search",$data);
                     if($er=="non"){
-                     $this->_view->assign("_msg",_t("السيارة غير متوفرة بالموقع"));
+                     $this->_view->assign("_msg",_t("الذي تبحث عنه غير متوفرة بالموقع"));
                     }
                     $this->_view->tmpDir('search','',array('tmp'=>true));
 
