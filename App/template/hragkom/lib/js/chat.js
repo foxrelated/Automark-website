@@ -38,7 +38,6 @@ $(document).ready(function(){
     if(!init){ // cause sometimes document.ready is init twice.
         init = true;
         originalTitle = document.title;
-        console.log('invoke document ready');
         startChatSession();
 
         $([window, document]).blur(function(){
@@ -70,6 +69,10 @@ function restructureChatBoxes() {
 function chatWith(chatuser) {
 	createChatBox(chatuser);
 	$("#chatbox_"+chatuser+" .chatboxtextarea").focus();
+    $.post(APP_URL + "App/template/hragkom/chat.php?action=openchat", { chatbox: chatuser} , function(data){
+        console.log(data);
+        startChatSession();
+    });
 }
 
 function createChatBox(chatboxtitle,minimizeChatBox) {

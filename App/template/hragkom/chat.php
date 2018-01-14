@@ -43,7 +43,8 @@ if (!$gaSql) {
 if ($_GET['action'] == "chatheartbeat") { chatHeartbeat(); } 
 if ($_GET['action'] == "sendchat") { sendChat(); } 
 if ($_GET['action'] == "closechat") { closeChat(); } 
-if ($_GET['action'] == "startchatsession") { startChatSession(); } 
+if ($_GET['action'] == "startchatsession") { startChatSession(); }
+if ($_GET['action'] == "openchat") { openChat(); }
 
 if (!isset($_SESSION['chatHistory'])) {
 	$_SESSION['chatHistory'] = array();	
@@ -216,10 +217,14 @@ EOD;
     }
 }
 
-function closeChat() {
+function openChat() {
+    $_SESSION['openChatBoxes'][$_POST['chatbox']] = date('Y-m-d H:i:s', time());
+    echo "1";
+    exit(0);
+}
 
+function closeChat() {
 	unset($_SESSION['openChatBoxes'][$_POST['chatbox']]);
-	
 	echo "1";
 	exit(0);
 }
