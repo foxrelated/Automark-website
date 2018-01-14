@@ -19,9 +19,9 @@ $_SESSION['fromuser'] = $_fromuser;
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/media.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/share-button.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/chat.css"> 
-    <!--<link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/screen.css">-->      
-    <!--<link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/screen_ie.css">--> 
+    <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/chat.css">
+    <!--<link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/screen.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/screen_ie.css">-->
     <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/share-button.js"></script>
 
     <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/chat.js"></script>
@@ -63,7 +63,7 @@ $_SESSION['fromuser'] = $_fromuser;
               </div>
             </div>
             <ul class="list-unstyled col-lg-12" id="right-section">
-              <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href="<?php echo $path['urlsite'] ?>cars/index/showsid/<?php echo $_ids;?>"><?php echo isset($_region_s)?$_region_s:''; ?> - 
+              <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href="<?php echo $path['urlsite'] ?>cars/index/showsid/<?php echo $_ids;?>"><?php echo isset($_region_s)?$_region_s:''; ?> -
 
               	<?php   if(isset($_city_s) and $_city_s!=''){ ?> <?php echo  language::getLang($_city->getNameId($_city_s));?> <?php } ?></a></li>
               <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href="<?php echo $path['urlsite'] ?>cars/index/showsid/<?php echo $_ids;?>"><?php echo isset($_phone_num1)?$_phone_num1:''; ?></a></li>
@@ -73,11 +73,11 @@ $_SESSION['fromuser'] = $_fromuser;
                 <ul class="list-unstyled text-center">
                   <li>
                     <?php if(session::get(system::get("session/session_name"))){ ?>
-                  	<a href="javascript:void(0)" onclick="javascript:chatWith('<?=$_user?>')"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
+                  	<a href="javascript:void(0)" onclick="chatWith('<?=$_user?>')"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
                     <?php }
                       elseif(!session::get(system::get("session/session_name"))) {
                       ?>
-                  
+
                   <button type="button" data-toggle="modal" data-target="#myChatModal" style="background-color: #db2d2e; border-bottom: 2px solid #ab191a;
                     border-top: 2px solid #ec4b4c;"><i class="fa fa-envelope-o fa-2x" aria-hidden="true" ></i></button>
                   <?php }  ?>
@@ -95,17 +95,17 @@ $_SESSION['fromuser'] = $_fromuser;
                           <div class="modal-body">
                             <ul class="" style="background-color:#e83031; margin: 10px;">
                                 <li>
-                                  <a href="<?php echo $path['urlsite'] ?>users/login"><i class="fa fa-unlock-alt" aria-hidden="true"></i> <?php echo _t(_Login);?></a> 
+                                  <a href="<?php echo $path['urlsite'] ?>users/login"><i class="fa fa-unlock-alt" aria-hidden="true"></i> <?php echo _t(_Login);?></a>
                                 </li>
-                              
-                                
+
+
                             </ul>
                             <ul class="" style="background-color:#e83031; margin: 10px;">
                               <li>
                                   <a href="<?php echo $path['urlsite'] ?>users/register"><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo _t(_Newuser);?></a>
                                 </li>
                             </ul>
-                        
+
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -127,7 +127,7 @@ $_SESSION['fromuser'] = $_fromuser;
 					</script>
 					<script async src="https://static.addtoany.com/menu/page.js"></script>
 					<!-- AddToAny END -->
-                    
+
                   </li>
                 </ul>
               </li>
@@ -147,14 +147,14 @@ $_SESSION['fromuser'] = $_fromuser;
                 </li>
                 <li>
                   <div class="col-md-9 col-sm-9 no-padding filters">
-                    
+
                     <div class="half-info col-sm-6">
                 	<form action="<?php echo $path['urlsite'] ?>cars/index/showsidfilter/<?=$_ids?>" method="post">
                       <select class="form-control" id="sel1" name="model" onchange="this.form.submit()">
                         <option><?=_Model?></option>
                         <?php foreach($lib_typecar->getTypeAll() as $rowstype ): ?>
                                   <option value="<?php echo $rowstype['id_t']; ?>"><?php echo language::getLang($rowstype['name_t']); ?></option>
-                     <?php endforeach; ?> 
+                     <?php endforeach; ?>
 					 <option><?= _Other?></option>
                       </select>
                       <i class="fa fa-angle-down"></i>
@@ -200,10 +200,10 @@ $_SESSION['fromuser'] = $_fromuser;
 						  $(this).closest('form').submit();
 						});
 					</script>
-                      
+
                       <input type="hidden" name="generalsearch" value="1" />
                       </form>
-                      
+
                     </div>
                     <div class="col-xs-4 no-padding chiv">
                       <a class="chiv1" href=""><i class="fa fa-chevron-right fa-lg"></i></a>
@@ -230,7 +230,7 @@ $_SESSION['fromuser'] = $_fromuser;
     </div>
     <?php } ?>
   </div>
-  
+
 </section>
             <nav aria-label="Page navigation">
               <ul class="pagination">
@@ -245,10 +245,10 @@ $_SESSION['fromuser'] = $_fromuser;
 							<?php if($numPage['list'] < ($numPage['count']-1)){ ?>
 						<a class="end" href="<?php echo $path['urlsite'].'cars/index/'.$_codePage.'/'.$_ids.'/'.($numPage['count']-1); ?>"><?=_Last?></a>
 								<?php } ?>
-					
+
                 </li>
               </ul>
-              
+
             </nav>
           </div>
 

@@ -18,11 +18,18 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 */
-
-define ('DBHOST','localhost');
-define ('DBUSER','automark');
-define ('DBPASS','ABnRjqARFD7NAhWV');
-define ('DBNAME','automark');
+$developmentMode = false;
+if($developmentMode){
+    define ('DBHOST','localhost');
+    define ('DBUSER','root');
+    define ('DBPASS','root');
+    define ('DBNAME','automark');
+} else{
+    define ('DBHOST','localhost');
+    define ('DBUSER','automark');
+    define ('DBPASS','ABnRjqARFD7NAhWV');
+    define ('DBNAME','automark');
+}
 
 session_start();
 
@@ -49,7 +56,8 @@ if (!isset($_SESSION['openChatBoxes'])) {
 function chatHeartbeat() {
     global $gaSql;
     if($gaSql){
-        $sql = "select * from chat where (chat.to = '".mysqli_real_escape_string($gaSql,$_SESSION['username'])."' AND recd = 0) order by id ASC";
+        $userName = mysqli_real_escape_string($gaSql,$_SESSION['username']);
+        $sql = "select * from chat where (chat.to = '".$userName."' AND recd = 0) order by id ASC";
         $query = mysqli_query($gaSql,$sql);
         $items = '';
 
