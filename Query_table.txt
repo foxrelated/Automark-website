@@ -241,3 +241,9 @@ UPDATE `option_car` SET `name_o` = '<!--:ar-->Ø­Ø§Ù„Ø© Ø§Ù„Ù…Ù
 UPDATE `option_car` SET `name_o` = '<!--:ar-->Ø­Ø§Ù„Ø© Ø§Ù„Ø¨Ø¯ÙŠ<!--:--><!--:en-->Badi case<!--:-->' WHERE `option_car`.`id_o` = 40;
 //////////////////////////////////
 ALTER TABLE `cars` CHANGE `description_c` `description_c` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;
+
+
+UPDATE `option_car` SET `option_o` = '{"type":"select","force":"0"}' WHERE `option_car`.`id_o` = 46;
+
+
+UPDATE `option_car` SET `option_o` = '{"type":"text","addon_end":"971","force":"0"}' WHERE `option_car`.`id_o` = 48;
