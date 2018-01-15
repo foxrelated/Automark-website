@@ -210,6 +210,8 @@ define("_All", "All");
 define("_Latestcars", "Latest cars");
 define("_LatestPhoneNumbers", "Latest Phone Numbers");
 define("_Latestvehicleboards", "Latest vehicle boards");
+define("_Latesttrucks", "Latest trucks");
+define("_LatestBoats", "Latest boats");
 define("_Searchforyourcars", "Search for your cars");
 define("_Pricebetween", "Price between");
 define("_Addannouncementhassuccessfully", "Add announcement has successfully");

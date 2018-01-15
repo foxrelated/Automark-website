@@ -586,21 +586,15 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
 				 	
                         
 				 			<ul class="nav clear clfooterll">
-				 				<li>
-							 		<p><?=_MAIN?></p>
-				 				</li>
-							  	<li>
-							 		<p><?=_Contactus?></p>
-				 				</li>
-								<li>
-							 		<p><?=_Addannouncement?></p>
-				 				</li>
-								<li>
-							 		<p><?=_OurServices?></p>
-				 				</li>
-								<li>
-							 		<p><?=_Howtopay?></p>
-				 				</li>
+				 				<li><a href="<?php echo $path['urlsite'] ?>" style="color: white; "><?=_MAIN?> </a> </li>
+
+				 				<li><a href="<?php echo $path['urlsite'] ?>pages/index/contact" style="color: white; "><?=_Contactus?> </a> </li>
+				 				<li><a href="<?php echo $path['urlsite'] ?>cars/mycars/addfreeads"
+							style="color: white; "><?=_Addannouncement?> </a> </li>
+				 				<li><a href="<?php echo $path['urlsite'] ?>pages/index/offers" style="color: white; "><?=_OurServices?> </a> </li>
+				 				<li><a href="<?php echo $path['urlsite'] ?>pages/index/contact" style="color: white; "><?=_Howtopay?> </a> </li>
+				 				
+							  	
 							</ul>
 				 	</div>
 					 	<div class="col-sm-3">

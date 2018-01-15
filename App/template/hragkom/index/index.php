@@ -18,6 +18,8 @@
                 <li class="" category="cat-1"><?=_Latestcars?></li>
                 <li class="" category="cat-3"><?=_LatestPhoneNumbers?></li>
                 <li class="" category="cat-2"><?=_Latestvehicleboards?></li>
+                <li class="" category="cat-4"><?=_Latesttrucks?></li>
+                <li class="" category="cat-5"><?=_LatestBoats?></li>
             </ul>
         </div>
       <div class="view-cnt-next">

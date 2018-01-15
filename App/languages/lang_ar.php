@@ -209,6 +209,8 @@ define("_All", "الكل");
 define("_Latestcars", "احدث السيارات");
 define("_LatestPhoneNumbers", "احدث الارقام الهواتف");
 define("_Latestvehicleboards", "احدث لوحات المركبات");
+define("_Latesttrucks", "احدث الشاحنات");
+define("_LatestBoats", "احدث القوارب");
 define("_Searchforyourcars", "ابحث عن سياراتك");
 define("_Pricebetween", "السعر بين");
 define("_Addannouncementhassuccessfully", "تـمت اضافة الاعلان بنجاح");
