@@ -7,6 +7,7 @@ define("_Managemyads", "Manage my ads");
 define("_Addannouncement", "Add announcement");
 define("_Yourpersonaldata", "Your personal data");
 define("_Signout", "Sign out");
+define("_forsale", "for sale");
 define("_Carsforsale", "Cars for sale");
 define("_Motorcyclesforsale","Motorcycles for sale");
 define("_Phonenumbers", "Phone numbers");

@@ -6,6 +6,7 @@ define("_Newuser", "مستخدم جديد");
 define("_Managemyads", "إدارة إعلاناتي");
 define("_Yourpersonaldata", "بياناتك الشخصية");
 define("_Signout", "تسجيل خروج");
+define("_forsale", "للبيع");
 define("_Carsforsale", "سيارات للبيع");
 define("_Motorcyclesforsale","درجات نارية للبيع");
 define("_Phonenumbers", "أرقام هواتف");
