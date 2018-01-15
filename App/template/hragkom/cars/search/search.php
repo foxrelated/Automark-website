@@ -98,7 +98,7 @@
         <div class="category-menu">
             <ul>
                 <!-- change the "cat-1", "cat-2", "cat-3" with your "Categories ID" -->
-                <li class="cat-active" category="prod-cnt"><?=_Latestcars?></li>
+                <li class="cat-active" category="prod-cnt"><?=_Lastresults?></li>
               
             </ul>
         </div>

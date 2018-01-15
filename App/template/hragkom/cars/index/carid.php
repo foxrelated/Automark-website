@@ -19,7 +19,7 @@ $_SESSION['fromuser'] = $_fromuser;
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/chat.css">
 
     <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/chat.js"></script>
-    
+
   </head>
   <body>
     <!-- Head Bar -->
@@ -49,34 +49,34 @@ $_SESSION['fromuser'] = $_fromuser;
         <div class="basic-details">
           <ul class="list-inline">
             <li class="detail col-md-3 hvr-bob nums-font"><i class="fa fa-dashboard"></i>
-              <?php 
+              <?php
           if(count($show_meta_cars)>0 && isset($show_meta_cars)){
-            $len = count($show_meta_cars); 
+            $len = count($show_meta_cars);
             $firsthalf = array_slice($show_meta_cars, 0, $len / 2);
             $secondhalf = array_slice($show_meta_cars, $len / 2);
             //var_dump($secondhalf);die;
           foreach($secondhalf as $rows_meta_cars){
-            
+
             if(($rows_meta_cars['name_o'] == "<!--:ar-->المسافة المقطوعة<!--:--><!--:en-->the traveled distance<!--:-->") || ($rows_meta_cars['name_o'] == "<!--:ar-->الكيلومترات المستهلكة<!--:--><!--:en-->Kilometers consumed<!--:-->")){
-              
-              
+
+
                   echo $rows_meta_cars['value_m'];
                   echo ('&nbsp;');
                   echo _kilometer;
-                
-        
+
+
             }
           }
           foreach($firsthalf as $rows_meta_cars){
-            
+
             if(($rows_meta_cars['name_o'] == "<!--:ar-->المسافة المقطوعة<!--:--><!--:en-->the traveled distance<!--:-->") || ($rows_meta_cars['name_o'] == "<!--:ar-->الكيلومترات المستهلكة<!--:--><!--:en-->Kilometers consumed<!--:-->")){
-              
-              
+
+
                   echo $rows_meta_cars['value_m'];
                   echo ('&nbsp;');
                   echo _kilometer;
-                
-        
+
+
             }
           }
         }?>
@@ -93,29 +93,29 @@ $_SESSION['fromuser'] = $_fromuser;
         <ul id="vertical">
           <?php if(($lib_func->jsonArray($_carsId['images_c']) != null)) {?>
           <?php foreach($lib_func->jsonArray($_carsId['images_c']) as $rowsimg){
-              
+
             ?>
             <li data-thumb="<?php echo $path['thumb'].'thumb_'.$rowsimg; ?>">
-              
+
                 <img class="img-responsive" style="width:100%" src="<?php echo $path['upload'].$rowsimg; ?>" title="" alt="">
-              
+
             </li>
            <?php  } ?>
            <?php } ?>
         </ul>
-          
+
         </div>
       </div>
       <div class="basic-information">
         <div class="container">
         <h3><?=_Maininformation?> </h3>
-        <?php if(!$_iscarfavorite){ 
-            
+        <?php if(!$_iscarfavorite){
+
           ?>
         <span style="display:none" class="add-to-favorit pointer" dir="<?php echo $_dir; ?>">
           <a href="<?php echo $path['urlsite'] ;?>cars/index/addtofavorites/<?php echo $_carsId['id_c'];?>">
           <i class="fa fa-lg3 fa-heart-o"></i>
-          <?=_Addtofavoriteslist?></a> 
+          <?=_Addtofavoriteslist?></a>
         </span>
         <?php }else{ ?>
         <span style="display:none" class="add-to-favorit pointer" dir="<?php echo $_dir; ?>">
@@ -126,29 +126,29 @@ $_SESSION['fromuser'] = $_fromuser;
         <div class="all-details col-md-6 col-sm-6 col-xs-12">
           <table class="table table-sm table-dark">
             <tbody>
-              <?php 
+              <?php
           if(count($show_meta_cars)>0 && isset($show_meta_cars)){
-            $len = count($show_meta_cars); 
+            $len = count($show_meta_cars);
             $firsthalf = array_slice($show_meta_cars, 0, $len / 2);
             $secondhalf = array_slice($show_meta_cars, $len / 2);
           foreach($firsthalf as $rows_meta_cars){
           ?>
           <tr>
                 <th scope="row"></th>
-                <td><?php 
+                <td><?php
                   if(($rows_meta_cars['name_o'] !== "<!--:ar-->المواصفات الاضافية<!--:--><!--:en-->Additional Specifications<!--:-->") ){
-                echo language::getLang($rows_meta_cars['name_o']); 
+                echo language::getLang($rows_meta_cars['name_o']);
               }?>
-                  
+
                 </td>
                 <td><?php
         if($lib_func->jsonId($rows_meta_cars['option_o'],'type')=='select'){
         $option_id=$_option->get_value_option(array('id'=>$rows_meta_cars['value_m']));
         if(count($option_id) and $option_id){
-          
+
         foreach($option_id as $rowsform): ?>
                 <?php echo ($rows_meta_cars['value_m']==$rowsform['id_v'])?language::getLang($rowsform['value_v']):'';?>
-        <?php endforeach; 
+        <?php endforeach;
           }
           }else{
             if(($rows_meta_cars['name_o'] !== "<!--:ar-->المواصفات الاضافية<!--:--><!--:en-->Additional Specifications<!--:-->") ){
@@ -159,49 +159,49 @@ $_SESSION['fromuser'] = $_fromuser;
               </tr>
         <?php  }
         } ?>
-  
 
-                
+
+
             </tbody>
           </table>
         </div>
         <div class="all-details col-md-6 col-sm-6 col-xs-12">
           <table class="table table-sm table-dark">
             <tbody>
-                 <?php 
+                 <?php
           if(count($show_meta_cars)>0 && isset($show_meta_cars)){
-            $len = count($show_meta_cars); 
+            $len = count($show_meta_cars);
             $firsthalf = array_slice($show_meta_cars, 0, $len / 2);
             $secondhalf = array_slice($show_meta_cars, $len / 2);
           foreach($secondhalf as $rows_meta_cars){
           ?>
               <tr>
                 <th scope="row"></th>
-                <td><?php 
+                <td><?php
                   if(($rows_meta_cars['name_o'] !== "<!--:ar-->المواصفات الاضافية<!--:--><!--:en-->Additional Specifications<!--:-->") ){
-                echo language::getLang($rows_meta_cars['name_o']); 
+                echo language::getLang($rows_meta_cars['name_o']);
               }?></td>
                 <td><?php
         if($lib_func->jsonId($rows_meta_cars['option_o'],'type')=='select'){
         $option_id=$_option->get_value_option(array('id'=>$rows_meta_cars['value_m']));
         if(count($option_id) and $option_id){
-          
+
         foreach($option_id as $rowsform): ?>
                 <?php echo ($rows_meta_cars['value_m']==$rowsform['id_v'])?language::getLang($rowsform['value_v']):'';?>
-        <?php endforeach; 
+        <?php endforeach;
           }
           }else{
             if(($rows_meta_cars['name_o'] !== "<!--:ar-->المواصفات الاضافية<!--:--><!--:en-->Additional Specifications<!--:-->") ){
               echo $rows_meta_cars['value_m'];
             }
           }
-        
+
         ?></td>
               </tr>
         <?php  }
         } ?>
-  
-             
+
+
             </tbody>
           </table>
         </div>
@@ -210,26 +210,26 @@ $_SESSION['fromuser'] = $_fromuser;
     </div>
     </section>
 
-     
+
     <section class="other-information">
       <div class="container">
-        <?php 
+        <?php
           if(count($show_meta_cars)>0 && isset($show_meta_cars)){?>
           <?php
             foreach($show_meta_cars as $rows_meta_cars){
-            
+
             if(($rows_meta_cars['name_o'] == "<!--:ar-->المواصفات الاضافية<!--:--><!--:en-->Additional Specifications<!--:-->") ){
-                      
+
           ?>
           <h3><?php echo language::getLang(($rows_meta_cars['name_o']));?></h3>
         <p><?php echo language::getLang(($rows_meta_cars['value_m']));?></p>
           <?php }}?>
-        
-        <?php  
+
+        <?php
         } ?>
     </div>
   </section>
-  
+
 
     <!-- Buyer -->
 
@@ -245,7 +245,7 @@ $_SESSION['fromuser'] = $_fromuser;
         </tr>
         <tr style="display:none">
           <td><?php echo _t(_Methodofcommunication);?>:<?php echo ('&nbsp;');?></td>
-          
+
           <td dir="ltr" class="fbold nums-font"><?php echo  $_carsId['mobile_u'];?></td>
         </tr>
       </tbody>
@@ -265,7 +265,7 @@ $_SESSION['fromuser'] = $_fromuser;
                 <i class="hvr-grow pointer fa fa-lg fa-twitter-square"></i>
                 </a></li>
               <li>
-                
+
                   <a class="details-share-icon" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $_carsId['id_c'];?>" target="_blank">
                     <i class="hvr-grow pointer fa fa-lg fa-linkedin-square">
                     </i>
@@ -284,14 +284,14 @@ $_SESSION['fromuser'] = $_fromuser;
           <hr>
           <td class="main-color" style="text-align: center">
             <?php if(session::get(system::get("session/session_name"))){ ?>
-                    
-                    
+
+
                       <a href="javascript:void(0)" onclick="chatWith('<?=$_user?>')"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
-                    
+
                     <?php }
                       elseif(!session::get(system::get("session/session_name"))) {
                       ?>
-                  
+
                   <button type="button" data-toggle="modal" data-target="#myChatModal" style="border-bottom: 2px solid #ab191a;
                     border-top: 2px solid #ec4b4c;"><i class="fa fa-envelope-o fa-2x" aria-hidden="true" ></i></button>
                   <?php }  ?>
@@ -307,17 +307,17 @@ $_SESSION['fromuser'] = $_fromuser;
                           <div class="modal-body">
                             <ul class="" style="margin: 10px;list-style: none;">
                                 <li>
-                                  <a href="<?php echo $path['urlsite'] ?>users/login"><i class="fa fa-unlock-alt" aria-hidden="true"></i> <?php echo _t(_Login);?></a> 
+                                  <a href="<?php echo $path['urlsite'] ?>users/login"><i class="fa fa-unlock-alt" aria-hidden="true"></i> <?php echo _t(_Login);?></a>
                                 </li>
-                              
-                                
+
+
                             </ul>
                             <ul class="" style="margin: 30px;list-style: none;">
                               <li>
                                   <a href="<?php echo $path['urlsite'] ?>users/register"><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo _t(_Newuser);?></a>
                                 </li>
                             </ul>
-                        
+
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -326,13 +326,13 @@ $_SESSION['fromuser'] = $_fromuser;
 
                       </div>
                     </div>
-            
+
           </td>
         </tr>
       </tbody>
     </table>
     </div>
-    
+
       </div>
     </section>
     <!-- Modal -->
@@ -373,15 +373,14 @@ $_SESSION['fromuser'] = $_fromuser;
 
       <!-- Advertise -->
 
-      
+
       <!-- Scripts -->
       <script src="<?php echo $path['template'];?>lib/js/jquery.nicescroll.min.js"></script>
     <script src="<?php echo $path['template'];?>lib/js/script.js"></script>
-      
-      
+
+
     </body>
   </html>
-      
-     
-     
-      
+
+
+

@@ -75,12 +75,12 @@ $_SESSION['fromuser'] = $_fromuser;
              <?php } ?>
 
              <?php if ($rows_option['code_o']=='plate_number') { ?>
-             <input style="width:45%;margin-right: 300px; margin-top: 20px;" class="detail-plate-input col-lg-6"   type="text" placeholder="<?=_Carplate?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
+             <input style="width:45%" class="detail-plate-input col-lg-6"   type="text" placeholder="<?=_Carplate?>" name="<?php echo $rows_option['code_o']; ?>[0]" value="<?php echo (isset($get[$rows_option['code_o']][0]))?$get[$rows_option['code_o']][0]:'';?>" />
              <?php } ?>
              <?php } ?>
              <?php  if($lib_func->jsonId($rows_option['option_o'],'type')=='select'){ ?>
              <?php if ($rows_option['code_o']=='category') { ?>
-             <select style="width:30%;margin-left:1%;margin-right: 300px; margin-top: 20px;margin-right:1%"   class="custom-select d-block col-lg-4" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Category) ?>" tabindex="1">
+             <select style="width:30%;margin-left:1%;margin-right:1%"   class="custom-select d-block col-lg-4" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Category) ?>" tabindex="1">
                 <option value=""><?php echo _t(_Category) ?></option>
                  <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
 
@@ -91,7 +91,7 @@ $_SESSION['fromuser'] = $_fromuser;
              </select>
     <?php } ?>
     <?php if ($rows_option['code_o']=='symbol') { ?>
-    <select style="width:23%; margin-right: 300px; margin-top: 20px;" class="custom-select d-block col-lg-4" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Symbol) ?>" tabindex="1">
+    <select style="width:23%" class="custom-select d-block col-lg-4" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Symbol) ?>" tabindex="1">
                 <option value=""><?php echo _t(_Symbol) ?></option>
                  <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
 

@@ -303,3 +303,4 @@ define("_Thecompanyprovidedtheservice", "الشركة المقدمة للخدم�
 define('_kilometersconsumed', 'الكليلو متر الحالي');
 define('_InteriorColor', 'اللون الداخلي');
 define('_NoMassege', 'لا يوجد رسائل');
+define('_Lastresults', 'أحدث النتائج');

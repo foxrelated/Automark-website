@@ -18,39 +18,33 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 */
+$developmentMode = false;
+if($developmentMode){
+    define ('DBHOST','localhost');
+    define ('DBUSER','root');
+    define ('DBPASS','root');
+    define ('DBNAME','automark');
+} else{
+    define ('DBHOST','localhost');
+    define ('DBUSER','automark');
+    define ('DBPASS','ABnRjqARFD7NAhWV');
+    define ('DBNAME','automark');
+}
 
-define ('DBPATH','localhost');
-define ('DBUSER','automark');
-define ('DBPASS','ABnRjqARFD7NAhWV');
-define ('DBNAME','automark');
-
-$db_host 		= "104.217.253.15";
-
-$db_user 		= "automark";
-$db_password 	= "ABnRjqARFD7NAhWV";
-//$db_host 		= "localhost";
-//$db_user 		= "root";
-//$db_password 	= "";
-$db_name 		= "automark";
-$db_port 		= "";
 session_start();
 
-//global $gaSql;
-$gaSql ="";
-$gaSql =  mysqli_connect( $db_host, $db_user, $db_password, $db_name) or
-		die( 'Could not open connection to server' );
+$gaSql =  mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
 /* check connection */
-if (mysqli_connect_errno()) {
+if (!$gaSql) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
 }
-//$dbh = mysqli_connect(DBPATH,DBUSER,DBPASS);
-//mysqli_selectdb(DBNAME,$dbh);
 
 if ($_GET['action'] == "chatheartbeat") { chatHeartbeat(); } 
 if ($_GET['action'] == "sendchat") { sendChat(); } 
 if ($_GET['action'] == "closechat") { closeChat(); } 
-if ($_GET['action'] == "startchatsession") { startChatSession(); } 
+if ($_GET['action'] == "startchatsession") { startChatSession(); }
+if ($_GET['action'] == "openchat") { openChat(); }
 
 if (!isset($_SESSION['chatHistory'])) {
 	$_SESSION['chatHistory'] = array();	
@@ -61,39 +55,24 @@ if (!isset($_SESSION['openChatBoxes'])) {
 }
 
 function chatHeartbeat() {
-	$db_host 		= "104.217.253.15";
+    global $gaSql;
+    if($gaSql){
+        $userName = mysqli_real_escape_string($gaSql,$_SESSION['username']);
+        $sql = "select * from chat where (chat.to = '".$userName."' AND recd = 0) order by id ASC";
+        $query = mysqli_query($gaSql,$sql);
+        $items = '';
 
-$db_user 		= "automark";
-$db_password 	= "ABnRjqARFD7NAhWV";
-//$db_host 		= "localhost";
-//$db_user 		= "root";
-//$db_password 	= "";
-$db_name 		= "automark";
-$db_port 		= "";
-	$gaSql ="";
-	$gaSql =  mysqli_connect( $db_host, $db_user, $db_password, $db_name) or
-			die( 'Could not open connection to server' );
-	/* check connection */
-	if (mysqli_connect_errno()) {
-	    printf("Connect failed: %s\n", mysqli_connect_error());
-	    exit();
-	}
-	
-	$sql = "select * from chat where (chat.to = '".mysqli_real_escape_string($gaSql,$_SESSION['username'])."' AND recd = 0) order by id ASC";
-	$query = mysqli_query($gaSql,$sql);
-	$items = '';
+        $chatBoxes = array();
 
-	$chatBoxes = array();
+        while ($chat = mysqli_fetch_array($query)) {
 
-	while ($chat = mysqli_fetch_array($query)) {
+            if (!isset($_SESSION['openChatBoxes'][$chat['from']]) && isset($_SESSION['chatHistory'][$chat['from']])) {
+                $items = $_SESSION['chatHistory'][$chat['from']];
+            }
 
-		if (!isset($_SESSION['openChatBoxes'][$chat['from']]) && isset($_SESSION['chatHistory'][$chat['from']])) {
-			$items = $_SESSION['chatHistory'][$chat['from']];
-		}
+            $chat['message'] = sanitize($chat['message']);
 
-		$chat['message'] = sanitize($chat['message']);
-
-		$items .= <<<EOD
+            $items .= <<<EOD
 					   {
 			"s": "0",
 			"f": "{$chat['from']}",
@@ -101,31 +80,31 @@ $db_port 		= "";
 	   },
 EOD;
 
-	if (!isset($_SESSION['chatHistory'][$chat['from']])) {
-		$_SESSION['chatHistory'][$chat['from']] = '';
-	}
+            if (!isset($_SESSION['chatHistory'][$chat['from']])) {
+                $_SESSION['chatHistory'][$chat['from']] = '';
+            }
 
-	$_SESSION['chatHistory'][$chat['from']] .= <<<EOD
+            $_SESSION['chatHistory'][$chat['from']] .= <<<EOD
 						   {
 			"s": "0",
 			"f": "{$chat['from']}",
 			"m": "{$chat['message']}"
 	   },
 EOD;
-		
-		unset($_SESSION['tsChatBoxes'][$chat['from']]);
-		$_SESSION['openChatBoxes'][$chat['from']] = $chat['sent'];
-	}
 
-	if (!empty($_SESSION['openChatBoxes'])) {
-	foreach ($_SESSION['openChatBoxes'] as $chatbox => $time) {
-		if (!isset($_SESSION['tsChatBoxes'][$chatbox])) {
-			$now = time()-strtotime($time);
-			$time = date('g:iA M dS', strtotime($time));
+            unset($_SESSION['tsChatBoxes'][$chat['from']]);
+            $_SESSION['openChatBoxes'][$chat['from']] = $chat['sent'];
+        }
 
-			$message = "Sent at $time";
-			if ($now > 180) {
-				$items .= <<<EOD
+        if (!empty($_SESSION['openChatBoxes'])) {
+            foreach ($_SESSION['openChatBoxes'] as $chatbox => $time) {
+                if (!isset($_SESSION['tsChatBoxes'][$chatbox])) {
+                    $now = time()-strtotime($time);
+                    $time = date('g:iA M dS', strtotime($time));
+
+                    $message = "Sent at $time";
+                    if ($now > 180) {
+                        $items .= <<<EOD
 {
 "s": "2",
 "f": "$chatbox",
@@ -133,49 +112,47 @@ EOD;
 },
 EOD;
 
-	if (!isset($_SESSION['chatHistory'][$chatbox])) {
-		$_SESSION['chatHistory'][$chatbox] = '';
-	}
+                        if (!isset($_SESSION['chatHistory'][$chatbox])) {
+                            $_SESSION['chatHistory'][$chatbox] = '';
+                        }
 
-	$_SESSION['chatHistory'][$chatbox] .= <<<EOD
+                        $_SESSION['chatHistory'][$chatbox] .= <<<EOD
 		{
 "s": "2",
 "f": "$chatbox",
 "m": "{$message}"
 },
 EOD;
-			$_SESSION['tsChatBoxes'][$chatbox] = 1;
-		}
-		}
-	}
-}
+                        $_SESSION['tsChatBoxes'][$chatbox] = 1;
+                    }
+                }
+            }
+        }
 
-	$sql = "update chat set recd = 1 where chat.to = '".mysqli_real_escape_string($gaSql,$_SESSION['username'])."' and recd = 0";
-	$query = mysqli_query($gaSql,$sql);
+        $sql = "update chat set recd = 1 where chat.to = '".mysqli_real_escape_string($gaSql,$_SESSION['username'])."' and recd = 0";
+        $query = mysqli_query($gaSql,$sql);
 
-	if ($items != '') {
-		$items = substr($items, 0, -1);
-	}
-header('Content-type: application/json');
-?>
-{
-		"items": [
-			<?php echo $items;?>
+        if ($items != '') {
+            $items = substr($items, 0, -1);
+        }
+        header('Content-type: application/json');
+        ?>
+        {
+        "items": [
+        <?php echo $items;?>
         ]
-}
+        }
 
-<?php
-			exit(0);
+        <?php
+        exit(0);
+    }
 }
 
 function chatBoxSession($chatbox) {
-	
 	$items = '';
-	
 	if (isset($_SESSION['chatHistory'][$chatbox])) {
 		$items = $_SESSION['chatHistory'][$chatbox];
 	}
-
 	return $items;
 }
 
@@ -186,7 +163,6 @@ function startChatSession() {
 			$items .= chatBoxSession($chatbox);
 		}
 	}
-
 
 	if ($items != '') {
 		$items = substr($items, 0, -1);
@@ -208,38 +184,21 @@ header('Content-type: application/json');
 }
 
 function sendChat() {
-	
-$db_host 		= "104.217.253.15";
+    global $gaSql;
+    if($gaSql){
+        $from = $_SESSION['username'];
+        $to = $_POST['to'];
+        $message = $_POST['message'];
+        //var_dump($sql);
+        $_SESSION['openChatBoxes'][$_POST['to']] = date('Y-m-d H:i:s', time());
 
-$db_user 		= "automark";
-$db_password 	= "ABnRjqARFD7NAhWV";
-//$db_host 		= "localhost";
-//$db_user 		= "root";
-//$db_password 	= "";
-$db_name 		= "automark";
-$db_port 		= "";
-	$gaSql ="";
-	$gaSql =  mysqli_connect( $db_host, $db_user, $db_password, $db_name) or
-			die( 'Could not open connection to server' );
-	/* check connection */
-	if (mysqli_connect_errno()) {
-	    printf("Connect failed: %s\n", mysqli_connect_error());
-	    exit();
-	}
+        $messagesan = sanitize($message);
 
-	$from = $_SESSION['username'];
-	$to = $_POST['to'];
-	$message = $_POST['message'];
-	//var_dump($sql);
-	$_SESSION['openChatBoxes'][$_POST['to']] = date('Y-m-d H:i:s', time());
-	
-	$messagesan = sanitize($message);
+        if (!isset($_SESSION['chatHistory'][$_POST['to']])) {
+            $_SESSION['chatHistory'][$_POST['to']] = '';
+        }
 
-	if (!isset($_SESSION['chatHistory'][$_POST['to']])) {
-		$_SESSION['chatHistory'][$_POST['to']] = '';
-	}
-
-	$_SESSION['chatHistory'][$_POST['to']] .= <<<EOD
+        $_SESSION['chatHistory'][$_POST['to']] .= <<<EOD
 					   {
 			"s": "1",
 			"f": "{$to}",
@@ -248,19 +207,24 @@ $db_port 		= "";
 EOD;
 
 
-	unset($_SESSION['tsChatBoxes'][$_POST['to']]);
+        unset($_SESSION['tsChatBoxes'][$_POST['to']]);
 
-	$sql = "insert into chat (chat.from,chat.to,message,sent) values ('".mysqli_real_escape_string($gaSql,$from)."', '".mysqli_real_escape_string($gaSql,$to)."','".mysqli_real_escape_string($gaSql,$message)."',NOW())";
-	$query = mysqli_query($gaSql,$sql);
-	//var_dump($gaSql);
-	echo "1";
-	exit(0);
+        $sql = "insert into chat (chat.from,chat.to,message,sent) values ('".mysqli_real_escape_string($gaSql,$from)."', '".mysqli_real_escape_string($gaSql,$to)."','".mysqli_real_escape_string($gaSql,$message)."',NOW())";
+        $query = mysqli_query($gaSql,$sql);
+        //var_dump($gaSql);
+        echo "1";
+        exit(0);
+    }
+}
+
+function openChat() {
+    $_SESSION['openChatBoxes'][$_POST['chatbox']] = date('Y-m-d H:i:s', time());
+    echo "1";
+    exit(0);
 }
 
 function closeChat() {
-
 	unset($_SESSION['openChatBoxes'][$_POST['chatbox']]);
-	
 	echo "1";
 	exit(0);
 }
