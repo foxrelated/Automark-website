@@ -17,8 +17,9 @@ $(document).ready(function() {
   $('#vertical').lightSlider({
     gallery:true,
     item:1,
+    autoWidth:true,
     vertical:true,
-    verticalHeight:650,
+    verticalHeight:618,
     vThumbWidth:225,
     thumbItem:4,
     thumbMargin:4,
