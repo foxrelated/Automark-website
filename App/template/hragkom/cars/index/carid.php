@@ -30,7 +30,18 @@ $_SESSION['fromuser'] = $_fromuser;
         <tbody>
           <tr>
             <th scope="row"></th>
-            <td class="car-section pointer"><?=_Carsforsale?></td>
+            <?php foreach($db_category->getAll() as $rowsCategory){
+          
+
+          ?>
+           <?php if($rowsCategory['id_ss'] == $_carsId['category_c']){
+              
+          ?>
+          <td class="car-section pointer"><?php echo language::getLang($rowsCategory['code_ss']);?> <?php echo ("&nbsp;"); ?><?=_forsale?></td>
+          <?php } ?>
+          <?php } ?>
+            
+            
             <td style="padding-top: 8px;"><i class="fa fa-angle-left"></i></td>
             <td class="type"><?php echo  $_carsId['title_c']; ?></td>
           </tr>
@@ -43,7 +54,7 @@ $_SESSION['fromuser'] = $_fromuser;
     <section class="container car-detail">
       <div style="padding: 0 30px;">
       <div class="car-image-head">
-        <p class="car-type inline"><?php echo  $_carsId['title_c']; ?> | <?=_GCCSpecifications?></p>
+        <p class="car-type inline"><?php echo  $_carsId['title_c']; ?> </p>
         <p class="price inline hvr-bob"><span class="nums-font"><?php echo  $_carsId['price_c']; ?></span> <?php echo _t(_AED);?></p>
         <small class="text-muted nums-font" style="margin-top: 10px;"><?php echo $_carsId['dateadd_c'];?></small>
         <div class="basic-details">
@@ -88,7 +99,7 @@ $_SESSION['fromuser'] = $_fromuser;
       </div>
     </div>
       <div class="car-images">
-        <div class="container">
+        <div style="max-height:551px">
 
         <ul id="vertical">
           <?php if(($lib_func->jsonArray($_carsId['images_c']) != null)) {?>
@@ -106,7 +117,7 @@ $_SESSION['fromuser'] = $_fromuser;
 
         </div>
       </div>
-     
+
       <div class="basic-information">
         <div class="container">
         <h3><?=_Maininformation?> </h3>
