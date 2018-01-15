@@ -88,7 +88,7 @@ $_SESSION['fromuser'] = $_fromuser;
       </div>
     </div>
       <div class="car-images">
-        <div style="max-height:551px">
+        <div class="container">
 
         <ul id="vertical">
           <?php if(($lib_func->jsonArray($_carsId['images_c']) != null)) {?>
@@ -97,7 +97,7 @@ $_SESSION['fromuser'] = $_fromuser;
             ?>
             <li data-thumb="<?php echo $path['thumb'].'thumb_'.$rowsimg; ?>">
 
-                <img class="img-responsive" style="width:100%" src="<?php echo $path['upload'].$rowsimg; ?>" title="" alt="">
+                <img class="img-responsive"  src="<?php echo $path['upload'].$rowsimg; ?>" title="" alt="">
 
             </li>
            <?php  } ?>
@@ -106,6 +106,7 @@ $_SESSION['fromuser'] = $_fromuser;
 
         </div>
       </div>
+     
       <div class="basic-information">
         <div class="container">
         <h3><?=_Maininformation?> </h3>
