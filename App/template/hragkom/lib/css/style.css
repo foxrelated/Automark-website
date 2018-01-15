@@ -1317,7 +1317,7 @@ text-shadow:-1px 1px 0 #940f0f;
 
 /* Grid Style */
 .prod-box{
-	width: 190px; height: 260px;
+	width: 207px; height: 260px;
 	padding: 0px; margin: 10px;
 	background-color: #fff;
 	float: right;
@@ -1326,7 +1326,7 @@ text-shadow:-1px 1px 0 #940f0f;
 .prod-box-list img:first-child{
 	height:170px;
 }
-.prod-box img:first-child, .prod-box-list img:first-child{width: 190px; float: right;}
+.prod-box img:first-child, .prod-box-list img:first-child{width: 100%; float: right;}
 .prod-box h3 a{
 	text-decoration: none;
 	width:140px;
