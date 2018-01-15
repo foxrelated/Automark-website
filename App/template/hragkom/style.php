@@ -269,6 +269,7 @@ $_SESSION['fromuser'] = $_fromuser;
 							<li><a href="<?php echo $path['urlsite'] ?>cars/index/show/ca/3"><?php echo _t(_Phonenumbers);?></a></li>
 							<li><a href="<?php echo $path['urlsite'] ?>cars/index/show/ca/2"><?php echo _t(_Carnumbers);?></a></li>
 							<li><a href="<?php echo $path['urlsite'] ?>cars/index/show/ca/5"><?php echo _t(_Boats);?></a></li>
+							<li><a href="<?php echo $path['urlsite'] ?>cars/index/showrooms"><?php echo _t(_Shows);?></a></li>
 							<li style="margin-top: -15px;margin-right:5px">
 							<a  class="text-center" href="<?php echo $path['urlsite'] ?>cars/mycars/addfreeads"
 							style="color: white; background-color: #db2d2e;">
