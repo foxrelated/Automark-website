@@ -18,11 +18,18 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 */
-
-define ('DBHOST','localhost');
-define ('DBUSER','automark');
-define ('DBPASS','ABnRjqARFD7NAhWV');
-define ('DBNAME','automark');
+$developmentMode = false;
+if($developmentMode){
+    define ('DBHOST','localhost');
+    define ('DBUSER','root');
+    define ('DBPASS','root');
+    define ('DBNAME','automark');
+} else{
+    define ('DBHOST','localhost');
+    define ('DBUSER','automark');
+    define ('DBPASS','ABnRjqARFD7NAhWV');
+    define ('DBNAME','automark');
+}
 
 session_start();
 
@@ -36,7 +43,8 @@ if (!$gaSql) {
 if ($_GET['action'] == "chatheartbeat") { chatHeartbeat(); } 
 if ($_GET['action'] == "sendchat") { sendChat(); } 
 if ($_GET['action'] == "closechat") { closeChat(); } 
-if ($_GET['action'] == "startchatsession") { startChatSession(); } 
+if ($_GET['action'] == "startchatsession") { startChatSession(); }
+if ($_GET['action'] == "openchat") { openChat(); }
 
 if (!isset($_SESSION['chatHistory'])) {
 	$_SESSION['chatHistory'] = array();	
@@ -49,7 +57,8 @@ if (!isset($_SESSION['openChatBoxes'])) {
 function chatHeartbeat() {
     global $gaSql;
     if($gaSql){
-        $sql = "select * from chat where (chat.to = '".mysqli_real_escape_string($gaSql,$_SESSION['username'])."' AND recd = 0) order by id ASC";
+        $userName = mysqli_real_escape_string($gaSql,$_SESSION['username']);
+        $sql = "select * from chat where (chat.to = '".$userName."' AND recd = 0) order by id ASC";
         $query = mysqli_query($gaSql,$sql);
         $items = '';
 
@@ -208,10 +217,14 @@ EOD;
     }
 }
 
-function closeChat() {
+function openChat() {
+    $_SESSION['openChatBoxes'][$_POST['chatbox']] = date('Y-m-d H:i:s', time());
+    echo "1";
+    exit(0);
+}
 
+function closeChat() {
 	unset($_SESSION['openChatBoxes'][$_POST['chatbox']]);
-	
 	echo "1";
 	exit(0);
 }

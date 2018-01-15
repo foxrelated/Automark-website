@@ -32,17 +32,21 @@ var newMessagesWin = new Array();
 var chatBoxes = new Array();
 var APP_URL = "http://104.217.253.15/automark/";
 //var APP_URL = "http://localhost/automark/site/";
+var init = false;
 
 $(document).ready(function(){
-	originalTitle = document.title;
-	startChatSession();
+    if(!init){ // cause sometimes document.ready is init twice.
+        init = true;
+        originalTitle = document.title;
+        startChatSession();
 
-	$([window, document]).blur(function(){
-		windowFocus = false;
-	}).focus(function(){
-		windowFocus = true;
-		document.title = originalTitle;
-	});
+        $([window, document]).blur(function(){
+            windowFocus = false;
+        }).focus(function(){
+            windowFocus = true;
+            document.title = originalTitle;
+        });
+    }
 });
 
 function restructureChatBoxes() {
@@ -63,9 +67,12 @@ function restructureChatBoxes() {
 }
 
 function chatWith(chatuser) {
-	
 	createChatBox(chatuser);
 	$("#chatbox_"+chatuser+" .chatboxtextarea").focus();
+    $.post(APP_URL + "App/template/hragkom/chat.php?action=openchat", { chatbox: chatuser} , function(data){
+        console.log(data);
+        startChatSession();
+    });
 }
 
 function createChatBox(chatboxtitle,minimizeChatBox) {
