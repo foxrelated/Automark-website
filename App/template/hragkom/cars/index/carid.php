@@ -295,49 +295,7 @@ $_SESSION['fromuser'] = $_fromuser;
           <td class="main-color"><button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal"><?php echo _t(_Callnow);?></button></td>
           <hr>
           <td class="main-color" style="text-align: center">
-            <?php if(session::get(system::get("session/session_name"))){ ?>
-
-
-                      <a href="javascript:void(0)" onclick="chatWith('<?=$_user?>')"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
-
-                    <?php }
-                      elseif(!session::get(system::get("session/session_name"))) {
-                      ?>
-
-                  <button type="button" data-toggle="modal" data-target="#myChatModal" style="border-bottom: 2px solid #ab191a;
-                    border-top: 2px solid #ec4b4c;"><i class="fa fa-envelope-o fa-2x" aria-hidden="true" ></i></button>
-                  <?php }  ?>
-                  <div id="myChatModal" class="modal fade" role="dialog">
-                      <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title"></h4>
-                          </div>
-                          <div class="modal-body">
-                            <ul class="" style="margin: 10px;list-style: none;">
-                                <li>
-                                  <a href="<?php echo $path['urlsite'] ?>users/login"><i class="fa fa-unlock-alt" aria-hidden="true"></i> <?php echo _t(_Login);?></a>
-                                </li>
-
-
-                            </ul>
-                            <ul class="" style="margin: 30px;list-style: none;">
-                              <li>
-                                  <a href="<?php echo $path['urlsite'] ?>users/register"><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo _t(_Newuser);?></a>
-                                </li>
-                            </ul>
-
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
+            
 
           </td>
         </tr>

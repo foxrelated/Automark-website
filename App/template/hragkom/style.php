@@ -28,6 +28,8 @@
      <link rel="stylesheet" href="<?php echo $path['urlsite']; ?>Public/css/colorbox.css" />
     <link rel="shortcut icon" href="<?php echo $path['template'];?>img/icone.png" />
     <link rel="icon" type="image/gif" href="<?php echo $path['template'];?>img/icone.png">
+    <link type="text/css" rel="stylesheet" id="arrowchat_css" media="all" href="/automark/arrowchat/external.php?type=css" charset="utf-8" />
+
 	<link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/chat.css"> 
 	 <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/chat.js"></script>
 <style>
@@ -130,6 +132,7 @@
 </head>
 
 <?php
+
 $_SESSION['username'] = $_fromuser; // Must be already set
 $_SESSION['fromuser'] = $_fromuser;
 ?>
@@ -181,40 +184,8 @@ $_SESSION['fromuser'] = $_fromuser;
                                <li><a href="<?php echo $path['urlsite'] ?>cars/mycars/add"><?php echo _t(_Addannouncement);?></a> </li>
                                <li><a href="<?php echo $path['urlsite'] ?>users/"><?php echo _t(_Yourpersonaldata);?></a> </li>
                   			   <li><a href="<?php echo $path['urlsite'] ?>users/login/logout/"><?php echo _t(_Signout);?></a> </li>
-                  			   <li >
-                  			   	<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="background-color: #db2d2e;">
-                                <i class="fa fa-envelope"></i>
-                                <b class="caret"></b>
+                  			   
 
-                                
-                         		</a>
-                         		
-                         		
-                            
-                        		
-                  			   		
-                  			   	<ul class="dropdown-menu" style="">
-                  			   		<?php if(!empty($_chat) || isset($_chat)){?>
-                         		
-                  			   		<p style="background-color: #803131;"><?=_NoMassege?></p>
-                  			   		<?php } else {?>
-                  			   		<?php
-                  			   		
-                  			   foreach ($_chat AS $onechat){
-                  			   	$to = $onechat['to'];
-                  			   ?>
-                  			  <li> <a  href="javascript:void(0)" onclick="javascript:chatWith('<?=$to?>')" style="background-color: #673a3a;"><?=$onechat["to"]?></a>
-                  			  	<hr>
-                  			  </li>
-                  			   	
-							<?php
-                  			   } 
-                  			   ?>
-                            
-                        		</ul>
-                        		<?php } ?>
-							 </li> 
-							  
                       <?php } ?>
                        
                     </ul>
@@ -644,7 +615,8 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
   <script type="text/javascript" src="<?php echo $path['urlsite']; ?>Public/js/crawler.js"></script>
     <script src="<?php echo $path['urlsite'];?>Public/js/upload.js"></script>
     <script src="<?php echo $path['urlsite'];?>Public/js/changeselect.js"></script>
-      
+      <script type="text/javascript" src="/automark/arrowchat/external.php?type=djs" charset="utf-8"></script>
+<script type="text/javascript" src="/automark/arrowchat/external.php?type=js" charset="utf-8"></script>
       
   <script type="text/javascript">
   $(function() {
