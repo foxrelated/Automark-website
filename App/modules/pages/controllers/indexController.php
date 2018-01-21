@@ -131,7 +131,6 @@ $this->_view->assign('_shows',$this->_shows);
             if($this->_input->get('send')==1){
 
       if($this->_token->check($this->_input->get('token'))){
-
           $this->_validate->check($_POST,
           array(
                   'email'=>array(
@@ -189,11 +188,12 @@ $this->_view->assign('_shows',$this->_shows);
                     $valueemail=array(
                         'name'=>$name,
                         'email'=>$email,
-                        'femail'=>'info@mobay3a.com',
+                        'femail'=>'fatherboard1@gmail.com',
                         'title'=>'mobay3a.com',
                         'msg'=>nl2br($msg)
                     );
                          if($this->_func->sendMail($valueemail)){
+
                              $this->_view->assign('_msg',_t("تم الارسال بنجاح"));
                          }else{
                             $this->_view->assign('_msg',_t("حاول مره اخرى"));
