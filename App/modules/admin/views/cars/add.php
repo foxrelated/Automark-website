@@ -106,9 +106,9 @@ if($rows_option['code_o']=='years'){?>
           <div class="controls">
                  <?php $type_text=($lib_func->jsonId($rows_option['option_o'],'addon_star')!='' or $lib_func->jsonId($rows_option['option_o'],'addon_end')!='')?"input-prepend input-append":""; ?>
                 <div class="<?php echo $type_text;?>">
-                <?php echo ($lib_func->jsonId($rows_option['option_o'],'addon_star')!='')?"<span class='add-on'>".$lib_func->jsonId($rows_option['option_o'],'addon_star')."</span>":""; ?>
+                <?php echo ($lib_func->jsonId($rows_option['option_o'],'addon_star')!='')?"<span class='add-on ".$lib_func->jsonId($rows_option['option_o'],'class')."'>".$lib_func->jsonId($rows_option['option_o'],'addon_star')."</span>":""; ?>
                    <input class="span5" name="<?php echo $rows_option['code_o']; ?>" value="<?php echo (isset($get[$rows_option['code_o']]))?$get[$rows_option['code_o']]:'';?>" type="text" />
-                <?php echo ($lib_func->jsonId($rows_option['option_o'],'addon_end')!='')?"<span class='add-on'>".$lib_func->jsonId($rows_option['option_o'],'addon_end')."</span>":""; ?>
+                <?php echo ($lib_func->jsonId($rows_option['option_o'],'addon_end')!='')?"<span class='add-on ".$lib_func->jsonId($rows_option['option_o'],'class')."'>".$lib_func->jsonId($rows_option['option_o'],'addon_end')."</span>":""; ?>
             </div>
    <span class="help-inline"><?php echo isset($error[$rows_option['code_o']])?$error[$rows_option['code_o']]:''; ?> </span>
           </div>

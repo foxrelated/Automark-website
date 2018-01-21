@@ -14,6 +14,21 @@ function changeselect(values,page,sub){
 				}
 			});
 
+    // check the country and change the country code depends on:
+    if(page == 'city'){
+        var $countryCode = $('.country-code');
+        switch(valued) { // valued here is the country id
+            case '1': // Saudi Arabia
+                $countryCode.html('966');
+                break;
+            case '95': // United Arab Emirates
+                $countryCode.html('971');
+                break;
+            case '102': // Oman
+                $countryCode.html('968');
+                break;
+        }
+    }
 
 					return false;
 }
