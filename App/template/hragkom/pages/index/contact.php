@@ -10,6 +10,7 @@
 
 
     <h5 class="title"><?php echo _t(_Filloutthefollowingformandwewillcontactyouassoonaspossible);?></h5>
+        <h5 class="title"><?= isset($_msg) ? $_msg:' ' ?></h5>
 
      <div class="col-sm-8">
 
