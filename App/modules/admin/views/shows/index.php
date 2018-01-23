@@ -21,7 +21,7 @@
                <?php foreach($data_shows->getAll() as $rowsall){?>
                 <tr >
                   <td><span class="badge badge-info"><?php  echo $rowsall['id_s'] ?></span></td>
-                  <td><?php  echo $rowsall['name_s'] ?></td>
+                  <td><?php  echo $rowsall['name_ar_s'] ?></td>
 
                   <td><a href="<?php echo $path['urladmin']  ?>/shows/remove/<?php echo $rowsall['id_s']; ?>">حذف</a>
                   -<a href="<?php echo $path['urladmin']  ?>/shows/edit/<?php echo $rowsall['id_s']; ?>">تعديل</a>

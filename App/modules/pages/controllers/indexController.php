@@ -10,6 +10,9 @@
          $this->_mail=new phpmail;
          $this->_chat=$this->loadModel('newchat','chat');
 $this->_user1=$this->loadModel('users','users');
+ $this->_shows=$this->loadModel("shows",'admin');
+$this->_shows = $this->_shows->getAll();
+$this->_view->assign('_shows',$this->_shows);
    $id_user=session::get(system::get("session/session_name"));
    $user = $this->_user1->findName($id_user,"username");
    $this->_view->assign('_fromuser',$user);
@@ -128,7 +131,6 @@ $this->_user1=$this->loadModel('users','users');
             if($this->_input->get('send')==1){
 
       if($this->_token->check($this->_input->get('token'))){
-
           $this->_validate->check($_POST,
           array(
                   'email'=>array(
@@ -186,11 +188,12 @@ $this->_user1=$this->loadModel('users','users');
                     $valueemail=array(
                         'name'=>$name,
                         'email'=>$email,
-                        'femail'=>'info@mobay3a.com',
+                        'femail'=>'fatherboard1@gmail.com',
                         'title'=>'mobay3a.com',
                         'msg'=>nl2br($msg)
                     );
                          if($this->_func->sendMail($valueemail)){
+
                              $this->_view->assign('_msg',_t("تم الارسال بنجاح"));
                          }else{
                             $this->_view->assign('_msg',_t("حاول مره اخرى"));

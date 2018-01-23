@@ -30,7 +30,18 @@ $_SESSION['fromuser'] = $_fromuser;
         <tbody>
           <tr>
             <th scope="row"></th>
-            <td class="car-section pointer"><?=_Carsforsale?></td>
+            <?php foreach($db_category->getAll() as $rowsCategory){
+          
+
+          ?>
+           <?php if($rowsCategory['id_ss'] == $_carsId['category_c']){
+              
+          ?>
+          <td class="car-section pointer"><?php echo language::getLang($rowsCategory['code_ss']);?> <?php echo ("&nbsp;"); ?><?=_forsale?></td>
+          <?php } ?>
+          <?php } ?>
+            
+            
             <td style="padding-top: 8px;"><i class="fa fa-angle-left"></i></td>
             <td class="type"><?php echo  $_carsId['title_c']; ?></td>
           </tr>
@@ -43,7 +54,7 @@ $_SESSION['fromuser'] = $_fromuser;
     <section class="container car-detail">
       <div style="padding: 0 30px;">
       <div class="car-image-head">
-        <p class="car-type inline"><?php echo  $_carsId['title_c']; ?> | <?=_GCCSpecifications?></p>
+        <p class="car-type inline"><?php echo  $_carsId['title_c']; ?> </p>
         <p class="price inline hvr-bob"><span class="nums-font"><?php echo  $_carsId['price_c']; ?></span> <?php echo _t(_AED);?></p>
         <small class="text-muted nums-font" style="margin-top: 10px;"><?php echo $_carsId['dateadd_c'];?></small>
         <div class="basic-details">
@@ -97,7 +108,7 @@ $_SESSION['fromuser'] = $_fromuser;
             ?>
             <li data-thumb="<?php echo $path['thumb'].'thumb_'.$rowsimg; ?>">
 
-                <img class="img-responsive" style="width:100%" src="<?php echo $path['upload'].$rowsimg; ?>" title="" alt="">
+                <img class="img-responsive"  src="<?php echo $path['upload'].$rowsimg; ?>" title="" alt="">
 
             </li>
            <?php  } ?>
@@ -106,6 +117,7 @@ $_SESSION['fromuser'] = $_fromuser;
 
         </div>
       </div>
+
       <div class="basic-information">
         <div class="container">
         <h3><?=_Maininformation?> </h3>
@@ -283,49 +295,7 @@ $_SESSION['fromuser'] = $_fromuser;
           <td class="main-color"><button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal"><?php echo _t(_Callnow);?></button></td>
           <hr>
           <td class="main-color" style="text-align: center">
-            <?php if(session::get(system::get("session/session_name"))){ ?>
-
-
-                      <a href="javascript:void(0)" onclick="chatWith('<?=$_user?>')"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
-
-                    <?php }
-                      elseif(!session::get(system::get("session/session_name"))) {
-                      ?>
-
-                  <button type="button" data-toggle="modal" data-target="#myChatModal" style="border-bottom: 2px solid #ab191a;
-                    border-top: 2px solid #ec4b4c;"><i class="fa fa-envelope-o fa-2x" aria-hidden="true" ></i></button>
-                  <?php }  ?>
-                  <div id="myChatModal" class="modal fade" role="dialog">
-                      <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title"></h4>
-                          </div>
-                          <div class="modal-body">
-                            <ul class="" style="margin: 10px;list-style: none;">
-                                <li>
-                                  <a href="<?php echo $path['urlsite'] ?>users/login"><i class="fa fa-unlock-alt" aria-hidden="true"></i> <?php echo _t(_Login);?></a>
-                                </li>
-
-
-                            </ul>
-                            <ul class="" style="margin: 30px;list-style: none;">
-                              <li>
-                                  <a href="<?php echo $path['urlsite'] ?>users/register"><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo _t(_Newuser);?></a>
-                                </li>
-                            </ul>
-
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
+            
 
           </td>
         </tr>

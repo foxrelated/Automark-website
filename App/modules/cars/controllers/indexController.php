@@ -208,6 +208,29 @@ $validate['email']=array(
           $this->_view->tmpDir('showsid');
     }
 
+     public function showrooms($num=''){
+      $this->_view->assign('_cardSort','adv');    
+      
+       $this->_view->assign('_codePage', "showrooms");
+      $countPag=10;
+       $count=count($this->_cars->getlimit('shows','','desc','on'));
+       $num=(isset($num) and $num!='' and  is_numeric($num))?(int)$num:1;
+        $countNumPage=ceil($count/$countPag)+1;
+         if($num<$countNumPage){
+            $limitNext=($num-1)*$countPag;
+         }else{
+          $limitNext=0;
+         }
+      $limit=array('limit_start'=>$limitNext,'limit_end'=>$countPag);
+      
+      $listPage=array('list'=>$num,'count'=>$countNumPage);
+      $this->_view->assign('numPage', $listPage);
+    $datashows =  $this->_cars->getlimit('shows',$limit,'desc','on');
+    $this->_view->assign('_showrooms',$datashows);
+    $this->_view->sider('sider');
+    $this->_view->tmpDir('showrooms');
+    }
+
     public function showsidfilter($id='',$num=''){
     $this->_view->assign('_cardSort','adv');
     //var_dump($id);

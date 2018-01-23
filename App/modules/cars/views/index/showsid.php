@@ -73,7 +73,8 @@ $_SESSION['fromuser'] = $_fromuser;
                 <ul class="list-unstyled text-center">
                   <li>
                     <?php if(session::get(system::get("session/session_name"))){ ?>
-                  	<a href="javascript:void(0)" onclick="chatWith('<?=$_user?>')"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
+                  	
+                    
                     <?php }
                       elseif(!session::get(system::get("session/session_name"))) {
                       ?>
