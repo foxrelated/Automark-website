@@ -1317,7 +1317,7 @@ text-shadow:-1px 1px 0 #940f0f;
 
 /* Grid Style */
 .prod-box{
-	width: 207px; height: 260px;
+	width: 202px; height: 260px;
 	padding: 0px; margin: 10px;
 	background-color: #fff;
 	float: right;
@@ -1533,6 +1533,10 @@ text-shadow:-1px 1px 0 #940f0f;
 	color:#bbb;
 }
 
+/* overrides */
 .lSSlideWrapper img {
 	width:100%;
+}
+.navbar-default .navbar-nav>.active>a {
+	background:transparent;
 }

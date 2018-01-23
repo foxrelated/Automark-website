@@ -456,7 +456,7 @@ $_SESSION['fromuser'] = $_fromuser;
 					</div>
 					<div class="col-sm-3 col-xs-6">
 						 <div class="form-group">
-		                          <button   name="general" class="btn btn-default btn_input_search_style" /><i class="fa fa-search" aria-hidden="true" style="position: static; height: 25px; font-size: 30px;"></i></button>
+		                          <button   name="general" class="btn btn-default btn_input_search_style" /><i class="fa fa-search" aria-hidden="true" style="position: static; font-size: 16px;"></i></button>
 		                          <input type="hidden" name="generalsearch" value="1" />
 		                </div>
 					</div>

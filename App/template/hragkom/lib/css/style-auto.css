@@ -295,8 +295,17 @@ select {
 }
 .info .my-class .my-info .divrgent
 {
-	margin-top: -150px;
+	margin-top: -177px;
 }
+
+.info .my-class .my-info .divrgent img {
+	margin-top: 5px;
+    width: 167px;
+    height: 167px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+
 .info .my-class .my-info img
 {
 	margin-top:20px;
