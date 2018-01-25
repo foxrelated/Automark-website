@@ -20,7 +20,6 @@
            $register->_acl=new acl();
 
         App::Run($register->_request);
-
        }catch(Exception $e){
               echo $e->getMessage();
         }

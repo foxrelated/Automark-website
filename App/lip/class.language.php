@@ -53,7 +53,6 @@ public static function qtrans_en($lang){
 			$arr .= "<!--:$key-->".$value."<!--:-->";
             }
 		}
-        var_dump($arr);
 		return $arr;
 }
 public static function getLang($text,$lang=''){

@@ -1,11 +1,8 @@
 <?php
+ini_set('display_errors', 0);
 $uri = rtrim( dirname($_SERVER["SCRIPT_NAME"]), '/' );
 $uri = '/' . trim( str_replace( $uri, '', $_SERVER['REQUEST_URI'] ), '/' );
  $uri = urldecode( $uri );
-
- 
-
-ini_set('display_errors', 1);
 
 define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', realpath(dirname(__FILE__)) . DS);

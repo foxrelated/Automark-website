@@ -10,7 +10,6 @@ class App{
               $params= $p->getParams();
 
                   if($modul){
-
                             $path_controller=APP_PATH.'modules'.DS.$modul.DS.'controllers'.DS.$controller.'.php';
                       if(!is_readable($path_controller)){
                             $path_controller=null;
@@ -19,6 +18,8 @@ class App{
                    } else{
                               $path_controller=APP_PATH.'controllers'.DS.$controller.'.php';
                    }
+
+         echo $path_controller;
 
                    if(is_readable($path_controller)){
                          require_once $path_controller;

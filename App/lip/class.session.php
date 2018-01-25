@@ -32,7 +32,6 @@
 
     }
     public static function redir($location=''){
-      var_dump($location);
       if($location){
             if(is_numeric($location)){
 

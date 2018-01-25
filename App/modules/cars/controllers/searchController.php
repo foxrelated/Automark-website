@@ -133,7 +133,6 @@ $this->_user1=$this->loadModel('users','users');
     }
  public function id(){
         $id=(int)$this->_input->get('id');
-    var_dump($id);die;
         
         if($this->_cars->getId($id,'on')== true and $id!=''){
             session::redir("cars/index/id/".$id);
