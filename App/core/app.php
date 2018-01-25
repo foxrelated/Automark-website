@@ -19,8 +19,6 @@ class App{
                               $path_controller=APP_PATH.'controllers'.DS.$controller.'.php';
                    }
 
-         echo $path_controller;
-
                    if(is_readable($path_controller)){
                          require_once $path_controller;
                           $controller = new $controller;
