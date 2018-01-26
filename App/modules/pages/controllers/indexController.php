@@ -188,7 +188,7 @@ $this->_view->assign('_shows',$this->_shows);
                     $valueemail=array(
                         'name'=>$name,
                         'email'=>$email,
-                        'femail'=>'fatherboard1@gmail.com',
+                        'femail'=>'samer.shatta@gmail.com',
                         'title'=>'mobay3a.com',
                         'msg'=>nl2br($msg)
                     );
