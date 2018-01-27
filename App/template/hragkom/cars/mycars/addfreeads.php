@@ -146,7 +146,12 @@ $_SESSION['fromuser'] = $_fromuser;
       </div>
     </section>
 
-    <div class="car-images">
+    <!--
+    hide this section for :
+    $_id=2: car plates
+    $_id=3: mobile numbers
+     -->
+    <div class="car-images" <?= ($_id==2 || $_id==3) ? "style='display: none;'":"" ?>>
         <div class="container">
             <ul id="vertical" class="list-unstyled">
               
