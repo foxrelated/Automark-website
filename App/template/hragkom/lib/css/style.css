@@ -248,7 +248,7 @@ nav .search-top-menu .po{
     font-weight: 100;
 }
 .bg_box_search_index .form-control{
-	background-color: transparent;
+/* 	background-color: transparent; */
 }
 .btn_input_search_style{
 	width:100%;
@@ -1317,7 +1317,7 @@ text-shadow:-1px 1px 0 #940f0f;
 
 /* Grid Style */
 .prod-box{
-	width: 202px; height: 260px;
+	width: 207px; height: 260px;
 	padding: 0px; margin: 10px;
 	background-color: #fff;
 	float: right;
@@ -1539,4 +1539,12 @@ text-shadow:-1px 1px 0 #940f0f;
 }
 .navbar-default .navbar-nav>.active>a {
 	background:transparent;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: transparent;
+}
+
+.form-control{
+    background-color: transparent;
 }
