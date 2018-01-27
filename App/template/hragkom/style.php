@@ -181,7 +181,7 @@ $_SESSION['fromuser'] = $_fromuser;
                         <li><a href="<?php echo $path['urlsite'] ?>users/register"><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo _t(_Newuser);?></a></li>
                         <?php }else{ ?>
                                <li><a href="<?php echo $path['urlsite'] ?>cars/mycars/"><?php echo _t(_Managemyads);?> </a> </li>
-                               <li><a href="<?php echo $path['urlsite'] ?>cars/mycars/add"><?php echo _t(_Addannouncement);?></a> </li>
+                               <li><a href="<?php echo $path['urlsite'] ?>cars/mycars/addfreeads"><?php echo _t(_Addannouncement);?></a> </li>
                                <li><a href="<?php echo $path['urlsite'] ?>users/"><?php echo _t(_Yourpersonaldata);?></a> </li>
                   			   <li><a href="<?php echo $path['urlsite'] ?>users/login/logout/"><?php echo _t(_Signout);?></a> </li>
                   			   
