@@ -10,7 +10,8 @@ function changeselect(values,page,sub){
 				data : "v="+valued,
 				success: function(response){
 					$(sub).html(response);
-					$(sub).select('');
+                    $(sub).selectpicker('refresh');
+					//$(sub).select('');
 				}
 			});
 
