@@ -139,7 +139,7 @@ $this->_user1=$this->loadModel('users','users');
                             او نسخ الرابط التالى  <br>
                             ".system::_data("url_site")."users/register/act/".$last_id."/".$urlactive;
                     $valueemail=array(
-                        'name'=>$name,
+                        'name'=>'Automark',//$name,
                         'email'=>system::_data("email_admin"),
                         'femail'=>$email,
                         'title'=>system::_data("title_site"),

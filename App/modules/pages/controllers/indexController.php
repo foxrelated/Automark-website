@@ -188,8 +188,8 @@ $this->_view->assign('_shows',$this->_shows);
                     $valueemail=array(
                         'name'=>$name,
                         'email'=>$email,
-                        'femail'=>'samer.shatta@gmail.com',
-                        'title'=>'mobay3a.com',
+                        'femail'=>system::_data("email_admin"),
+                        'title'=>$title,
                         'msg'=>nl2br($msg)
                     );
                          if($this->_func->sendMail($valueemail)){
