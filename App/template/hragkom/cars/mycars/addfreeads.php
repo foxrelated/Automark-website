@@ -126,7 +126,8 @@ $_SESSION['fromuser'] = $_fromuser;
 </section>
 
   <!-- Car Details -->
-    <section class="car-detail" dir="<?php echo $_dir; ?>">
+    <!-- hide this section when category is sell mobile number (id=3) -->
+    <section class="car-detail" dir="<?php echo $_dir; ?>"<?= $_id==3 ? "style='display: none;'":"" ?>>
       <div class="container">
         <div class="car-image-head">
           <p class="car-type inline"><?=_AddAdTitle40characters?></p>
