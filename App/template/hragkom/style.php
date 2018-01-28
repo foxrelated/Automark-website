@@ -532,7 +532,7 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
 <div class="bg-top-header">
 	<div class="container style_mail_box">
 			<div class="row">
-				<div class="col-sm-8">
+				<div style="visibility:collapse" class="col-sm-8">
 					<h4><?=_Subscribetoourmailinglist?></h4>
 					<div class="form-group  col-sm-9 has-feedback">
 							<input  class="form-control"  placeholder="<?=_Enteryouremailaddresshere?>"  />

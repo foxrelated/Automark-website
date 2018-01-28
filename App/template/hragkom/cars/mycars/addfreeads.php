@@ -103,7 +103,7 @@ $_SESSION['fromuser'] = $_fromuser;
     <?php } ?>
     
      <?php if ($rows_option['code_o']=='the_company_provided_the_service') { ?>
-    <select style="width:49%" class="custom-select d-block col-lg-4" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Thecompanyprovidedtheservice) ?>" tabindex="1">
+    <select class="custom-select d-block col-lg-12" name="<?php echo $rows_option['code_o']; ?>" data-placeholder="<?php echo _t(_Thecompanyprovidedtheservice) ?>" tabindex="1">
                 <option value=""><?php echo _t(_Thecompanyprovidedtheservice) ?></option>
                  <?php foreach($_option->get_value_option(array('option_id'=>$rows_option['id_o'])) as $rowsform):
 
