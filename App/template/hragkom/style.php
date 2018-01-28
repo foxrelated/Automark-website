@@ -433,6 +433,7 @@ $_SESSION['fromuser'] = $_fromuser;
 		                </div>
 					</div>
 				</div>
+				<div style="clear:both"></div>
 				</div>
 				</form>
 			</div>
@@ -531,7 +532,7 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
 <div class="bg-top-header">
 	<div class="container style_mail_box">
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-sm-8" style="visibility:collapce">
 					<h4><?=_Subscribetoourmailinglist?></h4>
 					<div class="form-group  col-sm-9 has-feedback">
 							<input  class="form-control"  placeholder="<?=_Enteryouremailaddresshere?>"  />
