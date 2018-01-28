@@ -434,6 +434,7 @@ $_SESSION['fromuser'] = $_fromuser;
 					</div>
 				</div>
 				</div>
+				<div style="clear:both"/>
 				</form>
 			</div>
 		</div>

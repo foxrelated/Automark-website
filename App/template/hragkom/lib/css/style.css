@@ -1416,12 +1416,11 @@ text-shadow:-1px 1px 0 #940f0f;
 	color: #f1f1f1;
 }
 .prod-box .buy-ico{
-	border-radius: 20px;
 	width: 35px; height: 35px;
 	float: right;
 	margin: 5px;
 	cursor: pointer;
-	background: #039fd3 url(img/bag-ico.png) 50%  no-repeat;
+	background: url(img/bag-ico.png) 50%  no-repeat;
 	-webkit-transition:background-color 0.3s ease-in;  
    	-moz-transition:background-color 0.3s ease-in;  
    	-o-transition:background-color 0.3s ease-in;  
@@ -1545,6 +1544,6 @@ text-shadow:-1px 1px 0 #940f0f;
     background-color: transparent;
 }
 
-.form-control{
-    background-color: transparent;
+.form-group .bootstrap-select.btn-group {
+	background: transparent;
 }
