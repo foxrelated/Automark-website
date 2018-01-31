@@ -18,6 +18,51 @@
         $this->_view->tmpDir('index');
 
     }
+
+      public function sendpasslink($id){
+          //$users = $this->_users->getAll();
+          $this->_users->find($id);
+          $user = $this->_users->resulte();
+          if($user) {
+              $name = $user['name_u'] . ' ' . $user['lastname_u'];
+              $username = $user['username'];
+              $email = $user['email_u'];;
+              $title = _t("طريقة استرجاع الباسورد");
+              $urlactive = $this->_hash->unique();
+              $msg = "لسترجاع  الحساب يرجى زيارة الرابط التالى <br>
+                           <a href='" . system::_data("url_site") . "users/login/newpass/" . $username . "/" . $urlactive . "'>الرابط التالى  </a>
+                            <br>
+                            او نسخ الرابط التالى  <br>
+                            " . system::_data("url_site") . "users/login/newpass/" . $username . "/" . $urlactive;
+              $valueemail = array(
+                  'name' => $name,
+                  'email' => 'info@automark.com',
+                  'femail' => $email,
+                  'title' => "Automark.com ",
+                  'msg' => nl2br($msg)
+              );
+
+
+              $value_active = array(
+                  'user' => $username,
+                  'code' => $urlactive,
+                  'type' => 'repass',
+                  'timeend' => time(),
+              );
+              if ($this->_users->insert_active($value_active)) {
+                  if ($this->_func->sendMail($valueemail)) {
+                      echo 'reset password email sent sucessfully';
+                  }
+              } else {
+                  echo 'failed to send the reset pass email';
+              }
+          }
+          else
+          {
+              echo "user not found";
+          }
+      }
+
      public function edit($id){
          $this->_view->assign('_sub','تعديل بيانات  العضو');
          $this->_users->find($id);

@@ -121,9 +121,9 @@ $this->_user1=$this->loadModel('users','users');
                             ".system::_data("url_site")."users/login/newpass/".$username."/".$urlactive;
                     $valueemail=array(
                         'name'=>$name,
-                        'email'=>'info@mobay3a.com',
+                        'email'=>'info@automark.com',
                         'femail'=>$email,
-                        'title'=>"Mobaya.com ",
+                        'title'=>"Automark.com ",
                         'msg'=>nl2br($msg)
                     );
 
