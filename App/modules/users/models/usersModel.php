@@ -64,7 +64,8 @@
     $nameuser=is_numeric($id)?'id_u':'username';
      $id= $this->_db->real_escape_string($id);
 
-    $query=$this->_db->query("select * from users where $nameuser = '$id'");
+      $queryString = "select * from users where $nameuser = '$id'";
+    $query=$this->_db->query($queryString);
 
     if($query){
       $this->_resulte= $query->fetch_assoc();
@@ -270,6 +271,21 @@
   public function resulte(){
      return $this->_resulte;
   }
+
+      public function getBetween($from_id,$to_id){
+
+          $query=$this->_db->query("select * from users where id_u >= $from_id and id_u < $to_id");
+          $arr=array();
+          if($query){
+
+              while($rows=$query->fetch_assoc()){
+                  $arr[]=$rows;
+
+              }
+          }
+          return $arr;
+      }
+
      public function remove($id){
        $mysql=$this->_db->prepare("delete from users where id_u= ?");
        $mysql->bind_param("i",$id);

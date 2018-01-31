@@ -120,7 +120,7 @@ $this->_user1=$this->loadModel('users','users');
                             او نسخ الرابط التالى  <br>
                             ".system::_data("url_site")."users/login/newpass/".$username."/".$urlactive;
                     $valueemail=array(
-                        'name'=>$name,
+                        'name'=>'AutoMark',
                         'email'=>'info@automark.com',
                         'femail'=>$email,
                         'title'=>"Automark.com ",

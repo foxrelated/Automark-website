@@ -19,11 +19,12 @@
 
     }
 
-      public function sendpasslink($id){
+      public function sendpasslink($from_id,$to_id){
           //$users = $this->_users->getAll();
-          $this->_users->find($id);
-          $user = $this->_users->resulte();
-          if($user) {
+          $number_of_reset_pass_requests = 0;
+          $users = $this->_users->getBetween($from_id,$to_id);
+          foreach($users as $user)
+          {
               $name = $user['name_u'] . ' ' . $user['lastname_u'];
               $username = $user['username'];
               $email = $user['email_u'];;
@@ -35,7 +36,7 @@
                             او نسخ الرابط التالى  <br>
                             " . system::_data("url_site") . "users/login/newpass/" . $username . "/" . $urlactive;
               $valueemail = array(
-                  'name' => $name,
+                  'name' => 'AutoMark',
                   'email' => 'info@automark.com',
                   'femail' => $email,
                   'title' => "Automark.com ",
@@ -51,16 +52,14 @@
               );
               if ($this->_users->insert_active($value_active)) {
                   if ($this->_func->sendMail($valueemail)) {
-                      echo 'reset password email sent sucessfully';
+                      //echo 'reset password email sent sucessfully';
+                      $number_of_reset_pass_requests += 1;
                   }
               } else {
                   echo 'failed to send the reset pass email';
               }
           }
-          else
-          {
-              echo "user not found";
-          }
+          echo '<br/> sent reset pass: '.$number_of_reset_pass_requests;
       }
 
      public function edit($id){
