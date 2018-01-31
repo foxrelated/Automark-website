@@ -78,7 +78,9 @@ $_SESSION['fromuser'] = $_fromuser;
           <?php } ?>
           <!-- Gallary Section -->
 
-          <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+        </div>
+        
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
             
             <nav aria-label="Page navigation">
               <ul class="pagination">
@@ -99,8 +101,7 @@ $_SESSION['fromuser'] = $_fromuser;
 
             </nav>
           </div>
-
-        </div>
+          
       </div>
     </section>
 
