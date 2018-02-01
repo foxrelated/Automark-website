@@ -110,7 +110,6 @@
     $query=$this->_db->query("select * from users");
       $arr=array();
     if($query){
-
       while($rows=$query->fetch_assoc()){
         $arr[]=$rows;
 
@@ -149,6 +148,24 @@
           return false;
 
   }
+
+      public function updateUserPassword($value=array()){
+          $this->_query=$this->_db->prepare("update users set
+                         password   = ? ,
+                         salt_u    = ?
+                     where id_u     = ?
+              ");
+          $this->_query->bind_param("ssi",
+              $value['password'],
+              $value['salt'],
+              $value['id']
+          );
+          if($this->_query->execute())
+              return true;
+          else
+              return false;
+      }
+
    public function edit($value=array()){
         $this->_query=$this->_db->prepare("update  users set
                          name_u     = ? ,

@@ -41,12 +41,23 @@ $this->_user1=$this->loadModel('users','users');
 
               $remember=($this->_input->get("remember") == 'on')?true:false;
               $resulte=$this->_validate->resulte();
+                if($resulte['password'] == ''){
+                    // first time to login, so we have to save his password
+                    $salt = $this->_hash->salt('32');
+                    $password = $this->_hash->make($this->_input->get('password'),$salt);
+                    $resulte['salt_u'] = $salt;
+                    $resulte['password'] = $password;
+                    $userArr = array(
+                        'password' => $resulte['password'],
+                        'salt' => $resulte['salt_u'],
+                        'id' => $resulte['id_u']);
+                    $updatePasswordResult = $this->_user1->updateUserPassword($userArr);
+                }
               $salt=$resulte['salt_u'];
               $password=$this->_hash->make($this->_input->get('password'),$salt);
               $username=$this->_securty->tities($this->_input->get('username'));
 // and $username==$resulte['username'];
                if($password == $resulte['password']){
-
                    if($remember==true){
                         $hash=$this->_hash->unique();
                         $hashcheck=$this->_model->session_user($resulte['id_u']);

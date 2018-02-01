@@ -48,7 +48,6 @@
       $this->_view->tmpDir('index','index',array('tmp'=>true));
     }
     public function id($id){
-      //var_dump($id);
 		$id=(int)$id;
 		$data_id=$this->_cars->getId($id,'on');
   	if(!count($data_id)){
