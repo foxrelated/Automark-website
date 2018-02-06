@@ -134,7 +134,7 @@ $this->_user1=$this->loadModel('users','users');
             }
            }
 
-        
+
         if(session::get(system::get("session/session_name"))){
 				$this->_view->assign('_id',(int)$id);
 			  	$this->_view->assign('data_category',$date_category);
