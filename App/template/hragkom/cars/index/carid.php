@@ -331,7 +331,7 @@ $_SESSION['fromuser'] = $_fromuser;
         <div class="container">
           <h2><?=_RelatedAds?></h2>
           <?php foreach($_lastcarsId as $rowscars){  ?>
-          <div class="rel col-md-3 col-xs-3 hvr-float-shadow">
+          <div class="rel col-md-3 col-xs-12 hvr-float-shadow">
             <a style="display:block;height:100%" href="<?php echo $path['urlsite'] ?>cars/index/id/<?php echo $rowscars['id_c'];?>">
             <img src="<?php echo $path['upload'].$lib_func->jsonId($rowscars['images_c'],0); ?>" class="img-thumbnail"/>
             <div class="rel-title nums-font"><?php echo $rowscars['title_c'];?></div>
