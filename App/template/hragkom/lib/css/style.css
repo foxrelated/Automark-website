@@ -1326,7 +1326,7 @@ text-shadow:-1px 1px 0 #940f0f;
 .prod-box-list img:first-child{
 	height:170px;
 }
-.prod-box img:first-child, .prod-box-list img:first-child{width: 100%; float: right;}
+.prod-box img:first-child, .prod-box-list img:first-child{width: 100%; float: right;object-fit: cover}
 .prod-box h3 a{
 	text-decoration: none;
 	width:140px;

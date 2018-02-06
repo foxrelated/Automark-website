@@ -66,12 +66,16 @@ body {
 
 .head-bar table {
   line-height: 50px;
-  width: 30%
+  width: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 5px;
 }
 
 .head-bar .table td {
     line-height: none !important;
-    text-align: center
+    text-align: center;
+    padding-left: 15px;
   }
 
   @media (max-width: 990px) {
@@ -776,8 +780,12 @@ body {
 
 .all-details td {
   color: #b4b4b4;
-  font-size: 25px;
+  font-size: 18px;
   margin: 0
+}
+
+.all-details tr td:nth-child(2){
+color:white;
 }
 
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
@@ -1007,7 +1015,7 @@ body {
 }
 
 .other-information h3 {
-  font-size: 38px;
+  font-size: 35px;
   margin-bottom:25px;
   padding-top: 40px;
   padding-bottom: 10px
@@ -1015,7 +1023,8 @@ body {
 
 .other-information p {
   font-size: 25px;
-  padding: 0
+  padding: 0;
+  line-height: 40px;
 }
 
 @media (max-width: 990px) {

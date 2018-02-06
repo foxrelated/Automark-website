@@ -224,7 +224,7 @@ $_SESSION['fromuser'] = $_fromuser;
 
 
     <section class="other-information">
-      <div class="container">
+      <div class="">
         <?php
           if(count($show_meta_cars)>0 && isset($show_meta_cars)){?>
           <?php
