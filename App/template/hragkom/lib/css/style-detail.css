@@ -80,52 +80,43 @@ body {
 
   @media (max-width: 990px) {
     .head-bar {
-      height: 50px;
       font-size: 15px;
     }
     .head-bar table {
       line-height: 40px;
-      width: 50%
     }
   }
 
   @media (max-width: 768px) {
     .head-bar {
-      height: 50px;
       font-size: 15px;
     }
     .head-bar table {
       line-height: 40px;
-      width: 70%
     }
   }
 
   @media (max-width: 543px) {
     .head-bar {
-      height: 40px;
       font-size: 13px;
     }
     .head-bar table {
       line-height: 30px;
-      width: 70%
     }
   }
 
   @media (max-width: 475px) {
     .head-bar {
-      height: 40px;
       font-size: 10px;
     }
   }
 
   @media (max-width: 350px) {
     .head-bar {
-      height: 40px;
       font-size: 9px;
     }
     .head-bar table {
       line-height: 30px;
-      width: 100%
     }
   }
 
@@ -1219,7 +1210,6 @@ color:white;
   .buyer .table > tbody > tr > th,
     .table > tfoot > tr > th,
      .table > thead > tr > td,
-      .table > tbody > tr > td,
        .table > tfoot > tr > td {
       width: 100px;
   }
@@ -1246,10 +1236,9 @@ color:white;
   }
   .buyer.table > thead > tr > th,
   .buyer .table > tbody > tr > th,
-    .table > tfoot > tr > th,
-     .table > thead > tr > td,
-      .table > tbody > tr > td,
-       .table > tfoot > tr > td {
+  .table > tfoot > tr > th,
+  .table > thead > tr > td,
+  .table > tfoot > tr > td {
       width: 100px;
   }
 }
@@ -1345,7 +1334,6 @@ color:white;
   position: relative;
   padding: 0;
   margin: 0 10px;
-  width: 23%
 }
 
 .rel-title {
@@ -1435,7 +1423,7 @@ color:white;
 
 @media (max-width: 543px) {
   .rel {
-    width: 21%
+
   }
 }
 

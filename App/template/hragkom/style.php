@@ -514,7 +514,7 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
 <div class="paddingTop container">
 		<div class="row">
 			<?php foreach ($_shows as $show) {?>
-			<div class="col-sm-2">
+			<div class="col-sm-2 col-xs-4">
 				<a style="display:block;height:100%" href="<?php echo $path['urlsite'] ?>cars/index/showsid/<?php echo $show['id_s'];?>">
 				<img class="img-responsive" src="<?php echo $path['thumb'];?>thumb_<?php echo $show['images_s'] ?>" /></a>
 			</div>
@@ -532,7 +532,7 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
 <div class="bg-top-header">
 	<div class="container style_mail_box">
 			<div class="row">
-				<div class="col-sm-8" style="visibility:collapce">
+				<div class="col-sm-8 hidden-xs" style="visibility:collapse">
 					<h4><?=_Subscribetoourmailinglist?></h4>
 					<div class="form-group  col-sm-9 has-feedback">
 							<input  class="form-control"  placeholder="<?=_Enteryouremailaddresshere?>"  />
