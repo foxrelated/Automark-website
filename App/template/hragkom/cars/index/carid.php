@@ -31,17 +31,17 @@ $_SESSION['fromuser'] = $_fromuser;
           <tr>
             <th scope="row"></th>
             <?php foreach($db_category->getAll() as $rowsCategory){
-          
+
 
           ?>
            <?php if($rowsCategory['id_ss'] == $_carsId['category_c']){
-              
+
           ?>
           <td class="car-section pointer"><?php echo language::getLang($rowsCategory['code_ss']);?> <?php echo ("&nbsp;"); ?><?=_forsale?></td>
           <?php } ?>
           <?php } ?>
-            
-            
+
+
             <td style="padding-top: 8px;"><i class="fa fa-angle-left"></i></td>
             <td class="type"><?php echo  $_carsId['title_c']; ?></td>
           </tr>
@@ -62,13 +62,13 @@ $_SESSION['fromuser'] = $_fromuser;
             <li class="detail col-md-3 hvr-bob nums-font"><i class="fa fa-dashboard"></i>
               <?php
           if(count($show_meta_cars)>0 && isset($show_meta_cars)){
+
             $len = count($show_meta_cars);
             $firsthalf = array_slice($show_meta_cars, 0, $len / 2);
             $secondhalf = array_slice($show_meta_cars, $len / 2);
-            //var_dump($secondhalf);die;
           foreach($secondhalf as $rows_meta_cars){
 
-            if(($rows_meta_cars['name_o'] == "<!--:ar-->المسافة المقطوعة<!--:--><!--:en-->the traveled distance<!--:-->") || ($rows_meta_cars['name_o'] == "<!--:ar-->الكيلومترات المستهلكة<!--:--><!--:en-->Kilometers consumed<!--:-->")){
+            if(($rows_meta_cars['code_o'] == "distance") || ($rows_meta_cars['code_o'] == "kilometersconsumed")){
 
 
                   echo $rows_meta_cars['value_m'];
@@ -295,7 +295,7 @@ $_SESSION['fromuser'] = $_fromuser;
           <td class="main-color"><button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal"><?php echo _t(_Callnow);?></button></td>
           <hr>
           <td class="main-color" style="text-align: center">
-            
+
 
           </td>
         </tr>
