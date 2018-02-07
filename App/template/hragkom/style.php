@@ -6,13 +6,13 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/jquery.js"></script>
      <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/jquery-3.1.1.min.js"></script>
-     
+
      <link href="<?php echo $path['template'];?>lib/css/font-awesome.css" rel="stylesheet">
      <?php  if($_dir=='rtl'){ ?>
      <link id="cssLink" href="<?php echo $path['template'];?>lib/rtl/css/bootstrap.min.css" rel="stylesheet" media="screen" />
      <?php } ?>
 	 <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/bootstrap-select.min.css">
-	 
+
      <link id="cssLink" href="<?php echo $path['template'];?>lib/css/docs.min.css" rel="stylesheet" media="screen" />
      <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>/lib/js/jScrollPane/jScrollPane.css" />
 
@@ -29,8 +29,11 @@
     <link rel="shortcut icon" href="<?php echo $path['template'];?>img/icone.png" />
     <link rel="icon" type="image/gif" href="<?php echo $path['template'];?>img/icone.png">
 
-	<link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/chat.css"> 
+	<link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/chat.css">
 	 <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/chat.js"></script>
+
+    <link type="text/css" rel="stylesheet" id="arrowchat_css" media="all" href="/arrowchat/external.php?type=css" charset="utf-8" />
+
 <style>
 	#search{
     background: url(<?php echo $path['urlsite']; ?>Public/img/search-white.png) no-repeat 10px 12px #ec3e3d;
@@ -46,10 +49,10 @@
     	background-color: #ec3e3d;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
-    border-radius: 30px;  
+    border-radius: 30px;
 	font-size:12px;
-    width: 80px;  
-    margin-top: 10px;	
+    width: 80px;
+    margin-top: 10px;
      padding: 6px 20px 6px 5px;
     }
 
@@ -70,7 +73,7 @@
 
        #social-links li{
        	min-height: 45px;
-       } 
+       }
 
 .btn-twitter {
     background-color: #3399CC !important;
@@ -128,9 +131,7 @@
     color:#FFFFFF!important;
 }
 </style>
-    <link type="text/css" rel="stylesheet" id="arrowchat_css" media="all" href="/arrowchat/external.php?type=css" charset="utf-8" />
-    <script type="text/javascript" src="/arrowchat/includes/js/jquery.js"></script>
-    <script type="text/javascript" src="/arrowchat/includes/js/jquery-ui.js"></script>
+
 </head>
 
 <?php
@@ -145,7 +146,7 @@ $_SESSION['fromuser'] = $_fromuser;
 	<nav class="navbar navbar-static-top margin0">
 
 			<div class="container">
-			
+
 <div class="row">
 <div class="col-sm-3 col-xs-6 ">
     				<div class="row">
@@ -163,19 +164,19 @@ $_SESSION['fromuser'] = $_fromuser;
 							  document.getElementById('form_lang').submit();
 							 }
  						</script>
-                        	
+
                         </li>
                         <li><a dir="<?php echo $_dir; ?>">info@automark.com  <i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
 						</ul>
     				</div>
 	</div>
               <div class=" col-sm-6 col-xs-6">
-			  
+
 	<div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menunavbartop" aria-expanded="false">
         <span  style="color:#fff;font-size:16px;"  class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
       </button>
-    </div> 
+    </div>
     <div class="collapse navbar-collapse" id="menunavbartop" style="background:#db2d2e;" >
                     <ul class="nav navbar-nav menu-top menutop pull-right menu_top_header">
                      <?php if(!session::get(system::get("session/session_name"))){?>
@@ -186,10 +187,10 @@ $_SESSION['fromuser'] = $_fromuser;
                                <li><a href="<?php echo $path['urlsite'] ?>cars/mycars/addfreeads"><?php echo _t(_Addannouncement);?></a> </li>
                                <li><a href="<?php echo $path['urlsite'] ?>users/"><?php echo _t(_Yourpersonaldata);?></a> </li>
                   			   <li><a href="<?php echo $path['urlsite'] ?>users/login/logout/"><?php echo _t(_Signout);?></a> </li>
-                  			   
+
 
                       <?php } ?>
-                       
+
                     </ul>
 
 			</div>
@@ -198,7 +199,7 @@ $_SESSION['fromuser'] = $_fromuser;
         <form action="<?php echo $path['urlsite']?>/cars/search/specific" class="navbar-form" role="search">
         <div class="input-group">
             <input type="text" class="form-control" name="q"  id="search">
-            
+
         </div>
         </form>
     </div>
@@ -229,10 +230,10 @@ $_SESSION['fromuser'] = $_fromuser;
 				<div class="navbar-header">
 					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menunavbarh" aria-expanded="false">
 						<span style="color:#db2d2e;font-size:25px;margin-top:20px" class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
-						
+
 					  </button>
-					 
-					</div> 
+
+					</div>
 
 					<div class="collapse navbar-collapse" id="menunavbarh"  style="background:#fff;z-index:100;" >
 						<ul class="nav navbar-nav menutopLogo pull-right  menu_header">
@@ -246,13 +247,13 @@ $_SESSION['fromuser'] = $_fromuser;
 							<li style="margin-top: -15px;margin-right:5px">
 							<a  class="text-center" href="<?php echo $path['urlsite'] ?>cars/mycars/addfreeads"
 							style="color: white; background-color: #db2d2e;">
-					
+
 							<i class="fa fa-plus-square-o fa-3x"></i>
-				
+
 							<br>
 							<?php echo _t(_Addyouradforfree);?>
 							</a>
-							</li> 
+							</li>
 						</ul>
 						 <form action="<?php echo $path['urlsite'] ?>cars/search/index" method="post">
 							 <div class="form-group search-top-menu" style="display:none;">
@@ -267,10 +268,10 @@ $_SESSION['fromuser'] = $_fromuser;
 			</div>
 		</div>
 		</nav>
-		
+
 	</div>
 
-	
+
 </header>
 
 
@@ -285,14 +286,14 @@ $_SESSION['fromuser'] = $_fromuser;
     						<a data-original-title="Facebook" rel="tooltip"  href="#" class="btn btn-facebook" data-placement="left">
 								<i class="fa fa-facebook"></i>
 							</a>
-    					</li>	
+    					</li>
 
         				<li>
     					    <a data-original-title="Twitter" rel="tooltip"  href="#" class="btn btn-twitter" data-placement="left">
 								<i class="fa fa-twitter"></i>
 							</a>
     					</li>
-  				
+
     					<li>
     						<a data-original-title="Google+" rel="tooltip"  href="#" class="btn btn-google" data-placement="left">
 								<i class="fa fa-google-plus"></i>
@@ -331,7 +332,7 @@ $_SESSION['fromuser'] = $_fromuser;
 									<?php foreach($db_category->getAll() as $rowsCategory){
 										?>
 									<?php if(($rowsCategory['code_ss'] != "<!--:ar-->لوحات السيارات<!--:--><!--:en-->Car plate<!--:-->") && ($rowsCategory['code_ss'] != "<!--:ar-->ارقام الجوالات<!--:--><!--:en-->Mobile number<!--:-->")){ ?>
-											<option value="<?php echo $rowsCategory['id_ss'];?>"><?php echo language::getLang($rowsCategory['code_ss']);?></option>							
+											<option value="<?php echo $rowsCategory['id_ss'];?>"><?php echo language::getLang($rowsCategory['code_ss']);?></option>
 									<?php } ?>
 									<?php } ?>
 									 <option><?= _Other?></option>
@@ -347,7 +348,7 @@ $_SESSION['fromuser'] = $_fromuser;
 										 <?php endforeach; ?>
 										 <option ><?= _Other?></option>
 								</select>
-						
+
 		                </div>
 					</div>
 					<div class="col-sm-3 col-xs-6">
@@ -363,7 +364,7 @@ $_SESSION['fromuser'] = $_fromuser;
 		                        <option value="" selected=""><?= _Selectthemodel?></option>
 									  <?php foreach($lib_typecar->getTypeAll() as $rowstype ): ?>
 		                                              <option value="<?php echo $rowstype['id_t']; ?>"><?php echo language::getLang($rowstype['name_t']); ?></option>
-		                                 <?php endforeach; ?> 
+		                                 <?php endforeach; ?>
 										 <option><?= _Other?></option>
 								</select>
 		                </div>
@@ -372,7 +373,7 @@ $_SESSION['fromuser'] = $_fromuser;
 					<div class="col-sm-3 col-xs-6">
 						 <div class="form-group">
 		                        <select class="form-control selectpicker" data-live-search="true"   name="yearsemin"  title=<?= _Yearof?> data-style="input_search_style">
-		                        <option value="" selected=""><?= _Yearof?></option> 
+		                        <option value="" selected=""><?= _Yearof?></option>
 		                        <<?php for ($i = 2018 ; $i >= 1990 ; $i--): ?>
 		                        	<option value="<?=$i?>"><?=$i?></option>
 		                        <?php endfor ?>
@@ -383,7 +384,7 @@ $_SESSION['fromuser'] = $_fromuser;
 					<div class="col-sm-3 col-xs-6">
 						 <div class="form-group">
 		                        <select class="form-control selectpicker" data-live-search="true" name="yearsemax"  title=<?= _Yearto?> data-style="input_search_style">
-		                        <option value="" selected=""><?= _Yearto?></option> 
+		                        <option value="" selected=""><?= _Yearto?></option>
 		                        <<?php for ($i = 2018 ; $i >= 1990 ; $i--): ?>
 		                        	<option value="<?=$i?>"><?=$i?></option>
 		                        <?php endfor ?>
@@ -393,25 +394,25 @@ $_SESSION['fromuser'] = $_fromuser;
 
 					<div class="col-sm-3 col-xs-6">
 						 <div class="form-group">
-		                        
+
 								<input class="form-control selectpicker input_search_style" name="desemin" type="text" placeholder="<?=_FromDes?>" />
 		                </div>
 					</div>
 					<div class="col-sm-3 col-xs-6">
 						 <div class="form-group">
-		                       
+
 								<input class="form-control selectpicker input_search_style" name="desemax" type="text" placeholder="<?=_ToDes?>" />
 		                </div>
 					</div>
 					<div class="col-sm-3 col-xs-6">
 						 <div class="form-group">
-		                        
+
 								<input class="form-control selectpicker input_search_style" name="pricemin" type="text" placeholder="<?=_FromPrice?>" />
 		                </div>
 					</div>
 					<div class="col-sm-3 col-xs-6">
 						 <div class="form-group">
-		                        
+
 								<input class="form-control selectpicker input_search_style" name="pricemax" type="text" placeholder="<?=_ToPrice?>" />
 		                </div>
 					</div>
@@ -424,7 +425,7 @@ $_SESSION['fromuser'] = $_fromuser;
 								 <option value="8"><?= _Medium?></option>
 								 <option value="9"><?= _Needmaintenance?></option>
 								  <option><?= _Other?></option>
-		                           
+
 								</select>
 		                </div>
 					</div>
@@ -455,7 +456,7 @@ $_SESSION['fromuser'] = $_fromuser;
  <div class="col-sm-12">
 <div class="paddingTop">
 		<div class="rows">
-		
+
 			<div class="col-sm-4">
 				<img class="img-responsive" src="<?php echo $path['template'];?>img/Home-automark-ae_14.png" />
 			</div>
@@ -465,20 +466,20 @@ $_SESSION['fromuser'] = $_fromuser;
 			<div class="col-sm-4">
 				<img class="img-responsive" src="<?php echo $path['template'];?>img/Home-automark-ae_10.png" />
 			</div>
-		
+
 		</div>
 	</div>
 	</div>
-	
+
 <?php
 if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
-	
+
 	 <div class="col-sm-12">
-                     
+
                           <h3 class='title'><?php echo $path['message_act'];?></h3><br clear='all' />
-                    
+
           </div>
-<?php 
+<?php
 }else{
  include($dirFile);
 }
@@ -492,24 +493,24 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
 				<img class="img-responsive" src="<?php echo $path['template'];?>img/hhh_22.png" />
 			</div>
 		</div>
-		<br />		
+		<br />
 			<div class="paddingTop">
 		<div class="row">
-		
+
 			<div class="col-sm-6">
 				<img class="img-responsive" src="<?php echo $path['template'];?>img/Home-automark-ae_31.png" />
 			</div>
 			<div class="col-sm-6">
 				<img  class="img-responsive" src="<?php echo $path['template'];?>img/Home-automark-ae_33.png" />
 			</div>
-			
-		
+
+
 		</div>
 	</div>
 	</div>
 </div>
 </div>
-	<div class="containe rounded-0" style="border-radius:50px;"> 
+	<div class="containe rounded-0" style="border-radius:50px;">
 			<br><br>
 	<h2 class="text-center" style="background-color: #db2d2e;border-radius: 50px;width: 150px;padding: 10px;color: white;margin: 0 auto;"><?=_Shows?></h2>
 <br>
@@ -521,7 +522,7 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
 				<img class="img-responsive" src="<?php echo $path['thumb'];?>thumb_<?php echo $show['images_s'] ?>" /></a>
 			</div>
 				<?php } ?>
-					
+
 	</div>
 	</div>
 	</div>
@@ -554,12 +555,12 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
 	<div class="container">
 		<div class="row high">
 				 	<div class="col-sm-3">
-							
+
 				 	</div>
 				 	<div class="col-sm-3">
 					<h3><i class='fa fa-tachometer' aria-hidden='true'></i><?=_Sitepages?> </h3>
-				 	
-                        
+
+
 				 			<ul class="nav clear clfooterll">
 				 				<li><a href="<?php echo $path['urlsite'] ?>" style="color: white; "><?=_MAIN?> </a> </li>
 
@@ -568,12 +569,12 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
 							style="color: white; "><?=_Addannouncement?> </a> </li>
 				 				<li><a href="<?php echo $path['urlsite'] ?>pages/index/offers" style="color: white; "><?=_OurServices?> </a> </li>
 				 				<li><a href="<?php echo $path['urlsite'] ?>pages/index/contact" style="color: white; "><?=_Howtopay?> </a> </li>
-				 				
-							  	
+
+
 							</ul>
 				 	</div>
 					 	<div class="col-sm-3">
-					 		
+
 					 	</div>
 				 		<div class="col-sm-3">
 
@@ -583,7 +584,7 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
 				 		</h2>
 				 	<div class="faces img-rounded" style="">
 							<a href="<?php echo system::_data("facebook_footer"); ?>"><i class="fa fa-facebook"></i></a>
-							
+
 							<a href="<?php echo system::_data("twitter_footer"); ?>"><i class="fa fa-twitter"></i></a>
 							<a href="<?php echo system::_data("youtube_footer"); ?>"><i class="fa fa-youtube"></i></a>
 							<a href="<?php echo system::_data("google_footer"); ?>"><i class="fa fa-google-plus"></i></a>
@@ -605,11 +606,11 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
 				</div>
 			</div>
 	</nav>
-	
+
 </footer>
-	
-	
-	
+
+
+
 	<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 	<script src="<?php echo $path['template'];?>lib/rtl/js/bootstrap.js"></script>
 	<script src="<?php echo $path['template'];?>lib/js/bootstrap-select.js"></script>
@@ -618,7 +619,7 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
   <script type="text/javascript" src="<?php echo $path['urlsite']; ?>Public/js/crawler.js"></script>
     <script src="<?php echo $path['urlsite'];?>Public/js/upload.js"></script>
     <script src="<?php echo $path['urlsite'];?>Public/js/changeselect.js"></script>
-      
+
   <script type="text/javascript">
   $(function() {
     var galleries = $('.ad-gallery').adGallery();
@@ -626,7 +627,7 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
   });
   </script>
 
-   
+
      <script src="<?php echo $path['urlsite']; ?>Public/js/jquery.colorbox.js"></script>
 
          <script>
@@ -636,9 +637,9 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
 				$(".iframe").colorbox({iframe:true, width:"50%", height:"70%"});
 			});
                  </script>
-	
-    
-    
+
+
+
 <script>
   $(function() {
     $( "#slider-range" ).slider({
@@ -656,20 +657,20 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
       " - <?php echo language::getLang(system::_data('default_currency'));?>" + $( "#slider-range" ).slider( "values", 1 ) );
   });
   </script>
-   
-   
-   
+
+
+
 <?php  if(isset($_cardSort) and $_cardSort=='adv'){ ?>
   <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/jquery.cookie.js"></script>
 
     <script>
 		$(function(){
     var default_view = 'grid'; // choose the view to show by default (grid/list)
-    
+
     // check the presence of the cookie, if not create "view" cookie with the default view value
     if($.cookie('view') !== 'undefined'){
         $.cookie('view', default_view, { expires: 7, path: '/' });
-    } 
+    }
     function get_grid(){
         $('.list').removeClass('list-active');
         $('.grid').addClass('grid-active');
@@ -689,17 +690,17 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
         });
     } // end "get_list" function
 
-    if($.cookie('view') == 'list'){ 
+    if($.cookie('view') == 'list'){
         // we dont use the "get_list" function here to avoid the animation
         $('.grid').removeClass('grid-active');
         $('.list').addClass('list-active');
         $('.prod-cnt').animate({opacity:0});
         $('.prod-cnt').removeClass('prod-box');
         $('.prod-cnt').addClass('prod-box-list');
-        $('.prod-cnt').stop().animate({opacity:1}); 
-    } 
+        $('.prod-cnt').stop().animate({opacity:1});
+    }
 
-    if($.cookie('view') == 'grid'){ 
+    if($.cookie('view') == 'grid'){
         $('.list').removeClass('list-active');
         $('.grid').addClass('grid-active');
         $('.prod-cnt').animate({opacity:0});
@@ -708,8 +709,8 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
             $('.prod-cnt').stop().animate({opacity:1});
     }
 
-    $('#list').click(function(){   
-        $.cookie('view', 'list'); 
+    $('#list').click(function(){
+        $.cookie('view', 'list');
         get_list()
     });
     var affixElement = '#navbar-main';
@@ -720,14 +721,14 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
 	    top: function () {
 	      return (this.top = $(affixElement).offset().top)
 	    },
-	     bottom: function () { 
+	     bottom: function () {
       return (this.bottom = $('#footer').outerHeight(true))
     }
 	  }
 	});
-	
-    $('#grid').click(function(){ 
-        $.cookie('view', 'grid'); 
+
+    $('#grid').click(function(){
+        $.cookie('view', 'grid');
         get_grid();
     });
 
@@ -750,18 +751,18 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
                $(this).css({'display':'none'});
             };
         });
-        $('.'+CategoryID).fadeIn(); 
-       */ 
+        $('.'+CategoryID).fadeIn();
+       */
     });
 });
 		</script>
 
 <?php }   ?>
-   
+
    <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/jquery.magnific-popup.js"></script>
     <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/lightslider.js"></script>
-   
-   
+
+
  <script type="text/javascript">
             var _root_ = '<?php echo $path['urlsite'];?>';
         </script>
