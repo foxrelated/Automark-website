@@ -28,7 +28,6 @@
      <link rel="stylesheet" href="<?php echo $path['urlsite']; ?>Public/css/colorbox.css" />
     <link rel="shortcut icon" href="<?php echo $path['template'];?>img/icone.png" />
     <link rel="icon" type="image/gif" href="<?php echo $path['template'];?>img/icone.png">
-    <link type="text/css" rel="stylesheet" id="arrowchat_css" media="all" href="/automark/arrowchat/external.php?type=css" charset="utf-8" />
 
 	<link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/chat.css"> 
 	 <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/chat.js"></script>
@@ -129,6 +128,9 @@
     color:#FFFFFF!important;
 }
 </style>
+    <link type="text/css" rel="stylesheet" id="arrowchat_css" media="all" href="/arrowchat/external.php?type=css" charset="utf-8" />
+    <script type="text/javascript" src="/arrowchat/includes/js/jquery.js"></script>
+    <script type="text/javascript" src="/arrowchat/includes/js/jquery-ui.js"></script>
 </head>
 
 <?php
@@ -616,8 +618,6 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
   <script type="text/javascript" src="<?php echo $path['urlsite']; ?>Public/js/crawler.js"></script>
     <script src="<?php echo $path['urlsite'];?>Public/js/upload.js"></script>
     <script src="<?php echo $path['urlsite'];?>Public/js/changeselect.js"></script>
-      <script type="text/javascript" src="/automark/arrowchat/external.php?type=djs" charset="utf-8"></script>
-<script type="text/javascript" src="/automark/arrowchat/external.php?type=js" charset="utf-8"></script>
       
   <script type="text/javascript">
   $(function() {
@@ -765,8 +765,9 @@ if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>
  <script type="text/javascript">
             var _root_ = '<?php echo $path['urlsite'];?>';
         </script>
-      
-	
+
+<script type="text/javascript" src="/arrowchat/external.php?type=djs" charset="utf-8"></script>
+<script type="text/javascript" src="/arrowchat/external.php?type=js" charset="utf-8"></script>
 </body>
 
 </html>
