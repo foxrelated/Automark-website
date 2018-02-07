@@ -19,6 +19,9 @@ $_SESSION['fromuser'] = $_fromuser;
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/chat.css">
 
     <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/chat.js"></script>
+      <link type="text/css" rel="stylesheet" id="arrowchat_css" media="all" href="/arrowchat/external.php?type=css" charset="utf-8" />
+      <script type="text/javascript" src="/arrowchat/includes/js/jquery.js"></script>
+      <script type="text/javascript" src="/arrowchat/includes/js/jquery-ui.js"></script>
 
   </head>
   <body>
@@ -348,7 +351,8 @@ $_SESSION['fromuser'] = $_fromuser;
       <script src="<?php echo $path['template'];?>lib/js/jquery.nicescroll.min.js"></script>
     <script src="<?php echo $path['template'];?>lib/js/script.js"></script>
 
-
+    <script type="text/javascript" src="/arrowchat/external.php?type=djs" charset="utf-8"></script>
+    <script type="text/javascript" src="/arrowchat/external.php?type=js" charset="utf-8"></script>
     </body>
   </html>
 
