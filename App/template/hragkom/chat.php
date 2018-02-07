@@ -26,9 +26,9 @@ if($developmentMode){
     define ('DBNAME','automark');
 } else{
     define ('DBHOST','localhost');
-    define ('DBUSER','automark');
-    define ('DBPASS','ABnRjqARFD7NAhWV');
-    define ('DBNAME','automark');
+    define ('DBUSER','automar8_automar');
+    define ('DBPASS','FgM8L;v)v,d=');
+    define ('DBNAME','automar8_brain');
 }
 
 session_start();

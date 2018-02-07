@@ -7,9 +7,9 @@ $GLOBALS['config']=array(
 'mysql'=>array(
                 'typeDB'=>'mysqli',
                 'localhost'=>'localhost',
-                'user'=> 'root',
-                'pass'=>'',
-                'db'=>'automark',
+                'user'=> 'automar8_automar',
+                'pass'=>'FgM8L;v)v,d=',
+                'db'=>'automar8_brain',
                 'db_char'=>'utf8'
             ),
 'dataBase_default_cars'=>array('imagemsh','model','modelcar','country','city','type','des','price'),

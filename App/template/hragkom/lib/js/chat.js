@@ -30,7 +30,7 @@ var chatboxFocus = new Array();
 var newMessages = new Array();
 var newMessagesWin = new Array();
 var chatBoxes = new Array();
-var APP_URL = "http://104.217.253.15/automark/";
+var APP_URL = "http://162.144.39.160/~automar8/site/";
 //var APP_URL = "http://localhost/automark/site/";
 var init = false;
 
