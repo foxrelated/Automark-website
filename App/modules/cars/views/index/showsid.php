@@ -73,48 +73,15 @@ $_SESSION['fromuser'] = $_fromuser;
                 <ul class="list-unstyled text-center">
                   <li>
                     <?php if(session::get(system::get("session/session_name"))){ ?>
-                  	
+                        <button type="button" id="btnChatWith" style="background-color: #db2d2e; border-bottom: 2px solid #ab191a;
+                    border-top: 2px solid #ec4b4c;" data-from-id="" data-to-id="<?= $_carsId['id_user']; ?>"><i class="fa fa-envelope-o fa-2x" aria-hidden="true" ></i></button>
                     
                     <?php }
                       elseif(!session::get(system::get("session/session_name"))) {
                       ?>
-
-                  <button type="button" data-toggle="modal" data-target="#myChatModal" style="background-color: #db2d2e; border-bottom: 2px solid #ab191a;
-                    border-top: 2px solid #ec4b4c;"><i class="fa fa-envelope-o fa-2x" aria-hidden="true" ></i></button>
                   <?php }  ?>
                   </li>
                   <li>
-                  	<div id="myChatModal" class="modal fade" role="dialog">
-                      <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title"></h4>
-                          </div>
-                          <div class="modal-body">
-                            <ul class="" style="background-color:#e83031; margin: 10px;">
-                                <li>
-                                  <a href="<?php echo $path['urlsite'] ?>users/login"><i class="fa fa-unlock-alt" aria-hidden="true"></i> <?php echo _t(_Login);?></a>
-                                </li>
-
-
-                            </ul>
-                            <ul class="" style="background-color:#e83031; margin: 10px;">
-                              <li>
-                                  <a href="<?php echo $path['urlsite'] ?>users/register"><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo _t(_Newuser);?></a>
-                                </li>
-                            </ul>
-
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
                   	<!-- AddToAny BEGIN -->
 					<a class="a2a_dd" href="https://www.addtoany.com/share"><i class="fa fa-share-alt fa-2x" aria-hidden="true"></i></a>
 					<script>

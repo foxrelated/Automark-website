@@ -18,8 +18,6 @@ $_SESSION['fromuser'] = $_fromuser;
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/share-button.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/chat.css">
 
-    <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/chat.js"></script>
-
   </head>
   <body>
     <!-- Head Bar -->
@@ -295,8 +293,7 @@ $_SESSION['fromuser'] = $_fromuser;
           <td class="main-color"><button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal"><?php echo _t(_Callnow);?></button></td>
           <hr>
           <td class="main-color" style="text-align: center">
-
-
+              <button type="button" class="btn btn-danger btn-lg" id="btnChatWith" data-from-id="" data-to-id="<?= $_carsId['id_user']; ?>"><?php echo _t(_Sendamessage);?></button>
           </td>
         </tr>
       </tbody>
@@ -305,6 +302,7 @@ $_SESSION['fromuser'] = $_fromuser;
 
       </div>
     </section>
+
     <!-- Modal -->
   <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">

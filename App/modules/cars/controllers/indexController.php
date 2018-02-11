@@ -64,7 +64,7 @@
             $data_mazat=array('cars_id'=>$id,'user_id'=>$this->user_id); 
         }
       $iscarfavorite = $this->_cars->getcarfavorite($this->user_id,$data_id['id_c']);
-      
+
       $userid = $data_id['id_user'];
       
       $_user = $this->_user1->findName($userid,"username");
@@ -163,7 +163,6 @@ $validate['email']=array(
 		}
     public function showsid($id='',$num=''){
 		$this->_view->assign('_cardSort','adv');
-    //var_dump($id);
 			$id=(int)$id;
           	 $this->_view->assign('_codePage', "showsid");
              $countPag=10;
@@ -185,11 +184,13 @@ $validate['email']=array(
             
             $userid = $_shows['user_id'];
           $user = $this->_users->findName($userid,"username");
+
           $this->_view->assign('_user',$user);
           
           $_fromuser = $this->_users->findName($this->user_id,"username");
           $this->_view->assign('_fromuser',$_fromuser);
-            //var_dump($limit);
+        $this->_view->assign('_fromuserId',$this->user_id);
+
            $this->_view->assign('_name_ar',$_shows['name_ar_s']);
            $this->_view->assign('_name_en',$_shows['name_en_s']);
            $this->_view->assign('_ids',$_shows['id_s']);
