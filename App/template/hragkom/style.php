@@ -30,7 +30,6 @@
     <link rel="icon" type="image/gif" href="<?php echo $path['template'];?>img/icone.png">
 
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/chat.css">
-    <script type="text/javascript" src="<?php echo $path['template'];?>lib/js/chat.js"></script>
 
     <link type="text/css" rel="stylesheet" id="arrowchat_css" media="all" href="/arrowchat/external.php?type=css" charset="utf-8" />
 
@@ -769,6 +768,7 @@ $_SESSION['fromuser'] = $_fromuser;
 
 <script type="text/javascript" src="/arrowchat/external.php?type=djs" charset="utf-8"></script>
 <script type="text/javascript" src="/arrowchat/external.php?type=js" charset="utf-8"></script>
+<script type="text/javascript" src="<?php echo $path['template'];?>lib/js/chat.js"></script>
 </body>
 
 </html>

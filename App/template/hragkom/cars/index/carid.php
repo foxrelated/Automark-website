@@ -293,7 +293,11 @@ $_SESSION['fromuser'] = $_fromuser;
           <td class="main-color"><button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal"><?php echo _t(_Callnow);?></button></td>
           <hr>
           <td class="main-color" style="text-align: center">
-              <button type="button" class="btn btn-danger btn-lg" id="btnChatWith" data-from-id="" data-to-id="<?= $_carsId['id_user']; ?>"><?php echo _t(_Sendamessage);?></button>
+              <?php if(session::get(system::get("session/session_name"))){ ?>
+              <button type="button" class="btn btn-danger btn-lg" id="btnChatWith" data-to-id="<?= $_carsId['id_user']; ?>"><?php echo _t(_Sendamessage);?></button>
+              <?php
+              }
+              ?>
           </td>
         </tr>
       </tbody>
