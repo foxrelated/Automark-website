@@ -74,8 +74,8 @@ $_SESSION['fromuser'] = $_fromuser;
                   <li>
                     <?php if(session::get(system::get("session/session_name"))){ ?>
                         <button type="button" id="btnChatWith" style="background-color: #db2d2e; border-bottom: 2px solid #ab191a;
-                    border-top: 2px solid #ec4b4c;" data-from-id="" data-to-id="<?= $_carsId['id_user']; ?>"><i class="fa fa-envelope-o fa-2x" aria-hidden="true" ></i></button>
-                    
+                    border-top: 2px solid #ec4b4c;" data-to-id="<?= $_fromuserId; ?>"><i class="fa fa-envelope-o fa-2x" aria-hidden="true" ></i></button>
+
                     <?php }
                       elseif(!session::get(system::get("session/session_name"))) {
                       ?>

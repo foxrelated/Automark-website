@@ -79,7 +79,6 @@
 			$this->_view->assign('show_meta_cars',$this->_cars->get_cars_meta($data_id['id_c']));
 			$this->_view->assign('data_category_value',$this->_func->jsonArray($date_category['value_ss']));
 			$this->_view->assign('data_comment',$this->_cars->getComment(array('car'=>$id,'order'=>'time_com','act'=>1)));
-	
     if(system::_data("active_comment")==1 or (system::_data("active_comment")==2 and session::get(system::get("session/session_name")))){	
 			$this->addcomment();
 	}
@@ -184,7 +183,6 @@ $validate['email']=array(
             
             $userid = $_shows['user_id'];
           $user = $this->_users->findName($userid,"username");
-
           $this->_view->assign('_user',$user);
           
           $_fromuser = $this->_users->findName($this->user_id,"username");
@@ -205,6 +203,7 @@ $validate['email']=array(
            $this->_view->assign('_carsId',$datacars);
            $this->_view->assign('_carsIdyear',$this->_cars->getlimit('shows',$limit,'desc',$id,'on'));
           $this->_view->sider('sider');
+
           $this->_view->tmpDir('showsid');
     }
 
