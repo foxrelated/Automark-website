@@ -15,6 +15,7 @@ abstract class controller{
     protected $_hash;
     protected $_func;
     protected $_permis;
+
     public function __construct(){
          $this->_register=Registry::getInstancia();
          $this->_request=$this->_register->_request;
@@ -27,6 +28,7 @@ abstract class controller{
          $this->_hash=$this->_register->_hash;
          $this->_acl=$this->_register->_acl;
          $this->_func=$this->_register->_func;
+        $this->_view->assign('_showFilters',true);
          $this->getFunctionTmp();
 
 

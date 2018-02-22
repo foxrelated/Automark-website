@@ -310,123 +310,150 @@ $_SESSION['fromuser'] = $_fromuser;
                     <h3><?= _ThelargestArabmarketforcarstrucksandspecialfigures?></h3>
                     <p><?= _Searchforyourfavoritevehicle?></p>
                 </div>
-                <form action="<?php echo $path['urlsite'] ?>cars/search/general" method="post">
-                    <div class="text_search_bg">
-                        <div class="row col-md-12">
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="form-group">
-                                    <select class="form-control selectpicker"  onchange="return changeselect(this,'city','#subcitySearch') " name="country"  title=<?= _Country?> data-style="input_search_style">
-                                        <option value="" selected=""><?= _Country?></option>
-                                        <?php foreach($lib_city->getCountryAll() as $rowscity ): ?>
-                                            <option  data-thumbnail="<?php echo $path['public'].'img/flags/'.$rowscity['code_c'].'.png'; ?>" value="<?php echo $rowscity['id_c']; ?>"><?php echo language::getLang($rowscity['name_c']); ?></option>
-                                        <?php endforeach; ?>
-                                        <option ><?= _Other?></option>
-                                    </select>
 
+                <?php
+                if($_showFilters) {
+                    ?>
+                    <form action="<?php echo $path['urlsite'] ?>cars/search/general" method="post">
+                        <div class="text_search_bg">
+                            <div class="row col-md-12">
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="form-group">
+                                        <select class="form-control selectpicker"
+                                                onchange="return changeselect(this,'city','#subcitySearch') "
+                                                name="country" title=<?= _Country ?> data-style="input_search_style">
+                                            <option value="" selected=""><?= _Country ?></option>
+                                            <?php foreach ($lib_city->getCountryAll() as $rowscity): ?>
+                                                <option
+                                                    data-thumbnail="<?php echo $path['public'] . 'img/flags/' . $rowscity['code_c'] . '.png'; ?>"
+                                                    value="<?php echo $rowscity['id_c']; ?>"><?php echo language::getLang($rowscity['name_c']); ?></option>
+                                            <?php endforeach; ?>
+                                            <option><?= _Other ?></option>
+                                        </select>
+
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="form-group">
-                                    <select class="form-control selectpicker" data-live-search="true"   id="subcitySearch" name="city" title="<?= _City?>"  data-style="input_search_style">
-                                        <option value="" selected=""><?= _City?></option>
-                                    </select>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="form-group">
+                                        <select class="form-control selectpicker" data-live-search="true"
+                                                id="subcitySearch" name="city" title="<?= _City ?>"
+                                                data-style="input_search_style">
+                                            <option value="" selected=""><?= _City ?></option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="form-group">
-                                    <select class="form-control selectpicker" name="category" title=<?= _Lookfor?> data-live-search="true" data-style="input_search_style">
-                                        <option value="" selected=""><?= _Lookfor?></option>
-                                        <?php foreach($db_category->getAll() as $rowsCategory){
-                                            ?>
-                                            <?php if(($rowsCategory['code_ss'] != "<!--:ar-->لوحات السيارات<!--:--><!--:en-->Car plate<!--:-->") && ($rowsCategory['code_ss'] != "<!--:ar-->ارقام الجوالات<!--:--><!--:en-->Mobile number<!--:-->")){ ?>
-                                                <option value="<?php echo $rowsCategory['id_ss'];?>"><?php echo language::getLang($rowsCategory['code_ss']);?></option>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="form-group">
+                                        <select class="form-control selectpicker" name="category"
+                                                title=<?= _Lookfor ?> data-live-search="true"
+                                                data-style="input_search_style">
+                                            <option value="" selected=""><?= _Lookfor ?></option>
+                                            <?php foreach ($db_category->getAll() as $rowsCategory) {
+                                                ?>
+                                                <?php if (($rowsCategory['code_ss'] != "<!--:ar-->لوحات السيارات<!--:--><!--:en-->Car plate<!--:-->") && ($rowsCategory['code_ss'] != "<!--:ar-->ارقام الجوالات<!--:--><!--:en-->Mobile number<!--:-->")) { ?>
+                                                    <option
+                                                        value="<?php echo $rowsCategory['id_ss']; ?>"><?php echo language::getLang($rowsCategory['code_ss']); ?></option>
+                                                <?php } ?>
                                             <?php } ?>
-                                        <?php } ?>
-                                        <option><?= _Other?></option>
-                                    </select>
+                                            <option><?= _Other ?></option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="form-group">
-                                    <select class="form-control selectpicker" data-live-search="true"  name="model" title=<?= _Selectthemodel?> data-style="input_search_style">
-                                        <option value="" selected=""><?= _Selectthemodel?></option>
-                                        <?php foreach($lib_typecar->getTypeAll() as $rowstype ): ?>
-                                            <option value="<?php echo $rowstype['id_t']; ?>"><?php echo language::getLang($rowstype['name_t']); ?></option>
-                                        <?php endforeach; ?>
-                                        <option><?= _Other?></option>
-                                    </select>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="form-group">
+                                        <select class="form-control selectpicker" data-live-search="true" name="model"
+                                                title=<?= _Selectthemodel ?> data-style="input_search_style">
+                                            <option value="" selected=""><?= _Selectthemodel ?></option>
+                                            <?php foreach ($lib_typecar->getTypeAll() as $rowstype): ?>
+                                                <option
+                                                    value="<?php echo $rowstype['id_t']; ?>"><?php echo language::getLang($rowstype['name_t']); ?></option>
+                                            <?php endforeach; ?>
+                                            <option><?= _Other ?></option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="form-group">
-                                    <select class="form-control selectpicker" data-live-search="true"   name="yearsemin"  title=<?= _Yearof?> data-style="input_search_style">
-                                        <option value="" selected=""><?= _Yearof?></option>
-                                        <<?php for ($i = 2018 ; $i >= 1990 ; $i--): ?>
-                                            <option value="<?=$i?>"><?=$i?></option>
-                                        <?php endfor ?>
-                                    </select>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="form-group">
+                                        <select class="form-control selectpicker" data-live-search="true"
+                                                name="yearsemin" title=<?= _Yearof ?> data-style="input_search_style">
+                                            <option value="" selected=""><?= _Yearof ?></option>
+                                            <<?php for ($i = 2018; $i >= 1990; $i--): ?>
+                                                <option value="<?= $i ?>"><?= $i ?></option>
+                                            <?php endfor ?>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="form-group">
-                                    <select class="form-control selectpicker" data-live-search="true" name="yearsemax"  title=<?= _Yearto?> data-style="input_search_style">
-                                        <option value="" selected=""><?= _Yearto?></option>
-                                        <<?php for ($i = 2018 ; $i >= 1990 ; $i--): ?>
-                                            <option value="<?=$i?>"><?=$i?></option>
-                                        <?php endfor ?>
-                                    </select>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="form-group">
+                                        <select class="form-control selectpicker" data-live-search="true"
+                                                name="yearsemax" title=<?= _Yearto ?> data-style="input_search_style">
+                                            <option value="" selected=""><?= _Yearto ?></option>
+                                            <<?php for ($i = 2018; $i >= 1990; $i--): ?>
+                                                <option value="<?= $i ?>"><?= $i ?></option>
+                                            <?php endfor ?>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="form-group">
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="form-group">
 
-                                    <input class="form-control selectpicker input_search_style" name="desemin" type="text" placeholder="<?=_FromDes?>" />
+                                        <input class="form-control selectpicker input_search_style" name="desemin"
+                                               type="text" placeholder="<?= _FromDes ?>"/>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="form-group">
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="form-group">
 
-                                    <input class="form-control selectpicker input_search_style" name="desemax" type="text" placeholder="<?=_ToDes?>" />
+                                        <input class="form-control selectpicker input_search_style" name="desemax"
+                                               type="text" placeholder="<?= _ToDes ?>"/>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="form-group">
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="form-group">
 
-                                    <input class="form-control selectpicker input_search_style" name="pricemin" type="text" placeholder="<?=_FromPrice?>" />
+                                        <input class="form-control selectpicker input_search_style" name="pricemin"
+                                               type="text" placeholder="<?= _FromPrice ?>"/>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="form-group">
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="form-group">
 
-                                    <input class="form-control selectpicker input_search_style" name="pricemax" type="text" placeholder="<?=_ToPrice?>" />
+                                        <input class="form-control selectpicker input_search_style" name="pricemax"
+                                               type="text" placeholder="<?= _ToPrice ?>"/>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="form-group">
-                                    <select class="form-control selectpicker" name="status"  title=<?= _Selectthevehiclestatus?> data-style="input_search_style">
-                                        <option value="" selected=""><?= _Selectthevehiclestatus?></option>
-                                        <option value="6"><?= _Excellent?></option>
-                                        <option value="7"><?= _Good?></option>
-                                        <option value="8"><?= _Medium?></option>
-                                        <option value="9"><?= _Needmaintenance?></option>
-                                        <option><?= _Other?></option>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="form-group">
+                                        <select class="form-control selectpicker" name="status"
+                                                title=<?= _Selectthevehiclestatus ?> data-style="input_search_style">
+                                            <option value="" selected=""><?= _Selectthevehiclestatus ?></option>
+                                            <option value="6"><?= _Excellent ?></option>
+                                            <option value="7"><?= _Good ?></option>
+                                            <option value="8"><?= _Medium ?></option>
+                                            <option value="9"><?= _Needmaintenance ?></option>
+                                            <option><?= _Other ?></option>
 
-                                    </select>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="form-group">
+                                        <button name="general" class="btn btn-default btn_input_search_style"/>
+                                        <i class="fa fa-search" aria-hidden="true"
+                                           style="position: static; font-size: 16px;"></i></button>
+                                        <input type="hidden" name="generalsearch" value="1"/>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="form-group">
-                                    <button   name="general" class="btn btn-default btn_input_search_style" /><i class="fa fa-search" aria-hidden="true" style="position: static; font-size: 16px;"></i></button>
-                                    <input type="hidden" name="generalsearch" value="1" />
-                                </div>
-                            </div>
+                            <div style="clear:both"></div>
                         </div>
-                        <div style="clear:both"></div>
-                    </div>
-                </form>
+                    </form>
+                <?php
+                }
+                ?>
             </div>
         </div>
     </div>
