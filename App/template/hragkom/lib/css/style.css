@@ -1565,16 +1565,16 @@ display:none
 }
 
 @media (max-width: 736px){
-	.prod-box >> div{
+	.prod-box > div{
 			margin: 4px; 
 	}
 
-	.prod-box >> img{
+	.prod-box > img{
 			padding: 4px; 
 	}
 
 	.prod-box{
-		width: 33,33%; 
+		width: 33.33%; 
 		padding:0px;
 		margin:0px;
 	}
@@ -1601,7 +1601,7 @@ display:none
 	}
 }
 
-@media (min-width: 1139px){
+@media (min-width: 1189px){
 	.prod-box{
 		width: 207px; 
 	}
