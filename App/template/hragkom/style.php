@@ -455,7 +455,7 @@ $_SESSION['fromuser'] = $_fromuser;
 
             <div class="col-sm-12">
 
-                <h3 class='title'><?php echo $path['message_act'];?></h3><br clear='all' />
+                <h3 style="padding-top:30px; padding-bottom:30px" class='title'><?php echo $path['message_act'];?></h3><br clear='all' />
 
             </div>
         <?php

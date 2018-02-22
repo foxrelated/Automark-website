@@ -21,7 +21,7 @@ $_SESSION['fromuser'] = $_fromuser;
   </head>
   <body>
     <!-- Head Bar -->
-    <div class="container head-bar text-right" style="margin-top: 175px; " >
+    <div class="container head-bar text-right" style="margin-top: 25px; " >
     <div style="background-color:#db2d2e;">
       <div class="" style="padding-top: 10px;height: 100%;">
         <table class="table table-sm table-dark">

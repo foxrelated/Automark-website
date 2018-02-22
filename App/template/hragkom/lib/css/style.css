@@ -1288,6 +1288,9 @@ text-shadow:-1px 1px 0 #940f0f;
     cursor: pointer; 
 	padding: 5px; 
 }
+#list{
+display:none
+}
 .bgheadercars{
 	background:#db2d2e;
 }
@@ -1559,4 +1562,37 @@ text-shadow:-1px 1px 0 #940f0f;
 
 .form-group .bootstrap-select.btn-group {
 	background: transparent;
+}
+
+
+@media (max-width: 767px){
+	.prod-box >> div{
+			margin: 4px; 
+	}
+
+	.prod-box >> img{
+			padding: 4px; 
+	}
+
+	.prod-box >> img{
+			width: 50%; 
+	}
+}
+
+@media (min-width: 1200px){
+	.prod-box{
+		width: 207px; 
+	}
+}
+
+@media (min-width: 992px) {
+	.prod-box{
+		width: 214px; 
+	}
+}
+
+@media (min-width: 768px)
+	.prod-box{
+		width: 220px; 
+	}
 }
