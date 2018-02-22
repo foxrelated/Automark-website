@@ -1334,7 +1334,7 @@ display:none
 /* Grid Style */
 .prod-box{
 	width: 207px; height: 260px;
-	padding: 0px; margin: 10px;
+	padding: 0px; margin: 0px;
 	background-color: #fff;
 	float: right;
 	position:relative;
@@ -1565,7 +1565,7 @@ display:none
 }
 
 
-@media (max-width: 580px){
+@media (max-width: 579px){
 	.prod-box >> div{
 			margin: 4px; 
 	}
@@ -1574,24 +1574,26 @@ display:none
 			padding: 4px; 
 	}
 
-	.prod-box >> img{
-			width: 50%; 
+	.prod-box{
+		width: 50%; 
+		padding:0px;
+		margin:0px;
 	}
 }
 
-@media (min-width: 1170px){
+@media (min-width: 1169px){
 	.prod-box{
 		width: 207px; 
 	}
 }
 
-@media (min-width: 970px) {
+@media (min-width: 969px) {
 	.prod-box{
 		width: 214px; 
 	}
 }
 
-@media (min-width: 750px)
+@media (min-width: 749px)
 	.prod-box{
 		width: 220px; 
 	}
