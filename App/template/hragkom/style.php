@@ -304,20 +304,6 @@ $_SESSION['fromuser'] = $_fromuser;
                         <div class="row col-md-12">
                             <div class="col-sm-3 col-xs-6">
                                 <div class="form-group">
-                                    <select class="form-control selectpicker" name="category" title=<?= _Lookfor?> data-live-search="true" data-style="input_search_style">
-                                        <option value="" selected=""><?= _Lookfor?></option>
-                                        <?php foreach($db_category->getAll() as $rowsCategory){
-                                            ?>
-                                            <?php if(($rowsCategory['code_ss'] != "<!--:ar-->لوحات السيارات<!--:--><!--:en-->Car plate<!--:-->") && ($rowsCategory['code_ss'] != "<!--:ar-->ارقام الجوالات<!--:--><!--:en-->Mobile number<!--:-->")){ ?>
-                                                <option value="<?php echo $rowsCategory['id_ss'];?>"><?php echo language::getLang($rowsCategory['code_ss']);?></option>
-                                            <?php } ?>
-                                        <?php } ?>
-                                        <option><?= _Other?></option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="form-group">
                                     <select class="form-control selectpicker"  onchange="return changeselect(this,'city','#subcitySearch') " name="country"  title=<?= _Country?> data-style="input_search_style">
                                         <option value="" selected=""><?= _Country?></option>
                                         <?php foreach($lib_city->getCountryAll() as $rowscity ): ?>
@@ -332,6 +318,20 @@ $_SESSION['fromuser'] = $_fromuser;
                                 <div class="form-group">
                                     <select class="form-control selectpicker" data-live-search="true"   id="subcitySearch" name="city" title="<?= _City?>"  data-style="input_search_style">
                                         <option value="" selected=""><?= _City?></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <div class="form-group">
+                                    <select class="form-control selectpicker" name="category" title=<?= _Lookfor?> data-live-search="true" data-style="input_search_style">
+                                        <option value="" selected=""><?= _Lookfor?></option>
+                                        <?php foreach($db_category->getAll() as $rowsCategory){
+                                            ?>
+                                            <?php if(($rowsCategory['code_ss'] != "<!--:ar-->لوحات السيارات<!--:--><!--:en-->Car plate<!--:-->") && ($rowsCategory['code_ss'] != "<!--:ar-->ارقام الجوالات<!--:--><!--:en-->Mobile number<!--:-->")){ ?>
+                                                <option value="<?php echo $rowsCategory['id_ss'];?>"><?php echo language::getLang($rowsCategory['code_ss']);?></option>
+                                            <?php } ?>
+                                        <?php } ?>
+                                        <option><?= _Other?></option>
                                     </select>
                                 </div>
                             </div>
