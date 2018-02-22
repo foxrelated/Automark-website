@@ -36,8 +36,13 @@ $(document).ready(function() {
   $('.car-type-input').on('keyup',function(){
     $('.car-type').text($(this).val());
   });
-  $('.price-input').on('keyup',function(){
-    $('.price').text($(this).val());
+  $('.price-input').on('focusout',function(){
+      var price = $(this).val();
+      if(price < 0){
+          price = 1; // min price ...
+          $(this).val(price);
+      }
+    $('.price').text(price);
   });
   $('.years-input').on('keyup',function(){
     $('.detail-make').text($(this).val());
