@@ -1564,7 +1564,6 @@ display:none
 	background: transparent;
 }
 
-
 @media (max-width: 579px){
 	.prod-box >> div{
 			margin: 4px; 
@@ -1581,9 +1580,9 @@ display:none
 	}
 }
 
-@media (min-width: 1139px){
+@media (min-width: 749px)
 	.prod-box{
-		width: 207px; 
+		width: 220px; 
 	}
 }
 
@@ -1593,8 +1592,9 @@ display:none
 	}
 }
 
-@media (min-width: 749px)
+@media (min-width: 1139px){
 	.prod-box{
-		width: 220px; 
+		width: 207px; 
 	}
 }
+
