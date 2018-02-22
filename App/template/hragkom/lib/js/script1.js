@@ -47,8 +47,13 @@ $(document).ready(function() {
   $('.years-input').on('keyup',function(){
     $('.detail-make').text($(this).val());
   });
-  $('.detail-km-input').on('keyup',function(){
-    $('.detail-km').text($(this).val());
+  $('.detail-km-input').on('focusout',function(){
+      var km = $(this).val();
+      if(km < 1000){
+          km = 1000; // min KM..
+          $(this).val(km);
+      }
+    $('.detail-km').text(km);
   });
   $('.detail-phone-input').on('keyup',function(){
     $('.detail-phone').text($(this).val());
