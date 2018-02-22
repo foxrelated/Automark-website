@@ -153,10 +153,19 @@ $_SESSION['fromuser'] = $_fromuser;
                                 <li>
                                     <!-- Language -->
                                     <form method='get' action='' id='form_lang' >
-                                        <select id="english" name='lang' onchange='changeLang();' style="width: 83px">
-                                            <option value='en' <?php if(isset($_SESSION['lang']) && $_SESSION['lang'] == 'en'){ echo "selected"; } ?> ><?=_English?></option>
-                                            <option value='ar' <?php if(isset($_SESSION['lang']) && $_SESSION['lang'] == 'ar'){ echo "selected"; } ?> ><?=_Arabic?></option>
-                                        </select>
+                                        <?php
+                                        if(isset($_SESSION['lang']) && $_SESSION['lang'] == 'en'){
+                                            ?>
+                                            <input type="hidden" name="lang" value="ar"/>
+                                            <button type="submit" class="btn btn1" >عربي</button>
+                                            <?php
+                                        } else{
+                                            ?>
+                                            <input type="hidden" name="lang" value="en"/>
+                                            <button type="submit" class="btn btn1">English</button>
+                                            <?php
+                                        }
+                                        ?>
                                     </form>
                                     <script>
                                         function changeLang(){
@@ -223,7 +232,9 @@ $_SESSION['fromuser'] = $_fromuser;
                 <div class="" style="background:#fff;">
                     <div class="row">
                         <div class="col-sm-3 col-xs-8">
-                            <h3 class="pull-left mazalogo"><img class="img-responsive" src="<?php echo $path['template'];?>img/logo.png" alt="" /></h3>
+                            <a href="<?=$path['urlsite']?>">
+                                <h3 class="pull-left mazalogo"><img class="img-responsive" src="<?php echo $path['template'];?>img/logo.png" alt="" /></h3>
+                            </a>
                         </div>
                         <div class="col-sm-9">
                             <div class="navbar-header">
