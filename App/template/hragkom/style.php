@@ -430,6 +430,7 @@ $_SESSION['fromuser'] = $_fromuser;
     </div>
     <div class="row row-offcanvas row-offcanvas-right">
 
+<!-- 
         <div class="col-sm-12">
             <div class="paddingTop">
                 <div class="rows">
@@ -447,6 +448,7 @@ $_SESSION['fromuser'] = $_fromuser;
                 </div>
             </div>
         </div>
+ -->
 
         <?php
         if($path['act_site']=='off' and !$lib_acl->_permis('admin')){?>

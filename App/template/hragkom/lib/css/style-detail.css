@@ -747,7 +747,7 @@ body {
 }
 
 .basic-information h3 {
-  font-size: 38px;
+  font-size: 32px;
   font-weight: bold;
   color: #ebebeb;
   margin: 25px 0;
@@ -798,7 +798,7 @@ color:white;
   }
 
   .basic-information h3 {
-    font-size: 25px;
+    font-size: 22px;
     margin: 15px 0;
     padding-bottom: 5px;
     padding-top: 5px
@@ -840,7 +840,7 @@ color:white;
   }
 
   .basic-information h3 {
-    font-size: 25px;
+    font-size: 22px;
     margin: 15px 0;
     padding-bottom: 5px;
     padding-top: 5px
@@ -881,7 +881,7 @@ color:white;
   }
 
   .basic-information h3 {
-    font-size: 25px;
+    font-size: 22px;
     margin: 15px 0;
     padding-bottom: 5px;
     padding-top: 5px
@@ -910,7 +910,7 @@ color:white;
   }
 
   .basic-information h3 {
-    font-size: 25px;
+    font-size: 22px;
     margin: 15px 0;
     padding-bottom: 5px;
     padding-top: 5px
@@ -938,7 +938,7 @@ color:white;
     z-index: 2
   }
   .basic-information h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .add-to-favorit {
@@ -947,7 +947,11 @@ color:white;
   }
 
   .all-details td {
-    font-size: 11px;
+    font-size: 13px;
+  }
+  
+  .all-details .table {
+    margin-bottom: 0px;
   }
 }
 
@@ -958,7 +962,7 @@ color:white;
     z-index: 2
   }
   .basic-information h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .add-to-favorit {

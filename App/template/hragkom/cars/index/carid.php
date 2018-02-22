@@ -133,7 +133,7 @@ $_SESSION['fromuser'] = $_fromuser;
           <?=_AddedtoFavorites?>
         </span>
         <?php }?>
-        <div class="all-details col-md-6 col-sm-6 col-xs-12">
+        <div class="all-details col-md-6 col-sm-6 col-xs-6">
           <table class="table table-sm table-dark">
             <tbody>
               <?php
@@ -175,7 +175,7 @@ $_SESSION['fromuser'] = $_fromuser;
             </tbody>
           </table>
         </div>
-        <div class="all-details col-md-6 col-sm-6 col-xs-12">
+        <div class="all-details col-md-6 col-sm-6 col-xs-6">
           <table class="table table-sm table-dark">
             <tbody>
                  <?php
@@ -245,7 +245,7 @@ $_SESSION['fromuser'] = $_fromuser;
 
     <section class="buyer">
     <div class="container">
-      <div class="col-md-6 col-xs-12 buy-info">
+      <div style="display:none" class="col-md-6 col-xs-12 buy-info">
       <table class="table table-sm table-dark">
       <tbody class="col-xs-12">
         <tr style="width:150px">
