@@ -65,27 +65,20 @@ $_SESSION['fromuser'] = $_fromuser;
             $firsthalf = array_slice($show_meta_cars, 0, $len / 2);
             $secondhalf = array_slice($show_meta_cars, $len / 2);
           foreach($secondhalf as $rows_meta_cars){
-
-            if(($rows_meta_cars['code_o'] == "distance") || ($rows_meta_cars['code_o'] == "kilometersconsumed")){
-
-
-                  echo $rows_meta_cars['value_m'];
+              if($rows_meta_cars['code_o'] == "kilometersconsumed"){
+                  $kilometersconsumed = $lib_func->jsonArray($rows_meta_cars['value_m']);
+                  echo $kilometersconsumed[0];
                   echo ('&nbsp;');
                   echo _kilometer;
-
-
             }
           }
           foreach($firsthalf as $rows_meta_cars){
-
-            if(($rows_meta_cars['name_o'] == "<!--:ar-->المسافة المقطوعة<!--:--><!--:en-->the traveled distance<!--:-->") || ($rows_meta_cars['name_o'] == "<!--:ar-->الكيلومترات المستهلكة<!--:--><!--:en-->Kilometers consumed<!--:-->")){
-
-
-                  echo $rows_meta_cars['value_m'];
+            //if(($rows_meta_cars['name_o'] == "<!--:ar-->المسافة المقطوعة<!--:--><!--:en-->the traveled distance<!--:-->") || ($rows_meta_cars['name_o'] == "<!--:ar-->الكيلومترات المستهلكة<!--:--><!--:en-->Kilometers consumed<!--:-->")){
+              if($rows_meta_cars['code_o'] == "kilometersconsumed"){
+                  $kilometersconsumed = $lib_func->jsonArray($rows_meta_cars['value_m']);
+                  echo $kilometersconsumed[0];
                   echo ('&nbsp;');
                   echo _kilometer;
-
-
             }
           }
         }?>
@@ -162,7 +155,11 @@ $_SESSION['fromuser'] = $_fromuser;
           }
           }else{
             if(($rows_meta_cars['name_o'] !== "<!--:ar-->المواصفات الاضافية<!--:--><!--:en-->Additional Specifications<!--:-->") ){
-            echo $rows_meta_cars['value_m'];
+                if($lib_func->jsonArray($rows_meta_cars['value_m']) != null) {
+                    echo $lib_func->jsonArray($rows_meta_cars['value_m'])[0];
+                }else {
+                    echo $rows_meta_cars['value_m'];
+                }
           }
         }
         ?></td>
