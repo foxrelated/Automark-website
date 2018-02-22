@@ -399,8 +399,9 @@ select {
 
 .rel {
   position: relative;
-  padding: 0;
-  height:250px
+  padding: 5;
+  height:250px;
+  margin-right: -5px;
   /*margin: 0 10px;*/
   /*width: 23%*/
 }

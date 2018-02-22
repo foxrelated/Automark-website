@@ -1212,6 +1212,13 @@ text-shadow:-1px 1px 0 #940f0f;
 }
 
 @media(max-width: 690px){
+
+.bg_box_search_index {
+	background:url('../../img/bmw_mobile.jpg') no-repeat right center;
+}
+.mazalogo {
+	padding: 10px;
+}
 .menutop {
 	margin:0;
 }

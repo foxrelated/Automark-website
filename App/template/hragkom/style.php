@@ -222,7 +222,7 @@ $_SESSION['fromuser'] = $_fromuser;
             <div class="container">
                 <div class="" style="background:#fff;">
                     <div class="row">
-                        <div class="col-sm-3">
+                        <div class="col-sm-3 col-xs-8">
                             <h3 class="pull-left mazalogo"><img class="img-responsive" src="<?php echo $path['template'];?>img/logo.png" alt="" /></h3>
                         </div>
                         <div class="col-sm-9">
@@ -282,35 +282,13 @@ $_SESSION['fromuser'] = $_fromuser;
                 <ul id="social-links" class="pull-left">
 
                     <li>
-                        <a data-original-title="Facebook" rel="tooltip"  href="#" class="btn btn-facebook" data-placement="left">
+                        <a hrea="https://www.facebook.com/Car-sale-UAE-815758745127954" data-original-title="Facebook" rel="tooltip"  href="#" class="btn btn-facebook" data-placement="left">
                             <i class="fa fa-facebook"></i>
                         </a>
                     </li>
-
                     <li>
-                        <a data-original-title="Twitter" rel="tooltip"  href="#" class="btn btn-twitter" data-placement="left">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a data-original-title="Google+" rel="tooltip"  href="#" class="btn btn-google" data-placement="left">
-                            <i class="fa fa-google-plus"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a data-original-title="Yotube" rel="tooltip"  href="#" class="btn btn-youtube" data-placement="left">
-                            <i class="fa fa-youtube"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a data-original-title="Instagram" rel="tooltip"  class="btn btn-instagram" data-placement="left">
+                        <a href="https://www.instagram.com/automark.ae" data-original-title="Instagram" rel="tooltip"  class="btn btn-instagram" data-placement="left">
                             <i class="fa fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a  data-original-title="RSS" rel="tooltip" class="btn btn-rss" data-placement="left">
-                            <i class="fa fa-rss"></i>
                         </a>
                     </li>
                 </ul>
