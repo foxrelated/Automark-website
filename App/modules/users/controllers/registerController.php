@@ -128,47 +128,48 @@ $this->_user1=$this->loadModel('users','users');
                         'act'=>0
                );
 
-                if($last_id=$this->_model->register($sql)){
-                 $name=$firstname.' '.$lastname;
-                  //var_dump($last_id);die;
-                  $title=_t("تفعيل حسابك  ");
-                   $urlactive=$this->_hash->unique();
-                     $msg="لتفعيل حسابك يرجى الذهاب الى الرابط التالى<br>
-                           <a href='".system::_data("url_site")."users/register/act/".$last_id."/".$urlactive."'>من هنا</a>
-                            <br>
-                            او نسخ الرابط التالى  <br>
-                            ".system::_data("url_site")."users/register/act/".$last_id."/".$urlactive;
-                    $valueemail=array(
-                        'name'=>'Automark',//$name,
-                        'email'=>system::_data("email_admin"),
-                        'femail'=>$email,
-                        'title'=>system::_data("title_site"),
-                        'msg'=>nl2br($msg)
-                    );
-
-
-                      $value_active=array(
-                        'user'=>$last_id,
-                        'code'=> $urlactive,
-                        'type'=>'activeuser',
-                        'timeend'=>time(),
-                      );
-                        
-
-                         if($this->_model->insert_active($value_active)){
-                         if($this->_func->sendMail($valueemail)){
-                             $this->_view->assign('_msg',_t("تم ارسال رسالة تفعيل الى بريدك الالكتروني قم بالضغط على الرابط الموضح فيه ليتم تفعيل الحساب "));
-                        }
-                        } else{
-                           throw new Exception(sprintf(_t('Error Database  %s '),'active'));
-                         }
-
-
-
-
-                }else{
-                    throw new Exception(sprintf(_t('Error Database  %s '),'register users'));
-                }
+                $last_id=$this->_model->register($sql);
+//                // send the verification email
+//                if($last_id){
+//                 $name=$firstname.' '.$lastname;
+//                  $title=_t("تفعيل حسابك  ");
+//                   $urlactive=$this->_hash->unique();
+//                     $msg="لتفعيل حسابك يرجى الذهاب الى الرابط التالى<br>
+//                           <a href='".system::_data("url_site")."users/register/act/".$last_id."/".$urlactive."'>من هنا</a>
+//                            <br>
+//                            او نسخ الرابط التالى  <br>
+//                            ".system::_data("url_site")."users/register/act/".$last_id."/".$urlactive;
+//                    $valueemail=array(
+//                        'name'=>'Automark',//$name,
+//                        'email'=>system::_data("email_admin"),
+//                        'femail'=>$email,
+//                        'title'=>system::_data("title_site"),
+//                        'msg'=>nl2br($msg)
+//                    );
+//
+//
+//                      $value_active=array(
+//                        'user'=>$last_id,
+//                        'code'=> $urlactive,
+//                        'type'=>'activeuser',
+//                        'timeend'=>time(),
+//                      );
+//
+//
+//                         if($this->_model->insert_active($value_active)){
+//                         if($this->_func->sendMail($valueemail)){
+//                             $this->_view->assign('_msg',_t("تم ارسال رسالة تفعيل الى بريدك الالكتروني قم بالضغط على الرابط الموضح فيه ليتم تفعيل الحساب "));
+//                        }
+//                        } else{
+//                           throw new Exception(sprintf(_t('Error Database  %s '),'active'));
+//                         }
+//
+//
+//
+//
+//                }else{
+//                    throw new Exception(sprintf(_t('Error Database  %s '),'register users'));
+//                }
             }else{
                 $this->_view->assign('get',array_filter($_POST));
                 $this->_view->assign('error',$this->_validate->errors());
