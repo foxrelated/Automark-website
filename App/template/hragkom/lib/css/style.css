@@ -1565,7 +1565,7 @@ display:none
 }
 
 
-@media (max-width: 767px){
+@media (max-width: 580px){
 	.prod-box >> div{
 			margin: 4px; 
 	}
@@ -1579,19 +1579,19 @@ display:none
 	}
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1170px){
 	.prod-box{
 		width: 207px; 
 	}
 }
 
-@media (min-width: 992px) {
+@media (min-width: 970px) {
 	.prod-box{
 		width: 214px; 
 	}
 }
 
-@media (min-width: 768px)
+@media (min-width: 750px)
 	.prod-box{
 		width: 220px; 
 	}
