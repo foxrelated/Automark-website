@@ -62,10 +62,7 @@ $this->_user1=$this->loadModel('users','users');
                         'min'=>3,
                          'int'=>true,
                         'max'=>50)
-                   ,'mobilecode'=>array(
-                        'required'=>true,
-                         )
-                        ,
+                   ,
                   'telphone'=>array(
                         'required'=>false,
                         'min'=>3,

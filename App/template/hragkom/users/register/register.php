@@ -10,17 +10,17 @@
                <div class="col-sm-9">
      <!--SING IN FORM EXAMPLE-->
             <form  method="post" class="form-horizontal">
-			
+
 	<!-- start -->
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-3 control-label"><?php echo _t(_FirstName); ?></label>
                     <div class="col-lg-8">
-                         <input type="text" class="form-control" name="firstname" value="<?php echo isset($get['firstname'])?$lib_seurty->tities($get['firstname']):'';?>" />   
+                         <input type="text" class="form-control" name="firstname" value="<?php echo isset($get['firstname'])?$lib_seurty->tities($get['firstname']):'';?>" />
                   <span class="help-inline"><?php echo isset($error['firstname'])?$error['firstname']:'' ?></span>
                      </div>
                 </div>
 	<!-- end -->
-	
+
 	<!-- start -->
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-3 control-label"><?php echo _t(_Lastname); ?></label>
@@ -29,29 +29,26 @@
 						<span class="help-inline"><?php echo isset($error['lastname'])?$error['lastname']:'' ?></span>
                      </div>
                 </div>
-	<!-- end -->	
-	
-	
-	
+	<!-- end -->
+
+
+
 	<!-- start -->
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-3 control-label"><?php echo _t(_Cellphone); ?></label>
                     <div class="col-lg-8">
                     <div class="row">
-					<div class="col-lg-8">
-                        <input type="text" class="form-control" placeholder="5300000000" name="mobile" value="<?php echo isset($get['mobile'])?$get['mobile']:'';?>" />
+					<div class="col-lg-12">
+                        <input type="text" class="form-control" placeholder="9665300000000" name="mobile" value="<?php echo isset($get['mobile'])?$get['mobile']:'';?>" />
 						</div>
-						<div class="col-lg-4">
-                        <input type="text" class="form-control " placeholder="966" name="mobilecode" value="<?php echo isset($get['mobilecode'])?$get['mobilecode']:'';?>" />
-					</div>
 					</div>
 						<span class="help-inline"><?=_Example?> : 5300000000  966</span>
 						<span class="help-inline"><?php echo isset($error['mobile'])?$error['mobile']:'' ?></span>
 						<span class="help-inline"><?php echo isset($error['mobilecode'])?$error['mobilecode']:'' ?></span>
                      </div>
                 </div>
-	<!-- end -->	
-	
+	<!-- end -->
+
 	<!-- start -->
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-3 control-label"><?php echo _t(_Username); ?></label>
@@ -62,7 +59,7 @@
                      </div>
                 </div>
 	<!-- end -->
-	
+
 	<!-- start -->
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-3 control-label"> <?php echo _t(_Email); ?></label>
@@ -72,7 +69,7 @@
                      </div>
                 </div>
 	<!-- end -->
-	
+
 	<!-- start -->
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-3 control-label"><?php echo _t(_Password); ?></label>
@@ -82,7 +79,7 @@
                      </div>
                 </div>
 	<!-- end -->
-	
+
 	<!-- start -->
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-3 control-label"><?php echo _t(_Resetpassword); ?></label>
@@ -104,7 +101,7 @@
 					<span class="help-inline"><?php echo isset($error['age'])?$error['age']:'' ?></span>
                      </div>
                 </div>
-	<!-- end -->	
+	<!-- end -->
 	<!-- start -->
                  <div class="form-group">
                     <label for="inputEmail" class="col-lg-3 control-label"><?php echo _t(_HumanVerification);?></label>
@@ -117,7 +114,7 @@
                      </div>
                 </div>
 	<!-- end -->
-	
+
 	<!-- start -->
                 <div class="form-group ">
                 <div class="col-lg-8">
@@ -134,7 +131,7 @@
                         </div>
                 </div>
                 </div>
-	<!-- end -->		
+	<!-- end -->
                 <div class="form-group">
                      <input type="submit" class="btn btn-default"  value="<?php echo _t("تسجيل"); ?>" />
                            <input type="hidden" name="insert" value="1" />
