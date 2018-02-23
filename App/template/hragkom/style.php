@@ -203,7 +203,7 @@ $_SESSION['fromuser'] = $_fromuser;
 
                         </div>
                     </div>
-                    <div class="col-sm-3 col-md-3">
+                    <div class="col-xs-2 col-sm-3 col-md-3">
                         <form action="<?php echo $path['urlsite']?>/cars/search/specific" class="navbar-form" role="search">
                             <div class="input-group">
                                 <input type="text" class="form-control" name="q"  id="search">
@@ -572,21 +572,24 @@ $_SESSION['fromuser'] = $_fromuser;
     <div class="container">
         <div class="row high">
             <div class="col-sm-3">
-
-            </div>
-            <div class="col-sm-3">
-                <h3><i class='fa fa-tachometer' aria-hidden='true'></i><?=_Sitepages?> </h3>
-
+				<h3><i class='fa fa-tachometer' aria-hidden='true'></i><?=_Sitepages?> </h3>
 
                 <ul class="nav clear clfooterll">
                     <li><a href="<?php echo $path['urlsite'] ?>" style="color: white; "><?=_MAIN?> </a> </li>
 
                     <li><a href="<?php echo $path['urlsite'] ?>pages/index/contact" style="color: white; "><?=_Contactus?> </a> </li>
+
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h3><i class='fa fa-tachometer' aria-hidden='true'></i> </h3>
+
+                <ul class="nav clear clfooterll">
+
                     <li><a href="<?php echo $path['urlsite'] ?>cars/mycars/addfreeads"
                            style="color: white; "><?=_Addannouncement?> </a> </li>
                     <li><a href="<?php echo $path['urlsite'] ?>pages/index/offers" style="color: white; "><?=_OurServices?> </a> </li>
                     <li><a href="<?php echo $path['urlsite'] ?>pages/index/contact" style="color: white; "><?=_Howtopay?> </a> </li>
-
 
                 </ul>
             </div>

@@ -826,8 +826,6 @@ a.bg-danger:hover {
   background-color: #e4b9b9;
 }
 
-
-
 .pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
 z-index: 2;
 color: #fff;
@@ -1247,10 +1245,15 @@ text-shadow:-1px 1px 0 #940f0f;
 .menutopContact > li > a {
     color: #fff;
     font-family: 'Droid Arabic Kufi', Stag Sans Light;
- padding:0;
+ 	padding:0;
 	text-align:right;
     font-weight: 100;
+    padding: 10px 15px;
 }
+.menutopContact li {
+	float:right;
+}
+
 .prod-box-list p {
     color: #888;
      width: auto !important; 
@@ -1541,6 +1544,12 @@ display:none
 }
 .stcostimg .img-responsive{
 	margin:0 auto;
+}
+
+#form_lang .btn1 {
+	margin-top: 8px;
+    background: transparent;
+    color: white;
 }
 
 .details-share-icon{

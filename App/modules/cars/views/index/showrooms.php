@@ -30,7 +30,7 @@ $_SESSION['fromuser'] = $_fromuser;
 
   <body>
 
-    <div class="head" style="margin-top: 175px; ">
+    <div class="head" style="margin-top: 25px; ">
       <div class="container">
         <ul class="list-unstyled">
           <a href="<?php echo $path['urlsite'] ?>"><li><?=_Themainpage?></li></a>
@@ -50,7 +50,7 @@ $_SESSION['fromuser'] = $_fromuser;
       <div class="container">
         <div class="row">
           <?php foreach ($_shows as $show) {?>
-          <div class="col-lg-3 col-md-12 col-sm-12">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
             <div class="my-class">
               <a href="<?php echo $path['urlsite'] ?>cars/index/showsid/<?php echo $show['id_s'];?>">
               <div class="my-info text-center">

@@ -69,7 +69,7 @@ $_SESSION['fromuser'] = $_fromuser;
               <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href="<?php echo $path['urlsite'] ?>cars/index/showsid/<?php echo $_ids;?>"><?php echo isset($_phone_num1)?$_phone_num1:''; ?></a></li>
               <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href="<?php echo $path['urlsite'] ?>cars/index/showsid/<?php echo $_ids;?>"><?php echo isset($_phone_num2)?$_phone_num2:''; ?></a></li>
               <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href="mailto:<?php echo $_showsemail ?>"><?=$_showsemail?></a></li>
-              <li class="my-li hidden-md hidden-xs col-sm-12">
+              <li class="my-li col-sm-12">
                 <ul class="list-unstyled text-center">
                   <li>
                     <?php if(session::get(system::get("session/session_name"))){ ?>
