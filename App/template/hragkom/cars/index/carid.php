@@ -17,6 +17,8 @@ $_SESSION['fromuser'] = $_fromuser;
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/media.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/share-button.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/chat.css">
+      <link rel="stylesheet" type="text/css" href="<?php echo $path['template'];?>lib/css/pgwslider.min.css">
+
 
   </head>
   <body>
@@ -90,23 +92,15 @@ $_SESSION['fromuser'] = $_fromuser;
       </div>
     </div>
       <div class="car-images">
-        <div style="max-height:551px">
 
-        <ul id="vertical">
-          <?php if(($lib_func->jsonArray($_carsId['images_c']) != null)) {?>
-          <?php foreach($lib_func->jsonArray($_carsId['images_c']) as $rowsimg){
-
-            ?>
-            <li data-thumb="<?php echo $path['thumb'].'thumb_'.$rowsimg; ?>">
-
-                <img class="img-responsive"  src="<?php echo $path['upload'].$rowsimg; ?>" title="" alt="">
-
-            </li>
-           <?php  } ?>
-           <?php } ?>
-        </ul>
-
-        </div>
+          <ul class="pgwSlider">
+              <?php if(($lib_func->jsonArray($_carsId['images_c']) != null)) {?>
+                  <?php foreach($lib_func->jsonArray($_carsId['images_c']) as $rowsimg){
+                      ?>
+                      <li><img src="<?= $path['thumb'].'thumb_'.$rowsimg ?>" alt="" data-large-src="<?= $path['upload'].$rowsimg ?>"></li>
+                  <?php  } ?>
+              <?php } ?>
+          </ul>
       </div>
 
       <div class="basic-information">
@@ -346,7 +340,12 @@ $_SESSION['fromuser'] = $_fromuser;
       <!-- Scripts -->
       <script src="<?php echo $path['template'];?>lib/js/jquery.nicescroll.min.js"></script>
     <script src="<?php echo $path['template'];?>lib/js/script.js"></script>
-
+    <script src="<?php echo $path['template'];?>lib/js/pgwslider.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.pgwSlider').pgwSlider();
+        });
+    </script>
 
     </body>
   </html>
