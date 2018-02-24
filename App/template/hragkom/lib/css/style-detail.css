@@ -1598,6 +1598,11 @@ color:white;
   padding-right: 5px
 }
 
+.bg_box_search_index {
+	min-height: auto;
+    height: 200px;
+}
+
 @media (max-width: 1200px) {
   .ads {
     top: -65px;

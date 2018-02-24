@@ -237,7 +237,12 @@ $_SESSION['fromuser'] = $_fromuser;
                             </a>
                         </div>
                         <div class="col-sm-9">
-                            <div class="navbar-header">
+                            <div class="navbar-header  hidden-sm hidden-md hidden-lg">
+                            
+                            	<a class="text-center" href="http://automark.ae/cars/mycars/addfreeads" style="color: #db2d2e;display: inline-block;margin-top: 35px;font-size: 8px;padding: 3px;float: left;margin-left:  20px;">
+                                            <i class="fa fa-plus-square-o fa-3x"></i>
+                                </a>
+                            
                                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menunavbarh" aria-expanded="false">
                                     <span style="color:#db2d2e;font-size:25px;margin-top:20px" class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
 
@@ -289,7 +294,7 @@ $_SESSION['fromuser'] = $_fromuser;
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-1">
+            <div class="col-sm-1 hidden-xs">
                 <ul id="social-links" class="pull-left">
 
                     <li>
@@ -582,7 +587,7 @@ $_SESSION['fromuser'] = $_fromuser;
                 </ul>
             </div>
             <div class="col-sm-3">
-                <h3><i class='fa fa-tachometer' aria-hidden='true'></i> </h3>
+                <h3><i class='fa' aria-hidden='true'></i> </h3>
 
                 <ul class="nav clear clfooterll">
 
