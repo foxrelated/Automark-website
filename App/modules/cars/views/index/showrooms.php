@@ -66,12 +66,12 @@ $_SESSION['fromuser'] = $_fromuser;
               </a>
             </div>
             <ul class="list-unstyled col-lg-12" id="right-section">
-              <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href="<?php echo $path['urlsite'] ?>cars/index/showsid/<?php echo $show['id_s'];?>"><?php echo isset($show['region_s'])?$show['region_s']:''; ?> -
+              <li class="col-lg-12 col-md-3 col-sm-6 col-xs-6"><a href="<?php echo $path['urlsite'] ?>cars/index/showsid/<?php echo $show['id_s'];?>"><?php echo isset($show['region_s'])?$show['region_s']:''; ?> -
 
               	<?php   if(isset($show['city_s']) and $show['city_s']!=''){ ?> <?php echo  language::getLang($_city->getNameId($show['city_s']));?> <?php } ?></a></li>
-              <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href="<?php echo $path['urlsite'] ?>cars/index/showsid/<?php echo $show['id_s'];?>"><?php echo isset($show['phone_num1'])?$show['phone_num1']:''; ?></a></li>
-              <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href="<?php echo $path['urlsite'] ?>cars/index/showsid/<?php echo $show['id_s'];?>"><?php echo isset($show['phone_num2'])?$show['phone_num2']:''; ?></a></li>
-              <li class="col-lg-12 col-md-3 col-sm-3 col-xs-6"><a href="mailto:<?php echo $show['email_s'] ?>"><?=$show['email_s']?></a></li>
+              <li class="col-lg-12 col-md-3 col-sm-6 col-xs-6"><a href="<?php echo $path['urlsite'] ?>cars/index/showsid/<?php echo $show['id_s'];?>"><?php echo isset($show['phone_num1'])?$show['phone_num1']:''; ?></a></li>
+              <li class="col-lg-12 col-md-3 col-sm-6 col-xs-6"><a href="<?php echo $path['urlsite'] ?>cars/index/showsid/<?php echo $show['id_s'];?>"><?php echo isset($show['phone_num2'])?$show['phone_num2']:''; ?></a></li>
+              <li class="col-lg-12 col-md-3 col-sm-6 col-xs-6"><a href="mailto:<?php echo $show['email_s'] ?>"><?=$show['email_s']?></a></li>
               
             </ul>
           </div>

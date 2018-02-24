@@ -314,7 +314,7 @@ select {
 {
 	position: relative;
 	margin-top: 70px;
-	margin-bottom: 8px;
+	padding-bottom: 8px;
 	color:#fff;
 	font-family: 'Cairo';
 	font-size: 20px;

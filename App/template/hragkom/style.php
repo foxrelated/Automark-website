@@ -178,7 +178,7 @@ $_SESSION['fromuser'] = $_fromuser;
                             </ul>
                         </div>
                     </div>
-                    <div class=" col-sm-6 col-xs-6">
+                    <div class=" col-sm-6 col-xs-6 hidden-xs">
 
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menunavbartop" aria-expanded="false">
@@ -203,7 +203,7 @@ $_SESSION['fromuser'] = $_fromuser;
 
                         </div>
                     </div>
-                    <div class="col-xs-2 col-sm-3 col-md-3">
+                    <div class="col-xs-2 col-sm-3 col-md-3 hidden-xs">
                         <form action="<?php echo $path['urlsite']?>/cars/search/specific" class="navbar-form" role="search">
                             <div class="input-group">
                                 <input type="text" class="form-control" name="q"  id="search">
@@ -243,7 +243,7 @@ $_SESSION['fromuser'] = $_fromuser;
                                             <i class="fa fa-plus-square-o fa-3x"></i>
                                 </a>
                             
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menunavbarh" aria-expanded="false">
+                                <button type="button" class="navbar-toggle collapsed" style="border:none" data-toggle="collapse" data-target="#menunavbarh" aria-expanded="false">
                                     <span style="color:#db2d2e;font-size:25px;margin-top:20px" class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
 
                                 </button>
