@@ -2,6 +2,10 @@
   font-family: 'DroidKufi';
 }
 
+.singular-slider {
+    max-height: 200px;
+}
+
 body {
   background-color: #f2f2f2;
   box-sizing: border-box;

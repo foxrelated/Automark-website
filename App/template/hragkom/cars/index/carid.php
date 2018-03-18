@@ -92,12 +92,13 @@ $_SESSION['fromuser'] = $_fromuser;
       </div>
     </div>
       <div class="car-images">
-
           <ul class="pgwSlider">
-              <?php if(($lib_func->jsonArray($_carsId['images_c']) != null)) {?>
-                  <?php foreach($lib_func->jsonArray($_carsId['images_c']) as $rowsimg){
+              <?php
+              $car_images = $lib_func->jsonArray($_carsId['images_c']);
+              if($car_images != null) {?>
+                  <?php foreach($car_images as $rowsimg){
                       ?>
-                      <li><img src="<?= $path['thumb'].'thumb_'.$rowsimg ?>" alt="" data-large-src="<?= $path['upload'].$rowsimg ?>"></li>
+                      <li class="<?= count($car_images) == 1 ? 'singular-slider' : '' ?>"><img src="<?= $path['thumb'].'thumb_'.$rowsimg ?>" alt="" data-large-src="<?= $path['upload'].$rowsimg ?>"></li>
                   <?php  } ?>
               <?php } ?>
           </ul>
