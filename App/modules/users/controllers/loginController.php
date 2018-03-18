@@ -18,6 +18,7 @@ $this->_user1=$this->loadModel('users','users');
    $this->_view->assign('_fromuser',$user);
    $this->_view->assign('_chat', $this->_chat1->getAll(array('from'=>$user,'listGroup'=>1)));
     }
+
     function index($admin=null){
 
     if($this->_input->get('login')==1){
@@ -92,6 +93,45 @@ $this->_user1=$this->loadModel('users','users');
             }
 
     }
+
+      function hashPass(){
+          $password = $this->_input->get('password');
+          if($password) {
+              $this->_validate->check($_POST,
+                  array(
+                      'username' => array(
+                          'required' => true,
+                          'loginuser' => 'users',
+                          'name_id' => array('username', 'email_u', 'mobile_u')
+                      ),
+                      'password' => array(
+                          'required' => true
+                      )
+                  )
+              );
+
+
+              $resulte = $this->_validate->resulte();
+              if ($resulte['password'] == '') { // generate pass hash to register
+                  $salt = $this->_hash->salt('32');
+                  $hashed_password = $this->_hash->make($this->_input->get('password'), $salt);
+                  echo json_encode(['password' => $password,
+                      'hashed_password' => $hashed_password,
+                      'salt' => base64_encode($salt)]);
+                  return;
+              } else { // generate has pass for login
+                  $salt = $resulte['salt_u'];
+                  $hashed_password = $this->_hash->make($password, $salt);
+                  echo json_encode(['password' => $password,
+                      'hashed_password' => $hashed_password,
+                      'salt' => base64_encode($salt)]);
+                  return;
+              }
+
+          } else
+            echo json_encode(['error'=>'password is empty']);
+          return;
+      }
 
     public function lostpasword(){
 
