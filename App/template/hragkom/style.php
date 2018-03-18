@@ -231,7 +231,7 @@ $_SESSION['fromuser'] = $_fromuser;
             <div class="container">
                 <div class="" style="background:#fff;">
                     <div class="row">
-                        <div class="col-sm-3 col-xs-8">
+                        <div class="col-sm-3 col-xs-7">
                             <a href="<?=$path['urlsite']?>">
                                 <h3 class="pull-left mazalogo"><img class="img-responsive" src="<?php echo $path['template'];?>img/logo.png" alt="" /></h3>
                             </a>
@@ -239,12 +239,16 @@ $_SESSION['fromuser'] = $_fromuser;
                         <div class="col-sm-9">
                             <div class="navbar-header  hidden-sm hidden-md hidden-lg">
                             
-                            	<a class="text-center" href="http://automark.ae/cars/mycars/addfreeads" style="color: #db2d2e;display: inline-block;margin-top: 35px;font-size: 8px;padding: 3px;float: left;margin-left:  20px;">
+                            	<a class="text-center" href="<?php echo $path['urlsite'] ?>cars/mycars/addfreeads" style="color: #db2d2e;display: inline-block;margin-top: 13px;font-size: 9px;padding: 3px;float: left;margin-left: 10px;">
                                             <i class="fa fa-plus-square-o fa-3x"></i>
+                                            <div>
+                                                <?php echo _t(_Addyouradforfree);?>
+                                            </div>
+
                                 </a>
                             
-                                <button type="button" class="navbar-toggle collapsed" style="border:none" data-toggle="collapse" data-target="#menunavbarh" aria-expanded="false">
-                                    <span style="color:#db2d2e;font-size:25px;margin-top:20px" class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                                <button type="button" class="navbar-toggle collapsed" style="border:none; margin-left: 0px;" data-toggle="collapse" data-target="#menunavbarh" aria-expanded="false">
+                                    <span style="color:#db2d2e;font-size:25px;margin-top:0px" class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
 
                                 </button>
 
