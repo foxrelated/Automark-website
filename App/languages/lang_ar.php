@@ -29,6 +29,7 @@ define("_ToDes", "إلى المسافة");
 define("_FromPrice", "من السعر");
 define("_ToPrice", "إلى السعر");
 define("_Selectthevehiclestatus", "اختر حالة السيارة");
+define("_SelectVehicleSubModel","اختر الطراز");
 define("_Other", "أخرى");
 define("_Excellent", "ممتازة");
 define("_Good", "جيدة");

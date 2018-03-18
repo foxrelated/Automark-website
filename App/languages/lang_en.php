@@ -30,6 +30,7 @@ define("_ToDes", "To Distance");
 define("_FromPrice", "From Price");
 define("_ToPrice", "To Price");
 define("_Selectthevehiclestatus", "Select the vehicle status");
+define("_SelectVehicleSubModel","Sub Model");
 define("_Other", "Other");
 define("_Excellent", "Excellent");
 define("_Good", "Good");

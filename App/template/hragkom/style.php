@@ -371,7 +371,8 @@ $_SESSION['fromuser'] = $_fromuser;
                                 <div class="col-sm-3 col-xs-6">
                                     <div class="form-group">
                                         <select class="form-control selectpicker" data-live-search="true" name="model"
-                                                title=<?= _Selectthemodel ?> data-style="input_search_style">
+                                                title=<?= _Selectthemodel ?> data-style="input_search_style"
+                                                onchange="return changeselect(this,'typecar','#subtype') ">
                                             <option value="" selected=""><?= _Selectthemodel ?></option>
                                             <?php foreach ($lib_typecar->getTypeAll() as $rowstype): ?>
                                                 <option
@@ -436,15 +437,20 @@ $_SESSION['fromuser'] = $_fromuser;
                                 </div>
                                 <div class="col-sm-3 col-xs-6">
                                     <div class="form-group">
-                                        <select class="form-control selectpicker" name="status"
-                                                title=<?= _Selectthevehiclestatus ?> data-style="input_search_style">
-                                            <option value="" selected=""><?= _Selectthevehiclestatus ?></option>
-                                            <option value="6"><?= _Excellent ?></option>
-                                            <option value="7"><?= _Good ?></option>
-                                            <option value="8"><?= _Medium ?></option>
-                                            <option value="9"><?= _Needmaintenance ?></option>
-                                            <option><?= _Other ?></option>
-
+<!--                                        <select class="form-control selectpicker" name="status"-->
+<!--                                                title=--><?//= _Selectthevehiclestatus ?><!-- data-style="input_search_style">-->
+<!--                                            <option value="" selected="">--><?//= _Selectthevehiclestatus ?><!--</option>-->
+<!--                                            <option value="6">--><?//= _Excellent ?><!--</option>-->
+<!--                                            <option value="7">--><?//= _Good ?><!--</option>-->
+<!--                                            <option value="8">--><?//= _Medium ?><!--</option>-->
+<!--                                            <option value="9">--><?//= _Needmaintenance ?><!--</option>-->
+<!--                                            <option>--><?//= _Other ?><!--</option>-->
+<!---->
+<!--                                        </select>-->
+                                        <select class="form-control selectpicker" name="submodel"
+                                                id="subtype"
+                                                title=<?= _SelectVehicleSubModel ?> data-style="input_search_style">
+                                            <option value="" selected=""><?= _SelectVehicleSubModel ?></option>
                                         </select>
                                     </div>
                                 </div>
