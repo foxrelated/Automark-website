@@ -231,7 +231,7 @@ $_SESSION['fromuser'] = $_fromuser;
             <div class="container">
                 <div class="" style="background:#fff;">
                     <div class="row">
-                        <div class="col-sm-3 col-xs-7">
+                        <div class="col-sm-3 col-xs-7" style="z-index: 10;">
                             <a href="<?=$path['urlsite']?>">
                                 <h3 class="pull-left mazalogo"><img class="img-responsive" src="<?php echo $path['template'];?>img/logo.png" alt="" /></h3>
                             </a>
